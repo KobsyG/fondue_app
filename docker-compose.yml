@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  react-app:
+    build:
+      context: ./front-react
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front-react/public:/usr/src/app/react/public
+      - ./front-react/src:/usr/src/app/react/src

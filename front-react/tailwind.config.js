@@ -1,11 +1,3 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,7 +5,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        'large-page': '10000px', // Adjust the height value as needed
+      },
+      colors: {
+        'fondue-blue': '#2E2573',
+        'fondue-yellow': '#FED88E',
+        'fondue-red': '#E50044',
+      },
+    },
   },
   plugins: [],
 }

@@ -24,7 +24,7 @@ function FallingCheese() {
         console.log('la fritas')
     }, [targetRef]);
     return (
-        <div className='w-full h-large-page bg-fondue-yellow justify-center items-center'>
+        <div>
             <Backg />
             <div ref={targetRef} className="absolute z-1 top-0 left-1/2 mt-[150vh] h-[200vh] w-10 bg-fondue-red" />
             {targetElement && (

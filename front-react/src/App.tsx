@@ -1,9 +1,13 @@
+import { Parallax, useParallax } from 'react-scroll-parallax';
 import './App.css';
-import FallingCheese from './components/FallingCheese/FallingCheese';
+import { useEffect, useRef, useState } from 'react';
+import { RootMarginShape } from 'parallax-controller';
+import ProtoMenInBlack from './components/ProtoMenInBLack/ProtoMenInBlack';
 
 function App() {
   return (
-    <FallingCheese />
+    <div>
+    </div>
   )
 }
 

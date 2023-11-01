@@ -27,10 +27,22 @@ function App() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    // (
+    // async () => {
+    // const LocomotiveScroll = (await import('locomotive-scroll')).default;
     const scroll = new LocomotiveScroll({
       el: scrollContainerRef.current ? scrollContainerRef.current : undefined,
-      smooth: true
+      smooth: true,
+      smartphone: {
+        smooth: true,
+      },
+      tablet: {
+        smooth: true,
+        breakpoint: 1024,
+      },
     });
+    // }
+    // )()
   }, [scrollContainerRef]);
   return (
     <div ref={scrollContainerRef}>

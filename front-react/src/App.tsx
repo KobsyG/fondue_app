@@ -1,9 +1,17 @@
+import { ReactLenis } from '@studio-freight/react-lenis'
+import FirstPart from './components/FirstPart/FirstPart';
 import './App.css';
-import FallingCheese from './components/FallingCheese/FallingCheese';
+import SecondPart from './components/SecondPart/SecondPart';
 
 function App() {
+
   return (
-    <FallingCheese />
+      <ReactLenis root>
+
+        <FirstPart />
+        <SecondPart />
+
+      </ReactLenis>
   )
 }
 

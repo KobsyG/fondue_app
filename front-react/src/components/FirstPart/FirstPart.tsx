@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import LoopAnim from './LoopAnim/LoopAnim'
-import ImgZoom from './ImgZoom/ImgZoom'
-import StaticText from './StaticText/StaticText'
+import LoopAnim from './LoopAnim'
+import ImgZoom from './ImgZoom'
+import StaticText from './StaticText'
 
 const phrase1 = "OMG LA FIRST LINE aaaaaaaaaaaaaaaaaaaa -"
 const phrase2 = "OMG LA SECOND LINE -"

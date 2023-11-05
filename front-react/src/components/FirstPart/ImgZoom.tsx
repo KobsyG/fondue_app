@@ -85,9 +85,9 @@ const ImgZoom = () => {
 
     return (
         <div className='photo-wrap-contain h-[100vh] w-[100vw] sticky top-0 flex items-center justify-center'>
-            {/* <div ref={wrap} className='photo-wrap bg-red-500'> */}
-                {/* <img className='object-cover w-full h-full' src={require("./photo-test.webp")} /> */}
-            {/* </div> */}
+            <div ref={wrap} className='photo-wrap bg-red-500'>
+                <img className='object-cover w-full h-full' src={require("../../images/photo-test.webp")} />
+            </div>
         </div>
     )
 }

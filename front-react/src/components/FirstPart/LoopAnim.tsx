@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import './LoopAnim.css'
+import '../../styles/LoopAnim.css'
 
 const LoopAnim = (props: {
                 phrase: string,

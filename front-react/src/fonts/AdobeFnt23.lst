@@ -1,0 +1,534 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/AdobeFnt23.lst
+FileLength:11718
+FileModTime:720050212
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:AlloraRegular
+FamilyName:Allora
+StyleName:Regular
+MenuName:Allora
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Allora
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Allora.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:22228
+FileModTime:546089672
+NameArray:0,Mac,4,Allora
+NameArray:0,Win,1,Allora
+NameArray:0,Win,16,Allora
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:AlohaMarch
+FamilyName:Aloha March
+StyleName:Regular
+MenuName:Aloha March
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Aloha March
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Aloha March.otf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:19704
+FileModTime:606036264
+NameArray:0,Win,1,Aloha March
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AvocadoCake-Regular
+FamilyName:Avocado Cake
+StyleName:Regular
+MenuName:Avocado Cake
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Avocado Cake Regular
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Avocado Cake Demo.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:21328
+FileModTime:655687500
+NameArray:0,Mac,4,Avocado Cake Regular
+NameArray:0,Win,1,Avocado Cake
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:BigCaslon-Medium
+FamilyName:Big Caslon
+StyleName:Medium
+MenuName:Big Caslon
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Big Caslon Medium
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/BigCaslon.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:223700
+FileModTime:705623360
+NameArray:0,Mac,4,Big Caslon Medium
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:CrimsonFoam-Regular
+FamilyName:Crimson Foam
+StyleName:Regular
+MenuName:Crimson Foam
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Crimson Foam Regular
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Crimson Foam Font.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:47552
+FileModTime:678209000
+NameArray:0,Mac,4,Crimson Foam Regular
+NameArray:0,Win,1,Crimson Foam
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Bold
+FamilyName:Minion Pro
+StyleName:Bold
+MenuName:Minion Pro
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro Bold
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/MinionPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:218116
+FileModTime:383224580
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro Bold
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:383224580
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-SemiboldIt
+FamilyName:Minion Pro
+StyleName:Semibold Italic
+MenuName:Minion Pro SmBd
+StyleBits:1
+WeightClass:600
+WidthClass:5
+AngleClass:1
+FullName:Minion Pro Semibold Italic
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/MinionPro-SemiboldIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:260456
+FileModTime:383222324
+DesignSize:110
+NameArray:0,Mac,18,Minion Pro SmBd Ital
+NameArray:0,Mac,4,Minion Pro Semibold Italic
+NameArray:0,Win,1,Minion Pro SmBd
+NameArray:0,Win,16,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:MoonFlowerBold
+FamilyName:Moon Flower Bold
+StyleName:Regular
+MenuName:Moon Flower Bold
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Moon Flower Bold
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Moon Flower Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:30564
+FileModTime:407412918
+NameArray:0,Mac,4,Moon Flower Bold
+NameArray:0,Win,1,Moon Flower Bold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:OccamsEraser
+FamilyName:Occams Eraser
+StyleName:Regular
+MenuName:Occams Eraser
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Occams Eraser
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Occams Eraser.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:130140
+FileModTime:684666982
+NameArray:0,Mac,4,Occams Eraser
+NameArray:0,Win,1,Occams Eraser
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:OpenSans-Bold
+FamilyName:Open Sans
+StyleName:Bold
+MenuName:Open Sans
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Open Sans Bold
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/OpenSans-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:224592
+FileModTime:502923474
+NameArray:0,Mac,4,Open Sans Bold
+NameArray:0,Win,1,Open Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:OpenSans-Italic
+FamilyName:Open Sans
+StyleName:Italic
+MenuName:Open Sans
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Open Sans Italic
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/OpenSans-Italic.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:212896
+FileModTime:502923474
+NameArray:0,Mac,4,Open Sans Italic
+NameArray:0,Win,1,Open Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:OpenSansLight-Italic
+FamilyName:Open Sans
+StyleName:Light Italic
+MenuName:Open Sans Light
+StyleBits:1
+WeightClass:300
+WidthClass:5
+AngleClass:1
+FullName:Open Sans Light Italic
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/OpenSans-LightItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:213128
+FileModTime:502923474
+NameArray:0,Mac,4,Open Sans Light Italic
+NameArray:0,Win,1,Open Sans Light
+NameArray:0,Win,16,Open Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:OpenSans
+FamilyName:Open Sans
+StyleName:Regular
+MenuName:Open Sans
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Open Sans
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/OpenSans-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:217360
+FileModTime:502923474
+NameArray:0,Mac,4,Open Sans
+NameArray:0,Win,1,Open Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:OpenSans-Semibold
+FamilyName:Open Sans
+StyleName:Semibold
+MenuName:Open Sans Semibold
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Open Sans Semibold
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/OpenSans-Semibold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:221328
+FileModTime:502923476
+NameArray:0,Mac,4,Open Sans Semibold
+NameArray:0,Win,1,Open Sans Semibold
+NameArray:0,Win,16,Open Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:OpenSans-SemiboldItalic
+FamilyName:Open Sans
+StyleName:Semibold Italic
+MenuName:Open Sans Semibold
+StyleBits:1
+WeightClass:600
+WidthClass:5
+AngleClass:1
+FullName:Open Sans Semibold Italic
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/OpenSans-SemiboldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:212820
+FileModTime:502923474
+NameArray:0,Mac,4,Open Sans Semibold Italic
+NameArray:0,Win,1,Open Sans Semibold
+NameArray:0,Win,16,Open Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Futura-Bold
+FamilyName:Futura
+StyleName:Bold
+MenuName:Futura
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Futura Bold
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Futura.ttc
+TTCOffset:612
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:487620
+FileModTime:705623360
+NameArray:0,Mac,4,Futura Bold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Futura-CondensedExtraBold
+FamilyName:Futura
+StyleName:Condensed ExtraBold
+MenuName:Futura
+StyleBits:2
+WeightClass:800
+WidthClass:3
+AngleClass:0
+FullName:Futura Condensed ExtraBold
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Futura.ttc
+TTCOffset:1196
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:487620
+FileModTime:705623360
+NameArray:0,Mac,4,Futura Condensed ExtraBold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Futura-CondensedMedium
+FamilyName:Futura
+StyleName:Condensed Medium
+MenuName:Futura
+StyleBits:0
+WeightClass:500
+WidthClass:3
+AngleClass:0
+FullName:Futura Condensed Medium
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Futura.ttc
+TTCOffset:912
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:487620
+FileModTime:705623360
+NameArray:0,Mac,4,Futura Condensed Medium
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Futura-Medium
+FamilyName:Futura
+StyleName:Medium
+MenuName:Futura
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Futura Medium
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Futura.ttc
+TTCOffset:44
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:487620
+FileModTime:705623360
+NameArray:0,Mac,4,Futura Medium
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Futura-MediumItalic
+FamilyName:Futura
+StyleName:Medium Italic
+MenuName:Futura
+StyleBits:1
+WeightClass:500
+WidthClass:5
+AngleClass:1
+FullName:Futura Medium Italic
+WritingScript:Roman
+OutlineFileName:/Users/sandrinewilliot/Desktop/Dossier FONDUE COEUR - Livret/Document fonts/Futura.ttc
+TTCOffset:328
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:487620
+FileModTime:705623360
+NameArray:0,Mac,4,Futura Medium Italic
+%EndFont
+

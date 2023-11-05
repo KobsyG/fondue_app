@@ -1,6 +1,7 @@
 import { ReactLenis } from '@studio-freight/react-lenis'
 import FirstPart from './components/FirstPart/FirstPart';
 import './App.css';
+import SecondPart from './components/SecondPart/SecondPart';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
       <ReactLenis root>
 
         <FirstPart />
+        <SecondPart />
 
       </ReactLenis>
   )

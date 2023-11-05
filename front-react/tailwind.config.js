@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        BigCaslon : ['BigCaslon'],
+      },
       spacing: {
         'large-page': '10000px', // Adjust the height value as needed
       },

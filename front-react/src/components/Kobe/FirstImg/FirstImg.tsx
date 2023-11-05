@@ -37,7 +37,7 @@ const FirstImg = () => {
         className='img-container'>
         <img
         ref={image}
-        src={require("./photo-test.webp")} alt="firstimg"/>
+        src={require("./montagne.jpeg")} alt="firstimg"/>
         <div ref={rideau} className='rideau'></div>
       </div>
     </div>

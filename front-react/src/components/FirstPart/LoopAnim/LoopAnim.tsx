@@ -32,9 +32,9 @@ const LoopAnim = (props: {
     }
   
     return (
-        <div className='slider relative whitespace-nowrap flex'>
-            <p ref={firstText1}>{props.phrase}</p>
-            <p ref={secondText1} className='left-[100%]'>{props.phrase}</p>
+        <div className='slider relative whitespace-nowrap flex overflow-hidden'>
+            <p ref={firstText1} className='font-BigCaslon'>{props.phrase}</p>
+            <p ref={secondText1} className='font-BigCaslon left-[100%]'>{props.phrase}</p>
         </div>
   )
 }

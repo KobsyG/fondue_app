@@ -1,15 +1,15 @@
 import { ReactLenis } from '@studio-freight/react-lenis'
-import FirstPart from './components/FirstPart/FirstPart';
 import './App.css';
-import SecondPart from './components/SecondPart/SecondPart';
+import TopImageMaskDown from './components/JB/TopImageMaskDown';
+import FallingCheese from './components/JB/FallingCheese';
+import MaskUpScaleDown from './components/JB/MaskUpScaleDown';
 
 function App() {
 
   return (
       <ReactLenis root>
 
-        <FirstPart />
-        <SecondPart />
+      <MaskUpScaleDown />
 
       </ReactLenis>
   )

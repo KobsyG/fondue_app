@@ -10,7 +10,7 @@ const phrase3 = "OMG LA THIRD LINE -"
 const FirstPart = () => {
   return (
     <div className='container-1st-part w-full h-[200vh] bg-orange-500 flex justify-center'>
-        <div className='slider-container absolute w-full'>
+        <div className='slider-container h-[100vh] top-[100vh] absolute w-full grid content-center'>
           <LoopAnim phrase={phrase1} direction={1} speed={0.2}/>
           <LoopAnim phrase={phrase2} direction={-1} speed={0.1}/>
           <LoopAnim phrase={phrase3} direction={1} speed={0.2}/>

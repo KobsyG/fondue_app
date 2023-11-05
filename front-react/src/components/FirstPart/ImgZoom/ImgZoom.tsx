@@ -17,10 +17,12 @@ const ImgZoom = () => {
             scrub: true,
         },
         css: {
+            // scaleX: 0.7,
+            // scaleY: 0.9,
             maxWidth: '400px',
             width: "50vw",
             height: "70vh",
-            // top: '15vh',
+            top: '15vh',
             // bottom: '15vh',
         }
     })

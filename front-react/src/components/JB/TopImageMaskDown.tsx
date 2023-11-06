@@ -58,18 +58,20 @@ function TopImageMaskDown() {
         });
 
         return () => {
+            console.log('DELETE ANIM')
             if (animation) {
-                console.log('DELETE ANIM')
                 animation.kill();
+            }
+            if (animation2) {
                 animation2.kill();
             }
         };
     }, [scaleRatio]);
 
     return (
-        <div className='grande-fen w-full h-[200vh]'>
-            <div className='absolute top-0 w-full h-[100vh] bg-orange-200' />
-            <div className='absolute top-[100vh] w-full h-[100vh] bg-orange-400' />
+        <div className='grande-fen w-full h-[200vh] bg-fondue-yellow'>
+            {/* <div className='absolute top-0 w-full h-[100vh] bg-orange-200' /> */}
+            {/* <div className='absolute top-[100vh] w-full h-[100vh] bg-fondue-yellow' /> */}
             <div className='mask sticky top-0 w-full h-[100vh] overflow-hidden flex items-center justify-center'>
                 <div className='cadre-img min-w-600 w-[600px] h-[80vh] bg-fondue-red overflow-hidden flex items-center justify-center'>
                     <img src={MIB} className='mib object-cover w-full' />

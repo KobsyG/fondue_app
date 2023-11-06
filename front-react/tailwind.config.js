@@ -5,9 +5,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     extend: {
       fontFamily: {
-        BigCaslon : ['BigCaslon'],
       },
       spacing: {
         'large-page': '10000px', // Adjust the height value as needed

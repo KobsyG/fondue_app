@@ -5,10 +5,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     extend: {
-      fontFamily: {
-        BigCaslon : ['BigCaslon'],
-      },
       spacing: {
         'large-page': '10000px', // Adjust the height value as needed
       },
@@ -19,6 +23,7 @@ module.exports = {
       },
       backgroundImage: {
         'contreplaque-pattern': "url('/src/images/Kraft.png')",
+        'bois': "url('/src/images/bois.avif')",
       }
     },
   },

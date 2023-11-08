@@ -4,6 +4,8 @@ import TopImageMaskDown from './components/JB/TopImageMaskDown';
 import FallingCheese from './components/JB/FallingCheese';
 import MaskUpScaleDown from './components/JB/MaskUpScaleDown';
 import FirstPart from './components/FirstPart/FirstPart';
+import LaBelleHistoire from './components/JB/LaBelleHistoire';
+import CloudCheese from './components/JB/CloudCheese';
 
 function App() {
 
@@ -11,7 +13,8 @@ function App() {
       <ReactLenis root>
 
       <FirstPart />
-      {/* <TopImageMaskDown /> */}
+      <LaBelleHistoire />
+      <CloudCheese />
 
       </ReactLenis>
   )

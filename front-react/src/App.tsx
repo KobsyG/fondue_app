@@ -14,7 +14,6 @@ function App() {
 
       <FirstPart />
       <LaBelleHistoire />
-      <CloudCheese />
 
       </ReactLenis>
   )

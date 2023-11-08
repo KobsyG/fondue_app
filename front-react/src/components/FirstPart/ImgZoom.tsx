@@ -42,7 +42,7 @@ const ImgZoom = () => {
                         scrub: true,
                     },
                     css: {
-                        width: '50vw',
+                        width: '40vw',
                         height: "90vh",
                     }
                 })

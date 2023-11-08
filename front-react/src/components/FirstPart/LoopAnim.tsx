@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import '../../styles/LoopAnim.css'
 
@@ -8,13 +8,18 @@ const LoopAnim = (props: {
                 speed: number,
 }) => {
   
-    const firstText1 = useRef(null);
-    const secondText1 = useRef(null);
+    const firstText1 = useRef(null)
+    const secondText1 = useRef(null)
+    const container = useRef(null)
+    
     let xPercent = 0;
     let direction = props.direction;
 
-    useEffect(() => {
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
         requestAnimationFrame(animation);
+    }, container)
+        return ctx.revert();
     })
 
     const animation = () => {
@@ -32,9 +37,9 @@ const LoopAnim = (props: {
     }
   
     return (
-        <div className='slider relative whitespace-nowrap flex overflow-hidden'>
-            <p ref={firstText1} className='font-BigCaslon'>{props.phrase}</p>
-            <p ref={secondText1} className='font-BigCaslon left-[100%]'>{props.phrase}</p>
+        <div ref={container} className='slider relative w-[100vw] whitespace-nowrap flex overflow-hidden '>
+            <p ref={firstText1} className='font-BigCaslon'>{props.phrase}<span>#FONDOUX -</span></p>
+            <p ref={secondText1} className='font-BigCaslon'>{props.phrase}<span>#FONDOUX -</span></p>
         </div>
   )
 }

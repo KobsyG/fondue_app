@@ -17,6 +17,9 @@ module.exports = {
         'fondue-yellow': '#FED88E',
         'fondue-red': '#E50044',
       },
+      backgroundImage: {
+        'contreplaque-pattern': "url('/src/images/Kraft.png')",
+      }
     },
   },
   plugins: [],

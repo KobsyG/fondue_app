@@ -3,7 +3,7 @@ import cubeCheese from '../../images/cheese1.svg'
 import triangleCheese2 from '../../images/cheese2.svg'
 import gsap from 'gsap'
 
-function CloudCheese({classAdd}: {classAdd: string}) {
+function CloudCheese({ classAdd }: { classAdd: string }) {
 
   useEffect(() => {
 
@@ -20,7 +20,7 @@ function CloudCheese({classAdd}: {classAdd: string}) {
 
     const cheeseDistance2 = gsap.fromTo('.cheeseDistance2', {
       xPercent: 100,
-      opacity: 0.7,
+      opacity: 0.9,
     }, {
       xPercent: -20,
       duration: 7,
@@ -30,7 +30,7 @@ function CloudCheese({classAdd}: {classAdd: string}) {
 
     const cheeseDistance3 = gsap.fromTo('.cheeseDistance3', {
       xPercent: 100,
-      opacity: 0.6,
+      opacity: 0.8,
     }, {
       xPercent: -20,
       delay: 3,
@@ -53,15 +53,15 @@ function CloudCheese({classAdd}: {classAdd: string}) {
   }, []);
 
   return (
-    <div className={`absolute z-20 ${classAdd} w-[100vw] h-[100vh]`}>
-      <div className='absolute cheeseDistance1 mt-[50vh] w-full flex items-center'>
-        <img src={cubeCheese} className='w-[30%] aspect-[1/1]' />
+    <div className={`absolute ${classAdd} w-[100vw] h-full overflow-hidden`}>
+      <div className='absolute z-20 cheeseDistance3 top-[30%] w-full flex items-center'>
+        <img src={cubeCheese} className='w-[20%] aspect-[1/1]' />
       </div>
-      <div className='absolute cheeseDistance2 mt-[10vh] w-full flex items-center'>
+      <div className='absolute z-20 cheeseDistance2 top-[25%] w-full flex items-center'>
         <img src={cubeCheese} className='w-[25%] aspect-[1/1]' />
       </div>
-      <div className='absolute cheeseDistance3 mt-[15vh] w-full flex items-center'>
-        <img src={cubeCheese} className='w-[20%] aspect-[1/1]' />
+      <div className='absolute z-0 cheeseDistance1 top-[50%] w-full flex items-center'>
+        <img src={cubeCheese} className='w-[30%] aspect-[1/1]' />
       </div>
     </div>
   )

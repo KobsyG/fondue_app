@@ -8,8 +8,9 @@ module.exports = {
     screens: {
       sm: '640px',
       md: '768px',
-      lg: '976px',
-      xl: '1440px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
     },
     extend: {
       fontFamily: {
@@ -22,6 +23,9 @@ module.exports = {
         'fondue-yellow': '#FED88E',
         'fondue-red': '#E50044',
       },
+      backgroundImage: {
+        'bois': "url('/src/images/bois.avif')",
+      }
     },
   },
   plugins: [],

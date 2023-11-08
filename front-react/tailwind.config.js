@@ -13,8 +13,6 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
-      fontFamily: {
-      },
       spacing: {
         'large-page': '10000px', // Adjust the height value as needed
       },

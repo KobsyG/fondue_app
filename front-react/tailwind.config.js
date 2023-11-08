@@ -22,6 +22,7 @@ module.exports = {
         'fondue-red': '#E50044',
       },
       backgroundImage: {
+        'contreplaque-pattern': "url('/src/images/Kraft.png')",
         'bois': "url('/src/images/bois.avif')",
       }
     },

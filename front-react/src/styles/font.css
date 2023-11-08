@@ -1,4 +1,31 @@
 @font-face {
-    font-family: BigCaslon;
-    src: url("../fonts/BigCaslon.ttf");
+    font-family: 'BigCaslon';
+    src: url("../fonts/BigCaslon.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'AvocadoCake';
+    src: url("../fonts/Avocado\ Cake\ Demo.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'MoonFlowerBold';
+    src: url("../fonts/Moon\ Flower\ Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'AlohaMarch';
+    src: url("../fonts/Aloha\ March.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'MinionPro';
+    src: url("../fonts/MinionPro-Regular.otf") format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MinionProBold';
+    src: url("../fonts/MinionPro-Bold.otf") format('opentype');
+    font-weight: bold;
 }

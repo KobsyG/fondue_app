@@ -1,5 +1,5 @@
 import React from 'react'
-import History from '../Kobe/History/History'
+import History from '../History/History'
 
 
 const SecondPart = () => {

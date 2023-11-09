@@ -17,7 +17,7 @@ const LoopAnim = (props: {
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-        requestAnimationFrame(animation);
+        // requestAnimationFrame(animation);
     }, container)
         return ctx.revert();
     })
@@ -37,7 +37,7 @@ const LoopAnim = (props: {
     }
   
     return (
-        <div ref={container} className='slider relative w-[100vw] whitespace-nowrap flex overflow-hidden '>
+        <div ref={container} className='slider relative w-[105vw] whitespace-nowrap flex overflow-hidden '>
             <p ref={firstText1} className='font-BigCaslon'>{props.phrase}<span>#FONDOUX -</span></p>
             <p ref={secondText1} className='font-BigCaslon'>{props.phrase}<span>#FONDOUX -</span></p>
         </div>

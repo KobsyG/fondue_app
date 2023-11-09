@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import LoopAnim from './LoopAnim'
 import ImgZoom from './ImgZoom'
-import StaticText from './StaticText'
+import StaticText from './StaticTextTitle'
 
 const phrase1 = "GÉNÉREUSE - VRAIE - IRRÉSISTIBLE - FIÈRE DE SON TERROIR - AUTHENTIQUE - ADDICTIVE - "
 const phrase2 = "AUTHENTIQUE - ADDICTIVE - GÉNÉREUSE - VRAIE - IRRÉSISTIBLE - FIÈRE DE SON TERROIR - "

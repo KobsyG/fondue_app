@@ -17,7 +17,7 @@ const LoopAnim = (props: {
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-        // requestAnimationFrame(animation);
+        requestAnimationFrame(animation);
     }, container)
         return ctx.revert();
     })

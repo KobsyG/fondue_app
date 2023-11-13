@@ -56,7 +56,7 @@ const ImgZoom = () => {
         <div ref={container}>
             <div className='photo-wrap-contain h-[100vh] w-[100vw] sticky top-0 flex items-center justify-center'>
                 <div ref={wrap} className='photo-wrap bg-white min-w-[600px]'>
-                    <img className='object-cover w-full h-full' src={require("../../images/cheese-kitchen.jpg")} />
+                    <img className='object-cover w-full h-full' src={require("../../../images/cheese-kitchen.jpg")} />
                 </div>
             </div>
         </div>

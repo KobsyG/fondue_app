@@ -1,6 +1,4 @@
-.rounded {
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
-    /* border-bottom-left-radius: 50%;
-    border-bottom-left-radius: 50%; */
+h1, p {
+    color: #2E2573;
+    font-size: 6vw;
 }

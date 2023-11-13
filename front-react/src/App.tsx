@@ -5,6 +5,7 @@ import FallingCheese from './components/JB/FallingCheese';
 import MaskUpScaleDown from './components/JB/MaskUpScaleDown';
 import LaBelleHistoire from './components/JB/LaBelleHistoire';
 import CloudCheese from './components/JB/CloudCheese';
+import Effect1 from './components/JB/Effect1';
 
 //fonts
 // import './fonts/AvocadoCake.otf';
@@ -15,8 +16,9 @@ function App() {
       <ReactLenis root>
 
       {/* <MaskUpScaleDown /> */}
-      <TopImageMaskDown />
+      {/* <TopImageMaskDown /> */}
       <LaBelleHistoire />
+      <Effect1 />
       {/* <CloudCheese /> */}
 
       </ReactLenis>

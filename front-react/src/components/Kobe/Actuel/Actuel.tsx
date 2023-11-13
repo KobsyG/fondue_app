@@ -141,7 +141,7 @@ const Actuel = () => {
 
         <div className='main-container w-[80%] mx-auto bg-fondue-blue'>
 
-          <div className='cheese-contain -top-[130vh] md:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
+          <div className='cheese-contain -top-[130vh] xl:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
             <div className='carree-cheese w-full h-[200vh] bg-fondue-yellow' />
             <div className='coulee'>
               <img className='w-full' src={coulee} />
@@ -154,19 +154,23 @@ const Actuel = () => {
                 <img className='h-full w-full object-contain' src={compere} />
               </div>
               <div className='text relative h-full w-1/2 flex items-center'>
-                <p className='hist1 absolute text-center md:text-justify text-[18px] md:text-[28px] lg:text-[32px] w-[80%]' style={{ fontFamily: 'AvocadoCake' }}>{title}</p>
-                <p className='hist2 absolute text-center md:text-justify text-[18px] md:text-[28px] lg:text-[32px] w-[80%] opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireFirst}</p>
-                <p className='hist3 absolute text-center md:text-justify text-[18px] md:text-[28px] lg:text-[32px] w-[80%] opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireSecond}</p>
+                <p className='hist1 w-[80%] absolute text-center text-[18px] md:text-[22px] xl:text-[35px] 2xl:text-[50px]' style={{ fontFamily: 'AvocadoCake' }}>{title}</p>
+                <p className='hist2 w-[80%] absolute text-center text-[18px] md:text-[22px] xl:text-[35px] 2xl:text-[50px] xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireFirst}</p>
+                <p className='hist3 w-[80%] absolute text-center text-[18px] md:text-[22px] xl:text-[35px] 2xl:text-[50px] xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireSecond}</p>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className='w-[80%] mx-auto'>
+          <img className='w-full' src={coulee} />
+        </div>
 
 
-
-          {/* <div className='montagne w-[100vw] mt-[20vh]'>
+        {/* <div className='montagne w-[100vw] mt-[20vh]'>
             <img src={montagne} />
           </div> */}
-          {/* </div> */}
+        {/* </div> */}
 
 
 
@@ -175,14 +179,13 @@ const Actuel = () => {
 
 
 
-          {/* <div className='suite w-full h-[50vh] bg-red-200' />
+        {/* <div className='suite w-full h-[50vh] bg-red-200' />
         <div className='suite w-full h-[50vh] bg-red-300' />
         <div className='suite w-full h-[50vh] bg-red-400' />
         <div className='suite w-full h-[50vh] bg-red-500' />
         <div className='suite w-full h-[50vh] bg-red-600' /> */}
 
 
-        </div>
       </div>
     </>
   )

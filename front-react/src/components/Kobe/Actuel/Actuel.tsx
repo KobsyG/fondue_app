@@ -21,39 +21,6 @@ const Actuel = () => {
 
     let ctx = gsap.context(() => {
 
-      // gsap.to('.cheese-contain', {
-      //   opacity: 0,
-      //   scrollTrigger: {
-      //     trigger: '.title',
-      //     start: 'bottom top',
-      //     end: '+=200px',
-      //     scrub: true,
-      //   }
-      // })
-
-      // gsap.to('.compere', {
-      //   opacity: 0,
-      //   scrollTrigger: {
-      //     trigger: '.title',
-      //     start: 'bottom top',
-      //     end: '+=200px',
-      //     scrub: true,
-      //   }
-      // })
-
-      gsap.from(".cheese-contain", {
-        y: '-190vh',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: ".title",
-          start: 'top top',
-          endTrigger: '.histoire',
-          end: 'center center',
-          scrub: true,
-        },
-      },
-      )
-
       gsap.to(".histoire", {
         scrollTrigger: {
           trigger: ".histoire-container",
@@ -73,28 +40,53 @@ const Actuel = () => {
         opacity: 0,
       })
 
-      gsap.to(".hist2", {
+      // gsap.to(".hist2",
+      //   {
+      //     opacity: 1,
+      //     // autoAlpha: 1,
+      //     scrollTrigger: {
+      //       trigger: ".histoire-container",
+      //       start: '25% center',
+      //       end: '25% top',
+      //       scrub: true,
+      //     },
+      //   })
+
+      // gsap.to(".hist2",
+      //   {
+      //     opacity: 0,
+      //     // autoAlpha: 0,
+      //     scrollTrigger: {
+      //       trigger: '.histoire-container',
+      //       start: '50% center',
+      //       end: '50% top',
+      //       scrub: true,
+      //       markers: true,
+      //       onUpdate: (self) => {
+      //         console.log("HIST 2 :", self.progress);
+      //       },
+      //     },
+      //   });
+
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".histoire-container",
           start: '25% center',
-          end: '25% top',
-          scrub: true,
-        },
-        opacity: 1,
-      })
-
-      gsap.fromTo(".hist2", {
-        opacity: 1,
-      },
-      {
-        scrollTrigger: {
-          trigger: ".histoire-container",
-          start: '50% center',
           end: '50% top',
           scrub: true,
         },
+      });
+
+      tl.to(".hist2", {
+        opacity: 1,
+        duration: 1,
+      }).to(".hist2", {
+        opacity: 1,
+        duration: 1,
+      }).to(".hist2", {
         opacity: 0,
-      })
+        duration: 1,
+      });
 
       gsap.to(".hist3", {
         scrollTrigger: {
@@ -105,6 +97,29 @@ const Actuel = () => {
         },
         opacity: 1,
       })
+    })
+
+    gsap.to(".cheese-contain", {
+      y: '170vh',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: ".title",
+        start: 'top top',
+        endTrigger: '.histoire-container',
+        end: 'top top',
+        scrub: true,
+      },
+    })
+
+    gsap.to(".main-container", {
+      scrollTrigger: {
+        trigger: ".histoire-container",
+        start: 'top top',
+        end: 'top top',
+        scrub: true,
+      },
+      backgroundColor: '#FED88E',
+      ease: "none",
     })
 
     return () => ctx.revert();
@@ -118,36 +133,30 @@ const Actuel = () => {
   return (
     <>
       <div className='landing-container w-full aspect-[1/8] bg-fondue-blue'>
-        {/* <div className='w-[80vw] h-full relative'> */}
 
 
+        <div className='title w-[full] h-[100vh] flex justify-center items-center'>
+          <img className='h-[40%] z-30' src={require("../../../images/logo-bleu.png")} />
+        </div>
 
-        {/* <div className='title-container w-full h-[100vh] bg-orange-200 flex'> */}
-          <div className='title w-[full] h-[100vh] flex justify-center items-center'>
-            <img className='h-[40%] z-30' src={require("../../../images/logo-bleu.png")} />
+        <div className='main-container w-[80%] mx-auto bg-fondue-blue'>
+
+          <div className='cheese-contain -top-[130vh] md:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
+            <div className='carree-cheese w-full h-[200vh] bg-fondue-yellow' />
+            <div className='coulee'>
+              <img className='w-full' src={coulee} />
+            </div>
           </div>
-        {/* </div> */}
 
-        <div className='w-[80%] mx-auto bg-fondue-yellow'>
-
-
-
-          {/* <div className='cheese-contain z-10 top-[90vh] absolute w-[80%] right-[10%]'>
-          <div className='carree-cheese w-full h-[100vh] bg-fondue-yellow' />
-          <div className='coulee'>
-            <img className='w-full' src={coulee} />
-          </div>
-        </div> */}
-
-          <div className='histoire-container w-full h-[400vh] bg-orange-400'>
-            <div className='histoire z-20 w-full h-[100vh] bg-fondue-yellow flex'>
+          <div className='histoire-container w-full h-[400vh] '>
+            <div className='histoire z-20 w-full h-[100vh] flex'>
               <div className='compere h-full w-1/2 md:p-[10%]'>
                 <img className='h-full w-full object-contain' src={compere} />
               </div>
               <div className='text relative h-full w-1/2 flex items-center'>
-                <p className='hist1 absolute text-justify text-[22px] md:text-[28px] lg:text-[32px] w-[80%]' style={{ fontFamily: 'AvocadoCake' }}>{title}</p>
-                <p className='hist2 absolute opacity-0 text-justify text-[22px] md:text-[28px] lg:text-[32px] w-[80%]' style={{ fontFamily: 'AvocadoCake' }}>{histoireFirst}</p>
-                <p className='hist3 absolute opacity-0 text-justify text-[22px] md:text-[28px] lg:text-[32px] w-[80%]' style={{ fontFamily: 'AvocadoCake' }}>{histoireSecond}</p>
+                <p className='hist1 absolute text-center md:text-justify text-[18px] md:text-[28px] lg:text-[32px] w-[80%]' style={{ fontFamily: 'AvocadoCake' }}>{title}</p>
+                <p className='hist2 absolute text-center md:text-justify text-[18px] md:text-[28px] lg:text-[32px] w-[80%] opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireFirst}</p>
+                <p className='hist3 absolute text-center md:text-justify text-[18px] md:text-[28px] lg:text-[32px] w-[80%] opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireSecond}</p>
               </div>
             </div>
           </div>

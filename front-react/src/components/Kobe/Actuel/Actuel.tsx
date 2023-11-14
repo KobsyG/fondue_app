@@ -30,73 +30,30 @@ const Actuel = () => {
         }
       })
 
-      gsap.to(".hist1", {
-        scrollTrigger: {
-          trigger: ".histoire-container",
-          start: '25% bottom',
-          end: '25% center',
-          scrub: true,
-        },
-        opacity: 0,
-      })
-
-      // gsap.to(".hist2",
-      //   {
-      //     opacity: 1,
-      //     // autoAlpha: 1,
-      //     scrollTrigger: {
-      //       trigger: ".histoire-container",
-      //       start: '25% center',
-      //       end: '25% top',
-      //       scrub: true,
-      //     },
-      //   })
-
-      // gsap.to(".hist2",
-      //   {
-      //     opacity: 0,
-      //     // autoAlpha: 0,
-      //     scrollTrigger: {
-      //       trigger: '.histoire-container',
-      //       start: '50% center',
-      //       end: '50% top',
-      //       scrub: true,
-      //       markers: true,
-      //       onUpdate: (self) => {
-      //         console.log("HIST 2 :", self.progress);
-      //       },
-      //     },
-      //   });
-
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".histoire-container",
-          start: '25% center',
-          end: '50% top',
+          start: 'top top',
+          end: 'bottom bottom',
           scrub: true,
         },
       });
 
-      tl.to(".hist2", {
-        opacity: 1,
+      tl.to(".hist1", {
+        opacity: 0,
         duration: 1,
       }).to(".hist2", {
         opacity: 1,
+        duration: 1,
+      }).to(".hist2", {
         duration: 1,
       }).to(".hist2", {
         opacity: 0,
         duration: 1,
-      });
-
-      gsap.to(".hist3", {
-        scrollTrigger: {
-          trigger: ".histoire-container",
-          start: '75% bottom',
-          end: '75% center',
-          scrub: true,
-        },
+      }).to(".hist3", {
         opacity: 1,
-      })
+        duration: 1,
+      });
     })
 
     gsap.to(".cheese-contain", {
@@ -136,12 +93,12 @@ const Actuel = () => {
 
 
         <div className='title w-[full] h-[100vh] flex justify-center items-center'>
-          <img className='h-[40%] z-30' src={require("../../../images/logo-bleu.png")} />
+          <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={require("../../../images/logo-bleu.png")} />
         </div>
 
         <div className='main-container w-[80%] mx-auto bg-fondue-blue'>
 
-          <div className='cheese-contain -top-[130vh] xl:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
+          <div className='cheese-contain -top-[130vh] 2xl:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
             <div className='carree-cheese w-full h-[200vh] bg-fondue-yellow' />
             <div className='coulee'>
               <img className='w-full' src={coulee} />
@@ -149,14 +106,14 @@ const Actuel = () => {
           </div>
 
           <div className='histoire-container w-full h-[400vh] '>
-            <div className='histoire z-20 w-full h-[100vh] flex'>
-              <div className='compere h-full w-1/2 md:p-[10%]'>
+            <div className='histoire z-20 w-full h-[100vh] flex flex-col lg:flex-row'>
+              <div className='compere w-full h-1/2 lg:h-full lg:w-1/2 p-[10%]'>
                 <img className='h-full w-full object-contain' src={compere} />
               </div>
-              <div className='text relative h-full w-1/2 flex items-center'>
-                <p className='hist1 w-[80%] absolute text-center text-[18px] md:text-[22px] xl:text-[35px] 2xl:text-[50px]' style={{ fontFamily: 'AvocadoCake' }}>{title}</p>
-                <p className='hist2 w-[80%] absolute text-center text-[18px] md:text-[22px] xl:text-[35px] 2xl:text-[50px] xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireFirst}</p>
-                <p className='hist3 w-[80%] absolute text-center text-[18px] md:text-[22px] xl:text-[35px] 2xl:text-[50px] xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireSecond}</p>
+              <div className='text mb-[20%] lg:mb-[0%] lg:right-[5%] relative w-full h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center'>
+                <p className='hist1 w-[80%] absolute text-center text-[18px] sm:text-[26px] 2xl:text-[36px] 3xl:text-[46px] 4xl:text-[56px]' style={{ fontFamily: 'AvocadoCake' }}>{title}</p>
+                <p className='hist2 w-[80%] absolute text-center text-[18px] sm:text-[26px] 2xl:text-[36px] 3xl:text-[46px] 4xl:text-[56px] 2xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireFirst}</p>
+                <p className='hist3 w-[80%] absolute text-center text-[18px] sm:text-[26px] 2xl:text-[36px] 3xl:text-[46px] 4xl:text-[56px] 2xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireSecond}</p>
               </div>
             </div>
           </div>

@@ -26,6 +26,7 @@ module.exports = {
       backgroundImage: {
         'contreplaque-pattern': "url('/src/images/Kraft.png')",
         'bois': "url('/src/images/bois.avif')",
+        'montagne': "url('/src/images/bg-montagne.png')",
       }
     },
   },

@@ -2,7 +2,8 @@ import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { gsap } from 'gsap'
 import './Actuel.css'
-const montagne = require("../../../images/montagne.png");
+const hautmontagne = require("../../../images/haut-mont.png");
+const basmontagne = require("../../../images/bas-mont.png");
 const montcoul = require("../../../images/mont-coul.png");
 const compere = require("../../../images/comper.png")
 const text = require("../../../images/text.png")
@@ -79,6 +80,59 @@ const Actuel = () => {
       ease: "none",
     })
 
+
+
+    // --------------------------------------------------------------------------
+    // ------------------------- TERROIR ANIMATION ------------------------------
+    // --------------------------------------------------------------------------
+
+
+    gsap.to(".coulee", {
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".montagne",
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      },
+    })
+
+    gsap.to(".fleur", {
+      opacity: 1,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".montagne",
+        start: 'top top',
+        // endTrigger: '.montagne-container',
+        // end: '20% top',
+        scrub: true,
+        // pin: ".montagne",
+        markers: true,
+      },
+    })
+
+    // gsap.to(".fleur", {
+    //   opacity: 1,
+    //   // duration: 1,
+    //   scrollTrigger: {
+    //     trigger: ".montagne",
+    //     start: 'top top',
+    //     endTrigger: '.montagne-container',
+    //     end: '20% top',
+    //     scrub: true,
+    //     pin: ".montagne",
+    //     markers: true,
+    //   },
+    // })
+
+    // gsap.to(".montagne", {
+    //   scrollTrigger: {
+    //     trigger:
+    //     pin
+    //   }
+    // })
+
     return () => ctx.revert();
 
   }, [])
@@ -119,14 +173,24 @@ const Actuel = () => {
           </div>
         </div>
 
-        <div className='w-[80%] mx-auto'>
-          <img className='w-full' src={coulee} />
+        <div className='terroir-container w-full h-[400vh] bg-fondue-blue'>
+          <div className='coulee w-[80%] z-10 mx-auto sticky top-0'>
+            <img className='w-full' src={coulee} />
+          </div>
+          <div className='montagne z-0 sticky top-0 h-[200vh]'>
+            <img className='w-full object-cover' src={hautmontagne} />
+            <img className='fleur h-48 absolute top-40 left-80 opacity-0' src={require('../../../images/fleur.png')} />
+            <img className='fleur h-48 absolute top-40 right-80 opacity-0' src={require('../../../images/fleur.png')} />
+            <div className='h-[100vh]'>
+              <img className='h-full' src={basmontagne} />
+            </div>
+          </div>
+
+        <div className='bg-red-400 h-[100vh]' />
         </div>
 
+        {/* <div className='bg-montagne-container bg-red-500 h-[100vh]'/> */}
 
-        {/* <div className='montagne w-[100vw] mt-[20vh]'>
-            <img src={montagne} />
-          </div> */}
         {/* </div> */}
 
 
@@ -143,7 +207,7 @@ const Actuel = () => {
         <div className='suite w-full h-[50vh] bg-red-600' /> */}
 
 
-      </div>
+      </div >
     </>
   )
 }

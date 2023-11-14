@@ -34,3 +34,8 @@
     font-family: 'OccamsEraser';
     src: url("../fonts/Occams\ Eraser.otf") format('opentype');
 }
+
+@font-face {
+    font-family: 'Allora';
+    src: url("../fonts/Allora.ttf") format('truetype');
+}

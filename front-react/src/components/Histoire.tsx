@@ -56,29 +56,31 @@ const Histoire = () => {
                 opacity: 1,
                 duration: 1,
             });
-        })
 
-        gsap.to(".cheese-contain", {
-            y: '170vh',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: ".title",
-                start: 'top top',
-                endTrigger: '.histoire-container',
-                end: 'top top',
-                scrub: true,
-            },
-        })
 
-        gsap.to(".main-container", {
-            scrollTrigger: {
-                trigger: ".histoire-container",
-                start: 'top top',
-                end: 'top top',
-                scrub: true,
-            },
-            backgroundColor: '#FED88E',
-            ease: "none",
+            gsap.to(".cheese-contain", {
+                y: '170vh',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: ".title",
+                    start: 'top top',
+                    endTrigger: '.histoire-container',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(".main-container", {
+                scrollTrigger: {
+                    trigger: ".histoire-container",
+                    start: 'top top',
+                    end: 'top top',
+                    scrub: true,
+                },
+                backgroundColor: '#FED88E',
+                ease: "none",
+            })
+
         })
 
         return () => ctx.revert();
@@ -93,15 +95,16 @@ const Histoire = () => {
 
     return (
         <>
-            <div className='title w-[full] h-[100vh] flex justify-center items-center'>
-                <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={require("../images/logo-bleu.png")} />
-            </div>
+            <div className='landing-container w-full bg-fondue-blue'>
+                <div className='title w-[full] h-[100vh] flex justify-center items-center'>
+                    <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={require("../images/logo-bleu.png")} />
+                </div>
 
-            <div className='main-container w-[80%] mx-auto bg-fondue-blue'>
+                <div className='main-container w-[80%] mx-auto bg-fondue-blue'>
 
-                <div className='cheese-contain -top-[130vh] 2xl:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
-                    <div className='carree-cheese w-full h-[200vh] bg-fondue-yellow' />
-                    {/* <picture>
+                    <div className='cheese-contain -top-[130vh] 2xl:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
+                        <div className='carree-cheese w-full h-[200vh] bg-fondue-yellow' />
+                        {/* <picture>
             <source
                 media="(max-width: 600px)"
                 srcSet={`${couleeTel}`}
@@ -112,28 +115,31 @@ const Histoire = () => {
               />
               <img className='' src={couleePc}/>
             </picture> */}
-                    <picture className='coulee'>
-                        {/* <source
-                  media="(max-width: 600px)"
-                  srcSet={couleeTel}
-                />
-                <source
-                  media="(min-width: 601px)"
-                  srcSet={couleePc}
-                /> */}
-                        <img src={couleePc} />
-                    </picture>
-                </div>
-
-                <div className='histoire-container w-full h-[400vh] '>
-                    <div className='histoire z-20 w-full h-[100vh] flex flex-col lg:flex-row'>
-                        <div className='compere w-full h-1/2 lg:h-full lg:w-1/2 p-[10%]'>
-                            <img className='h-full w-full object-contain' src={compere} />
+                        <div className='coulee'>
+                            <img src={couleeTel} className='lg:hidden' />
+                            
+                            <source
+                                media="(max-width: 600px)"
+                                srcSet={`${couleePc}`}
+                            />
+                            <source
+                                media="(min-width: 1200px)"
+                                srcSet={`${couleePc}`}
+                            />
+                            <img className='hidden lg:block' />
                         </div>
-                        <div className='text mb-[20%] lg:mb-[0%] lg:right-[5%] relative w-full h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center'>
-                            <p className='hist1 w-[80%] absolute text-center text-[18px] sm:text-[26px] 2xl:text-[36px] 3xl:text-[46px] 4xl:text-[56px]' style={{ fontFamily: 'AvocadoCake' }}>{title}</p>
-                            <p className='hist2 w-[80%] absolute text-center text-[18px] sm:text-[26px] 2xl:text-[36px] 3xl:text-[46px] 4xl:text-[56px] 2xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireFirst}</p>
-                            <p className='hist3 w-[80%] absolute text-center text-[18px] sm:text-[26px] 2xl:text-[36px] 3xl:text-[46px] 4xl:text-[56px] 2xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireSecond}</p>
+                    </div>
+
+                    <div className='histoire-container w-full h-[400vh] '>
+                        <div className='histoire z-20 w-full h-[100vh] flex flex-col lg:flex-row'>
+                            <div className='compere w-full h-1/2 lg:h-full lg:w-1/2 p-[10%]'>
+                                <img className='h-full w-full object-contain' src={compere} />
+                            </div>
+                            <div className='text mb-[20%] lg:mb-[0%] lg:right-[5%] relative w-full h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center'>
+                                <p className='hist1 w-[80%] absolute text-center text-[18px] sm:text-[26px] 2xl:text-[36px] 3xl:text-[46px] 4xl:text-[56px]' style={{ fontFamily: 'AvocadoCake' }}>{title}</p>
+                                <p className='hist2 w-[80%] absolute text-center text-[18px] sm:text-[26px] 2xl:text-[36px] 3xl:text-[46px] 4xl:text-[56px] 2xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireFirst}</p>
+                                <p className='hist3 w-[80%] absolute text-center text-[18px] sm:text-[26px] 2xl:text-[36px] 3xl:text-[46px] 4xl:text-[56px] 2xl:text-justify opacity-0' style={{ fontFamily: 'AvocadoCake' }}>{histoireSecond}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

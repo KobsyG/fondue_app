@@ -7,7 +7,11 @@ const basmontagne = require("../../../images/bas-mont.png");
 const montcoul = require("../../../images/mont-coul.png");
 const compere = require("../../../images/comper.png")
 const text = require("../../../images/text.png")
-const coulee = require("../../../images/coulee.png")
+// const coulee = require("../../../images/coulee.png")
+const montCP = require("../../../images/MontagneCP.png")
+const coulee = require("../../../images/CouleeShortV2.png")
+
+// import montagneCP from '../../../images/Mo,'
 
 const title = "Il était une fois deux amis, partis bras dessus bras dessous pour conquérir un titre aussi inattendu que réjouissant..."
 const histoireFirst = "C'est ainsi que le 13 mars 2022, à Montréjeau, Alban et Jean-Jacques remportent le premier titre de Champion de France de Fondue aux Fromages devant 20 autres équipes candidates au titre. Ils innovent en proposant une recette à base des 5 AOP du Cantal ! Et quelques ingrédients secrets qui vont vous être dévoilés..."
@@ -87,30 +91,30 @@ const Actuel = () => {
     // --------------------------------------------------------------------------
 
 
-    gsap.to(".coulee", {
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".montagne",
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true,
-      },
-    })
+    // gsap.to(".coulee", {
+    //   opacity: 0,
+    //   duration: 1,
+    //   scrollTrigger: {
+    //     trigger: ".montagne",
+    //     start: 'top top',
+    //     end: 'bottom top',
+    //     scrub: true,
+    //   },
+    // })
 
-    gsap.to(".fleur", {
-      opacity: 1,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".montagne",
-        start: 'top top',
-        // endTrigger: '.montagne-container',
-        // end: '20% top',
-        scrub: true,
-        // pin: ".montagne",
-        markers: true,
-      },
-    })
+    // gsap.to(".fleur", {
+    //   opacity: 1,
+    //   duration: 1,
+    //   scrollTrigger: {
+    //     trigger: ".montagne",
+    //     start: 'top top',
+    //     // endTrigger: '.montagne-container',
+    //     // end: '20% top',
+    //     scrub: true,
+    //     // pin: ".montagne",
+    //     markers: true,
+    //   },
+    // })
 
     // gsap.to(".fleur", {
     //   opacity: 1,
@@ -178,16 +182,17 @@ const Actuel = () => {
             <img className='w-full' src={coulee} />
           </div>
           <div className='montagne z-0 sticky top-0 h-[200vh]'>
-            <img className='w-full object-cover' src={hautmontagne} />
-            <img className='fleur h-48 absolute top-40 left-80 opacity-0' src={require('../../../images/fleur.png')} />
+            <img className='w-full object-cover' src={montCP} />
+            {/* <img className='fleur h-48 absolute top-40 left-80 opacity-0' src={require('../../../images/fleur.png')} />
             <img className='fleur h-48 absolute top-40 right-80 opacity-0' src={require('../../../images/fleur.png')} />
             <div className='h-[100vh]'>
               <img className='h-full' src={basmontagne} />
-            </div>
+            </div> */}
           </div>
 
-        <div className='bg-red-400 h-[100vh]' />
+          {/* <div className='bg-red-400 h-[100vh]' /> */}
         </div>
+
 
         {/* <div className='bg-montagne-container bg-red-500 h-[100vh]'/> */}
 

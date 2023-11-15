@@ -8,11 +8,14 @@ module.exports = {
     screens: {
       sm: '640px',
       md: '768px',
-      lg: '1024px',
+      lg: '1024px', // SWAP
       xl: '1280px',
       '2xl': '1536px',
       '3xl': '2520px',
       '4xl': '3544px',
+      macBeco: '1440px',
+      pcJB: '1920px',
+
     },
     extend: {
       spacing: {

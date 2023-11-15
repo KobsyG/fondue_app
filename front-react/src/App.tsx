@@ -14,12 +14,12 @@ import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
 function App() {
 
   return (
-      <ReactLenis root>
+    <ReactLenis root>
 
-        {/* <Histoire /> */}
-        < TerroirWIP />
+      {/* <Histoire /> */}
+      <TerroirWIP />
 
-      </ReactLenis>
+    </ReactLenis>
   )
 }
 

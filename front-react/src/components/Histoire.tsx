@@ -88,11 +88,6 @@ const Histoire = () => {
     }, [])
 
 
-
-
-
-
-
     return (
         <>
             <div className='landing-container w-full bg-fondue-blue'>

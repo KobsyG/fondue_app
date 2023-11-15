@@ -6,6 +6,8 @@ const hautmontagne = require("../../../images/haut-mont.png");
 const basmontagne = require("../../../images/bas-mont.png");
 const couleeTel = require("../../../images/coulee-telephone.png")
 const couleePc = require("../../../images/coulee-ordi.png")
+const gentiane1 = require("../../../images/gentiane1.png")
+const gentiane2 = require("../../../images/gentiane2.png")
 
 const TerroirWIP = () => {
 
@@ -18,10 +20,6 @@ const TerroirWIP = () => {
       //----------------------------------------------------------------------------
       //-------------------------------- GSAP --------------------------------------
       //----------------------------------------------------------------------------
-
-      const tl = gsap.timeline({
-        // repeat: -1,
-      });
 
       // gsap.fromTo(".letter",
       //   {
@@ -59,6 +57,34 @@ const TerroirWIP = () => {
       //   }
       // )
 
+      const tl = gsap.timeline({
+
+      });
+
+      // tl.totalDuration(1);
+
+      tl.from('.fleur', {
+        yPercent: 100,
+        duration: 0.3,
+        ease: 'none',
+      })
+      tl.to('.fleur', {
+        yPercent: 10,
+        duration: 0.1,
+        ease: 'none',
+      }, '>')
+      tl.to('.fleur', {
+        yPercent: -2,
+        duration: 0.1,
+        ease: 'none',
+      }, '>')
+    })
+
+    gsap.fromTo('.fleur', {
+      clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+    }, {
+      clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+      duration: 0.3,
     })
 
     return () => ctx.revert();
@@ -68,13 +94,13 @@ const TerroirWIP = () => {
   return (
     <>
       <div className='terroir-container w-full h-[400vh] bg-fondue-blue'>
-        <div className='camera1 w-full h-[100vh] sticky top-0 flex justify-center items-center'>
+        <div className='camera1 w-full h-[100vh] sticky top-0 flex items-center'>
           <div className='coulee w-[80%] absolute top-0'>
             <img src={couleeTel} className='lg:hidden' />
             <img src={couleePc} className='hidden lg:block' />
           </div>
 
-          <p style={{ fontFamily: 'AvocadoCake' }} className='text-[30px] text-white'>
+          {/* <p style={{ fontFamily: 'AvocadoCake' }} className='text-[30px] text-white'>
             <span className='letter inline-block'>E</span>
             <span className='letter inline-block'>n&nbsp;</span>
             <span className='letter inline-block'>A</span>
@@ -211,16 +237,20 @@ const TerroirWIP = () => {
             <span className='letter inline-block'>a</span>
             <span className='letter inline-block'>g</span>
             <span className='letter inline-block'>e</span>
-          </p>
+          </p> */}
 
-        <div className='montagne h-[200vh]'>
-          <div className='haut-montagne h-[100vh]'>
-            {/* <img src={}/> */}
+          <div className='fleur h-[20%] object-cover ml-[20%]'>
+            <img src={gentiane1} className='w-full h-full' />
           </div>
-          <div className='kraft-montagne h-[100vh]'>
-            {/* <img src={}/> */}
+
+          <div className='montagne h-[200vh]'>
+            <div className='haut-montagne h-[100vh]'>
+              {/* <img src={}/> */}
+            </div>
+            <div className='kraft-montagne h-[100vh]'>
+              {/* <img src={}/> */}
+            </div>
           </div>
-        </div>
 
         </div>
 

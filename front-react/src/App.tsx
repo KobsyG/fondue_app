@@ -8,14 +8,16 @@ import LaBelleHistoire from './components/JB/LaBelleHistoire';
 import CloudCheese from './components/JB/CloudCheese';
 import Terroir from './components/Kobe/Terroir/Terroir';
 import Actuel from './components/Kobe/Actuel/Actuel';
+import Histoire from './components/Histoire';
+import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
 
 function App() {
 
   return (
       <ReactLenis root>
 
-      <Actuel />
-
+        {/* <Histoire /> */}
+        < TerroirWIP />
 
       </ReactLenis>
   )

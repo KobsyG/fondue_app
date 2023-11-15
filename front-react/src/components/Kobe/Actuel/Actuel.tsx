@@ -7,11 +7,11 @@ const basmontagne = require("../../../images/bas-mont.png");
 const montcoul = require("../../../images/mont-coul.png");
 const compere = require("../../../images/comper.png")
 const text = require("../../../images/text.png")
-// const coulee = require("../../../images/coulee.png")
-const montCP = require("../../../images/MontagneCP.png")
-const coulee = require("../../../images/CouleeShortV2.png")
+const couleeTel = require("../../../images/coulee-telephone.png")
+const couleePc = require("../../../images/coulee-ordi.png")
 
-// import montagneCP from '../../../images/Mo,'
+const montagnePC = require("../../../images/Montagne CP.png")
+const montagne16 = require("../../../images/Montagne 16 cm.png")
 
 const title = "Il était une fois deux amis, partis bras dessus bras dessous pour conquérir un titre aussi inattendu que réjouissant..."
 const histoireFirst = "C'est ainsi que le 13 mars 2022, à Montréjeau, Alban et Jean-Jacques remportent le premier titre de Champion de France de Fondue aux Fromages devant 20 autres équipes candidates au titre. Ils innovent en proposant une recette à base des 5 AOP du Cantal ! Et quelques ingrédients secrets qui vont vous être dévoilés..."
@@ -102,19 +102,19 @@ const Actuel = () => {
     //   },
     // })
 
-    // gsap.to(".fleur", {
-    //   opacity: 1,
-    //   duration: 1,
-    //   scrollTrigger: {
-    //     trigger: ".montagne",
-    //     start: 'top top',
-    //     // endTrigger: '.montagne-container',
-    //     // end: '20% top',
-    //     scrub: true,
-    //     // pin: ".montagne",
-    //     markers: true,
-    //   },
-    // })
+    gsap.to(".fleur", {
+      opacity: 1,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".montagne",
+        start: 'top top',
+        // endTrigger: '.montagne-container',
+        // end: '20% top',
+        scrub: true,
+        // pin: ".montagne",
+        // markers: true,
+      },
+    })
 
     // gsap.to(".fleur", {
     //   opacity: 1,
@@ -158,9 +158,28 @@ const Actuel = () => {
 
           <div className='cheese-contain -top-[130vh] 2xl:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
             <div className='carree-cheese w-full h-[200vh] bg-fondue-yellow' />
-            <div className='coulee'>
-              <img className='w-full' src={coulee} />
-            </div>
+            {/* <picture>
+            <source
+                media="(max-width: 600px)"
+                srcSet={`${couleeTel}`}
+              />
+            <source
+                media="(min-width: 600px)"
+                srcSet={`${couleePc}`}
+              />
+              <img className='' src={couleePc}/>
+            </picture> */}
+            <picture className='coulee'>
+              {/* <source
+                  media="(max-width: 600px)"
+                  srcSet={couleeTel}
+                />
+                <source
+                  media="(min-width: 601px)"
+                  srcSet={couleePc}
+                /> */}
+              <img src={couleePc} />
+            </picture>
           </div>
 
           <div className='histoire-container w-full h-[400vh] '>
@@ -177,7 +196,7 @@ const Actuel = () => {
           </div>
         </div>
 
-        <div className='terroir-container w-full h-[400vh] bg-fondue-blue'>
+        {/* <div className='terroir-container w-full h-[400vh] bg-fondue-blue'>
           <div className='coulee w-[80%] z-10 mx-auto sticky top-0'>
             <img className='w-full' src={coulee} />
           </div>
@@ -188,31 +207,28 @@ const Actuel = () => {
             <div className='h-[100vh]'>
               <img className='h-full' src={basmontagne} />
             </div> */}
-          </div>
+      </div>
 
-          {/* <div className='bg-red-400 h-[100vh]' /> */}
-        </div>
+      <div className='bg-red-400 h-[100vh]' />
 
-
-        {/* <div className='bg-montagne-container bg-red-500 h-[100vh]'/> */}
-
-        {/* </div> */}
-
-
-
-
+      {/* <div>
+        <img className='coulee'
+                // src={montagne16}
+                // srcSet={`${couleePc} 1063w, ${montagne16} 4500w`}
+                // sizes='(max-width: 1000px) 1063px, 4500px'
+              />
+        </div> */}
 
 
 
+      {/* <div className='bg-montagne-container bg-red-500 h-[100vh]'/> */}
 
-        {/* <div className='suite w-full h-[50vh] bg-red-200' />
-        <div className='suite w-full h-[50vh] bg-red-300' />
-        <div className='suite w-full h-[50vh] bg-red-400' />
-        <div className='suite w-full h-[50vh] bg-red-500' />
-        <div className='suite w-full h-[50vh] bg-red-600' /> */}
+      {/* </div> */}
 
 
-      </div >
+
+
+
     </>
   )
 }

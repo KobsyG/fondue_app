@@ -10,15 +10,19 @@ import Terroir from './components/Kobe/Terroir/Terroir';
 import Actuel from './components/Kobe/Actuel/Actuel';
 import Histoire from './components/Histoire';
 import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
+import AudioComponent from './components/JB/AudioComponent';
 
 function App() {
 
   return (
     <ReactLenis root>
+      <AudioComponent>
 
-      {/* <Histoire /> */}
-      <TerroirWIP />
+        {/* <Histoire /> */}
+        <TerroirWIP />
 
+
+      </AudioComponent>
     </ReactLenis>
   )
 }

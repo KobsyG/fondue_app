@@ -70,6 +70,7 @@ const TerroirWIP = () => {
         scrollTrigger: {
           trigger: '.terroir-container',
           start: '20% top',
+          end: '20% top',
         },
         onStart() {
           console.log("YOOOO");
@@ -92,10 +93,7 @@ const TerroirWIP = () => {
         yPercent: -2,
         duration: 0.1,
         ease: 'none',
-      }, '>');
-
-
-      gentTl.fromTo('.fleur', {
+      }, '>').fromTo('.fleur', {
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
       }, {
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',

@@ -1,6 +1,7 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useContext, useEffect, useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { AudioContext } from '../../JB/AudioComponent';
 
 const hautmontagne = require("../../../images/haut-mont.png");
 const basmontagne = require("../../../images/bas-mont.png");
@@ -8,8 +9,16 @@ const couleeTel = require("../../../images/coulee-telephone.png")
 const couleePc = require("../../../images/coulee-ordi.png")
 const gentiane1 = require("../../../images/gentiane1.png")
 const gentiane2 = require("../../../images/gentiane2.png")
+// const sound1 = require("../../../images/testSounce.mp3")
 
 const TerroirWIP = () => {
+
+  const { audioGentRef, permissionGranted } = useContext(AudioContext);
+
+  // useEffect(() => {
+  //   console.log('permission: ' + permissionGranted);
+  //   console.log('ref: ' + audioGentRef.current);
+  // }, [permissionGranted]);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -57,39 +66,45 @@ const TerroirWIP = () => {
       //   }
       // )
 
-      const tl = gsap.timeline({
-
+      const gentTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.terroir-container',
+          start: '20% top',
+          end: '20% top',
+        },
+        onStart() {
+          console.log("YOOOO");
+          if (permissionGranted && audioGentRef.current) {
+            console.log('playing');
+            audioGentRef.current.play();
+          }
+        },
       });
 
-      // tl.totalDuration(1);
-
-      tl.from('.fleur', {
+      gentTl.from('.fleur', {
         yPercent: 100,
         duration: 0.3,
         ease: 'none',
-      })
-      tl.to('.fleur', {
+      }).to('.fleur', {
         yPercent: 10,
         duration: 0.1,
         ease: 'none',
-      }, '>')
-      tl.to('.fleur', {
+      }, '>').to('.fleur', {
         yPercent: -2,
         duration: 0.1,
         ease: 'none',
-      }, '>')
-    })
+      }, '>').fromTo('.fleur', {
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+      }, {
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+        duration: 0.3,
+      }, 0);
 
-    gsap.fromTo('.fleur', {
-      clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-    }, {
-      clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-      duration: 0.3,
-    })
 
+
+    })
     return () => ctx.revert();
-
-  }, [])
+  }, [permissionGranted])
 
   return (
     <>

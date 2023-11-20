@@ -16,12 +16,12 @@ function App() {
 
   return (
     <ReactLenis root>
-      <AudioComponent>
+      {/* <AudioComponent> */}
 
       <Histoire />
       <TerroirWIP />
 
-      </AudioComponent>
+      {/* </AudioComponent> */}
     </ReactLenis>
   )
 }

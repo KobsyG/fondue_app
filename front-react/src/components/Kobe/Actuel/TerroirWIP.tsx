@@ -102,6 +102,22 @@ const TerroirWIP = () => {
 
 
 
+      //----------------------------------------------------------------------------
+      //-------------------------------- GSAP - TABLE ------------------------------
+      //----------------------------------------------------------------------------
+
+      gsap.from('.table', {
+        xPercent: -150,
+        scrollTrigger: {
+          trigger: '.montagne',
+          start: '20% top',
+          end: '40% top',
+          scrub: true,
+        }
+      })
+
+
+
     })
     return () => ctx.revert();
   }, [permissionGranted])
@@ -109,13 +125,24 @@ const TerroirWIP = () => {
   return (
     <>
       <div className='terroir-container w-full h-[400vh] bg-fondue-blue'>
-        <div className='camera1 w-full h-[100vh] sticky top-0 flex items-center'>
-          <div className='coulee w-[80%] absolute top-0'>
-            <img src={couleeTel} className='lg:hidden' />
-            <img src={couleePc} className='hidden lg:block' />
+
+        <div className='camera1 w-full h-[100vh] sticky top-0 flex'>
+          <div className='coulee absolute w-[80%] left-[10%]'>
+            <picture>
+              <source
+                media='(max-width: 1024px)'
+                srcSet={couleeTel}
+              />
+              <source
+                media='(min-width: 1025px)'
+                srcSet={couleePc}
+              />
+              <img src={couleePc} />
+            </picture>
           </div>
 
-          {/* <p style={{ fontFamily: 'AvocadoCake' }} className='text-[30px] text-white'>
+
+          <p style={{ fontFamily: 'AvocadoCake' }} className='relative text-[30px] text-white top-[20vh]'>
             <span className='letter inline-block'>E</span>
             <span className='letter inline-block'>n&nbsp;</span>
             <span className='letter inline-block'>A</span>
@@ -200,76 +227,104 @@ const TerroirWIP = () => {
             <span className='letter inline-block'>.</span>
           </p>
 
-          <p style={{ fontFamily: 'AvocadoCake' }} className='text-[30px] text-white'>
-            <span className='letter inline-block'>L</span>
-            <span className='letter inline-block'>e</span>
-            <span className='letter inline-block'>C</span>
-            <span className='letter inline-block'>a</span>
-            <span className='letter inline-block'>n</span>
-            <span className='letter inline-block'>t</span>
-            <span className='letter inline-block'>a</span>
-            <span className='letter inline-block'>l</span>
-            <span className='letter inline-block'>e</span>
-            <span className='letter inline-block'>s</span>
-            <span className='letter inline-block'>t</span>
-            <span className='letter inline-block'>l</span>
-            <span className='letter inline-block'>e</span>
-            <span className='letter inline-block'>s</span>
-            <span className='letter inline-block'>e</span>
-            <span className='letter inline-block'>u</span>
-            <span className='letter inline-block'>l</span>
-            <span className='letter inline-block'>d</span>
-            <span className='letter inline-block'>é</span>
-            <span className='letter inline-block'>p</span>
-            <span className='letter inline-block'>a</span>
-            <span className='letter inline-block'>r</span>
-            <span className='letter inline-block'>t</span>
-            <span className='letter inline-block'>e</span>
-            <span className='letter inline-block'>m</span>
-            <span className='letter inline-block'>e</span>
-            <span className='letter inline-block'>n</span>
-            <span className='letter inline-block'>t</span>
-            <span className='letter inline-block'>à</span>
-            <span className='letter inline-block'>p</span>
-            <span className='letter inline-block'>o</span>
-            <span className='letter inline-block'>r</span>
-            <span className='letter inline-block'>t</span>
-            <span className='letter inline-block'>e</span>
-            <span className='letter inline-block'>r</span>
-            <span className='letter inline-block'>l</span>
-            <span className='letter inline-block'>e</span>
-            <span className='letter inline-block'>n</span>
-            <span className='letter inline-block'>o</span>
-            <span className='letter inline-block'>m</span>
-            <span className='letter inline-block'>d</span>
-            <span className='letter inline-block'>'</span>
-            <span className='letter inline-block'>u</span>
-            <span className='letter inline-block'>n</span>
-            <span className='letter inline-block'>f</span>
-            <span className='letter inline-block'>r</span>
-            <span className='letter inline-block'>o</span>
-            <span className='letter inline-block'>m</span>
-            <span className='letter inline-block'>a</span>
-            <span className='letter inline-block'>g</span>
-            <span className='letter inline-block'>e</span>
-          </p> */}
+          {/* <p style={{ fontFamily: 'AvocadoCake' }} className='text-[30px] text-white'>
+              <span className='letter inline-block'>L</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>C</span>
+              <span className='letter inline-block'>a</span>
+              <span className='letter inline-block'>n</span>
+              <span className='letter inline-block'>t</span>
+              <span className='letter inline-block'>a</span>
+              <span className='letter inline-block'>l</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>s</span>
+              <span className='letter inline-block'>t</span>
+              <span className='letter inline-block'>l</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>s</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>u</span>
+              <span className='letter inline-block'>l</span>
+              <span className='letter inline-block'>d</span>
+              <span className='letter inline-block'>é</span>
+              <span className='letter inline-block'>p</span>
+              <span className='letter inline-block'>a</span>
+              <span className='letter inline-block'>r</span>
+              <span className='letter inline-block'>t</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>m</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>n</span>
+              <span className='letter inline-block'>t</span>
+              <span className='letter inline-block'>à</span>
+              <span className='letter inline-block'>p</span>
+              <span className='letter inline-block'>o</span>
+              <span className='letter inline-block'>r</span>
+              <span className='letter inline-block'>t</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>r</span>
+              <span className='letter inline-block'>l</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>n</span>
+              <span className='letter inline-block'>o</span>
+              <span className='letter inline-block'>m</span>
+              <span className='letter inline-block'>d</span>
+              <span className='letter inline-block'>'</span>
+              <span className='letter inline-block'>u</span>
+              <span className='letter inline-block'>n</span>
+              <span className='letter inline-block'>f</span>
+              <span className='letter inline-block'>r</span>
+              <span className='letter inline-block'>o</span>
+              <span className='letter inline-block'>m</span>
+              <span className='letter inline-block'>a</span>
+              <span className='letter inline-block'>g</span>
+              <span className='letter inline-block'>e</span>
+            </p> */
+          }
 
-          <div className='fleur h-[20%] object-cover ml-[20%]'>
+          {/* <div className='fleur h-[20%] object-cover ml-[20%]'>
             <img src={gentiane1} className='w-full h-full' />
-          </div>
-
-          <div className='montagne h-[200vh]'>
-            <div className='haut-montagne h-[100vh]'>
-              {/* <img src={}/> */}
-            </div>
-            <div className='kraft-montagne h-[100vh]'>
-              {/* <img src={}/> */}
-            </div>
-          </div>
+          </div> */}
 
         </div>
 
+        <div className='montagne h-[400vh] w-[100vw]'>
 
+          <div className='haut-montagne'>
+            <picture>
+              <source
+                media='(max-width: 1024px)'
+                srcSet={hautmontagne}
+              />
+              <source
+                media='(min-width: 1025px)'
+                srcSet={hautmontagne}
+              />
+              <img src={hautmontagne} />
+            </picture>
+          </div>
+
+          <div className='sticky top-0 kraft-montagne h-[100vh] w-full'>
+            <div className='table absolute h-96 w-96 top-52 left-40'>
+              <img src={require("../../../images/table.jpeg")} />
+            </div>
+
+            <picture>
+              <source
+                media='(max-width: 1024px)'
+                srcSet={basmontagne}
+              />
+              <source
+                media='(min-width: 1025px)'
+                srcSet={basmontagne}
+              />
+              <img className='h-full' src={basmontagne} />
+            </picture>
+          </div>
+
+
+
+        </div>
 
         {/* <div className='montagne z-0 sticky top-0 h-[200vh] bg-red-300'>
           <img className='w-full object-cover' src={hautmontagne} />

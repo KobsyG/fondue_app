@@ -9,20 +9,22 @@ const Waiting = () => {
             <div className='coulee'>
                 <picture>
                     <source
-                        media='(max-width: 800px)'
+                        media='(max-width: 1024px)'
                         srcSet={couleeTel}
                     />
                     <source
-                        media='(min-width: 801px)'
+                        media='(min-width: 1025px)'
                         srcSet={couleePc}
                     />
                     <img src={couleePc} />
                 </picture>
+                <img src={require('../../../')} />
+                
             </div>
 
 
 
-            
+
         </div>
     )
 }

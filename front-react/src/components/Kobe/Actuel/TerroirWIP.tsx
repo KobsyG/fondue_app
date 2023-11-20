@@ -13,7 +13,7 @@ const gentiane2 = require("../../../images/gentiane2.png")
 
 const TerroirWIP = () => {
 
-  const { audioGentRef, permissionGranted } = useContext(AudioContext);
+  // const { audioGentRef, permissionGranted } = useContext(AudioContext);
 
   // useEffect(() => {
   //   console.log('permission: ' + permissionGranted);
@@ -72,13 +72,12 @@ const TerroirWIP = () => {
           start: '20% top',
           end: '20% top',
         },
-        onStart() {
-          console.log("YOOOO");
-          if (permissionGranted && audioGentRef.current) {
-            console.log('playing');
-            audioGentRef.current.play();
-          }
-        },
+        // onStart() {
+          // if (permissionGranted && audioGentRef.current) {
+            // console.log('playing');
+            // audioGentRef.current.play();
+          // }
+        // },
       });
 
       gentTl.from('.fleur', {
@@ -120,26 +119,25 @@ const TerroirWIP = () => {
 
     })
     return () => ctx.revert();
-  }, [permissionGranted])
+  }, [])
 
   return (
     <>
       <div className='terroir-container w-full h-[400vh] bg-fondue-blue'>
-
-        <div className='camera1 w-full h-[100vh] sticky top-0 flex'>
-          <div className='coulee absolute w-[80%] left-[10%]'>
-            <picture>
-              <source
-                media='(max-width: 1024px)'
-                srcSet={couleeTel}
-              />
-              <source
-                media='(min-width: 1025px)'
-                srcSet={couleePc}
-              />
-              <img src={couleePc} />
-            </picture>
-          </div>
+        <div className='camera1 w-full h-[100vh] sticky top-0 flex items-center'>
+          <div className='coulee w-[80%] left-[10%] absolute top-0'>
+                <picture>
+                    <source
+                        media='(max-width: 1024px)'
+                        srcSet={couleeTel}
+                    />
+                    <source
+                        media='(min-width: 1025px)'
+                        srcSet={couleePc}
+                    />
+                    <img src={couleePc} />
+                </picture>
+            </div>
 
 
           <p style={{ fontFamily: 'AvocadoCake' }} className='relative text-[30px] text-white top-[20vh]'>

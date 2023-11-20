@@ -97,7 +97,7 @@ const Histoire = () => {
 
                 <div className='main-container w-[80%] mx-auto bg-fondue-blue'>
 
-                    <div className='cheese-contain -top-[130vh] 2xl:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
+                    <div className='cheese-contain -top-[130vh] absolute z-10 w-[80%] right-[10%]'>
                         <div className='carree-cheese w-full h-[200vh] bg-fondue-yellow' />
                         <div className='coulee'>
                             <picture>
@@ -109,7 +109,7 @@ const Histoire = () => {
                                     media='(min-width: 1025px)'
                                     srcSet={couleePc}
                                 />
-                                <img src={couleePc} />
+                                <img src={couleeTel} />
                             </picture>
                         </div>
                     </div>

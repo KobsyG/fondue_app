@@ -101,7 +101,7 @@ const Waiting = () => {
             const opa4 = gsap.timeline({
                 repeat: -1,
                 delay: 2.4,
-                repeatDelay: 0.6,
+                repeatDelay: 0.3,
             })
             opa4.to(".smoke4", {
                 opacity: 1,
@@ -132,7 +132,6 @@ const Waiting = () => {
                     />
                     <img src={couleePc} />
                 </picture>
-                <img src={require('../../../')} />
                 
             </div>
             <div className='goutte-container absolute top-0 h-[100vh] w-[100vw]'>

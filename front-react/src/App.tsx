@@ -20,6 +20,7 @@ function App() {
 
       <Histoire />
       <TerroirWIP />
+      <MaskUpScaleDown />
 
       {/* </AudioComponent> */}
     </ReactLenis>

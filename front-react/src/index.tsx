@@ -10,7 +10,6 @@ import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
 import Histoire from './components/Histoire';
 import Contact from './components/Contact';
 import Waiting from './components/Waiting';
-// import { ParallaxProvider } from 'react-scroll-parallax';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +40,6 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
       <RouterProvider router={router}/>
-      {/* <App /> */}
     </React.StrictMode>
 );
 

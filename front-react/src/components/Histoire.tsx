@@ -97,31 +97,20 @@ const Histoire = () => {
 
                 <div className='main-container w-[80%] mx-auto bg-fondue-blue'>
 
-                    <div className='cheese-contain -top-[130vh] 2xl:-top-[170vh] absolute z-10 w-[80%] right-[10%]'>
+                    <div className='cheese-contain -top-[130vh] absolute z-10 w-[80%] right-[10%]'>
                         <div className='carree-cheese w-full h-[200vh] bg-fondue-yellow' />
-                        {/* <picture>
-            <source
-                media="(max-width: 600px)"
-                srcSet={`${couleeTel}`}
-              />
-            <source
-                media="(min-width: 600px)"
-                srcSet={`${couleePc}`}
-              />
-              <img className='' src={couleePc}/>
-            </picture> */}
                         <div className='coulee'>
-                            <img src={couleeTel} className='lg:hidden' />
-                            
-                            <source
-                                media="(max-width: 600px)"
-                                srcSet={`${couleePc}`}
-                            />
-                            <source
-                                media="(min-width: 1200px)"
-                                srcSet={`${couleePc}`}
-                            />
-                            <img className='hidden lg:block' />
+                            <picture>
+                                <source
+                                    media='(max-width: 1024px)'
+                                    srcSet={couleeTel}
+                                />
+                                <source
+                                    media='(min-width: 1025px)'
+                                    srcSet={couleePc}
+                                />
+                                <img src={couleeTel} />
+                            </picture>
                         </div>
                     </div>
 

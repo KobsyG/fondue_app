@@ -16,7 +16,7 @@ function App() {
   return (
     <ReactLenis root>
 
-      {/* <Histoire /> */}
+      <Histoire />
       <TerroirWIP />
 
     </ReactLenis>

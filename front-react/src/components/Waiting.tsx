@@ -12,14 +12,14 @@ const Waiting = () => {
 
         let ctx = gsap.context(() => {
 
-            gsap.to(".goutte-container", {
-                yPercent: 100,
-                ease: 'power3.in',
-                duration: 1,
-                delay: 2,
-                repeat: -1,
-                repeatDelay: 1,
-            })
+            // gsap.to(".goutte-container", {
+            //     yPercent: 100,
+            //     ease: 'power3.in',
+            //     duration: 1,
+            //     delay: 2,
+            //     repeat: -1,
+            //     repeatDelay: 1,
+            // })
 
             gsap.to('.smoke1', {
                 yPercent: -200,

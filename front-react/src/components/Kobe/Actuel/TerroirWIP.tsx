@@ -49,12 +49,23 @@ const TerroirWIP = () => {
         },
       }, '0')
 
+      phraseTl.to(".letter2", {
+        yPercent: -200,
+        duration: 1.5,
+        ease: 'power1.inOut',
+        stagger: {
+          each: 0.1,
+          yoyo: true,
+          repeat: -1,
+        },
+      }, '0')
+
       phraseTl.from('.text-wave-container', {
         xPercent: 100,
         duration: 12,
         ease: 'none',
         onComplete: () => {
-          phraseTl.pause();
+          phraseTl.kill();
         },
       }, '0');
 
@@ -131,13 +142,22 @@ const TerroirWIP = () => {
               />
               <img src={couleePc} />
             </picture>
+
+            <p style={{ fontFamily: 'AvocadoCake' }} className='text-white text-center mt-6 w-full text-[1.5vw]'>
+              En Auvergne, fromage et terroir sont intimement liés, chacun marquant l'autre de son empreinte.
+              <br />
+              <br />
+              Le Cantal est le seul département à porter le nom d'un fromage.
+            </p>
           </div>
 
+          {/* 
 
-          <div className='text-wave-container w-full h-full relative overflow-hidden flex justify-center'>
-            <p style={{ fontFamily: 'AvocadoCake' }} className='relative text-white text-[30px] top-[30%]'>
+          <div className='text-wave-container w-full h-full absolute top-0 overflow-hidden flex justify-center'>
+            <p style={{ fontFamily: 'AvocadoCake' }} className='relative text-white text-[32px] top-[30%]'>
               <span className='letter inline-block'>E</span>
-              <span className='letter inline-block'>n&nbsp;</span>
+              <span className='letter inline-block'>n</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>A</span>
               <span className='letter inline-block'>u</span>
               <span className='letter inline-block'>v</span>
@@ -146,27 +166,32 @@ const TerroirWIP = () => {
               <span className='letter inline-block'>g</span>
               <span className='letter inline-block'>n</span>
               <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>,&nbsp;</span>
+              <span className='letter inline-block'>,</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>f</span>
               <span className='letter inline-block'>r</span>
               <span className='letter inline-block'>o</span>
               <span className='letter inline-block'>m</span>
               <span className='letter inline-block'>a</span>
               <span className='letter inline-block'>g</span>
-              <span className='letter inline-block'>e&nbsp;</span>
               <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>t&nbsp;</span>
+              <span className='letter inline-block'>&nbsp;</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>t</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>t</span>
               <span className='letter inline-block'>e</span>
               <span className='letter inline-block'>r</span>
               <span className='letter inline-block'>r</span>
               <span className='letter inline-block'>o</span>
               <span className='letter inline-block'>i</span>
-              <span className='letter inline-block'>r&nbsp;</span>
+              <span className='letter inline-block'>r</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>s</span>
               <span className='letter inline-block'>o</span>
               <span className='letter inline-block'>n</span>
-              <span className='letter inline-block'>t&nbsp;</span>
+              <span className='letter inline-block'>t</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>i</span>
               <span className='letter inline-block'>n</span>
               <span className='letter inline-block'>t</span>
@@ -176,18 +201,21 @@ const TerroirWIP = () => {
               <span className='letter inline-block'>m</span>
               <span className='letter inline-block'>e</span>
               <span className='letter inline-block'>n</span>
-              <span className='letter inline-block'>t&nbsp;</span>
+              <span className='letter inline-block'>t</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>l</span>
               <span className='letter inline-block'>i</span>
               <span className='letter inline-block'>é</span>
               <span className='letter inline-block'>s</span>
-              <span className='letter inline-block'>,&nbsp;</span>
+              <span className='letter inline-block'>,</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>c</span>
               <span className='letter inline-block'>h</span>
               <span className='letter inline-block'>a</span>
               <span className='letter inline-block'>c</span>
               <span className='letter inline-block'>u</span>
-              <span className='letter inline-block'>n&nbsp;</span>
+              <span className='letter inline-block'>n</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>m</span>
               <span className='letter inline-block'>a</span>
               <span className='letter inline-block'>r</span>
@@ -195,19 +223,23 @@ const TerroirWIP = () => {
               <span className='letter inline-block'>u</span>
               <span className='letter inline-block'>a</span>
               <span className='letter inline-block'>n</span>
-              <span className='letter inline-block'>t&nbsp;</span>
+              <span className='letter inline-block'>t</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>l</span>
               <span className='letter inline-block'>'</span>
               <span className='letter inline-block'>a</span>
               <span className='letter inline-block'>u</span>
               <span className='letter inline-block'>t</span>
               <span className='letter inline-block'>r</span>
-              <span className='letter inline-block'>e&nbsp;</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>d</span>
-              <span className='letter inline-block'>e&nbsp;</span>
+              <span className='letter inline-block'>e</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>s</span>
               <span className='letter inline-block'>o</span>
-              <span className='letter inline-block'>n&nbsp;</span>
+              <span className='letter inline-block'>n</span>
+              <span className='letter inline-block'>&nbsp;</span>
               <span className='letter inline-block'>e</span>
               <span className='letter inline-block'>m</span>
               <span className='letter inline-block'>p</span>
@@ -221,69 +253,116 @@ const TerroirWIP = () => {
             </p>
           </div>
 
+          <div className='text-wave-container w-full h-full absolute top-0 overflow-hidden flex justify-center'>
+            <p style={{ fontFamily: 'AvocadoCake' }} className='relative text-white text-[30px] top-[40%]'>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
 
+              <span className='letter2 inline-block'>l</span>
+              <span className='letter2 inline-block'>e</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>c</span>
+              <span className='letter2 inline-block'>a</span>
+              <span className='letter2 inline-block'>n</span>
+              <span className='letter2 inline-block'>t</span>
+              <span className='letter2 inline-block'>a</span>
+              <span className='letter2 inline-block'>l</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>e</span>
+              <span className='letter2 inline-block'>s</span>
+              <span className='letter2 inline-block'>t</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>l</span>
+              <span className='letter2 inline-block'>e</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>s</span>
+              <span className='letter2 inline-block'>e</span>
+              <span className='letter2 inline-block'>u</span>
+              <span className='letter2 inline-block'>l</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>d</span>
+              <span className='letter2 inline-block'>é</span>
+              <span className='letter2 inline-block'>p</span>
+              <span className='letter2 inline-block'>a</span>
+              <span className='letter2 inline-block'>r</span>
+              <span className='letter2 inline-block'>t</span>
+              <span className='letter2 inline-block'>e</span>
+              <span className='letter2 inline-block'>m</span>
+              <span className='letter2 inline-block'>e</span>
+              <span className='letter2 inline-block'>n</span>
+              <span className='letter2 inline-block'>t</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>à</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>p</span>
+              <span className='letter2 inline-block'>o</span>
+              <span className='letter2 inline-block'>r</span>
+              <span className='letter2 inline-block'>t</span>
+              <span className='letter2 inline-block'>e</span>
+              <span className='letter2 inline-block'>r</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>l</span>
+              <span className='letter2 inline-block'>e</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>n</span>
+              <span className='letter2 inline-block'>o</span>
+              <span className='letter2 inline-block'>m</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>d</span>
+              <span className='letter2 inline-block'>'</span>
+              <span className='letter2 inline-block'>u</span>
+              <span className='letter2 inline-block'>n</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>f</span>
+              <span className='letter2 inline-block'>r</span>
+              <span className='letter2 inline-block'>o</span>
+              <span className='letter2 inline-block'>m</span>
+              <span className='letter2 inline-block'>a</span>
+              <span className='letter2 inline-block'>g</span>
+              <span className='letter2 inline-block'>e</span>
+              <span className='letter2 inline-block'>.</span>
 
-          {/* <p style={{ fontFamily: 'AvocadoCake' }} className='text-[30px] text-white'>
-              <span className='letter inline-block'>L</span>
-              <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>C</span>
-              <span className='letter inline-block'>a</span>
-              <span className='letter inline-block'>n</span>
-              <span className='letter inline-block'>t</span>
-              <span className='letter inline-block'>a</span>
-              <span className='letter inline-block'>l</span>
-              <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>s</span>
-              <span className='letter inline-block'>t</span>
-              <span className='letter inline-block'>l</span>
-              <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>s</span>
-              <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>u</span>
-              <span className='letter inline-block'>l</span>
-              <span className='letter inline-block'>d</span>
-              <span className='letter inline-block'>é</span>
-              <span className='letter inline-block'>p</span>
-              <span className='letter inline-block'>a</span>
-              <span className='letter inline-block'>r</span>
-              <span className='letter inline-block'>t</span>
-              <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>m</span>
-              <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>n</span>
-              <span className='letter inline-block'>t</span>
-              <span className='letter inline-block'>à</span>
-              <span className='letter inline-block'>p</span>
-              <span className='letter inline-block'>o</span>
-              <span className='letter inline-block'>r</span>
-              <span className='letter inline-block'>t</span>
-              <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>r</span>
-              <span className='letter inline-block'>l</span>
-              <span className='letter inline-block'>e</span>
-              <span className='letter inline-block'>n</span>
-              <span className='letter inline-block'>o</span>
-              <span className='letter inline-block'>m</span>
-              <span className='letter inline-block'>d</span>
-              <span className='letter inline-block'>'</span>
-              <span className='letter inline-block'>u</span>
-              <span className='letter inline-block'>n</span>
-              <span className='letter inline-block'>f</span>
-              <span className='letter inline-block'>r</span>
-              <span className='letter inline-block'>o</span>
-              <span className='letter inline-block'>m</span>
-              <span className='letter inline-block'>a</span>
-              <span className='letter inline-block'>g</span>
-              <span className='letter inline-block'>e</span>
-            </p> */
-          }
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+              <span className='letter2 inline-block'>&nbsp;</span>
+            </p>
 
-          {/* <div className='fleur h-[20%] object-cover ml-[20%]'>
-            <img src={gentiane1} className='w-full h-full' />
-          </div> */}
+        </div>
+    */}
 
         </div>
 
+        {/* <div className='fleur h-[20%] object-cover ml-[20%]'>
+            <img src={gentiane1} className='w-full h-full' />
+          </div> */}
+        {/* 
         <div className='montagne h-[400vh] w-[100vw]'>
           <div className='haut-montagne'>
             <picture>
@@ -317,9 +396,10 @@ const TerroirWIP = () => {
             </picture>
           </div>
         </div>
+    */}
 
 
-      </div>
+      </div >
       <div className='bg-black h-[100vh]' />
     </>
   )

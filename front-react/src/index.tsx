@@ -10,6 +10,7 @@ import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
 import Histoire from './components/Histoire';
 import Contact from './components/Contact';
 import Waiting from './components/Waiting';
+import Terroir from './components/Kobe/Actuel/Terroir';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path: "terroir",
-    element: <TerroirWIP />,
+    element: <Terroir />,
   },
 ]);
 

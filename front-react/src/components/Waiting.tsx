@@ -109,9 +109,9 @@ const Waiting = () => {
             */}
 
       <div className='bg-[#FFDA8F] absolute top-0 h-[30%] w-full p-6 flex justify-center'>
-        <div className='h-full aspect-[1/1] rounded-full bg-fondue-red p-1'>
+        {/* <div className='h-full aspect-[1/1] rounded-full bg-fondue-red p-1'> */}
           <img src={logo} className='h-full' />
-        </div>
+        {/* </div> */}
       </div>
 
       <div className='coulee absolute top-[30%]'>
@@ -130,59 +130,21 @@ const Waiting = () => {
         </picture>
       </div>
 
-      {/* 
-      <div className='waves-container absolute top-[60%] w-full flex flex-col justify-center' >
-        <div className='big-wave relative w-[200vw]' >
-          <img src={bigWave} className='' />
-          <div className='middle-wave absolute w-[200vw] bottom-0' >
-            <img src={middleWave} className='' />
-          </div>
 
-          <div className='small-wave absolute w-[200vw] bottom-0' >
-            <img src={smallWave} className='' />
-          </div>
+      <div className='absolute top-[60%] w-full flex flex-col'>
+        <div className='waves-container relative w-[200vw] -left-[50vw]' >
+          <img src={bigWave} className='big-wave w-[200vw]' />
+          <img src={middleWave} className='middle-wave absolute w-[200vw] bottom-0' />
+          <img src={smallWave} className='small-wave absolute w-[200vw] bottom-0' />
         </div>
-
-
-        <div className='bg-cyan-200 relative h-[100vh] w-full' />
-      </div> */}
-
-      <div className='absolute top-[60%] flex flex-col w-full'>
-
-        <div className='waves-container relative w-full h-auto flex justify-center' >
-          <div className='big-wave absolute w-[200vw]' >
-            <img src={bigWave} className='' />
-            <div className='middle-wave absolute w-[200vw] bottom-0' >
-              <img src={middleWave} className='' />
-            </div>
-
-            <div className='small-wave absolute w-[200vw] bottom-0' >
-              <img src={smallWave} className='' />
-            </div>
-          </div>
-        </div>
-
-        <div className='bg-cyan-200 h-[100vh] w-full' />
+        <div className='bg-[#FFDA8F] h-[100vh] w-full' />
       </div>
 
-      {/* 
-      <div className='waves-container absolute w-full bottom-0 flex justify-center' >
-        <div className='big-wave absolute w-[200vw] bottom-0' >
-          <img src={bigWave} className='' />
-        </div>
-
-        <div className='middle-wave absolute w-[200vw] bottom-0' >
-          <img src={middleWave} className='' />
-        </div>
-
-        <div className='small-wave absolute w-[200vw] bottom-0' >
-          <img src={smallWave} className='' />
-        </div>
-      </div> */}
 
       <div style={{ top: '60%', transform: 'translateY(-50%)' }} className='text absolute w-[90%] left-[5%] flex justify-center' >
         <img src={texte} className='object-cover w-full' />
       </div>
+
 
       <button className='buy-button absolute top-2 right-20 h-10 w-10'>
         <img src={require('../images/new/Logo_panier.png')} />

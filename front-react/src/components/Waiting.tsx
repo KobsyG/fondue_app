@@ -1,8 +1,18 @@
 import gsap from 'gsap'
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-const couleeTel = require("../images/coulee-telephone.png")
-const couleePc = require("../images/coulee-ordi.png")
-const goutte2 = require("../images/goutte2.png")
+
+const couleeTel = require("../images/new/Coulée_pc.png")
+const couleePc = require("../images/new/Coulée_pc.png")
+const bigWave = require("../images/new/Grosse_vague_pc.png")
+const middleWave = require("../images/new/Moyenne_vague_pc.png")
+const smallWave = require("../images/new/Petite_vague_pc.png")
+const texte = require("../images/new/Texte_pc.png")
+const goutte1 = require("../images/new/Goutte1pc.png")
+const goutte2 = require("../images/new/Goutte2pc.png")
+const goutte3 = require("../images/new/Goutte3pc.png")
+const goutte4 = require("../images/new/Goutte4pc.png")
+const goutte5 = require("../images/new/Goutte5pc.png")
+const goutte6 = require("../images/new/Goutte6pc.png")
 
 const Waiting = () => {
 
@@ -29,13 +39,14 @@ const Waiting = () => {
 
             waveTl.fromTo('.middle-wave',
                 {
-                    xPercent: -10,
+                    x: '-10vw',
                 },
                 {
-                    xPercent: 10,
+                    x: '10vw',
                     yoyo: true,
                     repeat: -1,
                     duration: 3,
+                    ease: 'none',
                 }
             )
 
@@ -51,7 +62,7 @@ const Waiting = () => {
     return (
         <div className='waiting-container relative overflow-hidden w-full h-[100vh] bg-fondue-blue'>
 
-            <div className='coulee'>
+            <div className='coulee relative'>
                 <picture>
                     <source
                         media='(max-width: 1024px)'
@@ -67,30 +78,64 @@ const Waiting = () => {
             </div>
 
             <div className='goutte-container absolute top-0 h-[100vh] w-[100vw]'>
-                <img src={goutte2} className='w-full' />
+                <div className='goutte1'>
+                    <img src={goutte1} className='w-full' />
+                </div>
+                <div className='goutte2'>
+                    <img src={goutte2} className='w-full' />
+                </div>
+                <div className='goutte3'>
+                    <img src={goutte3} className='w-full' />
+                </div>
+                <div className='goutte4'>
+                    <img src={goutte4} className='w-full' />
+                </div>
+                <div className='goutte5'>
+                    <img src={goutte5} className='w-full' />
+                </div>
+                <div className='goutte6'>
+                    <img src={goutte6} className='w-full' />
+                </div>
             </div>
 
-            <div className='waves-container absolute h-[30vh] w-full bottom-0 bg-fondue-yellow'>
-                <div className='h-[20vh] w-[10vw] bottom-0 bg-red-800 mx-auto' />
-                <div className='middle-wave absolute h-[20vh] w-full bottom-0 bg-yellow-300'>
-                    <div className='h-[20vh] w-[10vw] bottom-0 bg-red-500 mx-auto' />
+            <div className='text relative' >
+                <img src={texte} />
+            </div>
+
+            <div className='waves-container absolute w-full bottom-0 flex justify-center' >
+
+                <div className='big-wave absolute w-[120vw] bottom-0' >
+                    <img src={bigWave} className='' />
                 </div>
-                <div className='bottom-wave absolute h-[10vh] w-full bottom-0 bg-yellow-200'>
-                    <div className='h-[20vh] w-[10vw] bottom-0 bg-red-300 mx-auto' />
+
+                <div className='middle-wave absolute w-[120vw] bottom-0' >
+                    <img src={middleWave} className='' />
+                </div>
+
+                <div className='bottom-wave absolute w-[120vw] bottom-0' >
+                    <img src={smallWave} className='' />
                 </div>
 
             </div>
 
-            <button className='buy-button absolute top-2 right-20 h-10 w-10 bg-black' />
-            <button className='menu-button absolute top-2 right-3 h-10 w-10 bg-black' onClick={handleMenuCLick} />
+            <button className='buy-button absolute top-2 right-20 h-10 w-10'>
+                <img src={require('../images/new/Logo_panier.png')} />
+            </button>
+
+            <button className='menu-button absolute top-2 right-3 h-10 w-10' onClick={handleMenuCLick} >
+                <img src={require('../images/new/Logo_menu.png')} />
+            </button>
+
             {/* <div style={{visibility: isClickedMenu ? 'visible' : 'hidden',
             opacity: isClickedMenu ? 1 : 0,
             transition: '1s'}} className='menu absolute w-40 top-12 right-0 bg-red-500'> */}
             {/* <div style={{height: isClickedMenu ? 80 : 0, transition: '2s'}} 
             className='menu absolute w-40 top-12 right-0 overflow-hidden bg-red-500'> */}
-            <div style={{clipPath: isClickedMenu ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' :  'polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%)',
-            transition: '2s'}} 
-            className='menu absolute w-40 top-12 right-0 overflow-hidden bg-red-500'>
+            <div style={{
+                clipPath: isClickedMenu ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%)',
+                transition: '2s'
+            }}
+                className='menu absolute w-40 top-12 right-0 overflow-hidden bg-red-500'>
                 <ul>
                     <li>Facebook</li>
                     <li>Instagram</li>

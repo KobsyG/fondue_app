@@ -154,7 +154,7 @@ const TerroirWIP = () => {
             </p>
           </div>
 
-          {/* 
+          {/* n Auvergne, fromage et terroir sont i
 
           <div className='text-wave-container w-full h-full absolute top-0 overflow-hidden flex justify-center'>
             <p style={{ fontFamily: 'AvocadoCake' }} className='relative text-white text-[32px] top-[30%]'>

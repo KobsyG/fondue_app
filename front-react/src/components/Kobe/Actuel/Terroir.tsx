@@ -1,10 +1,8 @@
-import React, { useContext, useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useLayoutEffect } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { AudioContext } from '../../JB/AudioComponent';
+import Product from './Product';
 
-const hautmontagne = require("../../../images/haut-mont.png");
-const basmontagne = require("../../../images/bas-mont.png");
 const couleeTel = require("../../../images/coulee-telephone.png")
 const couleePc = require("../../../images/coulee-ordi.png")
 const gentiane1 = require("../../../images/gentiane1.png")
@@ -14,7 +12,6 @@ const montMobile = require('../../../images/MobileMontagneCraft.png')
 const montPc = require('../../../images/PcMontagneCraft.png')
 const echelle = require('../../../images/echelle-seul-blanc.png')
 
-
 const Terroir = () => {
 
   gsap.registerPlugin(ScrollTrigger);
@@ -23,6 +20,9 @@ const Terroir = () => {
 
     let ctx = gsap.context(() => {
 
+      //----------------------------------------------------------------------------
+      //-------------------------------- GSAP TERROIR ------------------------------
+      //----------------------------------------------------------------------------
 
       const gentTl = gsap.timeline({
         scrollTrigger: {
@@ -50,6 +50,7 @@ const Terroir = () => {
         duration: 0.3,
       }, 0);
 
+
       const gentTl2 = gsap.timeline({
         scrollTrigger: {
           trigger: '.montagne',
@@ -76,9 +77,16 @@ const Terroir = () => {
         duration: 0.3,
       }, 0);
 
-      //----------------------------------------------------------------------------
-      //-------------------------------- GSAP --------------------------------------
-      //----------------------------------------------------------------------------
+      gsap.fromTo('.lunette', {
+        clipPath: 'circle(20% at 50% 50%)',
+      }, {
+        clipPath: 'circle(100% at 50% 50%)',
+        duration: 5,
+        scrollTrigger: {
+          trigger: '.lunette',
+          start: 'top 30%'
+        }
+      });
 
 
     })
@@ -88,7 +96,6 @@ const Terroir = () => {
   return (
     <>
       <div className='terroir-container relative w-[100vw] aspect-[9/12] bg-fondue-blue'>
-
         <div className='coulee w-[80%] left-[10%] absolute top-0'>
           <picture>
             <source
@@ -113,7 +120,7 @@ const Terroir = () => {
         <div className='paturage w-full h-[35%] absolute top-[30%] flex items-center justify-center' >
           <div className='h-full w-1/2 flex justify-center items-center'>
           </div>
-          <div className='h-full w-1/2 flex justify-center items-center' >
+          <div className='lunette h-full w-1/2 flex justify-center items-center' >
             <p style={{ fontFamily: 'AvocadoCake' }} className='w-[50%] text-center text-[3vw] text-white'>
               La flore variée de nos pâturages d'estive qui régale les troupeaux n'est pas étrangère au saveurs de nos fromages...
             </p>
@@ -132,24 +139,24 @@ const Terroir = () => {
         </div>
 
         <div className='montagne absolute z-0 w-full bottom-0'>
-          <img src={montPc} className='w-full object-contain' />
-          {/* 
-          <picture className='w-full object-contain'>
+          <picture>
             <source
               media='(max-width: 1024px)'
               srcSet={montMobile}
+              className='w-full object-contain'
             />
             <source
               media='(min-width: 1025px)'
               srcSet={montPc}
+              className='w-full object-contain'
             />
-            <img src={montPc}/>
+            <img src={montPc} className='w-full object-contain' />
           </picture>
-           */}
         </div>
-
       </div >
-      <div className='bg-black h-[100vh]' />
+
+      <Product />
+
     </>
   )
 }

@@ -1,121 +1,52 @@
 import gsap from 'gsap'
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 const couleeTel = require("../images/coulee-telephone.png")
 const couleePc = require("../images/coulee-ordi.png")
 const goutte2 = require("../images/goutte2.png")
-const smokeV1 = require("../images/smokeV1.png")
-const smokeV2 = require("../images/smokeV2.png")
 
 const Waiting = () => {
+
+    const [isClickedMenu, setIsClickedMenu] = useState(false);
+
+    function handleMenuCLick() {
+        setIsClickedMenu(!isClickedMenu);
+    }
 
     useLayoutEffect(() => {
 
         let ctx = gsap.context(() => {
 
-            // gsap.to(".goutte-container", {
-            //     yPercent: 100,
-            //     ease: 'power3.in',
-            //     duration: 1,
-            //     delay: 2,
-            //     repeat: -1,
-            //     repeatDelay: 1,
-            // })
-
-            gsap.to('.smoke1', {
-                yPercent: -200,
-                x: 20,
-                duration: 3.3,
-                ease: 'power2.out',
-                repeat: -1,
-                // repeatDelay: 0.1,
-                delay: 0.7,
-            })
-
-            gsap.to('.smoke2', {
-                yPercent: -150,
-                x: 15,
-                duration: 2.6,
-                ease: 'power2.out',
-                repeat: -1,
-                // repeatDelay: 0.1,
-            })
-
-            gsap.to('.smoke3', {
-                yPercent: -170,
-                x: -15,
-                duration: 3.1,
-                ease: 'power2.out',
-                repeat: -1,
-                // repeatDelay: 0.1,
-                delay: 1.7,
-            })
-
-            gsap.to('.smoke4', {
-                yPercent: -170,
-                x: -25,
-                duration: 3.7,
-                ease: 'power2.out',
-                repeat: -1,
-                // repeatDelay: 0.1,
-                delay: 2.4,
-            })
-
-            const opa1 = gsap.timeline({
-                repeat: -1,
-                delay: 0.7,
-                repeatDelay: 1,
-            })
-            opa1.to(".smoke1", {
-                opacity: 1,
-                duration: 0.5,
-            }).to(".smoke1", {
-                opacity: 0,
-                duration: 1.8,
-            });
-
-            const opa2 = gsap.timeline({
-                repeat: -1,
-                repeatDelay: 0,
-            })
-            opa2.to(".smoke2", {
-                opacity: 1,
+            gsap.to(".goutte-container", {
+                yPercent: 100,
+                ease: 'power3.in',
                 duration: 1,
-            }).to(".smoke2", {
-                opacity: 0,
-                duration: 1.6,
-            });
-
-            const opa3 = gsap.timeline({
+                delay: 2,
                 repeat: -1,
-                delay: 1.7,
-                repeatDelay: 0.6,
+                repeatDelay: 6,
             })
-            opa3.to(".smoke3", {
-                opacity: 1,
-                duration: 0.6,
-            }).to(".smoke3", {
-                opacity: 0,
-                duration: 1.9,
-            });
 
-            const opa4 = gsap.timeline({
-                repeat: -1,
-                delay: 2.4,
-                repeatDelay: 0.3,
-            })
-            opa4.to(".smoke4", {
-                opacity: 1,
-                duration: 0.6,
-            }).to(".smoke4", {
-                opacity: 0,
-                duration: 2.8,
-            });
+            const waveTl = gsap.timeline();
+
+            waveTl.fromTo('.middle-wave',
+                {
+                    xPercent: -10,
+                },
+                {
+                    xPercent: 10,
+                    yoyo: true,
+                    repeat: -1,
+                    duration: 3,
+                }
+            )
 
         })
 
         return () => ctx.revert();
     }, [])
 
+    // useEffect(() => {
+    //     menuRef.current
+    // }, [isClickedMenu])
 
     return (
         <div className='waiting-container relative overflow-hidden w-full h-[100vh] bg-fondue-blue'>
@@ -132,20 +63,40 @@ const Waiting = () => {
                     />
                     <img src={couleePc} />
                 </picture>
-                
+
             </div>
+
             <div className='goutte-container absolute top-0 h-[100vh] w-[100vw]'>
                 <img src={goutte2} className='w-full' />
             </div>
-            <div className='smoke-container mx-auto mt-48 relative w-16' >
-                <img src={smokeV1} className='smoke1 opacity-0 absolute w-full' />
-                <img src={smokeV2} className='smoke2 opacity-0 absolute w-full' />
-                <img src={smokeV2} className='smoke3 opacity-0 absolute w-full' />
-                <img src={smokeV1} className='smoke4 opacity-0 absolute w-full' />
+
+            <div className='waves-container absolute h-[30vh] w-full bottom-0 bg-fondue-yellow'>
+                <div className='h-[20vh] w-[10vw] bottom-0 bg-red-800 mx-auto' />
+                <div className='middle-wave absolute h-[20vh] w-full bottom-0 bg-yellow-300'>
+                    <div className='h-[20vh] w-[10vw] bottom-0 bg-red-500 mx-auto' />
+                </div>
+                <div className='bottom-wave absolute h-[10vh] w-full bottom-0 bg-yellow-200'>
+                    <div className='h-[20vh] w-[10vw] bottom-0 bg-red-300 mx-auto' />
+                </div>
+
             </div>
 
-
-
+            <button className='buy-button absolute top-2 right-20 h-10 w-10 bg-black' />
+            <button className='menu-button absolute top-2 right-3 h-10 w-10 bg-black' onClick={handleMenuCLick} />
+            {/* <div style={{visibility: isClickedMenu ? 'visible' : 'hidden',
+            opacity: isClickedMenu ? 1 : 0,
+            transition: '1s'}} className='menu absolute w-40 top-12 right-0 bg-red-500'> */}
+            {/* <div style={{height: isClickedMenu ? 80 : 0, transition: '2s'}} 
+            className='menu absolute w-40 top-12 right-0 overflow-hidden bg-red-500'> */}
+            <div style={{clipPath: isClickedMenu ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' :  'polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%)',
+            transition: '2s'}} 
+            className='menu absolute w-40 top-12 right-0 overflow-hidden bg-red-500'>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
 
         </div>
     )

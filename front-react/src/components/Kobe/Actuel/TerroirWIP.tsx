@@ -98,15 +98,18 @@ const TerroirWIP = () => {
       //-------------------------------- GSAP - TABLE ------------------------------
       //----------------------------------------------------------------------------
 
-      gsap.from('.table', {
-        xPercent: -150,
+      const tabletl = gsap.timeline()
+
+      tabletl.from('.table', {
         scrollTrigger: {
           trigger: '.montagne',
           start: '20% top',
-          end: '40% top',
+          end: '30% top',
           scrub: true,
-        }
-      })
+        },
+        xPercent: -150,
+        // onComplete: () => { console.log('ouiouoioio'); tabletl.kill() }
+      }).call(() => {tabletl.kill()})
 
 
 
@@ -304,7 +307,7 @@ const TerroirWIP = () => {
               <img src={require("../../../images/table.jpeg")} />
             </div>
 
-            <picture>
+            <picture className='w-full object-cover'>
               <source
                 media='(max-width: 1024px)'
                 srcSet={basmontagne}
@@ -313,7 +316,7 @@ const TerroirWIP = () => {
                 media='(min-width: 1025px)'
                 srcSet={basmontagne}
               />
-              <img className='h-full' src={basmontagne} />
+              <img className='w-full object-cover' src={basmontagne} />
             </picture>
           </div>
         </div>

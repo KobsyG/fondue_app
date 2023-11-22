@@ -6,7 +6,7 @@ import MaskUpScaleDown from './components/JB/MaskUpScaleDown';
 import FirstPart from './components/Kobe/FirstPart/FirstPart';
 import LaBelleHistoire from './components/JB/LaBelleHistoire';
 import CloudCheese from './components/JB/CloudCheese';
-import Terroir from './components/Kobe/Terroir/Terroir';
+import Terroir from './components/Kobe/Actuel/Terroir';
 import Actuel from './components/Kobe/Actuel/Actuel';
 import Histoire from './components/Histoire';
 import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
@@ -19,9 +19,8 @@ function App() {
       {/* <AudioComponent> */}
 
       <Histoire />
-      <TerroirWIP />
-      <MaskUpScaleDown />
-
+      {/* <TerroirWIP /> */}
+      <Terroir />
       {/* </AudioComponent> */}
     </ReactLenis>
   )

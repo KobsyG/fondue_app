@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 import Waiting from './components/Waiting';
 import Terroir from './components/Kobe/Actuel/Terroir';
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Waiting/>,

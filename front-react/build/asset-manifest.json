@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.74c58983.css",
-    "main.js": "/static/js/main.6e7daa53.js",
+    "main.css": "/static/css/main.30c7c52c.css",
+    "main.js": "/static/js/main.b6454a39.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/PcCraft.png": "/static/media/PcCraft.525639afdedda423d8a5.png",
     "static/media/PcMontagneCraft.png": "/static/media/PcMontagneCraft.1c7a8075d941dcb63f1d.png",
@@ -13,10 +13,14 @@
     "static/media/Petite_vague_pc.png": "/static/media/Petite_vague_pc.15ca095417ee95d4f88b.png",
     "static/media/MinionPro-Regular.otf": "/static/media/MinionPro-Regular.e5d2692c7bb84fdf476b.otf",
     "static/media/MinionPro-Bold.otf": "/static/media/MinionPro-Bold.90d84352514f109cfa1f.otf",
+    "static/media/Texte_tel.png": "/static/media/Texte_tel.58f9d2cb3b50ab6a2d51.png",
     "static/media/comper.png": "/static/media/comper.5953fe70635f4de63cf4.png",
     "static/media/Occams Eraser.otf": "/static/media/Occams Eraser.ca47f08d7af9bcf17aef.otf",
     "static/media/gentiane2.png": "/static/media/gentiane2.dbb296ac63ac7222e4f7.png",
     "static/media/logo-bleu.png": "/static/media/logo-bleu.ebd1b708a8ac9e1da437.png",
+    "static/media/Petite_vague_tel.png": "/static/media/Petite_vague_tel.653b93f9412bb349daaf.png",
+    "static/media/Moyenne_vague_tel.png": "/static/media/Moyenne_vague_tel.6d328b9d4179673d0fac.png",
+    "static/media/insta.webp": "/static/media/insta.3fa50deee348bfb3256f.webp",
     "static/media/Coulee_pc.png": "/static/media/Coulee_pc.ead7ba6cdd65ab19aef4.png",
     "static/media/Goutte5pc.png": "/static/media/Goutte5pc.1409d818ccd22c88cc70.png",
     "static/media/Goutte4pc.png": "/static/media/Goutte4pc.944b8e74d2078da0880a.png",
@@ -27,20 +31,20 @@
     "static/media/coulee-telephone.png": "/static/media/coulee-telephone.3b23ac6dfd4c7c7de962.png",
     "static/media/gentiane1.png": "/static/media/gentiane1.5985977ff84368e2d69d.png",
     "static/media/Moon Flower Bold.ttf": "/static/media/Moon Flower Bold.1ccea58ac002b9944067.ttf",
+    "static/media/Grande_vague_tel.png": "/static/media/Grande_vague_tel.4e369cfd1562685062dc.png",
     "static/media/echelle-seul-blanc.png": "/static/media/echelle-seul-blanc.7f5e00e32cd8c2421542.png",
     "static/media/coulee-ordi.png": "/static/media/coulee-ordi.8b55e5f70a4feaa62eab.png",
     "static/media/Allora.ttf": "/static/media/Allora.7b36310510b0a5ade902.ttf",
     "static/media/Avocado Cake Demo.otf": "/static/media/Avocado Cake Demo.7cf03b01ba4798f88136.otf",
-    "static/media/Logo_menu.png": "/static/media/Logo_menu.660da7f808aba31bee2e.png",
     "static/media/Aloha March.otf": "/static/media/Aloha March.aba236606c41d581c2e8.otf",
-    "static/media/Logo_panier.png": "/static/media/Logo_panier.0e6047abb98da684b4c2.png",
+    "static/media/facebook.webp": "/static/media/facebook.03533392678df5012a04.webp",
     "index.html": "/index.html",
-    "main.74c58983.css.map": "/static/css/main.74c58983.css.map",
-    "main.6e7daa53.js.map": "/static/js/main.6e7daa53.js.map",
+    "main.30c7c52c.css.map": "/static/css/main.30c7c52c.css.map",
+    "main.b6454a39.js.map": "/static/js/main.b6454a39.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74c58983.css",
-    "static/js/main.6e7daa53.js"
+    "static/css/main.30c7c52c.css",
+    "static/js/main.b6454a39.js"
   ]
 }

@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://fonduecoeur.fr",
   "dependencies": {
     "@studio-freight/lenis": "^1.0.27",
     "@studio-freight/react-lenis": "^0.0.36",

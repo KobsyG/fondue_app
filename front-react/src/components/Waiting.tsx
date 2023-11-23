@@ -1,8 +1,8 @@
 import gsap from 'gsap'
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
-const couleeTel = require("../images/new/Coulée_pc.png")
-const couleePc = require("../images/new/Coulée_pc.png")
+const couleeTel = require("../images/new/Coulee_pc.png")
+const couleePc = require("../images/new/Coulee_pc.png")
 const bigWave = require("../images/new/Grosse_vague_pc_true.png")
 const middleWave = require("../images/new/Moyenne_vague_pc.png")
 const smallWave = require("../images/new/Petite_vague_pc.png")
@@ -26,14 +26,14 @@ const Waiting = () => {
 
         let ctx = gsap.context(() => {
 
-            gsap.to(".goutte-container", {
-                yPercent: 100,
-                ease: 'power3.in',
-                duration: 2,
-                delay: 2,
-                repeat: -1,
-                repeatDelay: 1,
-            })
+            // gsap.to(".goutte-container", {
+            //     yPercent: 100,
+            //     ease: 'power3.in',
+            //     duration: 2,
+            //     delay: 2,
+            //     repeat: -1,
+            //     repeatDelay: 1,
+            // })
 
             const waveTl = gsap.timeline();
 
@@ -88,7 +88,7 @@ const Waiting = () => {
     return (
         <div className='waiting-container relative overflow-hidden bg-fondue-blue w-[100vw] h-[100vh]'>
                     
-            <div className='goutte-container absolute top-0 h-[100vh] w-[100vw]'>
+            {/* <div className='goutte-container absolute top-0 h-[100vh] w-[100vw]'>
                 <div className='goutte1 absolute top-0'>
                     <img src={goutte1} className='w-full h-full object-cover' />
                 </div>
@@ -105,7 +105,7 @@ const Waiting = () => {
                     <img src={goutte5} className='w-full h-full object-cover' />
                 </div>
 
-            </div>
+            </div> */}
            
 
             <div className='bg-[#FFDA8F] absolute top-0 h-[30%] w-full p-6 flex justify-center'>
@@ -128,6 +128,7 @@ const Waiting = () => {
                     />
                     <img className='w-full' src={couleePc} />
                 </picture>
+                <img className='w-full' src={couleePc} />
             </div>
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
 
 import './index.css';
 import './styles/font.css';
@@ -12,10 +12,10 @@ import Contact from './components/Contact';
 import Waiting from './components/Waiting';
 import Terroir from './components/Kobe/Actuel/Terroir';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <Waiting/>,
   },
   {
     path: "contact",

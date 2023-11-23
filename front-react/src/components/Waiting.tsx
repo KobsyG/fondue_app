@@ -81,10 +81,6 @@ const Waiting = () => {
     return () => ctx.revert();
   }, [])
 
-  // useEffect(() => {
-  //     menuRef.current
-  // }, [isClickedMenu])
-
   return (
     <div className='waiting-container relative overflow-hidden bg-fondue-blue w-[100vw] h-[100vh]'>
       {/*         
@@ -109,9 +105,9 @@ const Waiting = () => {
             */}
 
       <div className='bg-[#FFDA8F] absolute top-0 h-[30%] w-full p-6 flex justify-center'>
-        {/* <div className='h-full aspect-[1/1] rounded-full bg-fondue-red p-1'> */}
+        <div className='h-full aspect-[1/1] rounded-full bg-fondue-red p-1'>
           <img src={logo} className='h-full' />
-        {/* </div> */}
+        </div>
       </div>
 
       <div className='coulee absolute top-[30%]'>
@@ -154,11 +150,6 @@ const Waiting = () => {
         <img src={require('../images/new/Logo_menu.png')} />
       </button>
 
-      {/* <div style={{visibility: isClickedMenu ? 'visible' : 'hidden',
-            opacity: isClickedMenu ? 1 : 0,
-            transition: '1s'}} className='menu absolute w-40 top-12 right-0 bg-red-500'> */}
-      {/* <div style={{height: isClickedMenu ? 80 : 0, transition: '2s'}} 
-            className='menu absolute w-40 top-12 right-0 overflow-hidden bg-red-500'> */}
       <div style={{
         clipPath: isClickedMenu ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%)',
         transition: '2s'

@@ -128,7 +128,7 @@ const Waiting = () => {
                     />
                     <img className='w-full' src={couleePc} />
                 </picture>
-                <img className='w-full' src={couleePc} />
+                {/* <img className='w-full' src={couleePc} /> */}
             </div>
 
 

@@ -11,17 +11,18 @@ import Actuel from './components/Kobe/Actuel/Actuel';
 import Histoire from './components/Histoire';
 import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
 import AudioComponent from './components/JB/AudioComponent';
+import Waiting from './components/Waiting';
 
 function App() {
 
   return (
     <ReactLenis root>
-      {/* <AudioComponent> */}
-
-      <Histoire />
-      {/* <TerroirWIP /> */}
-      <Terroir />
-      {/* </AudioComponent> */}
+        {/* <AudioComponent> */}
+        {/* <Histoire /> */}
+        {/* <TerroirWIP /> */}
+        {/* <Terroir /> */}
+        {/* </AudioComponent> */}
+        <Waiting/>
     </ReactLenis>
   )
 }

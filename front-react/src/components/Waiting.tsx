@@ -244,13 +244,13 @@ const Waiting = () => {
 
             <div className='reseau-container' >
 
-            <a href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==">
+            <a href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank'>
                 <button className='buy-button absolute top-2 right-20 h-10 w-10'>
                     <img src={require('../images/insta.webp')} />
                 </button>
             </a>
 
-            <a href="https://www.facebook.com/fonduecoeur">
+            <a href="https://www.facebook.com/fonduecoeur" target='_blank'>
                 <button className='menu-button absolute top-2 right-3 h-10 w-10' >
                     <img src={require('../images/facebook.webp')} />
                 </button>

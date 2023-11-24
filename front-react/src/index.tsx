@@ -9,8 +9,8 @@ import reportWebVitals from './reportWebVitals';
 import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
 import Histoire from './components/Histoire';
 import Contact from './components/Contact';
-import Waiting from './components/Waiting';
 import Terroir from './components/Kobe/Actuel/Terroir';
+import Waiting from './components/Waiting';
 
 const router = createBrowserRouter([
   {

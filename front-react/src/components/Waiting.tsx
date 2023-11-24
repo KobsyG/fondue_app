@@ -305,12 +305,12 @@ const Waiting = () => {
       </div>
 
       <div className='reseau-container absolute top-0 right-0 flex' >
-        <a className='insta-button h-10 w-10 mr-2 mt-2' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==">
+        <a className='insta-button h-10 w-10 mr-2 mt-2' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank'>
           <button>
             <img src={instaLogo} />
           </button>
         </a>
-        <a className='facebook-button h-10 w-10 mr-2 mt-2' href="https://www.facebook.com/fonduecoeur">
+        <a className='facebook-button h-10 w-10 mr-2 mt-2' href="https://www.facebook.com/fonduecoeur" target='_blank'>
           <button>
             <img src={facebookLogo} />
           </button>

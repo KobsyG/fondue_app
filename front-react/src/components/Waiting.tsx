@@ -15,6 +15,9 @@ const texteTel = require("../images/waiting/Texte_tel.png")
 const kraftTel = require("../images/waiting/MobileCraft.png")
 const instaLogo = require("../images/waiting/insta.webp")
 const facebookLogo = require("../images/waiting/facebook.webp")
+const bgYellowPc = require("../images/waiting/bg-yellow-pc.png")
+const bgYellowTel = require("../images/waiting/bg-yellow-tel.png")
+const bg1616 = require("../images/waiting/bg1616.png")
 
 const goutte1 = require("../images/waiting/Goutte1.png")
 const goutte2 = require("../images/waiting/Goutte2.png")
@@ -221,7 +224,25 @@ const Waiting = () => {
       <div className='w-full h-full bg-kraftTel block lg:hidden' />
       <div className='w-full h-full bg-fondue-blue hidden lg:block' />
 
-      <div className='bg-[#FFDA8F] absolute top-0 h-[30%] lg:h-[30%] w-full flex justify-center items-center'>
+      {/* <div className='bg-[#FFDA8F] absolute top-0 h-[30%] lg:h-[30%] w-full flex justify-center items-center'> */}
+      <div className='absolute top-0 h-[30%] lg:h-[30%] w-full flex justify-center items-center'>
+        {/*         
+        <picture>
+          <source
+            media='(max-width: 1024px)'
+            srcSet={bgYellowTel}
+            className='absolute z-0 top-0 left-0 w-full h-full object-cover'
+          />
+          <source
+            media='(min-width: 1025px)'
+            srcSet={bgYellowPc}
+            className='absolute z-0 top-0 left-0 w-full h-full object-cover'
+          />
+          <img src={bgYellowPc} className='absolute z-0 top-0 left-0 w-full h-full object-cover' />
+        </picture>
+        */}
+        <img src={bg1616} className='absolute z-0 top-0 left-0 w-full h-full object-cover' />
+
         <div className='logo relative h-[70%] lg:h-[70%] aspect-[1/1]'>
           <div className='h-full w-full bg-black absolute rounded-full top-[1%] left-[1%] opacity-40' />
           <img src={logo} className='h-full w-full absolute' />
@@ -284,7 +305,26 @@ const Waiting = () => {
             <img src={smallWave} className='small-wave absolute w-[200vw] bottom-0' />
           </picture>
         </div>
-        <div className='bg-[#FFDA8F] h-[100vh] w-full' />
+        {/* <div className='bg-[#FFDA8F] h-[100vh] w-full' /> */}
+        <div className='h-[100vh] w-[100vw]'>
+          {/* 
+          <picture>
+            <source
+              media='(max-width: 1024px)'
+              srcSet={bgYellowTel}
+              className='w-full h-full object-cover'
+            />
+            <source
+              media='(min-width: 1025px)'
+              srcSet={bgYellowPc}
+              className='w-full h-full object-cover'
+            />
+            <img src={bgYellowPc} className='w-full h-full object-cover' />
+          </picture>
+           */}
+          <img src={bg1616} className='w-full h-full object-cover' />
+
+        </div>
       </div>
 
 

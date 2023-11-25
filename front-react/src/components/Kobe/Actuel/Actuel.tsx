@@ -9,6 +9,7 @@ const compere = require("../../../images/Kobe/comper.png")
 const text = require("../../../images/Kobe/text.png")
 const couleeTel = require("../../../images/Kobe/coulee-telephone.png")
 const couleePc = require("../../../images/Kobe/coulee-ordi.png")
+const logo = require("../../../images/logo-bleu.png")
 
 const montagnePC = require("../../../images/Kobe/Montagne CP.png")
 const montagne16 = require("../../../images/Kobe/Montagne 16 cm.png")
@@ -151,7 +152,7 @@ const Actuel = () => {
 
 
         <div className='title w-[full] h-[100vh] flex justify-center items-center'>
-          <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={require("../../../images/logo-bleu.png")} />
+          <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={logo} />
         </div>
 
         <div className='main-container w-[80%] mx-auto bg-fondue-blue'>

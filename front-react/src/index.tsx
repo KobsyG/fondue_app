@@ -33,6 +33,10 @@ const router = createBrowserRouter([
     path: "terroir",
     element: <Terroir />,
   },
+  {
+    path: "*",
+    element: <Waiting/>,
+  },
 ]);
 
 const root = ReactDOM.createRoot(

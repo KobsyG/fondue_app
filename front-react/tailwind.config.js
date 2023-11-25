@@ -27,10 +27,6 @@ module.exports = {
         'fondue-red': '#E50044',
       },
       backgroundImage: {
-        'kraftPc': "url('/src/images/PcCraft.png')",
-        'kraftTel': "url('/src/images/MobileCraft.png')",
-        'bois': "url('/src/images/bois.avif')",
-        'montagne': "url('/src/images/bg-montagne.png')",
       }
     },
   },

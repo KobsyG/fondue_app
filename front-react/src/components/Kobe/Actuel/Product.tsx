@@ -2,9 +2,9 @@ import React, { useLayoutEffect } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const gentiane2 = require("../../../images/gentiane2.png")
-const craftPc = require('../../../images/PcCraft.png')
-const craftMob = require('../../../images/MobileCraft.png')
+const gentiane2 = require("../../../images/Kobe/gentiane2.png")
+const craftPc = require('../../../images/Kobe/PcCraft.png')
+const craftMob = require('../../../images/Kobe/MobileCraft.png')
 
 function Product() {
 

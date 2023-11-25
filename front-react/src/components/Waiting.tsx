@@ -15,9 +15,6 @@ const texteTel = require("../images/waiting/Texte_tel.png")
 const kraftTel = require("../images/waiting/MobileCraft.png")
 const instaLogo = require("../images/waiting/insta.webp")
 const facebookLogo = require("../images/waiting/facebook.webp")
-const bgYellowPc = require("../images/waiting/bg-yellow-pc.png")
-const bgYellowTel = require("../images/waiting/bg-yellow-tel.png")
-const bg1616 = require("../images/waiting/bg1616.png")
 
 const goutte1 = require("../images/waiting/Goutte1.png")
 const goutte2 = require("../images/waiting/Goutte2.png")
@@ -221,11 +218,12 @@ const Waiting = () => {
 
   return (
     <div className='waiting-container relative overflow-hidden w-[100vw] h-[100vh]'>
-      <div className='w-full h-full bg-kraftTel block lg:hidden' />
-      <div className='w-full h-full bg-fondue-blue hidden lg:block' />
+      {/* <div className='lg:hidden w-full h-full bg-kraftTel' /> */}
+      <img src={kraftTel} className='lg:hidden w-[100vw] h-[100vh] object-cover absolute z-0' />
+      <div className='hidden lg:block w-full h-full bg-fondue-blue' />
 
       <div className='bg-[#FFDA8F] absolute top-0 h-[30%] lg:h-[30%] w-full flex justify-center items-center'>
-        <div className='h-[70%] w-auto relative'>
+        <div className='h-[70%] lg:h-[80%] w-auto relative'>
           <div className='h-full w-full bg-black absolute rounded-full top-[1%] left-[1%] opacity-40' />
           <img src={logo} className='h-full relative object-cover' />
         </div>
@@ -233,10 +231,10 @@ const Waiting = () => {
       </div>
 
       <div className='topbar absolute top-0 h-[4.5%] w-full flex items-center ml-2'>
-        <p style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-blue text-[1.2vh]'>contact@fonduecoeur.fr</p>
+        <p style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-blue text-[1.2vh] lg:text-[20px]'>contact@fonduecoeur.fr</p>
       </div>
 
-      <div className='coulee absolute z-[60] w-full top-[30%] lg:top-[30%]'>
+      <div className='coulee absolute z-[60] w-full top-[30%]'>
         <img className='w-full' src={coulee} />
         <img src={goutte1} className='w-full goutte1 absolute z-[10] bottom-0' />
         <img src={goutte2} className='w-full goutte2 absolute z-[10] bottom-0' />
@@ -291,32 +289,20 @@ const Waiting = () => {
         <div className='bg-[#FFDA8F] h-[100vh] w-full' />
       </div>
 
-
-      <div style={{ transform: 'translateY(-50%)' }} className='text absolute z-[80] w-full top-[50%] lg:top-[55%] lg:w-[90%] lg:left-[5%] flex justify-center' >
-        <picture>
-          <source
-            media='(max-width: 1024px)'
-            srcSet={texteTel}
-            className='w-full'
-          />
-          <source
-            media='(min-width: 1025px)'
-            srcSet={texte}
-            className='w-full'
-          />
-          <img src={texte} className='object-cover w-full' />
-        </picture>
+      <div className='top-[30%] h-[45%] lg:top-[37%] lg:h-[35%] w-full absolute z-[80] flex justify-center items-center'>
+        <img src={texteTel} className='lg:hidden w-full max-h-[80%] object-contain' />
+        <img src={texte} className='hidden lg:block w-full max-h-[70%] max-w-[80%] object-contain' />
       </div>
 
       <div className='reseau-container absolute top-0 right-0 flex' >
-        <a className='insta-button h-10 w-10 mr-2 mt-2' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank'>
+        <a className='insta-button h-10 w-10 mr-2 mt-2 lg:h-12 lg:w-12 lg:mr-3 lg:mt-3' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank'>
           <button>
-            <img src={instaLogo} />
+            <img src={instaLogo} className='hover:scale-125 transform transition-transform duration-300'/>
           </button>
         </a>
-        <a className='facebook-button h-10 w-10 mr-2 mt-2' href="https://www.facebook.com/fonduecoeur" target='_blank'>
+        <a className='facebook-button h-10 w-10 mr-2 mt-2 lg:h-12 lg:w-12 lg:mr-3 lg:mt-3' href="https://www.facebook.com/fonduecoeur" target='_blank'>
           <button>
-            <img src={facebookLogo} />
+            <img src={facebookLogo} className='hover:scale-125 transform transition-transform duration-300'/>
           </button>
         </a>
       </div>

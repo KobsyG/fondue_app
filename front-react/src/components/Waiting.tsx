@@ -218,7 +218,6 @@ const Waiting = () => {
 
   return (
     <div className='waiting-container relative overflow-hidden w-[100vw] h-[100vh]'>
-      {/* <div className='lg:hidden w-full h-full bg-kraftTel' /> */}
       <img src={kraftTel} className='lg:hidden w-[100vw] h-[100vh] object-cover absolute z-0' />
       <div className='hidden lg:block w-full h-full bg-fondue-blue' />
 

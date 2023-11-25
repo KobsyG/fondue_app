@@ -92,7 +92,7 @@ const Histoire = () => {
         <>
             <div className='landing-container w-full bg-fondue-blue'>
                 <div className='title w-[full] h-[100vh] flex justify-center items-center'>
-                    <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={require("../images/logo-bleu.png")} />
+                    <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={require("../images/waiting/logo-bleu.png")} />
                 </div>
 
                 <div className='main-container w-[80%] mx-auto bg-fondue-blue'>

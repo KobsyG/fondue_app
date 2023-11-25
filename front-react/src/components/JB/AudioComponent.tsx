@@ -34,7 +34,7 @@ const AudioComponent: React.FC<{ children: ReactNode }> = ({ children }) => {
     return (
         <AudioContext.Provider value={{ audioGentRef, permissionGranted }}>
             <audio ref={audioGentRef}>
-                <source src="./testSound.mp3" type="audio/mpeg" />
+                {/* <source src="./testSound.mp3" type="audio/mpeg" /> */}
             </audio>
             {children}
         </AudioContext.Provider>

@@ -2,9 +2,9 @@ import React, { useLayoutEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const compere = require("../images/comper.png")
-const couleeTel = require("../images/coulee-telephone.png")
-const couleePc = require("../images/coulee-ordi.png")
+const compere = require("../images/histoire/comper.png")
+const couleeTel = require("../images/histoire/coulee-telephone.png")
+const couleePc = require("../images/histoire/coulee-ordi.png")
 
 const title = "Il était une fois deux amis, partis bras dessus bras dessous pour conquérir un titre aussi inattendu que réjouissant..."
 const histoireFirst = "C'est ainsi que le 13 mars 2022, à Montréjeau, Alban et Jean-Jacques remportent le premier titre de Champion de France de Fondue aux Fromages devant 20 autres équipes candidates au titre. Ils innovent en proposant une recette à base des 5 AOP du Cantal ! Et quelques ingrédients secrets qui vont vous être dévoilés..."

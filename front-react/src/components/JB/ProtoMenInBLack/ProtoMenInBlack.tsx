@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
-import Portrait from './portrait_of_black_man.jpg'
+import Portrait from '../../../images/jb/portrait_of_black_man.jpg'
 
 function ProtoMenInBlack() {
     const [targetElement, setTarget] = useState<HTMLDivElement | null>(null);

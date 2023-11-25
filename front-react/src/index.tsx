@@ -1,17 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
+
 import './index.css';
 import './styles/font.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import { ParallaxProvider } from 'react-scroll-parallax';
+import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
+import Histoire from './components/Histoire';
+import Contact from './components/Contact';
+import Terroir from './components/Kobe/Actuel/Terroir';
+import Waiting from './components/Waiting';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Waiting/>,
+  },
+  {
+    path: "contact",
+    element: <Contact />,
+  },
+  {
+    path: "histoire",
+    element: <Histoire />,
+  },
+  {
+    path: "terroir",
+    element: <Terroir />,
+  },
+  {
+    path: "all",
+    element: <App/>,
+  },
+  {
+    path: "*",
+    element: <Waiting/>,
+  },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
     <React.StrictMode>
-      <App />
+      <RouterProvider router={router}/>
     </React.StrictMode>
 );
 

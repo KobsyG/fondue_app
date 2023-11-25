@@ -244,7 +244,7 @@ const Waiting = () => {
         <img src={bg1616} className='absolute z-0 top-0 left-0 w-full h-full object-cover' />
 
         <div className='logo relative h-[70%] lg:h-[70%] aspect-[1/1]'>
-          <div className='h-full w-full bg-black absolute rounded-full top-[1%] left-[1%] opacity-40' />
+          {/* <div className='h-full w-full bg-black absolute rounded-full top-[1%] left-[1%] opacity-40' /> */}
           <img src={logo} className='h-full w-full absolute' />
         </div>
       </div>

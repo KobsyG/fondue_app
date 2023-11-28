@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import pacman from '../../images/pacman.png';
+// import pacman from '../../images/pacman.jpg';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -37,7 +37,7 @@ function FallingCheese() {
       <div className='h-[110vh] w-full bg-slate-300' />
       <div className='w-full h-[800vh] bg-slate-300'>
         <div className='divCheese1 w-full h-[70vh] bg-slate-600'>
-          <img src={pacman} className='cheese1 h-48 w-48 mx-auto' />
+          {/* <img src={} className='cheese1 h-48 w-48 mx-auto' /> */}
         </div>
       </div>
     </div >

@@ -1,9 +1,6 @@
 import CloudCheese from "./CloudCheese";
 import cntl from 'cntl';
 import salers from '../../images/Salers.jpg'
-import bread from '../../images/sourdough-bread-table.jpg'
-import cheese from '../../images/cheese-fondue-600420.jpeg'
-import postit1 from '../../images/postit1.png'
 import postit2 from '../../images/postit2.png'
 import postit3 from '../../images/postit3.png'
 

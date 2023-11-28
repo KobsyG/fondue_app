@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import cubeCheese from '../../images/cheese1.svg'
-import triangleCheese2 from '../../images/cheese2.svg'
+import cubeCheese from '../../images/jb/cheese1.svg'
+import triangleCheese2 from '../../images/jb/cheese2.svg'
 import gsap from 'gsap'
 
 function CloudCheese({ classAdd }: { classAdd: string }) {

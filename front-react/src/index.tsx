@@ -11,11 +11,12 @@ import Histoire from './components/Histoire';
 import Contact from './components/Contact';
 import Terroir from './components/Kobe/Actuel/Terroir';
 import Waiting from './components/Waiting';
+import Mono from './components/Mono';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Waiting/>,
+    element: <Mono />,
   },
   {
     path: "contact",

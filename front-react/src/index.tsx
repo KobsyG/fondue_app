@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, Form, RouterProvider } from "react-router-dom";
 
 import './index.css';
 import './styles/font.css';
@@ -12,11 +12,12 @@ import Contact from './components/Contact';
 import Terroir from './components/Kobe/Actuel/Terroir';
 import Waiting from './components/Waiting';
 import Mono from './components/Mono';
+import Forms from './components/Kobe/Forms';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Mono />,
+    element: <Forms />,
   },
   {
     path: "contact",

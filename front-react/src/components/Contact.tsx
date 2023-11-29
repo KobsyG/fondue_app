@@ -1,7 +1,39 @@
 import React, { FormEvent, useState } from 'react'
 import './contact.css'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const ok = <path d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"></path>
+
 const Contact = () => {
+  const successNotify = () => {
+    toast.success(`Message envoyé!`, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    })
+  };
+
+  const errorNotify = () => {
+    toast.error(`Hmm..`, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    })
+  };
+
+
   // const from = 'vermeerschjb@orange.fr'
   // const subject = 'First try'
   // const message = "our first message using php mail method"
@@ -34,28 +66,54 @@ const Contact = () => {
   }
 
   return (
-    <div className='contact-container w-[500px] bg-slate-100'>
 
-      <p>Contact</p>
-      <div>
+    <div className='contact-container bg-[#202454] w-[500px] flex justify-center p-10'>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        limit={3}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="light"
+      />
+      <div className='w-full'>
+        <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
+
         <form onSubmit={handleSubmit}>
-          <label>Adresse email</label>
-          <input type="email" id="from" name="from" placeholder="Votre email"
+          <label
+            style={{ fontFamily: 'OccamsEraser' }}
+            className='text-white text-[18px]'>
+            Votre Nom
+          </label>
+          <input type="email" id="from" name="from"
             value={from}
             onChange={e => setFrom(e.target.value)}
+            className='h-10'
           />
 
-          <label>Sujet</label>
-          <input type="text" id="subject" name="subject" placeholder="Sujet de l'email"
+          <label
+            style={{ fontFamily: 'OccamsEraser' }}
+            className='text-white text-[18px]'>
+            Votre Email
+          </label>
+          <input type="text" id="subject" name="subject"
             value={subject}
             onChange={e => setSubject(e.target.value)}
           />
 
-          <label>Message</label>
+          <label
+            style={{ fontFamily: 'OccamsEraser' }}
+            className='text-white text-[18px]'>
+            Le Message
+          </label>
           <textarea
             id="message"
             name="message"
-            placeholder="Veuillez écrire votre message"
             className='h-48'
             value={message}
             onChange={e => setMessage(e.target.value)}
@@ -63,22 +121,24 @@ const Contact = () => {
 
           <button
             type="submit"
+            onClick={successNotify}
+            style={{ fontFamily: 'AvocadoCake' }}
             disabled={from.length === 0 || subject.length === 0 || message.length === 0 || status === 'submitting'}
-            className={`text-white w-full rounded text-[20px] py-2 px-1 bg-fondue-yellow hover:bg-fondue-blue
-            ${from.length === 0 || subject.length === 0 || message.length === 0 || status === 'submitting' ? 'opacity-80 cursor-not-allowed' : 'opacity-100'}
+            className={`text-fondue-blue w-full rounded text-[20px] py-2 px-1 bg-fondue-yellow border-4 border-fondue-yellow
+            ${from.length === 0 || subject.length === 0 || message.length === 0 || status === 'submitting' ? 'hover:bg-fondue-red hover:border-fondue-red cursor-not-allowed' : 'hover:text-fondue-yellow hover:bg-fondue-blue'}
             `}
           >
             Envoyer
           </button>
-
-          {error !== null ?
-            (<p className="text-red-600">{error.message}</p>)
-            :
-            (<p>&nbsp;</p>)
-          }
-
         </form>
       </div>
+
+      {/* {error !== null ?
+        (<p className="text-red-600">{error.message}</p>)
+        :
+        (<p>&nbsp;</p>)
+      } */}
+
 
 
 

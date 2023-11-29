@@ -2,16 +2,17 @@ import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { gsap } from 'gsap'
 import './Actuel.css'
-const hautmontagne = require("../../../images/haut-mont.png");
-const basmontagne = require("../../../images/bas-mont.png");
-const montcoul = require("../../../images/mont-coul.png");
-const compere = require("../../../images/comper.png")
-const text = require("../../../images/text.png")
-const couleeTel = require("../../../images/coulee-telephone.png")
-const couleePc = require("../../../images/coulee-ordi.png")
+const hautmontagne = require("../../../images/Kobe/haut-mont.png");
+const basmontagne = require("../../../images/Kobe/bas-mont.png");
+const montcoul = require("../../../images/Kobe/mont-coul.png");
+const compere = require("../../../images/Kobe/comper.png")
+const text = require("../../../images/Kobe/text.png")
+const couleeTel = require("../../../images/Kobe/coulee-telephone.png")
+const couleePc = require("../../../images/Kobe/coulee-ordi.png")
+const logo = require("../../../images/logo-bleu.png")
 
-const montagnePC = require("../../../images/Montagne CP.png")
-const montagne16 = require("../../../images/Montagne 16 cm.png")
+const montagnePC = require("../../../images/Kobe/Montagne CP.png")
+const montagne16 = require("../../../images/Kobe/Montagne 16 cm.png")
 
 const title = "Il était une fois deux amis, partis bras dessus bras dessous pour conquérir un titre aussi inattendu que réjouissant..."
 const histoireFirst = "C'est ainsi que le 13 mars 2022, à Montréjeau, Alban et Jean-Jacques remportent le premier titre de Champion de France de Fondue aux Fromages devant 20 autres équipes candidates au titre. Ils innovent en proposant une recette à base des 5 AOP du Cantal ! Et quelques ingrédients secrets qui vont vous être dévoilés..."
@@ -151,7 +152,7 @@ const Actuel = () => {
 
 
         <div className='title w-[full] h-[100vh] flex justify-center items-center'>
-          <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={require("../../../images/logo-bleu.png")} />
+          <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={logo} />
         </div>
 
         <div className='main-container w-[80%] mx-auto bg-fondue-blue'>

@@ -226,7 +226,6 @@ const Waiting = () => {
           <div className='h-full w-full bg-black absolute rounded-full top-[1%] left-[1%] opacity-40' />
           <img src={logo} className='h-full relative object-cover' />
         </div>
-
       </div>
 
       <div className='topbar absolute top-0 h-[4.5%] w-full flex items-center ml-2'>

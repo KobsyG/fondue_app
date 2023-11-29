@@ -2,9 +2,9 @@ import React, { useLayoutEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const compere = require("../images/comper.png")
-const couleeTel = require("../images/coulee-telephone.png")
-const couleePc = require("../images/coulee-ordi.png")
+const compere = require("../images/histoire/comper.png")
+const couleeTel = require("../images/histoire/coulee-telephone.png")
+const couleePc = require("../images/histoire/coulee-ordi.png")
 
 const title = "Il était une fois deux amis, partis bras dessus bras dessous pour conquérir un titre aussi inattendu que réjouissant..."
 const histoireFirst = "C'est ainsi que le 13 mars 2022, à Montréjeau, Alban et Jean-Jacques remportent le premier titre de Champion de France de Fondue aux Fromages devant 20 autres équipes candidates au titre. Ils innovent en proposant une recette à base des 5 AOP du Cantal ! Et quelques ingrédients secrets qui vont vous être dévoilés..."
@@ -92,7 +92,7 @@ const Histoire = () => {
         <>
             <div className='landing-container w-full bg-fondue-blue'>
                 <div className='title w-[full] h-[100vh] flex justify-center items-center'>
-                    <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={require("../images/logo-bleu.png")} />
+                    <img className='w-[60%] sm:h-[40%] z-30 object-contain' src={require("../images/waiting/logo-bleu.png")} />
                 </div>
 
                 <div className='main-container w-[80%] mx-auto bg-fondue-blue'>

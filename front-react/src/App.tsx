@@ -1,12 +1,14 @@
 import { ReactLenis } from '@studio-freight/react-lenis'
 import './App.css';
-import Waiting from './components/Waiting';
+import Histoire from './components/Histoire';
+import Terroir from './components/Kobe/Actuel/Terroir';
 
 function App() {
 
   return (
     <ReactLenis root>
-        <Waiting/>
+      <Histoire />
+      <Terroir />
     </ReactLenis>
   )
 }

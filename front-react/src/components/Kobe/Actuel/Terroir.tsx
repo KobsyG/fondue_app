@@ -3,14 +3,14 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Product from './Product';
 
-const couleeTel = require("../../../images/coulee-telephone.png")
-const couleePc = require("../../../images/coulee-ordi.png")
-const gentiane1 = require("../../../images/gentiane1.png")
-const gentiane2 = require("../../../images/gentiane2.png")
+const couleeTel = require("../../../images/Kobe/coulee-telephone.png")
+const couleePc = require("../../../images/Kobe/coulee-ordi.png")
+const gentiane1 = require("../../../images/Kobe/gentiane1.png")
+const gentiane2 = require("../../../images/Kobe/gentiane2.png")
 
-const montMobile = require('../../../images/MobileMontagneCraft.png')
-const montPc = require('../../../images/PcMontagneCraft.png')
-const echelle = require('../../../images/echelle-seul-blanc.png')
+const montMobile = require('../../../images/Kobe/MobileMontagneCraft.png')
+const montPc = require('../../../images/Kobe/PcMontagneCraft.png')
+const echelle = require('../../../images/Kobe/echelle-seul-blanc.png')
 
 const Terroir = () => {
 

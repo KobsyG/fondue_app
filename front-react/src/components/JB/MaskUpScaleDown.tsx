@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import MIB from '../../images/portrait_of_black_man.jpg';
+import MIB from '../../images/jb/portrait_of_black_man.jpg';
 
 function MaskUpScaleDown() {
     const scrollTriggerInitialized = useRef(false);

@@ -26,7 +26,7 @@ const Contact = () => {
       body: formData
     })
       .then(response => {
-        if (response.ok) // verifier le response.ok
+        if (response.ok) // verifier le response.ok -> send response dans le PHP ? 
           setStatus('success')
         response.text()
       })

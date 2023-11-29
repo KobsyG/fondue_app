@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FormEvent, useState } from 'react'
 import './contact.css'
 
 const Contact = () => {
@@ -10,64 +10,72 @@ const Contact = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('typing'); // success | submitting | typing
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<Error | null>(null);
 
-  function handleClick() {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault(); // Prevent the default form submission behavior (ex: refresh page)
+    console.log('SUB');
+
+
+
     setStatus('submitting');
-    const formData = new FormData();
-    formData.append('from', from);
-    formData.append('subject', 'FONDUE COEUR:' + subject);
-    formData.append('message', message);
+    try {
+      await submitForm(from, 'FONDUE COEUR:' + subject, message);
+      setStatus('success');
+    } catch (err: any) {
+      setStatus('typing');
+      setError(err instanceof Error ? err : new Error('An error occurred'));
+    }
+  }
 
-    console.log('from : ', from, ' subject : ', subject, ' message : ', message);
 
-    fetch('./testmail.php', {
-      method: 'POST',
-      body: formData
-    })
-      .then(response => {
-        if (response.ok) // verifier le response.ok -> send response dans le PHP ? 
-          setStatus('success')
-        response.text()
-      })
-      .then(data => console.log(data))
-      .catch(error => console.error('Error feffefefe:', error));
+  if (status === 'success') {
+    return <h1>Email envoyé. Merci du fondue coeur!</h1>
   }
 
   return (
-    <div className='contact-container w-full h-[100vh]'>
+    <div className='contact-container w-[500px] bg-slate-100'>
 
-      <p>Contact Me</p>
+      <p>Contact</p>
       <div>
-        <form>
-          <label>Email</label>
+        <form onSubmit={handleSubmit}>
+          <label>Adresse email</label>
           <input type="email" id="from" name="from" placeholder="Votre email"
             value={from}
             onChange={e => setFrom(e.target.value)}
           />
 
-          <br />
-          <br />
-
-          <label>Subject</label>
-          <input id="subject" name="subject" placeholder="Write something.."
+          <label>Sujet</label>
+          <input type="text" id="subject" name="subject" placeholder="Sujet de l'email"
             value={subject}
             onChange={e => setSubject(e.target.value)}
           />
 
-          <br />
-          <br />
-
           <label>Message</label>
-          <textarea id="message" name="message" placeholder="Write something.."
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Veuillez écrire votre message"
+            className='h-48'
             value={message}
             onChange={e => setMessage(e.target.value)}
           ></textarea>
 
-          <button onClick={handleClick} className='w-48 h-48 bg-pink-200'>
-            Click Here!
+          <button
+            type="submit"
+            disabled={from.length === 0 || subject.length === 0 || message.length === 0 || status === 'submitting'}
+            className={`text-white w-full rounded text-[20px] py-2 px-1 bg-fondue-yellow hover:bg-fondue-blue
+            ${from.length === 0 || subject.length === 0 || message.length === 0 || status === 'submitting' ? 'opacity-80 cursor-not-allowed' : 'opacity-100'}
+            `}
+          >
+            Envoyer
           </button>
-          {/* <input type="submit" value="Submit" /> */}
+
+          {error !== null ?
+            (<p className="text-red-600">{error.message}</p>)
+            :
+            (<p>&nbsp;</p>)
+          }
 
         </form>
       </div>
@@ -75,8 +83,48 @@ const Contact = () => {
 
 
 
-    </div>
+    </div >
   )
+}
+
+function submitForm2(from: string, subject: string, message: string): Promise<void> {
+  // Pretend it's hitting the network.
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let shouldError = from.toLowerCase() !== 'lima'
+      if (shouldError) {
+        reject(new Error('An error occured'));
+      } else {
+        resolve();
+      }
+    }, 1500);
+  });
+}
+
+
+function submitForm(from: string, subject: string, message: string) {
+  const formData = new FormData();
+  formData.append('from', from);
+  formData.append('subject', subject);
+  formData.append('message', message);
+
+  // console.log('from : ', from, ' subject : ', subject, ' message : ', message);
+
+  return new Promise((resolve, reject) => {
+    fetch('./testmail.php', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text(); // Resolve with the response text
+        } else {
+          throw new Error('Failed to send the email.'); // Reject with an error message
+        }
+      })
+      .then(data => resolve(data)) // Resolve with the data (success message)
+      .catch(error => reject(error.message)); // Reject with the error message
+  });
 }
 
 export default Contact

@@ -8,7 +8,7 @@ const Contact = () => {
   function handleClick() {
     const formData = new FormData();
     formData.append('from', from);
-    formData.append('subject', subject);
+    formData.append('subject', 'FONDUE COEUR:' + subject);
     formData.append('message', message);
 
     fetch('./testmail.php', {
@@ -17,7 +17,7 @@ const Contact = () => {
     })
       .then(response => response.text())
       .then(data => console.log(data))
-      .catch(error => console.error('Error:', error));
+      .catch(error => console.error('Error feffefefe:', error));
   }
 
   return (

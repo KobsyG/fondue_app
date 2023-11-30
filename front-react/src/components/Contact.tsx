@@ -22,58 +22,34 @@ const Contact = () => {
   const errorNotify = () => {
     toast.error(`Une erreur interne est survenue, contactez-nous directement via l'email: contact@fonduecoeur.fr`, {
       position: "top-center",
-      autoClose: 2000,
+      autoClose: false,
       hideProgressBar: false,
-      closeOnClick: true,
+      closeOnClick: false,
       pauseOnHover: false,
-      draggable: true,
+      draggable: false,
       progress: undefined,
       theme: "light",
     })
   };
 
-  // const promiseNotify = () => {
-  // toast.promise()
-  // }
-
-  // const from = 'vermeerschjb@orange.fr'
-  // const subject = 'First try'
-  // const message = "our first message using php mail method"
-
   const [from, setFrom] = useState('');
-  const [subject, setSubject] = useState('');
+  const [nom, setNom] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('typing'); // success | submitting | typing
-  const [error, setError] = useState<Error | null>(null);
-
-  /*
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault(); // Prevent the default form submission behavior (ex: refresh page)
-    console.log('SUBMITTING');
-    setStatus('submitting');
-    try {
-      await submitForm(from, 'FONDUE COEUR:' + subject, message);
-      setStatus('success');
-    } catch (err: any) {
-      setStatus('typing');
-      setError(err instanceof Error ? err : new Error('An error occurred'));
-    }
-  }
-  */
+  const [status, setStatus] = useState('typing'); // error | submitting | typing
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData();
     formData.append('from', from);
-    formData.append('subject', subject);
+    formData.append('subject', 'FONDUE COEUR : de ' + nom);
     formData.append('message', message);
 
     console.log('SUBMITTING');
     setStatus('submitting');
 
     try {
-      const response = await fetch('http://localhost:8000/testmail.php', {
+      const response = await fetch('./testmail.php', {
         method: 'POST',
         body: formData
       })
@@ -84,7 +60,6 @@ const Contact = () => {
 
       const data = await response.text();
 
-      setStatus('typing');
 
       if (data.includes('200')) {
         console.log('Email sent successfully.');
@@ -96,16 +71,14 @@ const Contact = () => {
         console.log('Error from  php:', data);
         errorNotify();
       }
+      setStatus('typing');
 
     } catch (error) {
+      errorNotify();
+      setStatus('error')
       console.error('Error from fetch:', error);
     }
   };
-
-
-  if (status === 'success') {
-    return <h1>Email envoyé. Merci du fondue coeur!</h1>
-  }
 
   return (
 
@@ -119,9 +92,10 @@ const Contact = () => {
             className='text-white text-[18px]'>
             Votre Nom
           </label>
-          <input type="email" id="from" name="from"
-            value={from}
-            onChange={e => setFrom(e.target.value)}
+          <input type="text" id="nom" name="nom"
+            required minLength={1} maxLength={60}
+            value={nom}
+            onChange={e => setNom(e.target.value)}
             className='h-10'
           />
 
@@ -130,31 +104,36 @@ const Contact = () => {
             className='text-white text-[18px]'>
             Votre Email
           </label>
-          <input type="text" id="subject" name="subject"
-            value={subject}
-            onChange={e => setSubject(e.target.value)}
+          <input type="email" id="from" name="from"
+            required minLength={1} maxLength={60}
+            value={from}
+            onChange={e => setFrom(e.target.value)}
           />
 
-          <label
-            style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[18px]'>
-            Le Message
-          </label>
+          <pre>
+            <label
+              style={{ fontFamily: 'OccamsEraser' }}
+              className='text-white text-[18px]'>
+              Le Message                                                                                    {message.length}/1000
+            </label>
+          </pre>
           <textarea
             id="message"
             name="message"
+            required minLength={1} maxLength={1000}
             className='h-48'
             value={message}
             onChange={e => setMessage(e.target.value)}
           ></textarea>
 
+
           <button
             type="submit"
             style={{ fontFamily: 'AvocadoCake' }}
-            disabled={from.length === 0 || subject.length === 0 || message.length === 0 || status === 'submitting'}
+            disabled={status === 'submitting'}
             className={`text-fondue-blue w-full rounded text-[20px] py-2 px-1 bg-fondue-yellow border-4 border-fondue-yellow
-            ${from.length === 0 || subject.length === 0 || message.length === 0 ? 'hover:bg-fondue-red hover:border-fondue-red cursor-not-allowed' : 'hover:text-fondue-yellow hover:bg-fondue-blue'}
-            ${status === 'submitting' ? 'hover:bg-green-500 hover:border-green-500 cursor-not-allowed' : 'hover:text-fondue-yellow hover:bg-fondue-blue'}
+            ${status === 'submitting' ? 'hover:bg-green-300 hover:border-green-300' : 'hover:text-fondue-yellow hover:bg-fondue-blue'}
+            ${from.length === 0 || nom.length === 0 || message.length === 0 || status === 'error' ? 'hover:bg-fondue-red hover:border-fondue-red' : 'hover:text-fondue-yellow hover:bg-fondue-blue'}
             `}
           >
             Envoyer
@@ -162,55 +141,8 @@ const Contact = () => {
         </form>
       </div>
 
-      {/* {error !== null ?
-        (<p className="text-red-600">{error.message}</p>)
-        :
-        (<p>&nbsp;</p>)
-      } */}
-
-
-
-
-
     </div >
   )
-}
-
-function submitForm2(from: string, subject: string, message: string): Promise<void> {
-  // Pretend it's hitting the network.
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      let shouldError = from.toLowerCase() !== 'lima'
-      if (shouldError) {
-        reject(new Error('An error occured'));
-      } else {
-        resolve();
-      }
-    }, 1500);
-  });
-}
-
-
-function submitForm(from: string, subject: string, message: string) {
-  const formData = new FormData();
-  formData.append('from', from);
-  formData.append('subject', subject);
-  formData.append('message', message);
-
-  return new Promise((resolve, reject) => {
-    fetch('http://localhost:8000/testmail.php', {
-      method: 'POST',
-      body: formData
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to send the email.'); // Reject with an error message
-        }
-        response.text()
-      })
-      .then(data => console.log(data)) // Resolve with the data (success message)
-    // .catch(error => reject(error.message)); // Reject with the error message
-  });
 }
 
 export default Contact

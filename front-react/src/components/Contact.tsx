@@ -4,9 +4,8 @@ import './contact.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const ok = <path d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"></path>
-
 const Contact = () => {
+
   const successNotify = () => {
     toast.success(`Message envoyé!`, {
       position: "top-center",
@@ -68,19 +67,6 @@ const Contact = () => {
   return (
 
     <div className='contact-container bg-[#202454] w-[500px] flex justify-center p-10'>
-      <ToastContainer
-        position="top-center"
-        autoClose={2000}
-        limit={3}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        theme="light"
-      />
       <div className='w-full'>
         <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
 

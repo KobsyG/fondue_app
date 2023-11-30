@@ -19,7 +19,7 @@ import Forms from './components/Kobe/Forms';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Forms />,
+    element: <Waiting />,
   },
   {
     path: "contact",

@@ -18,7 +18,7 @@ import Mono from './components/Mono';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Mono />,
+    element: <Waiting />,
   },
   {
     path: "contact",

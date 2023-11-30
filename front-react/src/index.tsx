@@ -12,15 +12,16 @@ import Contact from './components/Contact';
 import Terroir from './components/Kobe/Actuel/Terroir';
 import Waiting from './components/Waiting';
 import Contact2 from './components/Contact2';
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Waiting/>,
+    element: <Waiting />,
   },
   {
     path: "contact",
-    element: <Contact2 />,
+    element: <Contact />,
   },
   {
     path: "histoire",
@@ -32,11 +33,11 @@ const router = createBrowserRouter([
   },
   {
     path: "all",
-    element: <App/>,
+    element: <App />,
   },
   {
     path: "*",
-    element: <Waiting/>,
+    element: <Waiting />,
   },
 ]);
 
@@ -44,9 +45,22 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-    <React.StrictMode>
-      <RouterProvider router={router}/>
-    </React.StrictMode>
+  <React.StrictMode>
+    <ToastContainer
+      position="top-center"
+      autoClose={2000}
+      limit={3}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover={false}
+      theme="light"
+    />
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import Portrait from '../../../images/jb/portrait_of_black_man.jpg'
+// import { Parallax } from "react-scroll-parallax";
+import Portrait from './portrait_of_black_man.jpg'
 
 function ProtoMenInBlack() {
     const [targetElement, setTarget] = useState<HTMLDivElement | null>(null);
@@ -15,7 +16,19 @@ function ProtoMenInBlack() {
                 <div ref={targetRef} className="top-0 left-1/4 h-[100vh] w-10 bg-fondue-red" />
             </div>
             <div className=''>
-                
+                {/* 
+                {targetElement && (
+                    <Parallax
+                        scale={[1, 0.30]}
+                        translateY={['0vh', '12vh']}
+                        shouldAlwaysCompleteAnimation={true}
+                        targetElement={targetElement}
+                        className='object-cover w-full'
+                    >
+                        <img className='object-cover w-full' src={Portrait} />
+                    </Parallax>
+                )}
+                */}
             </div>
         </div >
     )

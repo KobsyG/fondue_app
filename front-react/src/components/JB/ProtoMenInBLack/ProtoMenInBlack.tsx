@@ -9,7 +9,7 @@ function ProtoMenInBlack() {
         setTarget(targetRef.current);
         console.log('la fritas')
     }, [targetRef]);
-
+``
     return (
         <div className='w-full h-large-page bg-fondue-blue justify-center items-center'>
             <div className='w-full h-[200vh] bg-fondue-yellow absolute'>

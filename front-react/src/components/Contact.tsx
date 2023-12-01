@@ -85,9 +85,9 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
   return (
 
     <div className='contact-container rounded-[20px] bg-[#202454] w-[500px] flex justify-center p-10'>
-      <div className='w-full'>
+      <div className='w-full relative'>
 
-        <button className='close-cross relative -top-7 left-[410px] h-[40px] w-[40px]'>
+        <button className='close-cross absolute -top-7 left-[410px] h-[40px] w-[40px]'>
           <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
         </button>
 

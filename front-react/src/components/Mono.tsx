@@ -127,7 +127,7 @@ const Mono = () => {
       </div>
 
       <Dialog open={openContact} size='sm' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
-        <ToastContainer
+        {/* <ToastContainer
           position="top-center"
           autoClose={2000}
           limit={3}
@@ -139,7 +139,7 @@ const Mono = () => {
           draggable
           pauseOnHover={false}
           theme="light"
-        />
+        /> */}
         <Contact setOpen={setOpenContact} />
       </Dialog>
 

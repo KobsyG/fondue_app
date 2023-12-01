@@ -22,10 +22,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Waiting />,
   },
-  {
-    path: "contact",
-    element: <Contact />,
-  },
+  // {
+  //   path: "contact",
+  //   element: <Contact  />,
+  // },
   {
     path: "mono",
     element: <Mono />,

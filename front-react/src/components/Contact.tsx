@@ -4,7 +4,9 @@ import './contact.css'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Contact = () => {
+const croix = require("../images/Mono/croix.png")
+
+const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
   const successNotify = () => {
     toast.success(`Message envoyé!`, {
@@ -83,6 +85,10 @@ const Contact = () => {
   return (
 
     <div className='contact-container rounded-[20px] bg-[#202454] w-[500px] flex justify-center p-10'>
+      <button className='close-cross relative -top-7 left-[410px] h-[40px] w-[40px]'>
+        <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
+      </button>
+
       <div className='w-full'>
         <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
 
@@ -110,13 +116,15 @@ const Contact = () => {
             onChange={e => setFrom(e.target.value)}
           />
 
-          <pre>
-            <label
-              style={{ fontFamily: 'OccamsEraser' }}
-              className='text-white text-[18px]'>
-              Le Message                                                                                    {message.length}/1000
-            </label>
-          </pre>
+          <label
+            style={{ fontFamily: 'OccamsEraser' }}
+            className='text-white text-[18px]'>
+            Le Message
+          <span className='absolute right-20'>
+            {message.length}/1000
+          </span>
+          </label>
+
           <textarea
             id="message"
             name="message"

@@ -144,7 +144,7 @@ const Mono = () => {
       </Dialog>
 
       <Dialog open={openCheese} handler={handleOpenCheese} className='flex items-center justify-center bg-transparent'>
-        < CheeseWindow titre={titre} text={text} photo={photo} />
+        < CheeseWindow titre={titre} text={text} photo={photo} setOpenCheese={setOpenCheese}/>
       </Dialog>
 
     </div>

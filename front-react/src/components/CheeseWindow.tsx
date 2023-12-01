@@ -1,6 +1,8 @@
 import React from 'react'
 
-const CheeseWindow = ({ titre, text, photo }: { titre: any, text: string, photo: any }) => {
+const croix = require("../images/Mono/croix-bleu.png")
+
+const CheeseWindow = ({ titre, text, photo, setOpenCheese }: { titre: any, text: string, photo: any, setOpenCheese: React.Dispatch<React.SetStateAction<boolean>> }) => {
   return (
     <div className='cheeseWindow-container w-[1000px] flex rounded-[20px] bg-gray-400 h-[90vh]'>
 
@@ -9,7 +11,10 @@ const CheeseWindow = ({ titre, text, photo }: { titre: any, text: string, photo:
       </div>
 
       <div className='flex flex-col h-full w-[50%]'>
-        <div className='titre h-[250px] w-full border'>
+          <button className='absolute h-8 w-8 top-2 right-2'>
+            <img className='object-cover' src={croix} onClick={() => {setOpenCheese(false)}} />
+          </button>
+        <div className='titre h-[250px] w-full mt-10 border'>
           <img className='h-[200px] mx-auto my-auto' src={titre} />
         </div>
 

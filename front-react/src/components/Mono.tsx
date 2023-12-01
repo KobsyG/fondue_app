@@ -94,7 +94,7 @@ const Mono = () => {
         <p style={{ fontFamily: 'OccamsEraser' }} className='text-[20px] ml-auto text-fondue-red mr-5'>@LESFONDOUX</p>
       </div>
 
-      <Dialog open={open} size='xs' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
+      <Dialog open={open} size='sm' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
         <ToastContainer
           position="top-center"
           autoClose={2000}

@@ -85,11 +85,12 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
   return (
 
     <div className='contact-container rounded-[20px] bg-[#202454] w-[500px] flex justify-center p-10'>
-      <button className='close-cross relative -top-7 left-[410px] h-[40px] w-[40px]'>
-        <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
-      </button>
-
       <div className='w-full'>
+
+        <button className='close-cross relative -top-7 left-[410px] h-[40px] w-[40px]'>
+          <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
+        </button>
+
         <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
 
         <form onSubmit={handleSubmit}>
@@ -120,9 +121,9 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
             style={{ fontFamily: 'OccamsEraser' }}
             className='text-white text-[18px]'>
             Le Message
-          <span className='absolute right-20'>
-            {message.length}/1000
-          </span>
+            <span className='relative left-[310px]'>
+              {message.length}/1000
+            </span>
           </label>
 
           <textarea

@@ -16,6 +16,7 @@ import Waiting from './components/Waiting';
 import Contact2 from './components/Contact2';
 import Mono from './components/Mono';
 import Forms from './components/Kobe/Forms';
+import CheeseWindow from './components/CheeseWindow';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
     path: "mono",
     element: <Mono />,
   },
+  // {
+  //   path: "cheese",
+  //   element: <CheeseWindow />,
+  // },
   {
     path: "histoire",
     element: <Histoire />,

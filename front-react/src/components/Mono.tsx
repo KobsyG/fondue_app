@@ -17,6 +17,7 @@ import { ToastContainer } from 'react-toastify';
 import contactRouge from "../images/Mono/contact-rouge.svg"
 import cent from "../images/Mono/100.svg"
 import Contact from './Contact';
+import CheeseWindow from './CheeseWindow';
 
 const instaLogo = require("../images/waiting/insta.webp")
 const facebookLogo = require("../images/waiting/facebook.webp")
@@ -31,11 +32,37 @@ const texte1 = "La box fondue coeur, c’est un coffret, qui renferme tous les i
 const texte2 = "La première fondue championne de France."
 // bg-[url("./images/jb/portrait_of_black_man.jpg")]
 
+//--------------------------------------------------------------------------
+//--------------------------CheeseWindow-------------------------------------
+const titreStNectaire = require('../images/cheese/titreStNectaire.png')
+const textStNectaire = "Appellation d’Origine depuis 1955, il est produit en Auvergne sur une petite zone de montagne de 69 communes, situées sur le Massif du Sancy, le plateau du Cézallier et les monts d'Artense."
+const photoStNectaire = require('../images/cheese/stNectaire.jpg')
+
+const titreCantal = require('../images/cheese/titreCantal.png')
+const textCantal = "Avec sa pâte de couleur ivoire et sa croûte délicatement teintée de brun, le Cantal est le seul fromage de France à porter le nom de son département de naissance. C’est aussi l’un des plus anciens fromages dont l’origine remonte à des millénaires, qui a acquis ses lettres de noblesse dès 1956 obtenant l’AOC."
+const photoCantal = require('../images/cheese/Cantal.jpg')
+
+//--------------------------------------------------------------------------
+
+// interface props {
+//   titre: any;
+//   text: string;
+//   photo: any
+// }
+
 const Mono = () => {
 
-  const [open, setOpen] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
+  const handleOpen = () => setOpenContact(!openContact);
 
-  const handleOpen = () => setOpen(!open);
+  const [openCheese, setOpenCheese] = useState(false);
+  const handleOpenCheese = () => setOpenCheese(!openCheese);
+
+
+  const [titre, setTitre] = useState(null);
+  const [text, setText] = useState('');
+  const [photo, setPhoto] = useState(null);
+
 
   return (
     <div className='mono-contain h-[100vh] w-[100vw] flex flex-col bg-[#202454] '>
@@ -87,6 +114,24 @@ const Mono = () => {
         <div className='h-full w-1/2 flex items-center justify-center'>
           <img src={box} className='object-contain w-full h-full' />
         </div>
+        <button onClick={() => {
+          setTitre(titreStNectaire)
+          setText(textStNectaire)
+          setPhoto(photoStNectaire)
+          setOpenCheese(true)
+        }} className='h-10 w-10 mr-3 bg-red-300' />
+
+        <button onClick={() => {
+          setTitre(titreCantal)
+          setText(textCantal)
+          setPhoto(photoCantal)
+          setOpenCheese(true)
+        }}
+        className='h-10 w-10 mr-3 bg-red-300' />
+
+        <button className='h-10 w-10 mr-3 bg-red-300' />
+        <button className='h-10 w-10 mr-3 bg-red-300' />
+        <button className='h-10 w-10 mr-3 bg-red-300' />
       </div>
 
       <div className='bottom-bar w-full h-[40px] flex items-center bg-[#20245]'>
@@ -94,7 +139,7 @@ const Mono = () => {
         <p style={{ fontFamily: 'OccamsEraser' }} className='text-[20px] ml-auto text-fondue-red mr-5'>@LESFONDOUX</p>
       </div>
 
-      <Dialog open={open} size='sm' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
+      <Dialog open={openContact} size='sm' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
         <ToastContainer
           position="top-center"
           autoClose={2000}
@@ -108,7 +153,12 @@ const Mono = () => {
           pauseOnHover={false}
           theme="light"
         />
-        <Contact setOpen={setOpen}/>
+        <Contact setOpen={setOpenContact} />
+      </Dialog>
+
+      <Dialog open={openCheese} handler={handleOpenCheese} className='flex items-center justify-center bg-transparent'>
+        < CheeseWindow titre={titre} text={text} photo={photo} />
+
       </Dialog>
 
     </div>

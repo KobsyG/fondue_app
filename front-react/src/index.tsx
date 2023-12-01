@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
+import { ThemeProvider } from "@material-tailwind/react";
 
 import './index.css';
 import './styles/font.css';
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     element: <Contact />,
   },
   {
+    path: "mono",
+    element: <Mono />,
+  },
+  {
     path: "histoire",
     element: <Histoire />,
   },
@@ -48,7 +53,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ToastContainer
+    {/* <ToastContainer
       position="top-center"
       autoClose={2000}
       limit={3}
@@ -60,8 +65,10 @@ root.render(
       draggable
       pauseOnHover={false}
       theme="light"
-    />
-    <RouterProvider router={router} />
+    /> */}
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

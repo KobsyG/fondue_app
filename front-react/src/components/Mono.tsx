@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {
+  Button,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+} from "@material-tailwind/react";
+
+import { ToastContainer } from 'react-toastify';
+
 import contactRouge from "../images/Mono/contact-rouge.svg"
 import cent from "../images/Mono/100.svg"
+import Contact from './Contact';
 
 const instaLogo = require("../images/waiting/insta.webp")
 const facebookLogo = require("../images/waiting/facebook.webp")
@@ -16,12 +32,17 @@ const texte2 = "La première fondue championne de France."
 // bg-[url("./images/jb/portrait_of_black_man.jpg")]
 
 const Mono = () => {
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(!open);
+
   return (
     <div className='mono-contain h-[100vh] w-[100vw] flex flex-col bg-[#202454] '>
-      
+
       <div className='top-bar relative  min-h-[230px] w-full bg-[#202454]'>
 
-        <button className='contact group absolute h-[153px] w-[153px] top-10 left-10 flex items-center text-center'>
+        <button onClick={handleOpen} className='contact group absolute h-[153px] w-[153px] top-10 left-10 flex items-center text-center'>
           <p style={{ fontFamily: 'OccamsEraser' }} className='absolute w-full mt-2 z-10 text-[30px] text-white'>Contactez nous</p>
           <img className='relative pastille h-full z-0 group-hover:rotate-45 group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} />
         </button>
@@ -56,8 +77,8 @@ const Mono = () => {
               {texte2}
             </p>
             {/* <div className='inline-flex ml-30'> */}
-              {/* <img className='100% w-1/4 mt-8' src={test} /> */}
-              <img className='100% w-1/2 mt-8 ' src={cent} />
+            {/* <img className='100% w-1/4 mt-8' src={test} /> */}
+            <img className='100% w-1/2 mt-8 ' src={cent} />
             {/* </div> */}
           </div>
 
@@ -72,6 +93,23 @@ const Mono = () => {
         <p style={{ fontFamily: 'OccamsEraser' }} className='text-[20px] text-fondue-red ml-5'>contact@fonduecoeur.fr</p>
         <p style={{ fontFamily: 'OccamsEraser' }} className='text-[20px] ml-auto text-fondue-red mr-5'>@LESFONDOUX</p>
       </div>
+
+      <Dialog open={open} size='xs' handler={handleOpen} className='flex items-center justify-center bg-yellow-300'>
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          limit={3}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          theme="light"
+        />
+        <Contact />
+      </Dialog>
 
     </div>
   )

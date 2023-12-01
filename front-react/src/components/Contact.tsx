@@ -82,7 +82,7 @@ const Contact = () => {
 
   return (
 
-    <div className='contact-container bg-[#202454] w-[500px] flex justify-center p-10'>
+    <div className='contact-container rounded-[20px] bg-[#202454] w-[500px] flex justify-center p-10'>
       <div className='w-full'>
         <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
 

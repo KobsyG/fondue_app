@@ -1,18 +1,6 @@
 import React from 'react'
 
-// import titreStNectaire from '../images/cheese/titreStNectaire.svg'
-
-// const titreStNectaire = require('../images/cheese/titreStNectaire.png')
-// const text = "Appellation d’Origine depuis 1955, il est produit en Auvergne sur une petite zone de montagne de 69 communes, situées sur le Massif du Sancy, le plateau du Cézallier et les monts d'Artense."
-// const stNectaire = require('../images/cheese/stNectaire.jpg')
-
-interface Iprops {
-  titre: any;
-  text: string;
-  photo: any
-}
-
-const CheeseWindow = ({titre, text, photo}: Iprops) => {
+const CheeseWindow = ({ titre, text, photo }: { titre: any, text: string, photo: any }) => {
   return (
     <div className='cheeseWindow-container w-[1000px] flex rounded-[20px] bg-gray-400 h-[90vh]'>
 
@@ -31,7 +19,6 @@ const CheeseWindow = ({titre, text, photo}: Iprops) => {
           </p>
         </div>
       </div>
-
 
     </div>
   )

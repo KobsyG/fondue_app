@@ -1,17 +1,5 @@
 import React, { useState } from 'react'
-import {
-  Button,
-  Dialog,
-  DialogHeader,
-  DialogBody,
-  DialogFooter,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-} from "@material-tailwind/react";
-
+import { Dialog } from "@material-tailwind/react";
 import { ToastContainer } from 'react-toastify';
 
 import contactRouge from "../images/Mono/contact-rouge.svg"
@@ -32,8 +20,9 @@ const texte1 = "La box fondue coeur, c’est un coffret, qui renferme tous les i
 const texte2 = "La première fondue championne de France."
 // bg-[url("./images/jb/portrait_of_black_man.jpg")]
 
-//--------------------------------------------------------------------------
+//---------------------------------------------------------------------------
 //--------------------------CheeseWindow-------------------------------------
+//---------------------------------------------------------------------------
 const titreStNectaire = require('../images/cheese/titreStNectaire.png')
 const textStNectaire = "Appellation d’Origine depuis 1955, il est produit en Auvergne sur une petite zone de montagne de 69 communes, situées sur le Massif du Sancy, le plateau du Cézallier et les monts d'Artense."
 const photoStNectaire = require('../images/cheese/stNectaire.jpg')
@@ -41,14 +30,8 @@ const photoStNectaire = require('../images/cheese/stNectaire.jpg')
 const titreCantal = require('../images/cheese/titreCantal.png')
 const textCantal = "Avec sa pâte de couleur ivoire et sa croûte délicatement teintée de brun, le Cantal est le seul fromage de France à porter le nom de son département de naissance. C’est aussi l’un des plus anciens fromages dont l’origine remonte à des millénaires, qui a acquis ses lettres de noblesse dès 1956 obtenant l’AOC."
 const photoCantal = require('../images/cheese/Cantal.jpg')
-
 //--------------------------------------------------------------------------
-
-// interface props {
-//   titre: any;
-//   text: string;
-//   photo: any
-// }
+//--------------------------------------------------------------------------
 
 const Mono = () => {
 
@@ -58,11 +41,9 @@ const Mono = () => {
   const [openCheese, setOpenCheese] = useState(false);
   const handleOpenCheese = () => setOpenCheese(!openCheese);
 
-
   const [titre, setTitre] = useState(null);
   const [text, setText] = useState('');
   const [photo, setPhoto] = useState(null);
-
 
   return (
     <div className='mono-contain h-[100vh] w-[100vw] flex flex-col bg-[#202454] '>
@@ -114,6 +95,10 @@ const Mono = () => {
         <div className='h-full w-1/2 flex items-center justify-center'>
           <img src={box} className='object-contain w-full h-full' />
         </div>
+
+        {/* --------------------------------------------------------------------------------------------- */}
+        {/* -----------------------------------Button Test CheeseWindow---------------------------------- */}
+        {/* --------------------------------------------------------------------------------------------- */}
         <button onClick={() => {
           setTitre(titreStNectaire)
           setText(textStNectaire)
@@ -132,6 +117,8 @@ const Mono = () => {
         <button className='h-10 w-10 mr-3 bg-red-300' />
         <button className='h-10 w-10 mr-3 bg-red-300' />
         <button className='h-10 w-10 mr-3 bg-red-300' />
+        {/* --------------------------------------------------------------------------------------------- */}
+        {/* --------------------------------------------------------------------------------------------- */}
       </div>
 
       <div className='bottom-bar w-full h-[40px] flex items-center bg-[#20245]'>
@@ -158,7 +145,6 @@ const Mono = () => {
 
       <Dialog open={openCheese} handler={handleOpenCheese} className='flex items-center justify-center bg-transparent'>
         < CheeseWindow titre={titre} text={text} photo={photo} />
-
       </Dialog>
 
     </div>

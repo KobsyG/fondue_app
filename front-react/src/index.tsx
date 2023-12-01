@@ -23,18 +23,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Waiting />,
   },
-  // {
-  //   path: "contact",
-  //   element: <Contact  />,
-  // },
   {
     path: "mono",
     element: <Mono />,
   },
-  // {
-  //   path: "cheese",
-  //   element: <CheeseWindow />,
-  // },
   {
     path: "histoire",
     element: <Histoire />,
@@ -58,19 +50,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {/* <ToastContainer
-      position="top-center"
-      autoClose={2000}
-      limit={3}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover={false}
-      theme="light"
-    /> */}
     <ThemeProvider>
       <RouterProvider router={router} />
     </ThemeProvider>

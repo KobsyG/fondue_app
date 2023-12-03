@@ -13,7 +13,7 @@ const box = require("../images/Mono/box.png")
 const logopng = require("../images/Mono/mainLogo.png")
 const fondueChampionne = require("../images/Mono/fondue-championne.png")
 const drapal = require("../images/Mono/drapal.png")
-const test = require("../images/Mono/Capture d’écran 2023-11-28 à 16.51.42.png")
+// const test = require("../images/Mono/Capture d’écran 2023-11-28 à 16.51.42.png")
 
 const texte = "La box fondue coeur, c’est un coffret, qui renferme tous les ingrédients et secrets pour réaliser chez vous la première fondue championne de France."
 const texte1 = "La box fondue coeur, c’est un coffret, qui renferme tous les ingrédients et secrets pour réaliser chez vous:"
@@ -104,8 +104,9 @@ const Mono = () => {
           setText(textStNectaire)
           setPhoto(photoStNectaire)
           setOpenCheese(true)
-        }} className='h-10 w-10 mr-3 bg-red-300' />
-
+        }} className='h-10 w-10 absolute right-0 bg-red-300' />
+       
+        {/* 
         <button onClick={() => {
           setTitre(titreCantal)
           setText(textCantal)
@@ -117,6 +118,7 @@ const Mono = () => {
         <button className='h-10 w-10 mr-3 bg-red-300' />
         <button className='h-10 w-10 mr-3 bg-red-300' />
         <button className='h-10 w-10 mr-3 bg-red-300' />
+    */}
         {/* --------------------------------------------------------------------------------------------- */}
         {/* --------------------------------------------------------------------------------------------- */}
       </div>
@@ -144,7 +146,7 @@ const Mono = () => {
       </Dialog>
 
       <Dialog open={openCheese} handler={handleOpenCheese} className='flex items-center justify-center bg-transparent'>
-        < CheeseWindow titre={titre} text={text} photo={photo} setOpenCheese={setOpenCheese}/>
+        < CheeseWindow titre={titre} text={text} photo={photo} setOpenCheese={setOpenCheese} />
       </Dialog>
 
     </div>

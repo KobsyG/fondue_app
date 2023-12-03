@@ -87,7 +87,7 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
     <div className='contact-container rounded-[20px] bg-[#202454] w-[500px] flex justify-center p-10'>
       <div className='w-full relative'>
 
-        <button className='close-cross absolute -top-7 left-[410px] h-[40px] w-[40px]'>
+        <button className='close-cross absolute top-0 right-0 h-[30px] w-[30px]'>
           <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
         </button>
 
@@ -103,7 +103,7 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
             required minLength={1} maxLength={60}
             value={nom}
             onChange={e => setNom(e.target.value)}
-            className='h-10'
+            className='h-12'
           />
 
           <label
@@ -115,6 +115,7 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
             required minLength={1} maxLength={60}
             value={from}
             onChange={e => setFrom(e.target.value)}
+            className='h-12'
           />
 
           <label

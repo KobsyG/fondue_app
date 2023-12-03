@@ -42,6 +42,17 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+
+    const form = e.target as HTMLFormElement;
+
+    if (form.checkValidity()) {
+      // Form is valid, proceed with submission or other actions
+      console.log('Form submitted');
+    } else {
+      // Form is not valid, handle errors or display a message
+      console.log('Form validation failed');
+    }
+
     const formData = new FormData();
     formData.append('from', from);
     formData.append('subject', 'FONDUE COEUR : de ' + nom);
@@ -82,12 +93,24 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
     }
   };
 
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFrom(e.target.value);
+
+    // if (!e.target.validity.valid) {
+    //   e.target.setCustomValidity('Lalalalala');
+    // } else if (e.target.value.trim() === '') {
+    //   e.target.setCustomValidity('EMPTYYYYYYY');
+    // } else {
+    //   e.target.setCustomValidity('');
+    // }
+  };
+
   return (
 
     <div className='contact-container rounded-[20px] bg-[#202454] w-[500px] flex justify-center p-10'>
       <div className='w-full relative'>
 
-        <button className='close-cross absolute top-0 right-0 h-[30px] w-[30px]'>
+        <button className='close-cross absolute top-0 right-0 h-[30px] w-[30px] hover:scale-[1.15] transition-transform duration-200'>
           <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
         </button>
 
@@ -97,7 +120,7 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
           <label
             style={{ fontFamily: 'OccamsEraser' }}
             className='text-white text-[18px]'>
-            Votre Nom
+            Votre p'tit Nom
           </label>
           <input type="text" id="nom" name="nom"
             required minLength={1} maxLength={60}
@@ -109,20 +132,25 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
           <label
             style={{ fontFamily: 'OccamsEraser' }}
             className='text-white text-[18px]'>
-            Votre Email
+            L'adresse Email
           </label>
           <input type="email" id="from" name="from"
             required minLength={1} maxLength={60}
+            onInvalid={(event: React.InvalidEvent<HTMLInputElement>) => {
+              if (event.target instanceof HTMLInputElement) {
+                event.target.setCustomValidity('Je change avec le message de mon choix');
+              }
+            }}
             value={from}
-            onChange={e => setFrom(e.target.value)}
+            onChange={handleEmailChange}
             className='h-12'
           />
 
           <label
             style={{ fontFamily: 'OccamsEraser' }}
             className='text-white text-[18px]'>
-            Le Message
-            <span className='relative left-[310px]'>
+            Et le P'tit mot
+            <span className='relative left-[290px]'>
               {message.length}/1000
             </span>
           </label>

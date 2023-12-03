@@ -15,9 +15,13 @@ const fondueChampionne = require("../images/Mono/fondue-championne.png")
 const drapal = require("../images/Mono/drapal.png")
 // const test = require("../images/Mono/Capture d’écran 2023-11-28 à 16.51.42.png")
 
+const boxTest = require("../images/Mono/boxTest.jpg")
+
+
 const texte = "La box fondue coeur, c’est un coffret, qui renferme tous les ingrédients et secrets pour réaliser chez vous la première fondue championne de France."
 const texte1 = "La box fondue coeur, c’est un coffret, qui renferme tous les ingrédients et secrets pour réaliser chez vous:"
-const texte2 = "La première fondue championne de France."
+const texte2 = "La première fondue championne de France !"
+const texte3 = `À l'honneur les 5 fromages AOP d'auvergne, l'or jaune de nos montagnes "la gentiane" et les lentilles blondes de la planèze...`
 // bg-[url("./images/jb/portrait_of_black_man.jpg")]
 
 //---------------------------------------------------------------------------
@@ -77,16 +81,25 @@ const Mono = () => {
       <div className='middle-container grow w-full flex bottom-0 bg-[#202454]'>
         <div className='h-full w-1/2 flex justify-center items-center'>
 
-          <div className='text-and-image w-[800px] mb-12 h-[450px] flex flex-col justify-center items-center'>
-            <p style={{ fontFamily: 'AvocadoCake' }} className='w-full text-[25px] text-white text-center'>
+          <div className='text-and-image w-[600px] flex flex-col justify-center items-center'>
+            <p style={{ fontFamily: 'AvocadoCake' }} className='w-full text-[25px] text-white text-justify'>
               {texte1}
             </p>
-            <p style={{ fontFamily: 'AvocadoCake' }} className='w-full text-[25px] text-white text-center'>
+
+            <p style={{ fontFamily: 'AvocadoCake' }} className='w-full text-[25px] text-fondue-red text-center'>
+              <br />
               {texte2}
+              <br />
+              <br />
             </p>
+
+            <p style={{ fontFamily: 'AvocadoCake' }} className='w-full text-[25px] text-white text-justify'>
+              {texte3}
+            </p>
+
             {/* <div className='inline-flex ml-30'> */}
             {/* <img className='100% w-1/4 mt-8' src={test} /> */}
-            <img className='100% w-1/2 mt-8 ' src={cent} />
+            {/* <img className='100% w-1/2 mt-8 ' src={cent} /> */}
             {/* </div> */}
           </div>
 
@@ -99,13 +112,15 @@ const Mono = () => {
         {/* --------------------------------------------------------------------------------------------- */}
         {/* -----------------------------------Button Test CheeseWindow---------------------------------- */}
         {/* --------------------------------------------------------------------------------------------- */}
+{/*      
         <button onClick={() => {
           setTitre(titreStNectaire)
           setText(textStNectaire)
           setPhoto(photoStNectaire)
           setOpenCheese(true)
         }} className='h-10 w-10 absolute right-0 bg-red-300' />
-       
+        */}
+
         {/* 
         <button onClick={() => {
           setTitre(titreCantal)
@@ -125,11 +140,11 @@ const Mono = () => {
 
       <div className='bottom-bar w-full h-[40px] flex items-center bg-[#20245]'>
         <p style={{ fontFamily: 'OccamsEraser' }} className='text-[20px] text-fondue-red ml-5'>contact@fonduecoeur.fr</p>
-        <p style={{ fontFamily: 'OccamsEraser' }} className='text-[20px] ml-auto text-fondue-red mr-5'>@LESFONDOUX</p>
+        <p style={{ fontFamily: 'OccamsEraser' }} className='text-[20px] ml-auto text-fondue-red mr-5'>#LESFONDOUX</p>
       </div>
 
       <Dialog open={openContact} size='sm' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
-        {/* <ToastContainer
+        <ToastContainer
           position="top-center"
           autoClose={2000}
           limit={3}
@@ -141,11 +156,11 @@ const Mono = () => {
           draggable
           pauseOnHover={false}
           theme="light"
-        /> */}
+        />
         <Contact setOpen={setOpenContact} />
       </Dialog>
 
-      <Dialog open={openCheese} handler={handleOpenCheese} className='flex items-center justify-center bg-transparent'>
+      <Dialog open={openCheese} size='lg' handler={handleOpenCheese} className='flex items-center justify-center bg-transparent'>
         < CheeseWindow titre={titre} text={text} photo={photo} setOpenCheese={setOpenCheese} />
       </Dialog>
 

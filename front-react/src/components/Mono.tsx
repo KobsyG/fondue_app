@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Dialog } from "@material-tailwind/react";
 import { ToastContainer } from 'react-toastify';
+import './Mono.css'
 
 import contactRouge from "../images/Mono/contact-rouge.svg"
 import Contact from './Contact';
@@ -13,6 +14,8 @@ const basbox = require("../images/Mono/bas-box.png")
 const logopng = require("../images/Mono/mainLogo.png")
 const fondueChampionne = require("../images/Mono/fondue-championne.png")
 const drapal = require("../images/Mono/drapal.png")
+const fleche = require('../images/Mono/fleche.png')
+
 // const test = require("../images/Mono/Capture d’écran 2023-11-28 à 16.51.42.png")
 
 const boxTest = require("../images/Mono/boxTest.jpg")
@@ -73,24 +76,33 @@ const Mono = () => {
       <div className='top-bar relative h-[100px] sm:min-h-[230px] w-full bg-[#202454]'>
 
         <button onClick={handleOpen} className='contact group absolute h-[50px] sm:h-[100px] lg:h-[153px] w-[50[px] sm:w-[100px] lg:w-[153px] top-5 left-5 sm:top-10 sm:left-10 flex items-center text-center'>
-          <p style={{ fontFamily: 'OccamsEraser' }} className='absolute w-full mt-2 z-10 text-[10px] sm:text-[20px] lg:text-[30px] text-white'>Contactez nous</p>
-          <img className='relative pastille h-full z-0 group-hover:rotate-45 group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} />
+          <p style={{ fontFamily: 'OccamsEraser' }} className='absolute w-full mt-1 lg:mt-2 z-10 text-[10px] sm:text-[20px] lg:text-[30px] text-white'>Contactez nous</p>
+          <img className='relative pastille h-full z-0 lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} />
         </button>
+
+        <div className='bientot absolute w-[80px] sm:w-[180px] lg:w-[200px] h-full top-[70px] sm:top-[100px] lg:top-2 lg:left-[200px] pt-3 flex flex-col items-center justify-center'>
+          <p style={{ fontFamily: 'AvocadoCake' }} className='relative text-white sm:text-[10px] lg:text-[15px] h-[135px]'>
+            La box sera bientôt disponible à l'achat en ligne. En attendant, n'hésitez pas à nous contacter pour vous en procurer
+          </p>
+          <div className='relative w-full h-[87px] ml-10 hidden lg:block'>
+            <img src={fleche} className='h-full object-contain' />
+          </div>
+        </div>
 
         <div className='logo-container w-[200px] sm:w-[400px] lg:w-[550px] sm:h-[190px] lg:h-full flex flex-col items-center mx-auto'>
           <img className='object-contain w-full logo mt-2' src={logopng} />
           <img className='object-contain w-full drapeau my-auto border-2 border-white' src={drapal} />
           <img className='object-cover w-full fondueChampionne' src={fondueChampionne} />
         </div>
-        <div className='reseau absolute right-4 top-4 h-1/3 flex'>
+        <div className='reseau absolute right-1 sm:right-4 top-4 h-1/3 flex'>
           <a className='insta-button h-[30px] sm:h-[50px] w-[30px] sm:w-[50px] mr-2 lg:h-12 lg:w-12' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank'>
             <button>
-              <img src={instaLogo} className='hover:scale-125 transform transition-transform duration-300' />
+              <img src={instaLogo} className='lg:hover:scale-125 transform transition-transform duration-300' />
             </button>
           </a>
           <a className='facebook-button h-[30px] sm:h-[50px] w-[30px] sm:w-[50px] lg:h-12 lg:w-12' href="https://www.facebook.com/fonduecoeur" target='_blank'>
             <button>
-              <img src={facebookLogo} className='hover:scale-125 transform transition-transform duration-300' />
+              <img src={facebookLogo} className='lg:over:scale-125 transform transition-transform duration-300' />
             </button>
           </a>
         </div>
@@ -139,8 +151,8 @@ const Mono = () => {
                 setPhoto(photoStNectaire)
                 setOpenCheese(true)
               }}
-                className='absolute h-20 w-10 bg-transparent z-30' />
-              <button className='relative h-20 w-10 group-hover:translate-y-[-10px] transform duration-200 bg-fondue-yellow z-10' />
+                className='absolute h-16 sm:h-32 w-8 sm:w-16 bg-transparent z-30' />
+              <button className='relative h-16 sm:h-32 w-8 sm:w-16 lg:group-hover:translate-y-[-40px] transform duration-300 bg-fondue-yellow z-10' />
             </div>
 
             <div className='group mr-3 mt-10'>
@@ -150,10 +162,12 @@ const Mono = () => {
                 setPhoto(photoCantal)
                 setOpenCheese(true)
               }}
-                className='absolute h-20 w-10 bg-transparent z-30' />
-              <button className='relative h-20 w-10 group-hover:translate-y-[-10px] transform duration-200 bg-fondue-yellow z-10' />
+                className='absolute h-16 sm:h-32 w-8 sm:w-16 bg-transparent z-30' />
+              <button className='relative h-16 sm:h-32 w-8 sm:w-16 lg:group-hover:translate-y-[-40px] transform duration-300 z-10'>
+                <img src={require('../images/cheese/cheese-button.png')} className='object-cover h-full' />
+              </button>
             </div>
-            
+
             <div className='group mr-3 mt-10'>
               <button onClick={() => {
                 setTitre(titreSalers)
@@ -161,8 +175,8 @@ const Mono = () => {
                 setPhoto(photoSalers)
                 setOpenCheese(true)
               }}
-                className='absolute h-20 w-10 bg-transparent z-30' />
-              <button className='relative h-20 w-10 group-hover:translate-y-[-10px] transform duration-200 bg-fondue-yellow z-10' />
+                className='absolute h-16 sm:h-32 w-8 sm:w-16 bg-transparent z-30' />
+              <button className='relative h-16 sm:h-32 w-8 sm:w-16 lg:group-hover:translate-y-[-40px] transform duration-300 bg-fondue-yellow z-10' />
             </div>
 
             <div className='group mr-3 mt-10'>
@@ -172,8 +186,8 @@ const Mono = () => {
                 setPhoto(photoFourme)
                 setOpenCheese(true)
               }}
-                className='absolute h-20 w-10 bg-transparent z-30' />
-              <button className='relative h-20 w-10 group-hover:translate-y-[-10px] transform duration-200 bg-fondue-yellow z-10' />
+                className='absolute h-16 sm:h-32 w-8 sm:w-16 bg-transparent z-30' />
+              <button className='relative h-16 sm:h-32 w-8 sm:w-16 lg:group-hover:translate-y-[-40px] transform duration-300 bg-fondue-yellow z-10' />
             </div>
 
             <div className='group mr-3 mt-10'>
@@ -183,8 +197,10 @@ const Mono = () => {
                 setPhoto(photoBleu)
                 setOpenCheese(true)
               }}
-                className='absolute h-20 w-10 bg-transparent z-30' />
-              <button className='relative h-20 w-10 group-hover:translate-y-[-10px] transform duration-200 bg-fondue-yellow z-10' />
+                className='absolute h-16 sm:h-32 w-8 sm:w-16 bg-transparent z-30' />
+              <button className='relative h-16 sm:h-32 w-8 sm:w-16 lg:group-hover:translate-y-[-40px] transform duration-300 z-10'>
+                <img src={require('../images/cheese/bleu-button.png')} className='object-cover h-full' />
+              </button>
             </div>
 
             <div className='group mr-3 mt-10'>
@@ -194,10 +210,12 @@ const Mono = () => {
                 setPhoto(photoGentiane)
                 setOpenCheese(true)
               }}
-                className='absolute h-20 w-10 bg-transparent z-30' />
-              <button className='relative h-20 w-10 group-hover:translate-y-[-10px] transform duration-200 bg-fondue-yellow z-10' />
+                className='absolute h-16 sm:h-32 w-8 sm:w-16 bg-transparent z-30' />
+              <button className='relative h-16 sm:h-32 w-8 sm:w-16 lg:group-hover:translate-y-[-40px] transform duration-300 z-10'>
+                <img src={require('../images/cheese/gentiane-button.png')} className='object-cover h-full' />
+              </button>
             </div>
-            
+
           </div>
           {/* --------------------------------------------------------------------------------------------- */}
           {/* --------------------------------------------------------------------------------------------- */}

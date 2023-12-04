@@ -6,13 +6,13 @@ const croix = require("../images/Mono/croix-bleu.png")
 const CheeseWindow = ({ titre, text, photo, setOpenCheese }: { titre: string, text: string, photo: any, setOpenCheese: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
   return (
-    <div className='contact-container rounded-[20px] bg-gray-50 w-[1000px] flex justify-center p-6'>
-      <div className='w-full flex'>
-        <div className='w-1/2'>
-          <img src={photo} className='w-full rounded-[20px]' />
+    <div className='cheese-container rounded-[20px] bg-gray-50 w-[300px] sm:w-[1000px] flex justify-center p-6'>
+      <div className='w-full h-full flex flex-col-reverse sm:flex-row'>
+        <div className='w-full sm:w-1/2 h-[200px] sm:h-full'>
+          <img src={photo} className='w-full h-full rounded-[20px] object-cover object-center' />
         </div>
-        <div className='w-1/2 relative pl-6'>
-          <button className='close-cross absolute top-0 right-0 h-[30px] w-[30px] hover:scale-[1.15] transition-transform duration-200'>
+        <div className='w-full sm:w-1/2 relative pl-6'>
+          <button className='close-cross absolute top-0 right-0 h-[30px] w-[30px] lg:hover:scale-[1.15] transition-transform duration-200'>
             <img className='object-cover' src={croix} onClick={() => setOpenCheese(false)} />
           </button>
           <p
@@ -22,7 +22,7 @@ const CheeseWindow = ({ titre, text, photo, setOpenCheese }: { titre: string, te
           </p>
           <p
             style={{ fontFamily: 'OpenSansRegular' }}
-            className='text-fondue-blue sm:text-[15px] lg:text-[20px] mb-4 text-justify'>
+            className='text-fondue-blue text-[10px] sm:text-[15px] lg:text-[20px] mb-4 text-justify'>
             {text}
           </p>
 

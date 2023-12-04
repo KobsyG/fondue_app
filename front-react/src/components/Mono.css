@@ -22,4 +22,12 @@
         font-size: 7px;
         left: 6px;
     }
+
+    .text-and-image p {
+        font-size: 17px;
+    }
+
+    .middle-container {
+        padding-top: 50px;;
+    }
 }

@@ -39,3 +39,28 @@
     font-family: 'Allora';
     src: url("../fonts/Allora.ttf") format('truetype');
 }
+
+@font-face {
+    font-family: '';
+    src: url('') format('');
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: '';
+    src: url('') format('');
+}
+
+@font-face {
+    font-family: '';
+    src: url('') format('');
+}

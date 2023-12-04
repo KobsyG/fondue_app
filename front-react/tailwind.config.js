@@ -24,6 +24,9 @@ module.exports = withMT({
       spacing: {
         'large-page': '10000px', // Adjust the height value as needed
       },
+      backgroundImage: {
+        'pcKraft': "url('/src/images/Mono/PcCraft.png')",
+      },
       colors: {
         'fondue-blue': '#2E2573',
         'fondue-yellow': '#FED88E',

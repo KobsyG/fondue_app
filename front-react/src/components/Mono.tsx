@@ -129,6 +129,31 @@ const Mono = () => {
 
           </div>
 
+         {/* -----------------VERSION BG-KRAFT------------------------------ 
+         {/* --------------------------------------------------------------- 
+         {/* --------------------------------------------------------------- */}
+
+          {/* <div className='text-and-image w-[80%] sm:w-[600px] flex flex-col justify-center items-center bg-pcKraft'>
+            <p style={{ fontFamily: 'AvocadoCake' }} className='w-full text-[15px] sm:text-[25px] text-fondue-blue text-justify'>
+              {texte1}
+            </p>
+
+            <p style={{ fontFamily: 'AvocadoCake' }} className='w-full text-[15px] sm:text-[25px] text-fondue-red text-center'>
+              <br />
+              {texte2}
+              <br />
+              <br />
+            </p>
+
+            <p style={{ fontFamily: 'AvocadoCake' }} className='w-full text-[15px] sm:text-[25px] text-fondue-blue text-justify'>
+              {texte3}
+            </p>
+
+          </div> */}
+
+          {/* --------------------------------------------------------------- 
+         {/* --------------------------------------------------------------- */}
+
         </div>
 
         <div className='h-1/2 lg:h-full w-full lg:w-1/2 relative flex items-center justify-center'>

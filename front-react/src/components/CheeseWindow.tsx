@@ -2,9 +2,8 @@ import React from 'react'
 
 const croix = require("../images/Mono/croix-bleu.png")
 
-const textSaintNec = `Appellation d’Origine depuis 1955, il est produit en Auvergne sur une petite zone de montagne de 69 communes, situées sur le Massif du Sancy, le plateau du Cézallier et les monts d'Artense.`
 
-const CheeseWindow = ({ titre, text, photo, setOpenCheese }: { titre: any, text: string, photo: any, setOpenCheese: React.Dispatch<React.SetStateAction<boolean>> }) => {
+const CheeseWindow = ({ titre, text, photo, setOpenCheese }: { titre: string, text: string, photo: any, setOpenCheese: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
   return (
     <div className='contact-container rounded-[20px] bg-gray-50 w-[1000px] flex justify-center p-6'>
@@ -19,12 +18,12 @@ const CheeseWindow = ({ titre, text, photo, setOpenCheese }: { titre: any, text:
           <p
             style={{ fontFamily: 'OpenSansBold' }}
             className='text-fondue-red text-[30px] mb-4 text-left'>
-            LE SAINT NECTAIRE
+            {titre}
           </p>
           <p
             style={{ fontFamily: 'OpenSansRegular' }}
-            className='text-fondue-blue text-[20px] mb-4 text-justify'>
-            {textSaintNec}
+            className='text-fondue-blue sm:text-[15px] lg:text-[20px] mb-4 text-justify'>
+            {text}
           </p>
 
         </div>

@@ -9,9 +9,9 @@ module.exports = withMT({
   ],
   theme: {
     screens: {
-      sm: '640px',
+      sm: '640px', // Breakpoint Tablette -> Telephone
       md: '768px',
-      lg: '1024px', // SWAP
+      lg: '1024px', // Breakpoint Pc -> Tablette
       xl: '1280px',
       '2xl': '1536px',
       '3xl': '2520px',

@@ -110,28 +110,28 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
     <div className='contact-container rounded-[20px] bg-[#202454] w-[500px] flex justify-center p-10'>
       <div className='w-full relative'>
 
-        <button className='close-cross absolute top-0 right-0 h-[30px] w-[30px] hover:scale-[1.15] transition-transform duration-200'>
+        <button className='close-cross absolute top-0 right-0 h-[20px] sm:h-[30px] w-[20px] sm:w-[30px] hover:scale-[1.15] transition-transform duration-200'>
           <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
         </button>
 
-        <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
+        <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[18px] sm:text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
 
         <form onSubmit={handleSubmit}>
           <label
             style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[18px]'>
+            className='text-white text-[13px] sm:text-[18px]'>
             Votre p'tit Nom
           </label>
           <input type="text" id="nom" name="nom"
             required minLength={1} maxLength={60}
             value={nom}
             onChange={e => setNom(e.target.value)}
-            className='h-12'
+            className='h-8 sm:h-12'
           />
 
           <label
             style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[18px]'>
+            className='text-white text-[13px] sm:text-[18px]'>
             L'adresse Email
           </label>
           <input type="email" id="from" name="from"
@@ -143,14 +143,14 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
             }}
             value={from}
             onChange={handleEmailChange}
-            className='h-12'
+            className='h-8 sm:h-12'
           />
 
           <label
             style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[18px]'>
+            className='text-white text-[13px] sm:text-[18px]'>
             Et le P'tit mot
-            <span className='relative left-[290px]'>
+            <span className='relative left-[110px] sm:left-[290px]'>
               {message.length}/1000
             </span>
           </label>
@@ -159,7 +159,7 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
             id="message"
             name="message"
             required minLength={1} maxLength={1000}
-            className='h-48'
+            className='h-28 sm:h-48'
             value={message}
             onChange={e => setMessage(e.target.value)}
           ></textarea>

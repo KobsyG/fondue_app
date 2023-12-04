@@ -9,7 +9,7 @@ module.exports = withMT({
   ],
   theme: {
     screens: {
-      sm: '640px', // Breakpoint Tablette -> Telephone
+      sm: '601px', // Breakpoint Tablette -> Telephone
       md: '768px',
       lg: '1024px', // Breakpoint Pc -> Tablette
       xl: '1280px',

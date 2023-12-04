@@ -102,7 +102,7 @@ const Mono = () => {
           </a>
           <a className='facebook-button h-[30px] sm:h-[50px] w-[30px] sm:w-[50px] lg:h-12 lg:w-12' href="https://www.facebook.com/fonduecoeur" target='_blank'>
             <button>
-              <img src={facebookLogo} className='lg:over:scale-125 transform transition-transform duration-300' />
+              <img src={facebookLogo} className='lg:hover:scale-125 transform transition-transform duration-300' />
             </button>
           </a>
         </div>

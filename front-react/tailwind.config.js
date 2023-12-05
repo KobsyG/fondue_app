@@ -1,14 +1,17 @@
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     screens: {
-      sm: '640px',
+      sm: '601px', // Breakpoint Tablette -> Telephone
       md: '768px',
-      lg: '1024px', // SWAP
+      lg: '1024px', // Breakpoint Pc -> Tablette
       xl: '1280px',
       '2xl': '1536px',
       '3xl': '2520px',
@@ -21,14 +24,15 @@ module.exports = {
       spacing: {
         'large-page': '10000px', // Adjust the height value as needed
       },
+      backgroundImage: {
+        'pcKraft': "url('/src/images/Mono/PcCraft.png')",
+      },
       colors: {
         'fondue-blue': '#2E2573',
         'fondue-yellow': '#FED88E',
         'fondue-red': '#E50044',
       },
-      backgroundImage: {
-      }
     },
   },
   plugins: [],
-}
+});

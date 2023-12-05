@@ -1,0 +1,33 @@
+
+@media ((min-aspect-ratio: 0.5) and (max-width: 601px)) {
+    .bientot {
+        font-size: 5px;
+        top: 50px;
+        width: 70px;
+        left: 5px;
+    }
+    
+    .contact {
+        top: 5px;
+        left: 15px;
+    }
+
+    .middle-container {
+        padding-top: 30px;;
+    }
+}
+
+@media((max-aspect-ratio: 0.5) and (max-width: 601px)) {
+    .bientot {
+        font-size: 7px;
+        left: 6px;
+    }
+
+    .text-and-image p {
+        font-size: 17px;
+    }
+
+    .middle-container {
+        padding-top: 50px;;
+    }
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import { ThemeProvider } from "@material-tailwind/react";
 
 import './index.css';
 import './styles/font.css';
@@ -11,15 +13,19 @@ import Histoire from './components/Histoire';
 import Contact from './components/Contact';
 import Terroir from './components/Kobe/Actuel/Terroir';
 import Waiting from './components/Waiting';
+import Contact2 from './components/Contact2';
+import Mono from './components/Mono';
+import Forms from './components/Kobe/Forms';
+import CheeseWindow from './components/CheeseWindow';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Waiting/>,
+    element: <Waiting />,
   },
   {
-    path: "contact",
-    element: <Contact />,
+    path: "mono",
+    element: <Mono />,
   },
   {
     path: "histoire",
@@ -31,11 +37,11 @@ const router = createBrowserRouter([
   },
   {
     path: "all",
-    element: <App/>,
+    element: <App />,
   },
   {
     path: "*",
-    element: <Waiting/>,
+    element: <Waiting />,
   },
 ]);
 
@@ -43,9 +49,11 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-    <React.StrictMode>
-      <RouterProvider router={router}/>
-    </React.StrictMode>
+  <React.StrictMode>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

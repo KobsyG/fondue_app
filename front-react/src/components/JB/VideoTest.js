@@ -4,23 +4,22 @@ import gsap from "gsap";
 import '../../styles/soundButton.css';
 
 function VideoTest() {
-  const [videoswitch, setVideoSwitch] = useState(true);
+  const [videoDisplay, setVideoDisplay] = useState(true);
+  const [videoEnd, setVideoEnd] = useState(true);
   const [audioswitch, setAudioSwitch] = useState(true);
   const myvideo = useRef(null);
   const videoContainer = useRef(null);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      if (!videoswitch) {
-        const tl = gsap.timeline();
+      if (!videoDisplay) {
 
-        tl.fromTo('.entryVid', {
+        gsap.fromTo('.entryVid', {
           clipPath: 'circle(100%)'
         }, {
-          duration: 0.8,
+          duration: 0.7,
           clipPath: 'circle(0%)',
-        }, 0);
-
+        });
       }
     }, videoContainer)
 
@@ -28,12 +27,8 @@ function VideoTest() {
       ctx.revert();
     };
 
-  }, [videoswitch]);
+  }, [videoDisplay]);
 
-  const closeVideo = () => {
-    setVideoSwitch(false);
-    myvideo.current.pause();
-  };
 
   const handleAudio = () => {
     setAudioSwitch(!audioswitch);
@@ -41,45 +36,40 @@ function VideoTest() {
 
   return (
     <div ref={videoContainer}>
-
       {
-        videoswitch &&
-        <>
-          <div className="entryVid absolute top-0 left-0 h-[100vh] w-[100vw] bg-black">
-            <video
-              ref={myvideo}
-              src={require('../../images/entry.mp4')}
-              type="video/mp4"
-              autoPlay={true}
-              muted={audioswitch}
-              className='h-full w-full'
-              onEnded={closeVideo}
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <button
-            onClick={closeVideo}
-            className="animate-bounce group absolute bottom-5 right-5 h-16 w-32 flex justify-center items-center"
+        videoEnd &&
+        <div className="entryVid absolute top-0 left-0 h-[100vh] w-[100vw] bg-black" >
+          <video
+            ref={myvideo}
+            src={require('../../images/entry.mp4')}
+            type="video/mp4"
+            autoPlay={true}
+            muted={audioswitch}
+            className='h-full w-full'
+            onEnded={() => { setVideoEnd(false); setVideoDisplay(false); }}
           >
-            <div className="h-full w-full bg-fondue-red rounded-xl shadow-2xl transform group-hover:scale-x-110 group-hover:scale-y-105 transition duration-300 ease-out">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      }
+      {
+        videoDisplay &&
+        <>
+          <button
+            onClick={() => { setVideoDisplay(false); }}
+            className="skip-button animate-bounce group absolute z-20 bottom-5 right-5 h-16 w-32 flex justify-center items-center"
+          >
+            <div className="h-full w-full absolute bg-fondue-red rounded-xl shadow-2xl transform group-hover:scale-x-110 group-hover:scale-y-105 transition duration-300 ease-out">
             </div>
             <p style={{ fontFamily: 'OccamsEraser' }} className='absolute w-full z-10 text-[20px] text-white'>
               Je suis pressé !
             </p>
           </button>
+          <SoundButton audioswitch={audioswitch} handleAudio={handleAudio} />
         </>
       }
-
-      <SoundButton />
-
-      <button
-        className="absolute bg-white p-4 rounded-full top-0 left-36"
-        onClick={handleAudio}>
-        {audioswitch ? "Turn on audio" : "Turn off audio"}
-      </button>
-
       <div className="h-[100vh] w-[100vw] bg-orange-500" />
+
     </div>
   );
 }

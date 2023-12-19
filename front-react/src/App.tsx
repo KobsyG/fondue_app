@@ -11,8 +11,8 @@ function App() {
 
   return (
     <ReactLenis root>
+      <Coming />
       <VideoTest />
-      {/* <Coming /> */}
     </ReactLenis>
   )
 }

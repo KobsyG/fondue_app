@@ -4,7 +4,7 @@ import contactRouge from "../images/Mono/contact-rouge.svg"
 
 const Coming = () => {
     return (
-        <div className='coming h-[100vh] w-[100vw] bg-[#1B133B] flex flex-col overflow-hidden'>
+        <div className='coming absolute top-0 left-0 h-[100vh] w-[100vw] bg-[#1B133B] flex flex-col overflow-hidden'>
             <div className='topbar w-full h-[20%] min-h-[180px] flex'>
                 <div className='fonduecoeur h-[60%] min-w-[408px] ml-[60px] my-auto'>
                     <img className='h-full object-contain' src={require('../images/FFP/logo.png')} />

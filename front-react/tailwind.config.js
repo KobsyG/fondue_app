@@ -16,8 +16,11 @@ module.exports = withMT({
       '2xl': '1536px',
       '3xl': '2520px',
       '4xl': '3544px',
-      macBeco: '1440px',
+      macBeco: '1441px',
       pcJB: '1920px',
+      '1800': '1800px',
+      '1700': '1700px',
+      '1600' : '1600px',
 
     },
     extend: {

@@ -19,6 +19,7 @@ function VideoTest() {
         }, {
           duration: 0.7,
           clipPath: 'circle(0%)',
+          onComplete: () => {setVideoEnd(false)}
         });
       }
     }, videoContainer)
@@ -46,7 +47,7 @@ function VideoTest() {
             autoPlay={true}
             muted={audioswitch}
             className='h-full w-full'
-            onEnded={() => { setVideoEnd(false); setVideoDisplay(false); }}
+            onEnded={() => { setVideoDisplay(false); }}
           >
             Your browser does not support the video tag.
           </video>

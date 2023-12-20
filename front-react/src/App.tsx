@@ -6,13 +6,16 @@ import Histoire from './components/Histoire';
 import Terroir from './components/Kobe/Actuel/Terroir';
 import Coming from './components/Coming';
 import VideoTest from './components/JB/VideoTest.js';
+import ComingTel from './components/ComingTel';
 
 function App() {
 
+  const width = 800;
   return (
     <ReactLenis root>
-      <Coming />
-      <VideoTest />
+
+      <ComingTel />
+      {/* <VideoTest /> */}
     </ReactLenis>
   )
 }

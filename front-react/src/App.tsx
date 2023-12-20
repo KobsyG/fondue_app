@@ -7,15 +7,23 @@ import Terroir from './components/Kobe/Actuel/Terroir';
 import Coming from './components/Coming';
 import VideoTest from './components/JB/VideoTest.js';
 import ComingTel from './components/ComingTel';
+import useWidth from './components/JB/useWidth';
 
 function App() {
 
-  const width = 800;
+  const width = useWidth();
+
   return (
     <ReactLenis root>
-
-      <ComingTel />
-      {/* <VideoTest /> */}
+      {width >= 1080 &&
+        <>
+          <VideoTest />
+          <Coming />
+        </>
+      }
+      {width < 1080 &&
+        <ComingTel />
+      }
     </ReactLenis>
   )
 }

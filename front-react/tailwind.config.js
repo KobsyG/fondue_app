@@ -29,7 +29,8 @@ module.exports = withMT({
       },
       backgroundImage: {
         'pcKraft': "url('/src/images/Mono/PcCraft.png')",
-        'dominos': "url('/src/images/Kobe/domino.png')",
+        'dominos': "url('/src/images/FFP/domino.png')",
+        'kraft': "url('/src/images/FFP/kraftBg.png')",
       },
       colors: {
         'fondue-blue': '#2E2573',

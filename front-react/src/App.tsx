@@ -18,7 +18,7 @@ function App() {
       {width >= 1080 &&
         <>
           <Coming />
-          <IntroVideo />
+          {/* <IntroVideo /> */}
         </>
       }
       {width < 1080 &&

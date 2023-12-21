@@ -17,7 +17,7 @@ const kraft = require('../images/FFP/kraftBg.png')
 const Coming = () => {
   return (
     <div className='coming absolute top-0 left-0 h-[100vh] w-[100vw] bg-[#1B133B] flex flex-col overflow-hidden'>
-      <div className='topbar w-full h-[20%] min-h-[180px] flex'>
+      <div className='topbar w-full h-[20%] flex'>
         <div className='fonduecoeur h-[60%] min-w-[408px] ml-[60px] my-auto'>
           <img className='h-full object-contain' src={require('../images/FFP/logo.png')} />
         </div>
@@ -57,7 +57,7 @@ const Coming = () => {
 
           <img src={kraft} className='h-full w-full object-cover absolute' />
 
-          <div className='ruban absolute top-0  h-[75%] w-[80px] -left-[40px] macBeco:w-[80px] macBeco:-left-[40px] overflow-hidden flex flex-col-reverse'>
+          <div className='ruban absolute top-0  h-[75%] w-[56px] resp2:w-[70px] -left-[28px] resp2:-left-[35px] resp3:w-[80px] resp3:-left-[40px] overflow-hidden flex flex-col-reverse'>
             <img className='object-cover w-full' src={ruban2} />
             <div className='bg-fondue-red w-full h-[100vh]' />
           </div>

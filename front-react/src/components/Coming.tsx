@@ -167,43 +167,43 @@ const Coming = ({ videoEnd }: { videoEnd: boolean }) => {
 
 
 
-        <div className='pageDiapo h-full w-[27vw] bg-yellow-300'>
+        <div className='pageDiapo h-full w-[27vw]'>
           <Carousel className=""
             prevArrow={() => { }}
             nextArrow={() => { }}
             autoplay={true}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1 }}
             loop={true}
           >
             <img
               src={diapo1}
               alt="image 1"
-              className="h-full w-full object-cover"
+              className="h-full object-cover object-[80%]"
             />
             <img
               src={diapo2}
               alt="image 2"
-              className="h-full w-full object-cover"
+              className="h-full object-cover"
             />
             <img
               src={diapo3}
               alt="image 3"
-              className="h-full w-full object-cover"
+              className="h-full object-cover"
             />
             <img
               src={diapo4}
               alt="image 4"
-              className="h-full w-full object-cover"
+              className="h-full object-cover"
             />
             <img
               src={diapo5}
               alt="image 5"
-              className="h-full w-full object-cover"
+              className="h-full object-cover"
             />
             <img
               src={diapo6}
               alt="image 6"
-              className="h-full w-full object-cover"
+              className="h-full object-cover"
             />
           </Carousel>
 

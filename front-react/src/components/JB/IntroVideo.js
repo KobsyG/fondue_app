@@ -41,11 +41,11 @@ function IntroVideo({videoEnd, setVideoEnd}) {
   }
 
   return (
-    <div ref={videoContainer}>
+    <div ref={videoContainer} className="h-[100vh] w-[100vw] overflow-hidden">
       {
         videoEnd &&
         <>
-          <div className="entryVid absolute z-[1080] top-0 left-0 h-[100vh] w-[100vw] bg-black" >
+          <div className="entryVid absolute z-[1080] top-0 left-0 h-[100vh] w-[100vw] bg-black overflow-hidden" >
             <video
               src={require('../../images/introVideo.mp4')}
               type="video/mp4"

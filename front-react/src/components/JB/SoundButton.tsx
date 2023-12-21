@@ -17,7 +17,7 @@ function SoundButton({ audioswitch, handleAudio }: { audioswitch: boolean, handl
   return (
     <motion.div
       onClick={handleAudio}
-      className='custom-cursor absolute h-[170px] w-[170px] top-0 left-0 flex items-center justify-center'
+      className='custom-cursor absolute z-[1080] h-[170px] w-[170px] top-0 left-0 flex items-center justify-center'
       animate={{
         x: x - 85,
         y: y - 85

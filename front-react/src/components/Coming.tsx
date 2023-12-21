@@ -1,12 +1,9 @@
-import React from 'react'
-import cheese from '../images/jb/cheese1.svg'
-
+import { useLayoutEffect, useRef } from 'react'
+import gsap from "gsap";
 import './Coming.css'
 
 import contactRouge from "../images/Mono/contact-rouge.svg"
 import logoChampion from '../images/FFP/logoFondueChampionne.svg'
-import ruban from '../images/FFP/ruban.svg'
-
 const box = require('../images/FFP/box.png')
 const facebook = require('../images/FFP/facebook.png')
 const insta = require('../images/FFP/insta.png')
@@ -14,10 +11,101 @@ const ruban2 = require('../images/FFP/rubanCut.png')
 const pageCahier = require('../images/FFP/pageCahierCut.png')
 const kraft = require('../images/FFP/kraftBg.png')
 
-const Coming = () => {
+const bouteille = require('../images/FFP/bouteille.png')
+const fleurs = require('../images/FFP/fleursGentiane.png')
+const fromages = require('../images/FFP/fromages.png')
+const lentilles = require('../images/FFP/lentilles.png')
+const pastille = require('../images/FFP/pastilleCouderc.png')
+
+const Coming = ({ videoEnd }: { videoEnd: boolean }) => {
+  const comingContainer = useRef(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const phareTl = gsap.timeline({
+        repeat: -1,
+      })
+
+      phareTl.fromTo('.phare', {
+        color: '#7d6a45',
+        scale: 1,
+      }, {
+        color: '#FED88E',
+        duration: 1,
+        ease: 'none',
+        scale: 1.02,
+      }, 0);
+
+      phareTl.fromTo('.phare', {
+        color: '#FED88E',
+        scale: 1.02,
+      }, {
+        duration: 1,
+        color: '#7d6a45',
+        ease: 'none',
+        scale: 1,
+      }, '>');
+
+    }, comingContainer)
+
+    return () => {
+      ctx.revert();
+    };
+
+  }, []);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      if (!videoEnd) {
+        const frigoTl = gsap.timeline({
+        })
+
+        frigoTl
+          .fromTo('.fleurs', {
+            opacity: 0,
+            scale: 3.5,
+            duration: 1,
+          }, {
+            opacity: 1,
+            scale: 1,
+          }, '0.5')
+          .fromTo('.pastille', {
+            opacity: 0,
+            scale: 3.5,
+            duration: 1,
+          }, {
+            scale: 1,
+            opacity: 1,
+          }, '0.8')
+          .fromTo('.fromages', {
+            opacity: 0,
+            scale: 3.5,
+            duration: 1,
+          }, {
+            scale: 1,
+            opacity: 1,
+          }, '1.2')
+          .fromTo('.lentilles', {
+            opacity: 0,
+            scale: 3.5,
+            duration: 1,
+          }, {
+            scale: 1,
+            opacity: 1,
+          }, '1.5')
+      }
+    }, comingContainer)
+
+    return () => {
+      ctx.revert();
+    };
+
+  }, [videoEnd]);
+
+
   return (
-    <div className='coming absolute top-0 left-0 h-[100vh] w-[100vw] bg-[#1B133B] flex flex-col overflow-hidden'>
-      <div className='topbar w-full h-[20%] min-h-[180px] flex'>
+    <div ref={comingContainer} className='coming absolute top-0 left-0 h-[100vh] w-[100vw] bg-[#1B133B] flex flex-col overflow-hidden'>
+      <div className='topbar w-full h-[20%] flex'>
         <div className='fonduecoeur h-[60%] min-w-[408px] ml-[60px] my-auto'>
           <img className='h-full object-contain' src={require('../images/FFP/logo.png')} />
         </div>
@@ -36,17 +124,39 @@ const Coming = () => {
         </div>
       </div>
 
-      <div className='carreau block h-[35px] min-h-[35px] w-full bg-contain bg-repeat-x bg-dominos' />
+      <div className='carreau block h-[4vh] min-h-[4vh] w-full bg-contain bg-repeat-x bg-dominos' />
 
       <div className='main grow w-full flex items-end'>
-        <div className='page1 h-full w-[33vw] flex flex-col mr-3 bg-[#30246C]'>
-          <h2 className='text-white w-fit text-[25px] px-2 bg-fondue-red mt-10 ml-20'>LE CONCEPT</h2>
-          <p style={{ fontFamily: 'OpenSansBold' }} className='text-white w-[350px] mt-8 ml-20 text-[25px] leading-8 text-left'>UNE BOX QUI RASSEMBLE TOUS LES INGRÉDIENTS POUR RÉALISER <span className='text-fondue-red'>CHEZ VOUS</span> LA FONDUE CHAMPIONNE DE FRANCE ET 100% MADE IN AUVERGNE !</p>
 
-          <div className='textImg flex pt-40'>
-            <p className='-rotate-90'>100% AUVERGNE</p>
+
+
+        <div className='page1 h-full w-[33vw] min-w-[450px] flex flex-col mr-3 bg-[#30246C]'>
+
+          <h2 className='text-white w-fit text-[1.2vw] px-2 ml-[1.5vw] mt-[1.5vw] fromMacBeco:ml-[2vw] fromMacBeco:mt-[2vw] bg-fondue-red'>LE CONCEPT</h2>
+          <p style={{ fontFamily: 'OpenSansBold' }} className='text-white w-[90%] ml-[1.5vw] mt-[1.5vw] fromMacBeco:ml-[2vw] fromMacBeco:mt-[2vw] h-fit text-[1.1vw] text-left'>UNE BOX QUI RASSEMBLE TOUS LES INGRÉDIENTS POUR RÉALISER <span className='text-fondue-red'>CHEZ VOUS</span> LA FONDUE CHAMPIONNE DE FRANCE ET 100% MADE IN AUVERGNE !</p>
+
+          <div className='relative w-full grow flex items-center overflow-hidden'>
+            <div className='h-[80%] absolute z-20 left-0 top-0 flex'>
+              <p style={{ letterSpacing: '2px', writingMode: 'vertical-lr', fontFamily: 'OccamsEraser' }} className='phare ml-[1vw] text-[3vw] pcJB:text-[2.5vw] whitespace-nowrap -rotate-180'>100% AUVERGNE</p>
+            </div>
+            <div className='photos relative w-[100%] mx-auto'>
+              <img src={bouteille} className='bouteille h-full object-cover' />
+              <img src={fleurs} className='fleurs absolute top-0 left-0 h-full object-cover opacity-0' />
+              <img src={fromages} className='fromages absolute top-0 left-0 h-full object-cover opacity-0' />
+              <img src={lentilles} className='lentilles absolute top-0 left-0 h-full object-cover opacity-0' />
+              <img src={pastille} className='pastille absolute top-0 left-0 h-full object-cover opacity-0' />
+            </div>
           </div>
+
         </div>
+
+
+
+
+
+
+
+
 
         <div className='pageDiapo h-full w-[27vw] bg-yellow-300'>
           <img className='object-cover h-full object-[83%]' src={require('../images/FFP/diapo/cheese-fondue.jpeg')} />
@@ -87,7 +197,7 @@ const Coming = () => {
             <img src={pageCahier} className='h-full w-full object-cover absolute' />
             <div className='fournisseurs absolute' >
               <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] macBeco:text-[25px] w-[50%] mt-10 ml-[80px] macBeco:ml-32'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
-              <ul style={{ fontFamily: 'OpenSansBold', listStyle: 'square' }} className='mt-5 ml-10 macBeco:ml-16 text-fondue-blue text-[12px] macBeco:text-[15px] w-[80%]'>
+              <ul style={{ fontFamily: 'OpenSansBold' }} className='mt-5 ml-10 macBeco:ml-16 text-fondue-blue text-[12px] macBeco:text-[15px] w-[80%]'>
                 <li className='' >
                   <h1 className='font-bold text-[17px]'>DISTILLERIE LOUIS COUDERC</h1>
                   <p className='text-left'>14 rue Victor Hugo à Aurillac</p>
@@ -117,16 +227,18 @@ const Coming = () => {
 
           <button className='contact group absolute h-[120px] w-[120px] bottom-5 right-5 rotate-12 flex items-center justify-center text-center'>
             <p style={{ fontFamily: 'AvocadoCake' }} className='absolute w-[80px] z-10 text-[20px] text-white'>ON SE LANCE ?</p>
-            <img className='relative pastille h-full z-0 lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} />
+            <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] group-hover:transition-transform duration-500' src={contactRouge} />
           </button>
 
-          {/* <div className='smallbox absolute w-[200px] macBeco:w-[300px] -rotate-[15deg] ml-16 mb-5 macBeco:mb-10'> */}
-          {/* <div className='smallbox absolute w-[13vw] macBeco:w-[15vw] top-[8vw] macBeco:top-[10vw] left-[5vw] macBeco:left-[3vw] -rotate-[15deg] '>
-                        <img src={box} />
-                    </div> */}
-          {/* <div className='smallbox w-[15vw] mb-5 macBeco:mb-10 ml-10 -rotate-[17deg] '>
-                        <img src={box} />
-                    </div> */}
+          {/*
+          <div className='smallbox absolute w-[200px] macBeco:w-[300px] -rotate-[15deg] ml-16 mb-5 macBeco:mb-10'>
+          <div className='smallbox absolute w-[13vw] macBeco:w-[15vw] top-[8vw] macBeco:top-[10vw] left-[5vw] macBeco:left-[3vw] -rotate-[15deg] '>
+          <img src={box} />
+          </div>
+          <div className='smallbox w-[15vw] mb-5 macBeco:mb-10 ml-10 -rotate-[17deg] '>
+          <img src={box} />
+          </div>
+          */}
 
           <div className='box absolute w-[25vw] -top-[10vw] -left-[5vw]'>
             <img className='object-cover' src={box} />

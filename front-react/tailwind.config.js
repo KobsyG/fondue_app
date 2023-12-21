@@ -17,6 +17,7 @@ module.exports = withMT({
       '3xl': '2520px',
       '4xl': '3544px',
       macBeco: '1441px',
+      fromMacBeco: '1440px',
       pcJB: '1921px',
       '1800': '1800px',
       '1700': '1700px',

@@ -1,9 +1,5 @@
-ul p {
-    
-}
-
-@media (min-width: 1441px)
-{ ul h1 {
- /* color: blueviolet; */
-}
+ul {
+    list-style-image: url("../images/FFP/coeurList.png");
+    height: 10px;   
+    width: 10px;   
 }

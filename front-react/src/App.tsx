@@ -11,14 +11,15 @@ import useWidth from './components/JB/useWidth';
 
 function App() {
 
+  const [videoEnd, setVideoEnd] = useState(true);
   const width = useWidth();
 
   return (
     <ReactLenis root>
       {width >= 1080 &&
         <>
-          <Coming />
-          {/* <IntroVideo /> */}
+          <Coming videoEnd={videoEnd}/>
+          {/* <IntroVideo videoEnd={videoEnd} setVideoEnd={setVideoEnd} /> */}
         </>
       }
       {width < 1080 &&

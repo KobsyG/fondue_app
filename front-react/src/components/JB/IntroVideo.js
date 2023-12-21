@@ -3,9 +3,8 @@ import SoundButton from './SoundButton.tsx'
 import gsap from "gsap";
 import '../../styles/soundButton.css';
 
-function IntroVideo() {
+function IntroVideo({videoEnd, setVideoEnd}) {
   const [videoDisplay, setVideoDisplay] = useState(true);
-  const [videoEnd, setVideoEnd] = useState(true);
   const [audioswitch, setAudioSwitch] = useState(true);
   const videoContainer = useRef(null);
 
@@ -46,7 +45,7 @@ function IntroVideo() {
       {
         videoEnd &&
         <>
-          <div className="entryVid absolute top-0 left-0 h-[100vh] w-[100vw] bg-black" >
+          <div className="entryVid absolute z-[1080] top-0 left-0 h-[100vh] w-[100vw] bg-black" >
             <video
               src={require('../../images/introVideo.mp4')}
               type="video/mp4"
@@ -60,7 +59,7 @@ function IntroVideo() {
           </div>
           <button
             onClick={() => { setVideoDisplay(false); }}
-            className="skip-button animate-bounce group absolute z-20 bottom-5 right-5 h-16 w-32 flex justify-center items-center"
+            className="skip-button animate-bounce group absolute z-[1090] bottom-5 right-5 h-16 w-32 flex justify-center items-center"
           >
             <div className="h-full w-full absolute bg-fondue-red rounded-xl shadow-2xl transform group-hover:scale-x-110 group-hover:scale-y-105 transition duration-300 ease-out">
             </div>

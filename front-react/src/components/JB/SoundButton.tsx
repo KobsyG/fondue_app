@@ -7,8 +7,6 @@ function SoundButton({ audioswitch, handleAudio }: { audioswitch: boolean, handl
 
   const { x, y } = useMousePosition();
 
-  console.log(x, y);
-
   const variants = {
     default: {
       x: x - 20,

@@ -3,15 +3,15 @@ import SoundButton from './SoundButton.tsx'
 import gsap from "gsap";
 import '../../styles/soundButton.css';
 
-function VideoTest() {
+function IntroVideo() {
   const [videoDisplay, setVideoDisplay] = useState(true);
   const [videoEnd, setVideoEnd] = useState(true);
   const [audioswitch, setAudioSwitch] = useState(true);
-  const myvideo = useRef(null);
   const videoContainer = useRef(null);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
+
       if (!videoDisplay) {
 
         gsap.fromTo('.entryVid', {
@@ -19,9 +19,10 @@ function VideoTest() {
         }, {
           duration: 0.7,
           clipPath: 'circle(0%)',
-          onComplete: () => {setVideoEnd(false)}
+          onComplete: () => { setVideoEnd(false) }
         });
       }
+
     }, videoContainer)
 
     return () => {
@@ -35,27 +36,28 @@ function VideoTest() {
     setAudioSwitch(!audioswitch);
   };
 
+  let audioVol = document.getElementById("myaudio");
+  if (audioVol) {
+    audioVol.volume = 0.1;
+  }
+
   return (
     <div ref={videoContainer}>
       {
         videoEnd &&
-        <div className="entryVid absolute top-0 left-0 h-[100vh] w-[100vw] bg-black" >
-          <video
-            ref={myvideo}
-            src={require('../../images/entry.mp4')}
-            type="video/mp4"
-            autoPlay={true}
-            muted={audioswitch}
-            className='h-full w-full'
-            onEnded={() => { setVideoDisplay(false); }}
-          >
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      }
-      {
-        videoDisplay &&
         <>
+          <div className="entryVid absolute top-0 left-0 h-[100vh] w-[100vw] bg-black" >
+            <video
+              src={require('../../images/introVideo.mp4')}
+              type="video/mp4"
+              autoPlay={true}
+              muted={true}
+              className='h-full w-full'
+              onEnded={() => { setVideoDisplay(false); }}
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <button
             onClick={() => { setVideoDisplay(false); }}
             className="skip-button animate-bounce group absolute z-20 bottom-5 right-5 h-16 w-32 flex justify-center items-center"
@@ -69,10 +71,16 @@ function VideoTest() {
           <SoundButton audioswitch={audioswitch} handleAudio={handleAudio} />
         </>
       }
-      <div className="h-[100vh] w-[100vw] bg-orange-500" />
-
+      <audio
+        id="myaudio"
+        src={require('../../images/introAudio.mp3')}
+        type="video/mp3"
+        autoPlay={true}
+        muted={audioswitch}
+      >
+      </audio>
     </div>
   );
 }
 
-export default VideoTest;
+export default IntroVideo;

@@ -2,7 +2,14 @@
 import './Coming.css'
 import contactRouge from "../images/Mono/contact-rouge.svg"
 
+import logoChampion from '../images/FFP/logoFondueChampionne.svg'
+
 const box = require('../images/FFP/box.png')
+const pageCahier = require('../images/FFP/pageCahierCut.png')
+const kraft = require('../images/FFP/kraftBg.png')
+const facebook = require('../images/FFP/facebook.png')
+const insta = require('../images/FFP/insta.png')
+const ruban2 = require('../images/FFP/rubanCut.png')
 
 const ComingTel = () => {
     return (
@@ -21,7 +28,7 @@ const ComingTel = () => {
                     </div>
 
                     <div className='championne w-[40%] pr-4 my-auto'>
-                        <img className=' object-contain' src={require('../images/FFP/logo.png')} />
+                        <img className=' object-contain' src={logoChampion} />
                     </div>
                 </div>
 
@@ -46,8 +53,10 @@ const ComingTel = () => {
 
             <div className='page3 relative h-[60vh] w-[full] flex flex-col-reverse bg-yellow-800'>
 
-                <div className='ruban absolute h-[50%] w-[15vw] top-0 left-0 bg-fondue-red'>
-                    <img className='absolute object-cover w-full bottom-0' src={require('../images/cheese/gentiane-button.png')} />
+                <img src={kraft} className='h-full w-full object-cover absolute' />
+
+                <div className='ruban absolute h-[50%] w-[15vw] top-0 left-0'>
+                    <img className='absolute object-cover h-full' src={ruban2} />
                 </div>
 
                 <div className='flex flex-col relative bottom-0 left-0 w-[45%] h-[50%] pb-3'>
@@ -63,11 +72,11 @@ const ComingTel = () => {
                         </div>
                         <div className='reseaux absolute bottom-2 -right-2 flex flex-col justify-between'>
                             <button className='facebook w-[9vw]'>
-                                <img src={require('../images/waiting/facebook.webp')} />
+                                <img src={facebook} />
                             </button>
 
                             <button className='instagram w-[9vw] mt-2'>
-                                <img src={require('../images/waiting/insta.webp')} />
+                                <img src={insta} />
                             </button>
                         </div>
 
@@ -84,39 +93,41 @@ const ComingTel = () => {
 
 
 
-                <div className='page-rotate absolute h-[110%] w-[65%] left-[45%] top-0 -rotate-[6deg] bg-gray-200' />
-                <div className='page-rotate absolute top-[5%] h-[90%] w-[55%] left-[45%] -rotate-[6deg] bg-blue-100'>
+                <div className='page-rotate absolute h-[110%] w-[65%] left-[45%] top-0 -rotate-[6deg]'>
+                    <img src={pageCahier} className='absolute h-full w-full object-cover' />
+                </div>
+                <div className='page-rotate absolute top-[5%] h-[90%] w-[55%] left-[45%] -rotate-[6deg]'>
 
-                    {/* 
-                    
-                    
-                    <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] macBeco:text-[25px] w-[50%] mt-10 ml-[80px] macBeco:ml-32'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
-                    <ul style={{ fontFamily: 'OpenSansBold', listStyle: 'square' }} className='mt-5 ml-10 macBeco:ml-16 text-fondue-blue text-[12px] macBeco:text-[15px] w-[80%]'>
-                        <li className='' >
-                            <h1 className='font-bold text-[17px]'>DISTILLERIE LOUIS COUDERC</h1>
-                            <p className='text-left'>14 rue Victor Hugo à Aurillac</p>
-                            <p className='text-left'>04 71 48 01 50 - commercial@distillerie-couderc.com</p>
-                        </li>
-                        <br />
-                        <li className='max-w-[290px] macBeco:max-w-[350px]' >
-                            <h1 className='font-bold text-[17px]'>FROMAGERIE MORIN</h1>
-                            <p className='text-left'>Marché aux Fromages</p>
-                            <p className='text-left'>7 rue du buis à Aurillac - 04 71 48 63 10</p>
-                            <p className='text-left'>Morin Fromager Center Commercial de Marmiers à Aurillac - 04 71 63 59 18</p>
-                            <p className='text-left'>Morin Fromager Garric</p>
-                            <p className='text-left'>13 avenue du Garric à Aurillac - 04 71 43 25 84</p>
+
+                    <div className='fournisseurs absolute'>
+                        <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[20px] w-[80%] mt-10 ml-[40px]'>ET ON LA TROUVE OÙ <br /> CETTE MERVEILLE ?</h3>
+                        <ul style={{ fontFamily: 'OpenSansBold', listStyle: 'square' }} className='mt-5 ml-10 text-fondue-blue text-[8px] w-[80%]'>
+                            <li className='' >
+                                <h1 className='font-bold text-[12px]'>DISTILLERIE LOUIS COUDERC</h1>
+                                <p className='text-left'>14 rue Victor Hugo à Aurillac</p>
+                                <p className='text-left'>04 71 48 01 50 - commercial@distillerie-couderc.com</p>
+                            </li>
                             <br />
-                            <p className='text-left'>Marchés: Tulle, Ussel, Egleton, Bugeat, Le Rouget, Maurs Vic-sur-Cère, Ste Genevieve sur Argence</p>
-                        </li>
-                        <br />
-                        <li className='max-w-[290px] macBeco:max-w-[350px]' >
-                            <h1 className='font-bold text-[17px]'>LECLERC AURILLAC</h1>
-                            <p className='text-left'>26 Rue de la Jordanne</p>
-                            <p></p>
+                            <li className='' >
+                                <h1 className='font-bold text-[12px]'>FROMAGERIE MORIN</h1>
+                                <p className='text-left'>Marché aux Fromages</p>
+                                <p className='text-left'>7 rue du buis à Aurillac - 04 71 48 63 10</p>
+                                <p className='text-left'>Morin Fromager Center Commercial de Marmiers à Aurillac - 04 71 63 59 18</p>
+                                <p className='text-left'>Morin Fromager Garric</p>
+                                <p className='text-left'>13 avenue du Garric à Aurillac - 04 71 43 25 84</p>
+                                <br />
+                                <p className='text-left'>Marchés: Tulle, Ussel, Egleton, Bugeat, Le Rouget, Maurs Vic-sur-Cère, Ste Genevieve sur Argence</p>
+                            </li>
+                            <br />
+                            <li className='' >
+                                <h1 className='font-bold text-[12px]'>LECLERC AURILLAC</h1>
+                                <p className='text-left'>26 Rue de la Jordanne</p>
+                                <p></p>
 
-                        </li>
-                    </ul>
-                */}
+                            </li>
+                        </ul>
+                    </div>
+
 
                 </div>
 

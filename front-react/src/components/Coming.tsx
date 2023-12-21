@@ -124,11 +124,11 @@ const Coming = () => {
               </div>
               <div className='reseaux h-[60px] w-[115px] macBeco:w-[120px] flex justify-between mb-5 macBeco:mb-10'>
                 <button className='facebook w-[50px] macBeco:w-[60px]'>
-                  <img src={facebook} className='hover:scale-125 transform transition-transform duration-300'/>
+                  <img src={facebook} className='hover:scale-125 transform transition-transform duration-300' />
                 </button>
 
                 <button className='instagram w-[50px] macBeco:w-[60px]'>
-                  <img src={insta} className='hover:scale-125 transform transition-transform duration-300'/>
+                  <img src={insta} className='hover:scale-125 transform transition-transform duration-300' />
                 </button>
               </div>
             </div>
@@ -140,8 +140,8 @@ const Coming = () => {
 
             <img src={pageCahier} className='h-full w-full object-cover absolute' />
             <div className='fournisseurs absolute' >
-              <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[20px] macBeco:text-[25px] fromJB:text-[28px] w-[50%] mt-10 fromJB:mt-16 ml-[80px] macBeco:ml-32'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
-              <ul style={{ fontFamily: 'OpenSansBold', listStyle: 'square' }} className='mt-5 fromJB:mt-10 ml-10 macBeco:ml-16 text-fondue-blue text-[11px] fromBeco:text-[12px] fromJB:text-[15px] w-[80%]'>
+              <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[20px] fromBeco:text-[25px] fromJB:text-[28px] w-[80%] mt-10 fromJB:mt-16 ml-[80px] macBeco:ml-32'>ET ON LA TROUVE OÙ <br /> CETTE MERVEILLE ?</h3>
+              <ul style={{ fontFamily: 'OpenSansBold' }} className='mt-5 fromJB:mt-10 ml-10 macBeco:ml-16 text-fondue-blue text-[11px] fromBeco:text-[12px] fromJB:text-[15px] w-[80%]'>
                 <li className='' >
                   <h1 className='font-bold text-[15px] fromBeco:text-[18px]'>DISTILLERIE LOUIS COUDERC</h1>
                   <p className='text-left'>14 rue Victor Hugo à Aurillac</p>

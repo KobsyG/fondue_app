@@ -25,6 +25,7 @@ function App() {
       {width < 1080 &&
         <ComingTel />
       }
+      {/* <ComingTel /> */}
 
     </ReactLenis>
   )

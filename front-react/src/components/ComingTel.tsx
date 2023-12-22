@@ -132,8 +132,8 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                         <img className=' object-contain' src={require('../images/FFP/logo.png')} />
                     </div>
 
-                    <div className='championne w-[40%] pr-4 my-auto'>
-                        <img className=' object-contain' src={logoChampion} />
+                    <div className='championne h-[90%] pr-4 my-auto'>
+                        <img className=' object-contain h-full' src={logoChampion} />
                     </div>
                 </div>
 

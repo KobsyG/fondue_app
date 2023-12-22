@@ -11,6 +11,17 @@ const facebook = require('../images/FFP/facebook.png')
 const insta = require('../images/FFP/insta.png')
 const ruban2 = require('../images/FFP/rubanCut.png')
 
+const bouteille = require('../images/FFP/bouteille.png')
+const bouteilleLong = require('../images/FFP/bouteilleLong.png')
+const fleurs = require('../images/FFP/fleursGentiane.png')
+const fleursLong = require('../images/FFP/fleursLong.png')
+const fromages = require('../images/FFP/fromages.png')
+const fromagesLong = require('../images/FFP/fromagesLong.png')
+const lentilles = require('../images/FFP/lentilles.png')
+const lentillesLong = require('../images/FFP/lentillesLong.png')
+const pastille = require('../images/FFP/pastilleCouderc.png')
+const pastilleLong = require('../images/FFP/pastilleLong.png')
+
 const ComingTel = () => {
     return (
         <div className='comingTel relative w-[100vw] bg-[#1B133B] overflow-hidden'>
@@ -34,16 +45,80 @@ const ComingTel = () => {
 
                 <div className='carreau block h-[20px] min-h-[20px] w-full bg-contain bg-repeat-x bg-dominos' />
 
-                <div className='page1 p-3 w-full flex flex-col bg-[#30246C] justify-between grow'>
+                <div className='page1 w-full flex flex-col bg-[#30246C] grow'>
 
-                    <h2 className='text-white h-fit w-fit px-1 text-[18px] bg-fondue-red my-auto'>LE CONCEPT</h2>
-                    <p style={{ fontFamily: 'OpenSansBold' }} className='text-white text-[18px] text-left lead my-auto'>UNE BOX QUI RASSEMBLE TOUS LES INGRÉDIENTS POUR RÉALISER <span className='text-fondue-red'>CHEZ VOUS</span> LA FONDUE CHAMPIONNE DE FRANCE ET 100% MADE IN AUVERGNE !</p>
+                    <h2 className='text-white h-fit w-fit px-1 text-[3vh] bg-fondue-red ml-[4vw] mt-[4vw]'>LE CONCEPT</h2>
+                    <p style={{ fontFamily: 'OpenSansBold' }} className='text-white text-[2.5vh] w-[90%] text-left ml-[4vw] mt-[4vw] leading-6'>UNE BOX QUI RASSEMBLE TOUS LES INGRÉDIENTS POUR RÉALISER <span className='text-fondue-red'>CHEZ VOUS</span> LA FONDUE CHAMPIONNE DE FRANCE ET 100% MADE IN AUVERGNE !</p>
 
                     {/* <div className='textImg flex pt-40'>
                         <p className='-rotate-90'>100% AUVERGNE</p>
                     </div> */}
-                    <div className='h-[60vh] w-full my-auto bg-green-500'>
-
+                    <div className='photos relative h-fit w-full mx-auto my-auto'>
+                        <picture>
+                            <source
+                                media='(min-aspect-ratio: 0.5)'
+                                srcSet={bouteille}
+                                className='bouteille object-cover'
+                            />
+                            <source
+                                media='(max-aspect-ratio: 0.5)'
+                                srcSet={bouteilleLong}
+                                className='bouteille long-ratio object-cover'
+                            />
+                            <img src={bouteille} className='bouteille object-cover' />
+                        </picture>
+                        <picture>
+                            <source
+                                media='(min-aspect-ratio: 0.5)'
+                                srcSet={fleurs}
+                                className='fleurs object-cover absolute top-0 left-0'
+                            />
+                            <source
+                                media='(max-aspect-ratio: 0.5)'
+                                srcSet={fleursLong}
+                                className='fleurs long-ratio object-cover absolute top-0 left-0'
+                            />
+                            <img src={fleurs} className='fleurs object-cover absolute top-0 left-0' />
+                        </picture>
+                        <picture>
+                            <source
+                                media='(min-aspect-ratio: 0.5)'
+                                srcSet={fromages}
+                                className='fromages object-cover absolute top-0 left-0'
+                            />
+                            <source
+                                media='(max-aspect-ratio: 0.5)'
+                                srcSet={fromagesLong}
+                                className='fromages long-ratio object-cover absolute top-0 left-0'
+                            />
+                            <img src={fromages} className='fromages object-cover absolute top-0 left-0' />
+                        </picture>
+                        <picture>
+                            <source
+                                media='(min-aspect-ratio: 0.5)'
+                                srcSet={lentilles}
+                                className='lentilles object-cover absolute top-0 left-0'
+                            />
+                            <source
+                                media='(max-aspect-ratio: 0.5)'
+                                srcSet={lentillesLong}
+                                className='lentilles long-ratio object-cover absolute top-0 left-0'
+                            />
+                            <img src={lentilles} className='lentilles object-cover absolute top-0 left-0' />
+                        </picture>
+                        <picture>
+                            <source
+                                media='(min-aspect-ratio: 0.5)'
+                                srcSet={pastille}
+                                className='pastille object-cover absolute top-0 left-0'
+                            />
+                            <source
+                                media='(max-aspect-ratio: 0.5)'
+                                srcSet={pastilleLong}
+                                className='pastille long-ratio object-cover absolute top-0 left-0'
+                            />
+                            <img src={pastille} className='pastille object-cover absolute top-0 left-0' />
+                        </picture>
                     </div>
                 </div>
 

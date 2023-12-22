@@ -3,8 +3,11 @@ import './Coming.css'
 import contactRouge from "../images/Mono/contact-rouge.svg"
 
 import logoChampion from '../images/FFP/logoFondueChampionne.svg'
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
+import { Dialog } from '@material-tailwind/react'
+import { ToastContainer } from 'react-toastify'
+import Contact from './Contact'
 
 const box = require('../images/FFP/box.png')
 const pageCahier = require('../images/FFP/pageCahierCut.png')
@@ -36,7 +39,10 @@ const coeurs = require('../images/FFP/coeur-tel.png')
 
 const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
 
+    const [openContact, setOpenContact] = useState(false);
     const comingTelContainer = useRef(null);
+
+    const handleOpen = () => setOpenContact(!openContact);
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -120,7 +126,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
     return (
         <div ref={comingTelContainer} className='comingTelContainer relative w-[100vw] bg-[#1B133B] overflow-hidden'>
 
-            <button className='contact h-[100px] w-[100px] fixed bottom-5 right-5 z-40 rotate-12 flex items-center justify-center'>
+            <button onClick={handleOpen} className='contact h-[100px] w-[100px] fixed bottom-5 right-5 z-40 rotate-12 flex items-center justify-center'>
                 <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-10 text-[18px] text-white'>ON SE LANCE ?</p>
                 <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} />
             </button>
@@ -132,7 +138,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                         <img className=' object-contain' src={require('../images/FFP/logo.png')} />
                     </div>
 
-                    <div className='championne h-[90%] pr-4 my-auto'>
+                    <div className='championne h-[70%] pr-4 my-auto'>
                         <img className=' object-contain h-full' src={logoChampion} />
                     </div>
                 </div>
@@ -356,6 +362,22 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 </div> */}
 
             </div>
+            <Dialog open={openContact} size='sm' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={2000}
+                    limit={3}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover={false}
+                    theme="light"
+                />
+                <Contact setOpen={setOpenContact} />
+            </Dialog>
         </div>
     )
 }

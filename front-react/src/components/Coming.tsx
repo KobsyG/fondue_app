@@ -30,7 +30,7 @@ const diapo5 = require('../images/FFP/diapo/cheese-kitchen.jpg')
 const diapo6 = require('../images/FFP/diapo/gentiane.jpg')
 
 
-const Coming = ({ videoEnd }: { videoEnd: boolean }) => {
+const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: boolean }) => {
 
   const [openContact, setOpenContact] = useState(false);
   const handleOpen = () => setOpenContact(!openContact);
@@ -171,7 +171,7 @@ const Coming = ({ videoEnd }: { videoEnd: boolean }) => {
           <Carousel className=""
             prevArrow={() => { }}
             nextArrow={() => { }}
-            autoplay={true}
+            autoplay={!videoDisplay}
             transition={{ duration: 1 }}
             loop={true}
           >

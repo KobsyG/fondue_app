@@ -3,8 +3,7 @@ import SoundButton from './SoundButton.tsx'
 import gsap from "gsap";
 import '../../styles/soundButton.css';
 
-function IntroVideo({videoEnd, setVideoEnd}) {
-  const [videoDisplay, setVideoDisplay] = useState(true);
+function IntroVideo({videoEnd, setVideoEnd, videoDisplay, setVideoDisplay}) {
   const [audioswitch, setAudioSwitch] = useState(true);
   const videoContainer = useRef(null);
 

@@ -22,9 +22,9 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
   };
 
   const errorNotify = () => {
-    toast.error(`Une erreur interne est survenue, contactez-nous directement via l'email: contact@fonduecoeur.fr`, {
+    toast.error(`Une erreur interne est survenue, veuillez nous contacter directement via contact@fonduecoeur.fr`, {
       position: "top-center",
-      autoClose: false,
+      autoClose: 10000,
       hideProgressBar: false,
       closeOnClick: false,
       pauseOnHover: false,
@@ -95,31 +95,21 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFrom(e.target.value);
-
-    // if (!e.target.validity.valid) {
-    //   e.target.setCustomValidity('Lalalalala');
-    // } else if (e.target.value.trim() === '') {
-    //   e.target.setCustomValidity('EMPTYYYYYYY');
-    // } else {
-    //   e.target.setCustomValidity('');
-    // }
   };
 
   return (
-
-    <div className='contact-container rounded-[20px] bg-[#202454] w-[500px] flex justify-center p-10'>
+    <div className='contact-container rounded-[20px] bg-[#202454]  flex justify-center w-full p-5 lg:w-[500px] lg:p-10'>
       <div className='w-full relative'>
-
-        <button className='close-cross absolute top-0 right-0 h-[20px] sm:h-[30px] w-[20px] sm:w-[30px] hover:scale-[1.15] transition-transform duration-200'>
+        <button className='close-cross absolute top-1 right-1 h-[25px] w-[25px] lg:top-0 lg:right-0 lg:h-[30px] lg:w-[30px] hover:scale-[1.15] transition-transform duration-200'>
           <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
         </button>
 
-        <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[18px] sm:text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
+        <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
 
         <form onSubmit={handleSubmit}>
           <label
             style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[13px] sm:text-[18px]'>
+            className='text-white text-[18px]'>
             Votre p'tit Nom
           </label>
           <input type="text" id="nom" name="nom"
@@ -127,18 +117,32 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
             value={nom}
             onChange={e => setNom(e.target.value)}
             className='h-8 sm:h-12'
+            onInvalid={(event) => {
+              if (event.target instanceof HTMLInputElement) {
+                event.target.setCustomValidity("Qui n'en a pas !");
+              }
+            }}
+            onInput={(event) => {
+              if (event.target instanceof HTMLInputElement) {
+                event.target.setCustomValidity("");
+              }
+            }}
           />
-
           <label
             style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[13px] sm:text-[18px]'>
+            className='text-white text-[18px]'>
             L'adresse Email
           </label>
           <input type="email" id="from" name="from"
             required minLength={1} maxLength={60}
-            onInvalid={(event: React.InvalidEvent<HTMLInputElement>) => {
+            onInvalid={(event) => {
               if (event.target instanceof HTMLInputElement) {
-                event.target.setCustomValidity('Je change avec le message de mon choix');
+                event.target.setCustomValidity(`L'email n'est pas valide..`);
+              }
+            }}
+            onInput={(event) => {
+              if (event.target instanceof HTMLInputElement) {
+                event.target.setCustomValidity("");
               }
             }}
             value={from}
@@ -148,9 +152,9 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
 
           <label
             style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[13px] sm:text-[18px]'>
+            className='text-white text-[18px]'>
             Et le P'tit mot
-            <span className='relative left-[110px] sm:left-[290px]'>
+            <span className='absolute right-0'>
               {message.length}/1000
             </span>
           </label>
@@ -162,6 +166,16 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
             className='h-28 sm:h-48'
             value={message}
             onChange={e => setMessage(e.target.value)}
+            onInvalid={(event) => {
+              if (event.target instanceof HTMLTextAreaElement) {
+                event.target.setCustomValidity(`Un dernier p'tit effort !`);
+              }
+            }}
+            onInput={(event) => {
+              if (event.target instanceof HTMLTextAreaElement) {
+                event.target.setCustomValidity("");
+              }
+            }}
           ></textarea>
 
 

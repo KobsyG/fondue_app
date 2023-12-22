@@ -131,7 +131,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           <img className='h-full object-contain' src={require('../images/FFP/logo.png')} />
         </div>
 
-        <div className='devenez h-full flex-col justify-center items-left hidden xl:flex ml-[30px] 1700:ml-[100px] text-[18px] 1600:text-[23px] 1800:text-[25px]'>
+        <div style={{ fontFamily: 'OpenSansBold' }} className='devenez h-full flex-col justify-center items-left hidden xl:flex ml-[30px] 1700:ml-[100px] text-[18px] 1600:text-[23px] 1800:text-[25px]'>
           <h2 className='bg-fondue-red whitespace-nowrap px-2 w-fit mb-2 text-white'>
             DEVENEZ À VOTRE TOUR
           </h2>
@@ -295,20 +295,10 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] group-hover:transition-transform duration-500' src={contactRouge} />
           </button>
 
-          {/*
-          <div className='smallbox absolute w-[200px] macBeco:w-[300px] -rotate-[15deg] ml-16 mb-5 macBeco:mb-10'>
-          <div className='smallbox absolute w-[13vw] macBeco:w-[15vw] top-[8vw] macBeco:top-[10vw] left-[5vw] macBeco:left-[3vw] -rotate-[15deg] '>
-          <img src={box} />
-          </div>
-          <div className='smallbox w-[15vw] mb-5 macBeco:mb-10 ml-10 -rotate-[17deg] '>
-          <img src={box} />
-          </div>
-          */}
           <div className='smallbox hidden fromJB:block w-[15vw] mt-44 ml-20 -rotate-[17deg] '>
             <img src={box} />
           </div>
 
-          {/* <div className='box absolute w-[25vw] -top-[10vw] left-[3vw] 1280:-left-[3vw] 1536:-left-[5vw]'> */}
           <div className='box absolute w-[25vw] -top-[10vw] left-[3vw] 1281:left-0 1920:-left-[3vw] '>
             <img className='object-cover' src={box} />
           </div>

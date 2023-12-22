@@ -362,7 +362,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 </div> */}
 
             </div>
-            <Dialog open={openContact} size='sm' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
+            <Dialog open={openContact} size='md' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
                 <ToastContainer
                     position="top-center"
                     autoClose={2000}

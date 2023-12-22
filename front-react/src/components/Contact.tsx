@@ -98,102 +98,101 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
   };
 
   return (
-    <div className='contact-container rounded-[20px] bg-[#202454]  flex justify-center w-full p-5 lg:w-[500px] lg:p-10'>
-      <div className='w-full relative'>
-        <button className='close-cross absolute top-1 right-1 h-[25px] w-[25px] lg:top-0 lg:right-0 lg:h-[30px] lg:w-[30px] hover:scale-[1.15] transition-transform duration-200'>
-          <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
-        </button>
+      <div className='contact-container rounded-[20px] bg-[#202454] h-fit flex justify-center w-[80%] p-5 lg:w-[500px] lg:p-10'>
+        <div className='w-full relative z-10'>
+          <button className='close-cross absolute top-1 right-1 h-[25px] w-[25px] lg:top-0 lg:right-0 lg:h-[30px] lg:w-[30px] hover:scale-[1.15] transition-transform duration-200'>
+            <img className='object-cover' src={croix} onClick={() => setOpen(false)} />
+          </button>
 
-        <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
+          <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
 
-        <form onSubmit={handleSubmit}>
-          <label
-            style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[18px]'>
-            Votre p'tit Nom
-          </label>
-          <input type="text" id="nom" name="nom"
-            required minLength={1} maxLength={60}
-            value={nom}
-            onChange={e => setNom(e.target.value)}
-            className='h-8 sm:h-12'
-            onInvalid={(event) => {
-              if (event.target instanceof HTMLInputElement) {
-                event.target.setCustomValidity("Qui n'en a pas !");
-              }
-            }}
-            onInput={(event) => {
-              if (event.target instanceof HTMLInputElement) {
-                event.target.setCustomValidity("");
-              }
-            }}
-          />
-          <label
-            style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[18px]'>
-            L'adresse Email
-          </label>
-          <input type="email" id="from" name="from"
-            required minLength={1} maxLength={60}
-            onInvalid={(event) => {
-              if (event.target instanceof HTMLInputElement) {
-                event.target.setCustomValidity(`L'email n'est pas valide..`);
-              }
-            }}
-            onInput={(event) => {
-              if (event.target instanceof HTMLInputElement) {
-                event.target.setCustomValidity("");
-              }
-            }}
-            value={from}
-            onChange={handleEmailChange}
-            className='h-8 sm:h-12'
-          />
+          <form onSubmit={handleSubmit}>
+            <label
+              style={{ fontFamily: 'OccamsEraser' }}
+              className='text-white text-[18px]'>
+              Votre p'tit Nom
+            </label>
+            <input type="text" id="nom" name="nom"
+              required minLength={1} maxLength={60}
+              value={nom}
+              onChange={e => setNom(e.target.value)}
+              className='h-8 sm:h-12'
+              onInvalid={(event) => {
+                if (event.target instanceof HTMLInputElement) {
+                  event.target.setCustomValidity(`Très bien "Personne"..`);
+                }
+              }}
+              onInput={(event) => {
+                if (event.target instanceof HTMLInputElement) {
+                  event.target.setCustomValidity("");
+                }
+              }}
+            />
+            <label
+              style={{ fontFamily: 'OccamsEraser' }}
+              className='text-white text-[18px]'>
+              L'adresse Email
+            </label>
+            <input type="email" id="from" name="from"
+              required minLength={1} maxLength={60}
+              onInvalid={(event) => {
+                if (event.target instanceof HTMLInputElement) {
+                  event.target.setCustomValidity(`Vous savez, pour vous recontacter..`);
+                }
+              }}
+              onInput={(event) => {
+                if (event.target instanceof HTMLInputElement) {
+                  event.target.setCustomValidity("");
+                }
+              }}
+              value={from}
+              onChange={handleEmailChange}
+              className='h-8 sm:h-12'
+            />
 
-          <label
-            style={{ fontFamily: 'OccamsEraser' }}
-            className='text-white text-[18px]'>
-            Et le P'tit mot
-            <span className='absolute right-0'>
-              {message.length}/1000
-            </span>
-          </label>
+            <label
+              style={{ fontFamily: 'OccamsEraser' }}
+              className='text-white text-[18px]'>
+              Et le P'tit mot
+              <span className='absolute right-0'>
+                {message.length}/1000
+              </span>
+            </label>
 
-          <textarea
-            id="message"
-            name="message"
-            required minLength={1} maxLength={1000}
-            className='h-28 sm:h-48'
-            value={message}
-            onChange={e => setMessage(e.target.value)}
-            onInvalid={(event) => {
-              if (event.target instanceof HTMLTextAreaElement) {
-                event.target.setCustomValidity(`Un dernier p'tit effort !`);
-              }
-            }}
-            onInput={(event) => {
-              if (event.target instanceof HTMLTextAreaElement) {
-                event.target.setCustomValidity("");
-              }
-            }}
-          ></textarea>
+            <textarea
+              id="message"
+              name="message"
+              required minLength={1} maxLength={1000}
+              className='h-28 sm:h-48'
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+              onInvalid={(event) => {
+                if (event.target instanceof HTMLTextAreaElement) {
+                  event.target.setCustomValidity(`Allez ! Un dernier effort !`);
+                }
+              }}
+              onInput={(event) => {
+                if (event.target instanceof HTMLTextAreaElement) {
+                  event.target.setCustomValidity("");
+                }
+              }}
+            ></textarea>
 
 
-          <button
-            type="submit"
-            style={{ fontFamily: 'AvocadoCake' }}
-            disabled={status === 'submitting'}
-            className={`text-fondue-blue w-full rounded text-[20px] py-2 px-1 bg-fondue-yellow border-4 border-fondue-yellow
+            <button
+              type="submit"
+              style={{ fontFamily: 'AvocadoCake' }}
+              disabled={status === 'submitting'}
+              className={`text-fondue-blue w-full rounded text-[20px] py-2 px-1 bg-fondue-yellow border-4 border-fondue-yellow
             ${status === 'submitting' ? 'hover:bg-green-300 hover:border-green-300' : 'hover:text-fondue-yellow hover:bg-fondue-blue'}
             ${from.length === 0 || nom.length === 0 || message.length === 0 || status === 'error' ? 'hover:bg-fondue-red hover:border-fondue-red' : 'hover:text-fondue-yellow hover:bg-fondue-blue'}
             `}
-          >
-            Envoyer
-          </button>
-        </form>
-      </div>
-
-    </div >
+            >
+              Envoyer
+            </button>
+          </form>
+        </div>
+      </div >
   )
 }
 

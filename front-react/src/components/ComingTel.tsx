@@ -357,12 +357,8 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
 
                 </div>
 
-                {/* <div className='box absolute w-[25vw] -top-[10vw] -left-[5vw]'>
-                    <img className='object-cover' src={box} />
-                </div> */}
-
             </div>
-            <Dialog open={openContact} size='md' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
+            <Dialog open={openContact} size='md' handler={handleOpen} className='flex items-center shadow-none justify-center bg-transparent'>
                 <ToastContainer
                     position="top-center"
                     autoClose={2000}

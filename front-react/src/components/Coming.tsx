@@ -1,10 +1,10 @@
-import { useLayoutEffect, useRef, useState } from 'react'
-import gsap from "gsap";
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import gsap from 'gsap';
 import './Coming.css'
 
 import contactRouge from "../images/Mono/contact-rouge.svg"
 import logoChampion from '../images/FFP/logoFondueChampionne.svg'
-import ruban from '../images/FFP/ruban.svg'
+import logoFondue from '../images/FFP/logo.png'
 import { Carousel, Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
@@ -24,9 +24,11 @@ const pastille = require('../images/FFP/pastilleCouderc.png')
 const coeur1 = require('../images/FFP/coeur1.png')
 const coeur2 = require('../images/FFP/coeur2.png')
 const coeur3 = require('../images/FFP/coeur3.png')
+const coeurs = require('../images/FFP/coeur-tel.png')
 const phraseFromage = require('../images/FFP/phraseFromage.png')
 const phraseGentiane = require('../images/FFP/phraseGentiane.png')
 const phraseLentille = require('../images/FFP/phraseLentille.png')
+const sneakyMan = require('../images/FFP/SneakyMan.png')
 
 const diapo1 = require('../images/FFP/diapo/cheese-fondue.jpeg')
 const diapo2 = require('../images/FFP/diapo/Cantal.jpg')
@@ -68,6 +70,11 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         scale: 1,
       }, '>');
 
+      const sneakyManTl = gsap.timeline({
+      })
+
+
+
     }, comingContainer)
 
     return () => {
@@ -75,6 +82,42 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
     };
 
   }, []);
+
+
+  const [giant, setGiant] = useState(false);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+
+      if (giant) {
+        const sneakyManTl = gsap.timeline({
+          onComplete: () => setGiant(false),
+        });
+
+        sneakyManTl
+          .to('.sneakyGiant', {
+            xPercent: -20,
+            duration: 3,
+            ease: 'none',
+          }, '0')
+          .to('.sneakyGiant', {
+            xPercent: -20,
+            duration: 0.5,
+          }, '>')
+          .to('.sneakyGiant', {
+            xPercent: 0,
+            ease: 'none',
+            duration: 0.5,
+          }, '>')
+      }
+    }, comingContainer);
+
+    return () => ctx.revert();
+  }, [giant]);
+
+  const handleEaster = () => {
+    setGiant(true);
+  };
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -115,6 +158,25 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             scale: 1,
             opacity: 1,
           }, '1.5')
+          .fromTo('.bouteille', {
+            opacity: 0,
+          }, {
+            opacity: 1,
+            duration: 0.5,
+          }, '1.5')
+          .fromTo('.bouteille', {
+            rotate: -180,
+          }, {
+            rotate: 360,
+            duration: 3,
+          }, '1.5')
+          .fromTo('.coeurs', {
+            clipPath: 'polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%)',
+          }, {
+            duration: 4,
+            ease: 'power3.out',
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+          }, '3')
       }
     }, comingContainer)
 
@@ -126,9 +188,14 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
   return (
     <div ref={comingContainer} className='coming absolute top-0 left-0 h-[100vh] w-[100vw] bg-[#1B133B] flex flex-col overflow-hidden'>
+
+      <div className='sneakyGiant h-full w-full absolute z-[100] left-[100vw]'>
+        <img src={sneakyMan} className='h-full absolute top-0 left-0 transform scale-x-[-1] object-cover' />
+      </div>
+
       <div className='topbar w-full h-[20%] flex'>
         <div className='fonduecoeur h-[60%] min-w-[408px] ml-[60px] my-auto'>
-          <img className='h-full object-contain' src={require('../images/FFP/logo.png')} />
+          <img className='h-full object-contain' src={logoFondue} />
         </div>
 
         <div style={{ fontFamily: 'OpenSansBold' }} className='devenez h-full flex-col justify-center items-left hidden xl:flex ml-[30px] 1700:ml-[100px] text-[18px] 1600:text-[23px] 1800:text-[25px]'>
@@ -156,21 +223,23 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           <h2 style={{ fontFamily: 'OpenSansBold' }} className='text-white w-fit text-[1.2vw] px-2 ml-[1.5vw] mt-[1.5vw] fromMacBeco:ml-[2vw] fromMacBeco:mt-[2vw] bg-fondue-red'>LE CONCEPT</h2>
           <p style={{ fontFamily: 'OpenSansBold' }} className='text-white w-[90%] ml-[1.5vw] mt-[1.5vw] fromMacBeco:ml-[2vw] fromMacBeco:mt-[2vw] h-fit text-[1.1vw] text-left'>UNE BOX QUI RASSEMBLE TOUS LES INGRÉDIENTS POUR RÉALISER <span className='text-fondue-red'>CHEZ VOUS</span> LA FONDUE CHAMPIONNE DE FRANCE ET 100% MADE IN AUVERGNE !</p>
 
-          <div className='relative w-full grow flex items-center overflow-hidden'>
+          <div className='relative w-full grow flex items-center overflow-hidden mb-[5vh]'>
             <div className='h-[80%] absolute z-20 left-0 top-0 flex'>
               <p style={{ letterSpacing: '2px', writingMode: 'vertical-lr', fontFamily: 'OccamsEraser' }} className='phare ml-[1vw] text-[3vw] pcJB:text-[2.5vw] whitespace-nowrap -rotate-180'>100% AUVERGNE</p>
             </div>
-            <div className='photos relative w-[100%] mx-auto'>
-              <img src={bouteille} className='bouteille h-full object-cover' />
+            <div className='photos relative w-[100%]'>
+              <img src={bouteille} className='bouteille absolute z-40 top-0 left-0  h-full object-cover opacity-0' />
               <img src={fleurs} className='fleurs absolute top-0 left-0 h-full object-cover opacity-0' />
               <img src={fromages} className='fromages absolute top-0 left-0 h-full object-cover opacity-0' />
               <img src={lentilles} className='lentilles absolute top-0 left-0 h-full object-cover opacity-0' />
               <img src={pastille} className='pastille absolute top-0 left-0 h-full object-cover opacity-0' />
-              <img src={coeur1} className='absolute top-0 left-0 h-full object-cover' />
-              <img src={coeur2} className='absolute top-0 left-0 h-full object-cover' />
-              <img src={coeur3} className='absolute top-0 left-0 h-full object-cover' />
+              <img src={coeurs} className='coeurs absolute top-0 left-0 h-full object-cover' />
+              {/* <img src={coeur1} className='absolute top-0 left-0 h-full object-cover' /> */}
+              {/* <img src={coeur2} className='absolute top-0 left-0 h-full object-cover' /> */}
+              {/* <img src={coeur3} className='absolute top-0 left-0 h-full object-cover' /> */}
               <img src={phraseFromage} className='absolute top-0 left-0 h-full object-cover' />
-              <img src={phraseGentiane} className='absolute top-0 left-0 h-full object-cover' />
+              {/* phraseGentiane is the only one without absolutness */}
+              <img src={phraseGentiane} className='h-full object-cover' />
               <img src={phraseLentille} className='absolute top-0 left-0 h-full object-cover' />
             </div>
           </div>
@@ -187,6 +256,11 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             transition={{ duration: 1 }}
             loop={true}
           >
+            <img
+              src={diapo6}
+              alt="image 6"
+              className="h-full object-cover object-[20%]"
+            />
             <img
               src={diapo1}
               alt="image 1"
@@ -207,23 +281,9 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
               alt="image 4"
               className="h-full object-cover"
             />
-            <img
-              src={diapo5}
-              alt="image 5"
-              className="h-full object-cover"
-            />
-            <img
-              src={diapo6}
-              alt="image 6"
-              className="h-full object-cover"
-            />
           </Carousel>
-
-
-          {/* <img className='object-cover h-full object-[83%]' src={require('../images/FFP/diapo/cheese-fondue.jpeg')} /> */}
         </div>
 
-        {/* <div className='page3 relative h-full w-[700px] min-w-[700px] flex flex-col-reverse bg-yellow-800'> */}
         <div className='page3 relative h-full w-[35vw] macBeco:w-[40vw] min-w-[600px] macBeco:min-w-[750px] bg-yellow-800'>
 
           <img src={kraft} className='h-full w-full object-cover absolute' />
@@ -236,10 +296,10 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
           <div className='absolute bottom-0 z-10 flex flex-col-reverse'>
             <div className='flex items-end'>
-              <div className='guyHP relative h-[150px] w-[150px] mb-5 ml-4'>
+              <button onClick={handleEaster} className='guyHP relative h-[20vh] aspect-square mb-5 ml-2'>
                 <img className='absolute bottom-0' src={require('../images/FFP/guy-hp.png')} />
-              </div>
-              <div className='reseaux h-[60px] w-[115px] macBeco:w-[120px] flex justify-between mb-5 macBeco:mb-10'>
+              </button>
+              <div className='reseaux h-[60px] w-[110px] macBeco:w-[125px] flex justify-between mb-5 macBeco:mb-10'>
                 <a className='facebook w-[50px] macBeco:w-[60px]' href="https://www.facebook.com/fonduecoeur" target='_blank'>
                   <button>
                     <img src={facebook} className='hover:scale-125 transform transition-transform duration-300' />
@@ -254,7 +314,8 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
               </div>
             </div>
             <p style={{ fontFamily: 'OpenSansBold' }} className='text-left text-[13px] macBeco:text-[15px] w-fit ml-16 mb-5 macBeco:mb-3 text-white bg-fondue-blue'>CONTACT@FONDUECOEUR.FR</p>
-            <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[25px] macBeco:text-[27px] ml-16 mb-5 macBeco:mb-3 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
+            <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[25px] text-left macBeco:text-[27px] ml-16 mb-5 macBeco:mb-3 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
+
           </div>
 
           <div className='page-rotate absolute h-[105%] w-[400px] macBeco:w-[500px] -bottom-5 -right-16 -rotate-6 bg-gray-200'>
@@ -290,7 +351,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             </div>
           </div>
 
-          <button onClick={handleOpen} className='contact group absolute h-[120px] w-[120px] bottom-5 right-5 rotate-12 flex items-center justify-center text-center'>
+          <button onClick={handleOpen} className='contact animate-own-bounce group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 rotate-12 flex items-center justify-center text-center'>
             <p style={{ fontFamily: 'AvocadoCake' }} className='absolute w-[80px] z-10 text-[20px] text-white'>ON SE LANCE ?</p>
             <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] group-hover:transition-transform duration-500' src={contactRouge} />
           </button>
@@ -305,7 +366,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         </div>
 
 
-        <Dialog open={openContact} size='sm' handler={handleOpen} className='flex items-center justify-center bg-transparent'>
+        <Dialog open={openContact} size='sm' handler={handleOpen} className='flex items-center justify-center shadow-none bg-transparent rounded-[20px]'>
           <ToastContainer
             position="top-center"
             autoClose={2000}

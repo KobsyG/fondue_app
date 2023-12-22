@@ -21,6 +21,12 @@ const fleurs = require('../images/FFP/fleursGentiane.png')
 const fromages = require('../images/FFP/fromages.png')
 const lentilles = require('../images/FFP/lentilles.png')
 const pastille = require('../images/FFP/pastilleCouderc.png')
+const coeur1 = require('../images/FFP/coeur1.png')
+const coeur2 = require('../images/FFP/coeur2.png')
+const coeur3 = require('../images/FFP/coeur3.png')
+const phraseFromage = require('../images/FFP/phraseFromage.png')
+const phraseGentiane = require('../images/FFP/phraseGentiane.png')
+const phraseLentille = require('../images/FFP/phraseLentille.png')
 
 const diapo1 = require('../images/FFP/diapo/cheese-fondue.jpeg')
 const diapo2 = require('../images/FFP/diapo/Cantal.jpg')
@@ -160,6 +166,12 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
               <img src={fromages} className='fromages absolute top-0 left-0 h-full object-cover opacity-0' />
               <img src={lentilles} className='lentilles absolute top-0 left-0 h-full object-cover opacity-0' />
               <img src={pastille} className='pastille absolute top-0 left-0 h-full object-cover opacity-0' />
+              <img src={coeur1} className='absolute top-0 left-0 h-full object-cover' />
+              <img src={coeur2} className='absolute top-0 left-0 h-full object-cover' />
+              <img src={coeur3} className='absolute top-0 left-0 h-full object-cover' />
+              <img src={phraseFromage} className='absolute top-0 left-0 h-full object-cover' />
+              <img src={phraseGentiane} className='absolute top-0 left-0 h-full object-cover' />
+              <img src={phraseLentille} className='absolute top-0 left-0 h-full object-cover' />
             </div>
           </div>
 

@@ -71,13 +71,13 @@ const ComingTel = () => {
 
                         </div>
                         <div className='reseaux absolute bottom-2 -right-2 flex flex-col justify-between'>
-                            <button className='facebook w-[9vw]'>
+                            <a className='facebook w-[9vw]' href="https://www.facebook.com/fonduecoeur" target='_blank'>
                                 <img src={facebook} />
-                            </button>
+                            </a>
 
-                            <button className='instagram w-[9vw] mt-2'>
+                            <a className='instagram w-[9vw] mt-2' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank'>
                                 <img src={insta} />
-                            </button>
+                            </a>
                         </div>
 
                     </div>

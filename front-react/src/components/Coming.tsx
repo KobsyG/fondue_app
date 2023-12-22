@@ -240,13 +240,17 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
                 <img className='absolute bottom-0' src={require('../images/FFP/guy-hp.png')} />
               </div>
               <div className='reseaux h-[60px] w-[115px] macBeco:w-[120px] flex justify-between mb-5 macBeco:mb-10'>
-                <button className='facebook w-[50px] macBeco:w-[60px]'>
-                  <img src={facebook} className='hover:scale-125 transform transition-transform duration-300' />
-                </button>
+                <a className='facebook w-[50px] macBeco:w-[60px]' href="https://www.facebook.com/fonduecoeur" target='_blank'>
+                  <button>
+                    <img src={facebook} className='hover:scale-125 transform transition-transform duration-300' />
+                  </button>
+                </a>
 
-                <button className='instagram w-[50px] macBeco:w-[60px]'>
-                  <img src={insta} className='hover:scale-125 transform transition-transform duration-300' />
-                </button>
+                <a className='instagram w-[50px] macBeco:w-[60px]' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank'>
+                  <button>
+                    <img src={insta} className='hover:scale-125 transform transition-transform duration-300' />
+                  </button>
+                </a>
               </div>
             </div>
             <p style={{ fontFamily: 'OpenSansBold' }} className='text-left text-[13px] macBeco:text-[15px] w-fit ml-16 mb-5 macBeco:mb-3 text-white bg-fondue-blue'>CONTACT@FONDUECOEUR.FR</p>

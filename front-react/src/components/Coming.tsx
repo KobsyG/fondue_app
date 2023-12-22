@@ -147,7 +147,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
         <div className='page1 h-full w-[33vw] min-w-[450px] flex flex-col mr-3 bg-[#30246C]'>
 
-          <h2 className='text-white w-fit text-[1.2vw] px-2 ml-[1.5vw] mt-[1.5vw] fromMacBeco:ml-[2vw] fromMacBeco:mt-[2vw] bg-fondue-red'>LE CONCEPT</h2>
+          <h2 style={{ fontFamily: 'OpenSansBold' }} className='text-white w-fit text-[1.2vw] px-2 ml-[1.5vw] mt-[1.5vw] fromMacBeco:ml-[2vw] fromMacBeco:mt-[2vw] bg-fondue-red'>LE CONCEPT</h2>
           <p style={{ fontFamily: 'OpenSansBold' }} className='text-white w-[90%] ml-[1.5vw] mt-[1.5vw] fromMacBeco:ml-[2vw] fromMacBeco:mt-[2vw] h-fit text-[1.1vw] text-left'>UNE BOX QUI RASSEMBLE TOUS LES INGRÉDIENTS POUR RÉALISER <span className='text-fondue-red'>CHEZ VOUS</span> LA FONDUE CHAMPIONNE DE FRANCE ET 100% MADE IN AUVERGNE !</p>
 
           <div className='relative w-full grow flex items-center overflow-hidden'>

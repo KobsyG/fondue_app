@@ -22,7 +22,7 @@ function App() {
       {width >= 1080 &&
         <>
           <Coming videoEnd={videoEnd} videoDisplay={videoDisplay}/>
-          {/* <IntroVideo videoEnd={videoEnd} setVideoEnd={setVideoEnd} videoDisplay={videoDisplay} setVideoDisplay={setVideoDisplay} /> */}
+          <IntroVideo videoEnd={videoEnd} setVideoEnd={setVideoEnd} videoDisplay={videoDisplay} setVideoDisplay={setVideoDisplay} />
         </>
       }
       {width < 1080 &&

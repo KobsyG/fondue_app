@@ -8,6 +8,7 @@ import gsap from 'gsap'
 import { Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
+import FourniComponent, { fourni1, fourni2, fourni3 } from './FourniComponent'
 
 const box = require('../images/FFP/box.png')
 const pageCahier = require('../images/FFP/pageCahierCut.png')
@@ -421,11 +422,15 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
 
                 </div>
 
-
-
-
-
                 <div className='page-rotate absolute h-[110%] w-[65%] left-[45%] top-0 -rotate-[6deg]'>
+                    <FourniComponent fourniList={[fourni1, fourni2, fourni3]} />
+                </div>
+
+
+                {/*
+                <div className='page-rotate absolute h-[110%] w-[65%] left-[45%] top-0 -rotate-[6deg]'>
+
+
                     <img src={pageCahier} className='absolute h-full w-full object-cover' />
                 </div>
                 <div className='page-rotate absolute top-[5%] h-[90%] w-[55%] left-[45%] -rotate-[6deg]'>
@@ -459,9 +464,8 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                             </li>
                         </ul>
                     </div>
-
-
                 </div>
+                            */}
 
             </div>
             <Dialog open={openContact} size='md' handler={handleOpen} className='flex items-center shadow-none justify-center bg-transparent'>

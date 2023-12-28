@@ -29,6 +29,9 @@ const phraseFromage = require('../images/FFP/phraseFromage.png')
 const phraseGentiane = require('../images/FFP/phraseGentiane.png')
 const phraseLentille = require('../images/FFP/phraseLentille.png')
 const sneakyMan = require('../images/FFP/SneakyMan.png')
+const sneaky1 = require('../images/FFP/sneaky1.png')
+const sneaky2 = require('../images/FFP/sneaky2.png')
+const sneaky3 = require('../images/FFP/sneaky3.png')
 
 const diapo1 = require('../images/FFP/diapo/cheese-fondue.jpeg')
 const diapo2 = require('../images/FFP/diapo/Cantal.jpg')
@@ -83,7 +86,6 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
   }, []);
 
-
   const [giant, setGiant] = useState(false);
 
   useLayoutEffect(() => {
@@ -119,10 +121,62 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
     setGiant(true);
   };
 
+  function runSneanys() {
+
+    const sneakyTl = gsap.timeline({
+      repeat: -1,
+    })
+
+    sneakyTl.to('.sneaky3', {opacity: 1})
+    .fromTo('.sneaky3', {
+        xPercent: -10,
+      },{
+      xPercent: 0,
+    })
+    .to('.sneaky3', {zIndex: 10})
+    .to('.sneaky3', {
+      zIndex: 0,
+      opacity: 0,
+      xPercent: -10,
+    }, '+=4')
+
+    sneakyTl.to('.sneaky1', {opacity: 1})
+    .fromTo('.sneaky1',
+      {
+        xPercent: +10,
+      }, {
+      xPercent: 0,
+    })
+    .to('.sneaky1', {zIndex: 10})
+    .to('.sneaky1', {
+      opacity:0,
+      xPercent: +10,
+      zIndex: 0,
+    }, '+=4')
+
+    sneakyTl.to('.sneaky2', {opacity: 1})
+    .fromTo('.sneaky2',
+      {
+        xPercent: -10,
+      }, {
+      xPercent: 0,
+    })
+    .to('.sneaky2', {zIndex: 10})
+    .to('.sneaky2', {
+      opacity: 0,
+      xPercent: -10,
+      zIndex: 0,
+    }, '+=4')
+  }
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       if (!videoEnd) {
         const frigoTl = gsap.timeline({
+          onComplete: () => {
+            console.log("complete oui")
+            runSneanys()
+          }
         })
 
         frigoTl
@@ -180,11 +234,36 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
       }
     }, comingContainer)
 
+    const contactTl = gsap.timeline({
+      repeat: -1,
+      repeatDelay: 5,
+    })
+
+    contactTl.to('.contact', {
+      animationPlayState: 'running',
+    })
+    .to('.contact', {
+      animationPlayState: 'paused',
+    }, '+=2')
+
     return () => {
       ctx.revert();
     };
 
   }, [videoEnd]);
+
+
+  // useLayoutEffect(() => {
+  //   let ctx = gsap.context(() => {
+
+
+  //   }, comingContainer)
+
+  // return () => {
+  //   ctx.revert();
+  // };
+
+  // }, []);
 
   return (
     <div ref={comingContainer} className='coming absolute top-0 left-0 h-[100vh] w-[100vw] bg-[#1B133B] flex flex-col overflow-hidden'>
@@ -229,10 +308,10 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             </div>
             <div className='photos relative w-[100%]'>
               <img src={bouteille} className='bouteille absolute z-40 top-0 left-0  h-full object-cover opacity-0' />
-              <img src={fleurs} className='fleurs absolute top-0 left-0 h-full object-cover opacity-0' />
-              <img src={fromages} className='fromages absolute top-0 left-0 h-full object-cover opacity-0' />
-              <img src={lentilles} className='lentilles absolute top-0 left-0 h-full object-cover opacity-0' />
-              <img src={pastille} className='pastille absolute top-0 left-0 h-full object-cover opacity-0' />
+              <img src={fleurs} className='fleurs absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
+              <img src={fromages} className='fromages absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
+              <img src={lentilles} className='lentilles absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
+              <img src={pastille} className='pastille absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
               <img src={coeurs} className='coeurs absolute top-0 left-0 h-full object-cover' />
               {/* <img src={coeur1} className='absolute top-0 left-0 h-full object-cover' /> */}
               {/* <img src={coeur2} className='absolute top-0 left-0 h-full object-cover' /> */}
@@ -241,6 +320,10 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
               {/* phraseGentiane is the only one without absolutness */}
               <img src={phraseGentiane} className='h-full object-cover' />
               <img src={phraseLentille} className='absolute top-0 left-0 h-full object-cover' />
+              <img src={sneaky1} className='absolute sneaky1 top-0 left-0 opacity-0' />
+              <img src={sneaky2} className='absolute sneaky2 top-0 left-0 opacity-0' />
+              <img src={sneaky3} className='absolute sneaky3 top-0 left-0 opacity-0' />
+
             </div>
           </div>
 
@@ -313,7 +396,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
                 </a>
               </div>
             </div>
-            <p style={{ fontFamily: 'OpenSansBold' }} className='text-left text-[13px] macBeco:text-[15px] w-fit ml-16 mb-5 macBeco:mb-3 text-white bg-fondue-blue'>CONTACT@FONDUECOEUR.FR</p>
+            <p style={{ fontFamily: 'OpenSansBold' }} className='text-left text-[13px] macBeco:text-[15px] w-fit px-1 ml-16 mb-5 macBeco:mb-3 text-white bg-fondue-blue'>CONTACT@FONDUECOEUR.FR</p>
             <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[25px] text-left macBeco:text-[27px] ml-16 mb-5 macBeco:mb-3 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
 
           </div>
@@ -351,9 +434,9 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             </div>
           </div>
 
-          <button onClick={handleOpen} className='contact animate-own-bounce group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 rotate-12 flex items-center justify-center text-center'>
+          <button onClick={handleOpen} className='contact group absolute animate-own-bounce z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>
             <p style={{ fontFamily: 'AvocadoCake' }} className='absolute w-[80px] z-10 text-[20px] text-white'>ON SE LANCE ?</p>
-            <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] group-hover:transition-transform duration-500' src={contactRouge} />
+            <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] group-hover:transition-transform group-hover:duration-500 group-hover:' src={contactRouge} />
           </button>
 
           <div className='smallbox hidden fromJB:block w-[15vw] mt-44 ml-20 -rotate-[17deg] '>

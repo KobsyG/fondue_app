@@ -26,6 +26,13 @@ const lentilles = require('../images/FFP/lentilles.png')
 const lentillesLong = require('../images/FFP/lentillesLong.png')
 const pastille = require('../images/FFP/pastilleCouderc.png')
 const pastilleLong = require('../images/FFP/pastilleLong.png')
+const sneaky1 = require('../images/FFP/sneaky1.png')
+const sneaky1Long = require('../images/FFP/sneaky1-long.png')
+const sneaky2 = require('../images/FFP/sneaky2.png')
+const sneaky2Long = require('../images/FFP/sneaky2-long.png')
+const sneaky3 = require('../images/FFP/sneaky3.png')
+const sneaky3Long = require('../images/FFP/sneaky3-long.png')
+
 
 const phraseFromagesLong = require('../images/FFP/phraseFromage-long.png')
 const phraseFleursLong = require('../images/FFP/phraseGentiane-long.png')
@@ -56,11 +63,65 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
         };
     }, []);
 
+
+    function runSneanys() {
+
+        const sneakyTl = gsap.timeline({
+            repeat: -1,
+        })
+
+        sneakyTl.to('.sneaky1', { opacity: 1 })
+            .fromTo('.sneaky1', {
+                xPercent: -10,
+            }, {
+                xPercent: 0,
+            })
+            .to('.sneaky1', { zIndex: 10 })
+            .to('.sneaky1', {
+                zIndex: 0,
+                opacity: 0,
+                xPercent: -10,
+            }, '+=4')
+
+        sneakyTl.to('.sneaky2', { opacity: 1 })
+            .fromTo('.sneaky2',
+                {
+                    yPercent: +10,
+                }, {
+                yPercent: 0,
+            })
+            .to('.sneaky2', { zIndex: 10 })
+            .to('.sneaky2', {
+                opacity: 0,
+                yPercent: +10,
+                zIndex: 0,
+            }, '+=4')
+
+        sneakyTl.to('.sneaky3', { opacity: 1 })
+            .fromTo('.sneaky3',
+                {
+                    yPercent: +10,
+                }, {
+                yPercent: 0,
+            })
+            .to('.sneaky3', { zIndex: 10 })
+            .to('.sneaky3', {
+                opacity: 0,
+                yPercent: +10,
+                zIndex: 0,
+            }, '+=4')
+    }
+
+
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             if (!loadingDisplay) {
 
                 const frigoTl = gsap.timeline({
+                    onComplete: () => {
+                        console.log("complete oui")
+                        runSneanys()
+                    }
                 })
 
                 frigoTl
@@ -176,40 +237,40 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                             <source
                                 media='(min-aspect-ratio: 0.5)'
                                 srcSet={fleurs}
-                                className='fleurs object-cover absolute top-0 left-0 opacity-0'
+                                className='fleurs object-cover absolute top-0 left-0 opacity-0 z-10'
                             />
                             <source
                                 media='(max-aspect-ratio: 0.5)'
                                 srcSet={fleursLong}
-                                className='fleurs long-ratio object-cover absolute top-0 left-0 opacity-0'
+                                className='fleurs long-ratio object-cover absolute top-0 left-0 opacity-0 z-10'
                             />
-                            <img src={fleurs} className='fleurs object-cover absolute top-0 left-0 opacity-0' />
+                            <img src={fleurs} className='fleurs object-cover absolute top-0 left-0 opacity-0 z-10' />
                         </picture>
                         <picture>
                             <source
                                 media='(min-aspect-ratio: 0.5)'
                                 srcSet={fromages}
-                                className='fromages object-cover absolute top-0 left-0 opacity-0'
+                                className='fromages object-cover absolute top-0 left-0 opacity-0 z-10'
                             />
                             <source
                                 media='(max-aspect-ratio: 0.5)'
                                 srcSet={fromagesLong}
-                                className='fromages long-ratio object-cover absolute top-0 left-0 opacity-0'
+                                className='fromages long-ratio object-cover absolute top-0 left-0 opacity-0 z-10'
                             />
-                            <img src={fromages} className='fromages object-cover absolute top-0 left-0 opacity-0' />
+                            <img src={fromages} className='fromages object-cover absolute top-0 left-0 opacity-0 z-10' />
                         </picture>
                         <picture>
                             <source
                                 media='(min-aspect-ratio: 0.5)'
                                 srcSet={lentilles}
-                                className='lentilles object-cover absolute top-0 left-0 opacity-0'
+                                className='lentilles object-cover absolute top-0 left-0 opacity-0 z-10'
                             />
                             <source
                                 media='(max-aspect-ratio: 0.5)'
                                 srcSet={lentillesLong}
-                                className='lentilles long-ratio object-cover absolute top-0 left-0 opacity-0'
+                                className='lentilles long-ratio object-cover absolute top-0 left-0 opacity-0 z-10'
                             />
-                            <img src={lentilles} className='lentilles object-cover absolute top-0 left-0 opacity-0' />
+                            <img src={lentilles} className='lentilles object-cover absolute top-0 left-0 opacity-0 z-10' />
                         </picture>
                         <picture>
                             <source
@@ -252,6 +313,51 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                             />
                             <img src={phraseLentilles} className='phraseLentilles object-cover absolute top-0 left-0' />
                         </picture>
+
+                        {/* {Sneaky Guys} */}
+
+                        <picture>
+                            <source
+                                media='(min-aspect-ratio: 0.5)'
+                                srcSet={sneaky1}
+                                className='sneaky1 object-cover absolute top-0 left-0 opacity-0'
+                            />
+                            <source
+                                media='(max-aspect-ratio: 0.5)'
+                                srcSet={sneaky1Long}
+                                className='sneaky1 long-ratio object-cover absolute top-0 left-0 opacity-0'
+                            />
+                            <img src={sneaky1} className='sneaky1 object-cover absolute top-0 left-0 opacity-0' />
+                        </picture>
+
+                        <picture>
+                            <source
+                                media='(min-aspect-ratio: 0.5)'
+                                srcSet={sneaky2}
+                                className='sneaky2 object-cover absolute top-0 left-0 opacity-0'
+                            />
+                            <source
+                                media='(max-aspect-ratio: 0.5)'
+                                srcSet={sneaky2Long}
+                                className='sneaky2 long-ratio object-cover absolute top-0 left-0 opacity-0'
+                            />
+                            <img src={sneaky2} className='sneaky2 object-cover absolute top-0 left-0 opacity-0' />
+                        </picture>
+
+                        <picture>
+                            <source
+                                media='(min-aspect-ratio: 0.5)'
+                                srcSet={sneaky3}
+                                className='sneaky3 object-cover absolute top-0 left-0 opacity-0'
+                            />
+                            <source
+                                media='(max-aspect-ratio: 0.5)'
+                                srcSet={sneaky3Long}
+                                className='sneaky3 long-ratio object-cover absolute top-0 left-0 opacity-0'
+                            />
+                            <img src={sneaky3} className='sneaky3 object-cover absolute top-0 left-0 opacity-0' />
+                        </picture>
+
                         {/* phraseFleurs is the only one without absolutness */}
                         <picture>
                             <source

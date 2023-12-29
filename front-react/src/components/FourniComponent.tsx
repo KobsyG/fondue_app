@@ -56,29 +56,37 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
         <div
           className='fourniNew h-full w-full absolute z-20'>
           <img src={pageCahier} className='h-full w-full object-cover absolute' />
-          <div className='absolute fromBeco:mt-4' >
-            <div className='flex items-center justify-start w-full mt-4 ml-[30px] 1536:ml-[50px] fromJB:mt-8'>
+          <div className='absolute mt-2 ml-2 sm:mt-6 sm:ml-6                                       lg:mt-0 lg:ml-0 fromBeco:mt-4' >
+            
+            <div className='flex items-center justify-start                         lg:w-full lg:mt-4 lg:ml-[30px] 1536:ml-[50px] fromJB:mt-8'>
               <button
                 className='w-fit h-fit flex items-center'
                 onClick={handleSlideChange}
               >
-                <img src={leftArrow} className='h-8 1536:h-10 fromJB:h-12 mr-4' />
-                <p className='text-fondue-red text-[2vw] mr-6'>{currentSlide + 1}</p>
+                <img src={leftArrow} className='h-6 mr-2 sm:h-10              sm:mr-6 lg:h-8 1536:h-10 fromJB:h-12' />
+                <p className='text-fondue-red text-[6vw] mr-2               sm:mr-6 lg:text-[2vw] lg:mr-6'>{currentSlide + 1}</p>
               </button>
-              <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] w-[50%] 1536:text-[26px] fromJB:text-[30px] fromJB:w-[60%]'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
+              <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red w-[64%] text-[2vh] sm:text-[2.5vh]                              lg:text-[22px] lg:w-[50%] 1536:text-[26px] fromJB:text-[30px] fromJB:w-[60%]'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
             </div>
+
+
+  
             {fourniList[currentSlide]}
           </div>
         </div>
 
         <div className='fourniOld h-full w-full'>
           <img src={pageCahier} className='h-full w-full object-cover absolute' />
-          <div className='absolute fromBeco:mt-4' >
-            <div className='flex items-center justify-start w-full mt-4 ml-[30px] 1536:ml-[50px] fromJB:mt-8'>
-              <img src={leftArrow} className='h-8 1536:h-10 fromJB:h-12 mr-4' />
-              <p className='text-fondue-red text-[2vw] mr-6'>{oldSlide + 1}</p>
-              <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] w-[50%] 1536:text-[26px] fromJB:text-[30px] fromJB:w-[60%]'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
+          <div className='absolute mt-2 ml-2 sm:mt-6 sm:ml-6                                       lg:mt-0 lg:ml-0 fromBeco:mt-4' >
+            
+            <div className='flex items-center justify-start                         lg:w-full lg:mt-4 lg:ml-[30px] 1536:ml-[50px] fromJB:mt-8'>
+              <img src={leftArrow} className='h-6 mr-2 sm:h-10              sm:mr-6 lg:h-8 1536:h-10 fromJB:h-12' />
+              <p className='text-fondue-red text-[6vw] mr-2               sm:mr-6 lg:text-[2vw] lg:mr-6'>{oldSlide + 1}</p>
+              <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red w-[64%] text-[2vh] sm:text-[2.5vh]                              lg:text-[22px] lg:w-[50%] 1536:text-[26px] fromJB:text-[30px] fromJB:w-[60%]'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
             </div>
+
+
+
             {oldFourni}
           </div>
         </div>

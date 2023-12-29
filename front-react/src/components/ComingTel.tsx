@@ -436,7 +436,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
 
       <div className='page3 relative h-[60vh] w-[full] flex flex-col-reverse bg-yellow-800'>
         <img src={kraft} className='h-full w-full object-cover absolute' />
-        <div className='ruban absolute flex flex-row z-30 h-[50%] w-[50%] top-0 left-0'>
+        <div style={{ pointerEvents: 'none' }}  className='ruban absolute flex flex-row z-30 h-[50%] w-[50%] top-0 left-0'>
           <img src={ruban2} className='object-cover h-full' />
           <div className='box h-32 mt-[35%] grow'>
             <img src={box} className='object-cover w-full' />

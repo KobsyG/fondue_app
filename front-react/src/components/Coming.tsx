@@ -279,7 +279,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           <img className='h-full object-contain' src={logoFondue} />
         </div>
 
-        <div style={{ fontFamily: 'OpenSansBold' }} className='devenez h-full flex-col justify-center items-left hidden xl:flex ml-[30px] 1700:ml-[100px] text-[18px] 1600:text-[23px] 1800:text-[25px]'>
+        <div style={{ fontFamily: 'OpenSansBold' }} className='devenez h-full flex-col justify-center items-left hidden xl:flex 1536:ml-[5%] text-[18px] 1600:text-[23px] 1800:text-[25px]'>
           <h2 className='bg-fondue-red whitespace-nowrap px-2 w-fit mb-2 text-white'>
             DEVENEZ À VOTRE TOUR
           </h2>
@@ -288,7 +288,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           </h2>
         </div>
 
-        <div className='fonduecoeur h-[60%] ml-auto my-auto  mr-[60px]'>
+        <div className='fonduecoeur h-[60%] ml-auto my-auto mr-[60px]'>
           <img className='h-full object-contain' src={logoChampion} />
         </div>
       </div>

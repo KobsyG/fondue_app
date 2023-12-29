@@ -14,6 +14,37 @@ ul {
     }
 }
 
+/* Adjusted margin-top for all Fourni on Tel */
+.margin-top-fourni-tel {
+    margin-top: 0.5rem
+}
+
+@media (max-aspect-ratio: 0.5) {
+    .margin-top-fourni-tel {
+        margin-top: 1rem;
+    }
+}
+
+/* Adjusted pastille-contact for Tel */
+.pastille-size-margin {
+    height: 80px;
+    width: 80px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+}
+
+@media (max-aspect-ratio: 0.5) {
+    .pastille-size-margin {
+        height: 100px;
+        width: 100px;
+        bottom: 30px;
+        right: 20px;
+        font-size: 20px;
+    }
+}
+
+
 .contact {
     rotate: 12deg;
 }
@@ -28,11 +59,12 @@ ul {
 
 @keyframes my-bounce {
 
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
-    
+
     50% {
         transform: translateY(-15%);
         animation-timing-function: cubic-bezier(0.8, 0, 1, 1);

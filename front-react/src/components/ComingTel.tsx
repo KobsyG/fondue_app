@@ -8,7 +8,7 @@ import gsap from 'gsap'
 import { Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
-import FourniComponent, { fourni1, fourni2, fourni3 } from './FourniComponent'
+import FourniComponent, { fourni1, fourni2, fourni3, fourniTel1, fourniTel2, fourniTel3 } from './FourniComponent'
 
 const box = require('../images/FFP/box.png')
 const pageCahier = require('../images/FFP/pageCahierCut.png')
@@ -243,15 +243,15 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
   return (
     <div ref={comingTelContainer} className='comingTelContainer relative w-[100vw] bg-[#1B133B] overflow-hidden'>
 
-      <button onClick={handleOpen} className='contact h-[100px] w-[100px] fixed bottom-5 right-5 z-40 flex items-center justify-center'>
-        <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-10 text-[18px] text-white'>ON SE LANCE ?</p>
+      <button onClick={handleOpen} className='contact pastille-size-margin sm:h-[120px] sm:w-[120px] fixed sm:bottom-5 sm:right-5 z-40 flex items-center justify-center'>
+        <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-10 sm:text-[22px] text-white'>ON SE LANCE ?</p>
         <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} />
       </button>
 
       <div className='part1 flex flex-col h-[100vh]'>
 
-        <div className='topbar w-full h-[100px] flex justify-between'>
-          <div className='fonduecoeur w-[40%] pl-4 my-auto'>
+        <div className='topbar w-full h-[100px] sm:h-[200px] flex justify-between'>
+          <div className='fonduecoeur w-[40%] pl-4 my-auto sm:ml-[3vw]'>
             <img className=' object-contain' src={require('../images/FFP/logo.png')} />
           </div>
 
@@ -264,8 +264,8 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
 
         <div className='page1 w-full flex flex-col bg-[#30246C] grow'>
 
-          <h2 style={{ fontFamily: 'OpenSansBold' }} className='text-white h-fit w-fit px-1 text-[3vh] bg-fondue-red ml-[4vw] mt-[4vw]'>LE CONCEPT</h2>
-          <p style={{ fontFamily: 'OpenSansBold' }} className='text-white text-[2.5vh] w-[90%] text-left ml-[4vw] mt-[4vw] leading-6'>UNE BOX QUI RASSEMBLE TOUS LES INGRÉDIENTS POUR RÉALISER <span className='text-fondue-red'>CHEZ VOUS</span> LA FONDUE CHAMPIONNE DE FRANCE ET 100% MADE IN AUVERGNE !</p>
+          <h2 style={{ fontFamily: 'OpenSansBold' }} className='text-white h-fit w-fit px-1 text-[3vh] bg-fondue-red ml-[4vw] mt-[4vw] sm:mt-[2vw]'>LE CONCEPT</h2>
+          <p style={{ fontFamily: 'OpenSansBold' }} className='text-white text-[2.5vh] w-[90%] text-left ml-[4vw] mt-[4vw] leading-6 sm:leading-10 sm:mt-[2vw]'>UNE BOX QUI RASSEMBLE TOUS LES INGRÉDIENTS POUR RÉALISER <span className='text-fondue-red'>CHEZ VOUS</span> LA FONDUE CHAMPIONNE DE FRANCE ET 100% MADE IN AUVERGNE !</p>
 
           {/* <div className='textImg flex pt-40'>
                         <p className='-rotate-90'>100% AUVERGNE</p>
@@ -436,16 +436,18 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
 
       <div className='page3 relative h-[60vh] w-[full] flex flex-col-reverse bg-yellow-800'>
         <img src={kraft} className='h-full w-full object-cover absolute' />
-        <div style={{ pointerEvents: 'none' }}  className='ruban absolute flex flex-row z-30 h-[50%] w-[50%] top-0 left-0'>
+        <div style={{ pointerEvents: 'none' }} className='ruban absolute flex flex-row z-30 h-[50%] w-[50%] top-0 left-0'>
           <img src={ruban2} className='object-cover h-full' />
-          <div className='box h-32 mt-[35%] grow'>
+          <div className='box h-32 mt-[40%] sm:mt-[20%] grow sm:grow-0 sm:w-[75%]'>
             <img src={box} className='object-cover w-full' />
           </div>
         </div>
 
         <div className='flex flex-col relative bottom-0 left-0 w-[45%] h-[50%] pb-3'>
           <div className='w-full h-[30%] flex items-center pl-3'>
-            <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[20px] text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
+            <button onClick={handleOpen} className='h-fit w-fit'>
+              <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[20px] sm:text-[35px] sm:text-left sm:ml-6 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
+            </button>
           </div>
           <div className='w-full relative h-[60%] flex'>
             <div className='guyHP relative bottom-0 left-0 w-full h-full'>
@@ -466,7 +468,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
         </div>
 
         <div className='page-rotate absolute h-[110%] w-[65%] left-[45%] top-0 -rotate-[6deg]'>
-          <FourniComponent fourniList={[fourni1, fourni2, fourni3]} />
+          <FourniComponent fourniList={[fourniTel1, fourniTel2, fourniTel3]} />
         </div>
       </div>
 

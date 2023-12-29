@@ -400,7 +400,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[25px] text-left macBeco:text-[27px] ml-16 mb-5 macBeco:mb-3 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
 
             <div className='h-[150px] relative overflow-hidden'>
-              <img src={sneakyMan} className='sneaky4 object-cover absolute h-full left-[8px] 1366:left-[15px] 1536:left-[20px] opacity-1 z-0' />
+              <img src={sneakyMan} className='sneaky4 object-cover absolute h-full left-[8px] 1366:left-[15px] 1536:left-[20px] opacity-0 z-0' />
             </div>
 
           </div>

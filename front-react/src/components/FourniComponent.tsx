@@ -5,7 +5,7 @@ import leftArrow from '../images/FFP/leftArrow.svg'
 
 const pageCahier = require('../images/FFP/pageCahierCut.png')
 
-function FourniComponent({ fourniList}: { fourniList: JSX.Element[] }) {
+function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
   const fourniContainer = useRef(null);
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -59,12 +59,12 @@ function FourniComponent({ fourniList}: { fourniList: JSX.Element[] }) {
           <div className='absolute fromBeco:mt-4' >
             <div className='flex items-center justify-start w-full mt-4 ml-[30px] 1536:ml-[50px] fromJB:mt-8'>
               <button
-                className='h-8 1536:h-10 fromJB:h-12 mr-4'
+                className='w-fit h-fit flex items-center'
                 onClick={handleSlideChange}
               >
-                <img src={leftArrow} className='object-cover h-full' />
+                <img src={leftArrow} className='h-8 1536:h-10 fromJB:h-12 mr-4' />
+                <p className='text-fondue-red text-[2vw] mr-6'>{currentSlide + 1}</p>
               </button>
-              <p className='text-fondue-red text-[2vw] mr-6'>{currentSlide + 1}</p>
               <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] w-[50%] 1536:text-[26px] fromJB:text-[30px] fromJB:w-[60%]'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
             </div>
             {fourniList[currentSlide]}

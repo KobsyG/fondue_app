@@ -243,7 +243,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
   return (
     <div ref={comingTelContainer} className='comingTelContainer relative w-[100vw] bg-[#1B133B] overflow-hidden'>
 
-      <button onClick={handleOpen} className='contact pastille-size-margin sm:h-[120px] sm:w-[120px] fixed sm:bottom-5 sm:right-5 z-40 flex items-center justify-center'>
+      <button onClick={handleOpen} className='contact pastille-size-margin-tel fixed z-40 flex items-center justify-center'>
         <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-10 sm:text-[22px] text-white'>ON SE LANCE ?</p>
         <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} />
       </button>
@@ -267,9 +267,6 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
           <h2 style={{ fontFamily: 'OpenSansBold' }} className='text-white h-fit w-fit px-1 text-[3vh] bg-fondue-red ml-[4vw] mt-[4vw] sm:mt-[2vw]'>LE CONCEPT</h2>
           <p style={{ fontFamily: 'OpenSansBold' }} className='text-white text-[2.5vh] w-[90%] text-left ml-[4vw] mt-[4vw] leading-6 sm:leading-10 sm:mt-[2vw]'>UNE BOX QUI RASSEMBLE TOUS LES INGRÉDIENTS POUR RÉALISER <span className='text-fondue-red'>CHEZ VOUS</span> LA FONDUE CHAMPIONNE DE FRANCE ET 100% MADE IN AUVERGNE !</p>
 
-          {/* <div className='textImg flex pt-40'>
-                        <p className='-rotate-90'>100% AUVERGNE</p>
-                    </div> */}
           <div className='photos relative h-fit w-full mx-auto my-auto'>
 
             {/* LES 3 COEURS */}

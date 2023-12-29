@@ -2,33 +2,19 @@ import gsap from 'gsap';
 import { useLayoutEffect, useRef, useState } from 'react'
 
 import leftArrow from '../images/FFP/leftArrow.svg'
-import rightArrow from '../images/FFP/rightArrow.svg'
 
 const pageCahier = require('../images/FFP/pageCahierCut.png')
 
-function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
+function FourniComponent({ fourniList, canSlide, setCanSlide }: { fourniList: JSX.Element[], canSlide: boolean, setCanSlide: any }) {
   const fourniContainer = useRef(null);
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [oldSlide, setOldSlide] = useState(0);
   const [oldFourni, setOldFourni] = useState(fourniList[0]);
-  const [canSlide, setCanSlide] = useState(true);
 
-  const handleLeftButtonClick = () => {
+  const handleSlideChange = () => {
     if (canSlide) {
-      setCanSlide(false)
-      setCurrentSlide((prevSlide) => {
-        if (prevSlide === 0) {
-          return fourniList.length - 1;
-        } else {
-          return prevSlide - 1;
-        }
-      });
-    }
-  };
-
-  const handleRightButtonClick = () => {
-    if (canSlide) {
-      setCanSlide(false)
+      setCanSlide(false);
       setCurrentSlide((prevSlide) => {
         if (prevSlide === fourniList.length - 1) {
           return 0;
@@ -49,6 +35,7 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
         duration: 1,
         onComplete: () => {
           setOldFourni(fourniList[currentSlide]);
+          setOldSlide(currentSlide);
           setCanSlide(true);
         },
       })
@@ -65,30 +52,35 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
       <img src={pageCahier} className='h-full w-full object-cover absolute' />
       <div className='absolute h-full w-full top-4 left-4 shadow-2xl'>
 
-        <div className='fourniNew h-full w-full absolute z-20'>
+        <div
+          className='fourniNew h-full w-full absolute z-20'>
           <img src={pageCahier} className='h-full w-full object-cover absolute' />
-          <div className='absolute' >
-            <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] mt-4 ml-[80px] w-[50%] 1536:text-[26px] 1536:ml-[120px] fromJB:text-[30px] fromJB:w-[60%] fromJB:mt-8'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
+          <div className='absolute fromBeco:mt-4' >
+            <div className='flex items-center justify-start w-full mt-4 ml-[30px] 1536:ml-[50px] fromJB:mt-8'>
+              <button
+                className='h-8 1536:h-10 fromJB:h-12 mr-4'
+                onClick={handleSlideChange}
+              >
+                <img src={leftArrow} className='object-cover h-full' />
+              </button>
+              <p className='text-fondue-red text-[2vw] mr-6'>{currentSlide + 1}</p>
+              <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] w-[50%] 1536:text-[26px] fromJB:text-[30px] fromJB:w-[60%]'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
+            </div>
             {fourniList[currentSlide]}
           </div>
         </div>
 
         <div className='fourniOld h-full w-full'>
           <img src={pageCahier} className='h-full w-full object-cover absolute' />
-          <div className='absolute'>
-            <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] mt-4 ml-[80px] w-[50%] 1536:text-[26px] 1536:ml-[120px] fromJB:text-[30px] fromJB:w-[60%] fromJB:mt-8'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
+          <div className='absolute fromBeco:mt-4' >
+            <div className='flex items-center justify-start w-full mt-4 ml-[30px] 1536:ml-[50px] fromJB:mt-8'>
+              <img src={leftArrow} className='h-8 1536:h-10 fromJB:h-12 mr-4' />
+              <p className='text-fondue-red text-[2vw] mr-6'>{oldSlide + 1}</p>
+              <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] w-[50%] 1536:text-[26px] fromJB:text-[30px] fromJB:w-[60%]'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
+            </div>
             {oldFourni}
           </div>
         </div>
-      </div>
-
-      <div className='fourniButton w-32 h-16 p-3 absolute bottom-[10%] left-4 rotate-6 z-30 flex justify-between'>
-        <button onClick={handleLeftButtonClick} className='left h-full'>
-          <img src={leftArrow} className='h-full' />
-        </button>
-        <button onClick={handleRightButtonClick} className='right h-full'>
-          <img src={rightArrow} className='h-full' />
-        </button>
       </div>
     </div>
   )

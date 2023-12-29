@@ -46,6 +46,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
   const [openContact, setOpenContact] = useState(false);
   const handleOpen = () => setOpenContact(!openContact);
   const comingContainer = useRef(null);
+  const [page3CanSlide, setCanSlide] = useState(true);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -407,8 +408,12 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
           </div>
 
-          <div className='page-rotate absolute h-[105%] w-[400px] macBeco:w-[500px] -bottom-5 -right-16 -rotate-6 bg-gray-200'>
-            <FourniComponent fourniList={[fourni1, fourni2, fourni3]} />
+          <div
+            className='page-rotate absolute h-[105%] w-[400px] macBeco:w-[500px] -bottom-5 -right-16 -rotate-6 bg-gray-200'
+            // onMouseEnter={() => setCanSlide(false)}
+            // onMouseLeave={() => setCanSlide(true)}
+          >
+            <FourniComponent fourniList={[fourni1, fourni2, fourni3]} canSlide={page3CanSlide} setCanSlide={setCanSlide} />
           </div>
 
           <button onClick={handleOpen} className='contact group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>
@@ -420,7 +425,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             <img src={box} />
           </div>
 
-          <div className='box absolute w-[25vw] -top-[10vw] left-[3vw] 1281:left-0 1920:-left-[3vw] z-10'>
+          <div style={{ pointerEvents: 'none' }} className='box absolute w-[25vw] -top-[10vw] left-[3vw] 1281:left-0 1920:-left-[3vw] z-10'>
             <img className='object-cover' src={box} />
           </div>
         </div>

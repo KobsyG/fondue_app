@@ -5,12 +5,13 @@ import leftArrow from '../images/FFP/leftArrow.svg'
 
 const pageCahier = require('../images/FFP/pageCahierCut.png')
 
-function FourniComponent({ fourniList, canSlide, setCanSlide }: { fourniList: JSX.Element[], canSlide: boolean, setCanSlide: any }) {
+function FourniComponent({ fourniList}: { fourniList: JSX.Element[] }) {
   const fourniContainer = useRef(null);
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [oldSlide, setOldSlide] = useState(0);
   const [oldFourni, setOldFourni] = useState(fourniList[0]);
+  const [canSlide, setCanSlide] = useState(true);
 
   const handleSlideChange = () => {
     if (canSlide) {

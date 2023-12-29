@@ -46,7 +46,6 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
   const [openContact, setOpenContact] = useState(false);
   const handleOpen = () => setOpenContact(!openContact);
   const comingContainer = useRef(null);
-  const [page3CanSlide, setCanSlide] = useState(true);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -186,7 +185,6 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
       if (!videoEnd) {
         const frigoTl = gsap.timeline({
           onComplete: () => {
-            console.log("complete oui")
             runSneanys()
           }
         })
@@ -413,7 +411,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             // onMouseEnter={() => setCanSlide(false)}
             // onMouseLeave={() => setCanSlide(true)}
           >
-            <FourniComponent fourniList={[fourni1, fourni2, fourni3]} canSlide={page3CanSlide} setCanSlide={setCanSlide} />
+            <FourniComponent fourniList={[fourni1, fourni2, fourni3]}/>
           </div>
 
           <button onClick={handleOpen} className='contact group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>

@@ -478,7 +478,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 </div>
 
                 <div className='page-rotate absolute h-[110%] w-[65%] left-[45%] top-0 -rotate-[6deg]'>
-                    {/* <FourniComponent fourniList={[fourni1, fourni2, fourni3]} /> */}
+                    <FourniComponent fourniList={[fourni1, fourni2, fourni3]} />
                 </div>
 
 

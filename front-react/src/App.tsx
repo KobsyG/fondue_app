@@ -11,8 +11,8 @@ import ComingLoadingTel from './components/ComingLoadingTel';
 
 function App() {
 
-  // const [videoEnd, setVideoEnd] = useState(true);
-  const [videoEnd, setVideoEnd] = useState(false);
+  const [videoEnd, setVideoEnd] = useState(true);
+  // const [videoEnd, setVideoEnd] = useState(false);
   const [videoDisplay, setVideoDisplay] = useState(true);
 
   const width = useWidth();

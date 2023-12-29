@@ -64,17 +64,21 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
     }, []);
 
 
-    function runSneanys() {
 
-        const sneakyTl = gsap.timeline({
+
+    function runSneanyslong() {
+
+        const sneakylongTl = gsap.timeline({
             repeat: -1,
         })
 
-        sneakyTl.to('.sneaky1', { opacity: 1 })
+        sneakylongTl.to('.sneaky1', { opacity: 1 })
             .fromTo('.sneaky1', {
                 xPercent: -10,
+                yPercent: -2,
             }, {
                 xPercent: 0,
+                yPercent: 0,
             })
             .to('.sneaky1', { zIndex: 10 })
             .to('.sneaky1', {
@@ -83,7 +87,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 xPercent: -10,
             }, '+=4')
 
-        sneakyTl.to('.sneaky2', { opacity: 1 })
+        sneakylongTl.to('.sneaky2', { opacity: 1 })
             .fromTo('.sneaky2',
                 {
                     yPercent: +10,
@@ -97,7 +101,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 zIndex: 0,
             }, '+=4')
 
-        sneakyTl.to('.sneaky3', { opacity: 1 })
+        sneakylongTl.to('.sneaky3', { opacity: 1 })
             .fromTo('.sneaky3',
                 {
                     yPercent: +10,
@@ -112,6 +116,55 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
             }, '+=4')
     }
 
+    function runSneanys() {
+
+        const sneakyTl = gsap.timeline({
+            repeat: -1,
+        })
+
+        sneakyTl.to('.sneaky3', { opacity: 1 })
+            .fromTo('.sneaky3', {
+                xPercent: -10,
+                yPercent: -2,
+            }, {
+                xPercent: 0,
+                yPercent: 0,
+            })
+            .to('.sneaky3', { zIndex: 10 })
+            .to('.sneaky3', {
+                zIndex: 0,
+                opacity: 0,
+                xPercent: -10,
+            }, '+=4')
+
+        sneakyTl.to('.sneaky1', { opacity: 1 })
+            .fromTo('.sneaky1',
+                {
+                    xPercent: +10,
+                }, {
+                xPercent: 0,
+            })
+            .to('.sneaky1', { zIndex: 10 })
+            .to('.sneaky1', {
+                opacity: 0,
+                xPercent: +10,
+                zIndex: 0,
+            }, '+=4')
+
+        sneakyTl.to('.sneaky2', { opacity: 1 })
+            .fromTo('.sneaky2',
+                {
+                    xPercent: -10,
+                }, {
+                xPercent: 0,
+            })
+            .to('.sneaky2', { zIndex: 10 })
+            .to('.sneaky2', {
+                opacity: 0,
+                xPercent: -10,
+                zIndex: 0,
+            }, '+=4')
+    }
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -119,8 +172,10 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
 
                 const frigoTl = gsap.timeline({
                     onComplete: () => {
-                        console.log("complete oui")
-                        runSneanys()
+                        if (window.matchMedia('(max-aspect-ratio: 0.5)').matches)
+                            runSneanyslong()
+                        else
+                            runSneanys()
                     }
                 })
 
@@ -187,7 +242,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
     return (
         <div ref={comingTelContainer} className='comingTelContainer relative w-[100vw] bg-[#1B133B] overflow-hidden'>
 
-            <button onClick={handleOpen} className='contact h-[100px] w-[100px] fixed bottom-5 right-5 z-40 rotate-12 flex items-center justify-center'>
+            <button onClick={handleOpen} className='contact h-[100px] w-[100px] fixed bottom-5 right-5 z-40 flex items-center justify-center'>
                 <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-10 text-[18px] text-white'>ON SE LANCE ?</p>
                 <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} />
             </button>
@@ -200,7 +255,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                     </div>
 
                     <div className='championne h-[70%] pr-4 my-auto'>
-                        <img className=' object-contain h-full' src={logoChampion} />
+                        <img className='object-contain h-full' src={logoChampion} />
                     </div>
                 </div>
 
@@ -217,7 +272,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                     <div className='photos relative h-fit w-full mx-auto my-auto'>
 
                         {/* LES 3 COEURS */}
-                        <img src={coeurs} className='coeursTelShort object-cover absolute z-20 top-0 left-0 opacity-0' />
+                        <img src={coeurs} className='coeursTelShort object-cover absolute z-0 top-0 left-0 opacity-0' />
 
                         {/* PHOTOS FRIGOS */}
                         <picture>
@@ -276,14 +331,14 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                             <source
                                 media='(min-aspect-ratio: 0.5)'
                                 srcSet={pastille}
-                                className='pastille object-cover absolute top-0 left-0 opacity-0'
+                                className='pastille object-cover absolute top-0 left-0 opacity-0 z-10'
                             />
                             <source
                                 media='(max-aspect-ratio: 0.5)'
                                 srcSet={pastilleLong}
-                                className='pastille long-ratio object-cover absolute top-0 left-0 opacity-0'
+                                className='pastille long-ratio object-cover absolute top-0 left-0 opacity-0 z-10'
                             />
-                            <img src={pastille} className='pastille object-cover absolute top-0 left-0 opacity-0' />
+                            <img src={pastille} className='pastille object-cover absolute top-0 left-0 opacity-0 z-10' />
                         </picture>
 
                         {/* PHRASES */}
@@ -325,7 +380,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                             <source
                                 media='(max-aspect-ratio: 0.5)'
                                 srcSet={sneaky1Long}
-                                className='sneaky1 long-ratio object-cover absolute top-0 left-0 opacity-0'
+                                className='sneaky1long long-ratio object-cover absolute top-5 left-5 opacity-0'
                             />
                             <img src={sneaky1} className='sneaky1 object-cover absolute top-0 left-0 opacity-0' />
                         </picture>
@@ -339,7 +394,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                             <source
                                 media='(max-aspect-ratio: 0.5)'
                                 srcSet={sneaky2Long}
-                                className='sneaky2 long-ratio object-cover absolute top-0 left-0 opacity-0'
+                                className='sneaky2long long-ratio object-cover absolute top-0 left-0 opacity-0'
                             />
                             <img src={sneaky2} className='sneaky2 object-cover absolute top-0 left-0 opacity-0' />
                         </picture>
@@ -353,7 +408,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                             <source
                                 media='(max-aspect-ratio: 0.5)'
                                 srcSet={sneaky3Long}
-                                className='sneaky3 long-ratio object-cover absolute top-0 left-0 opacity-0'
+                                className='sneaky3long long-ratio object-cover absolute top-0 left-0 opacity-0'
                             />
                             <img src={sneaky3} className='sneaky3 object-cover absolute top-0 left-0 opacity-0' />
                         </picture>

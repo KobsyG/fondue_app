@@ -127,46 +127,48 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
       repeat: -1,
     })
 
-    sneakyTl.to('.sneaky3', {opacity: 1})
-    .fromTo('.sneaky3', {
+    sneakyTl.to('.sneaky3', { opacity: 1 })
+      .fromTo('.sneaky3', {
         xPercent: -10,
-      },{
-      xPercent: 0,
-    })
-    .to('.sneaky3', {zIndex: 10})
-    .to('.sneaky3', {
-      zIndex: 0,
-      opacity: 0,
-      xPercent: -10,
-    }, '+=4')
+        yPercent: -2,
+      }, {
+        xPercent: 0,
+        yPercent: 0,
+      })
+      .to('.sneaky3', { zIndex: 10 })
+      .to('.sneaky3', {
+        zIndex: 0,
+        opacity: 0,
+        xPercent: -10,
+      }, '+=4')
 
-    sneakyTl.to('.sneaky1', {opacity: 1})
-    .fromTo('.sneaky1',
-      {
+    sneakyTl.to('.sneaky1', { opacity: 1 })
+      .fromTo('.sneaky1',
+        {
+          xPercent: +10,
+        }, {
+        xPercent: 0,
+      })
+      .to('.sneaky1', { zIndex: 10 })
+      .to('.sneaky1', {
+        opacity: 0,
         xPercent: +10,
-      }, {
-      xPercent: 0,
-    })
-    .to('.sneaky1', {zIndex: 10})
-    .to('.sneaky1', {
-      opacity:0,
-      xPercent: +10,
-      zIndex: 0,
-    }, '+=4')
+        zIndex: 0,
+      }, '+=4')
 
-    sneakyTl.to('.sneaky2', {opacity: 1})
-    .fromTo('.sneaky2',
-      {
+    sneakyTl.to('.sneaky2', { opacity: 1 })
+      .fromTo('.sneaky2',
+        {
+          xPercent: -10,
+        }, {
+        xPercent: 0,
+      })
+      .to('.sneaky2', { zIndex: 10 })
+      .to('.sneaky2', {
+        opacity: 0,
         xPercent: -10,
-      }, {
-      xPercent: 0,
-    })
-    .to('.sneaky2', {zIndex: 10})
-    .to('.sneaky2', {
-      opacity: 0,
-      xPercent: -10,
-      zIndex: 0,
-    }, '+=4')
+        zIndex: 0,
+      }, '+=4')
   }
 
   useLayoutEffect(() => {
@@ -224,27 +226,30 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             rotate: 360,
             duration: 3,
           }, '1.5')
+          // .fromTo('.coeurs', {opacity: 0}, {opacity: 1})
           .fromTo('.coeurs', {
+            opacity: 0, // sans ça + opacity-0 dans son classname: apparait furtivement apres la video 
             clipPath: 'polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%)',
           }, {
             duration: 4,
             ease: 'power3.out',
             clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            opacity: 1, // sans ça + opacity-0 dans son classname: apparait furtivement apres la video 
           }, '3')
       }
     }, comingContainer)
 
-    const contactTl = gsap.timeline({
-      repeat: -1,
-      repeatDelay: 5,
-    })
+    // const contactTl = gsap.timeline({
+    //   repeat: -1,
+    //   repeatDelay: 5,
+    // })
 
-    contactTl.to('.contact', {
-      animationPlayState: 'running',
-    })
-    .to('.contact', {
-      animationPlayState: 'paused',
-    }, '+=2')
+    // contactTl.to('.contact', {
+    //   animationPlayState: 'running',
+    // })
+    // .to('.contact', {
+    //   animationPlayState: 'paused',
+    // }, '+=2')
 
     return () => {
       ctx.revert();
@@ -312,7 +317,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
               <img src={fromages} className='fromages absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
               <img src={lentilles} className='lentilles absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
               <img src={pastille} className='pastille absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
-              <img src={coeurs} className='coeurs absolute top-0 left-0 h-full object-cover' />
+              <img src={coeurs} className='coeurs absolute top-0 left-0 h-full object-cover opacity-0' />
               {/* <img src={coeur1} className='absolute top-0 left-0 h-full object-cover' /> */}
               {/* <img src={coeur2} className='absolute top-0 left-0 h-full object-cover' /> */}
               {/* <img src={coeur3} className='absolute top-0 left-0 h-full object-cover' /> */}
@@ -398,6 +403,10 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             </div>
             <p style={{ fontFamily: 'OpenSansBold' }} className='text-left text-[13px] macBeco:text-[15px] w-fit px-1 ml-16 mb-5 macBeco:mb-3 text-white bg-fondue-blue'>CONTACT@FONDUECOEUR.FR</p>
             <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[25px] text-left macBeco:text-[27px] ml-16 mb-5 macBeco:mb-3 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
+
+            <div className='h-[150px]'>
+              <img src={sneakyMan} className='object-cover h-full' />
+            </div>
 
           </div>
 

@@ -397,7 +397,9 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
               </div>
             </div>
             <p style={{ fontFamily: 'OpenSansBold' }} className='text-left text-[13px] macBeco:text-[15px] w-fit px-1 ml-16 mb-5 macBeco:mb-3 text-white bg-fondue-blue'>CONTACT@FONDUECOEUR.FR</p>
-            <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[25px] text-left macBeco:text-[27px] ml-16 mb-5 macBeco:mb-3 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
+            <button onClick={handleOpen}>
+              <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[25px] text-left macBeco:text-[27px] ml-16 mb-5 macBeco:mb-3 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
+            </button>
 
             <div className='h-[150px] relative overflow-hidden'>
               <img src={sneakyMan} className='sneaky4 object-cover absolute h-full left-[8px] 1366:left-[15px] 1536:left-[20px] opacity-0 z-0' />
@@ -406,7 +408,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           </div>
 
           <div className='page-rotate absolute h-[105%] w-[400px] macBeco:w-[500px] -bottom-5 -right-16 -rotate-6 bg-gray-200'>
-            <FourniComponent fourniList={[fourni1, fourni2]} />
+            <FourniComponent fourniList={[fourni1, fourni2, fourni3]} />
           </div>
 
           <button onClick={handleOpen} className='contact group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>

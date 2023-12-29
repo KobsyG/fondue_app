@@ -68,7 +68,7 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
         <div className='fourniNew h-full w-full absolute z-20'>
           <img src={pageCahier} className='h-full w-full object-cover absolute' />
           <div className='absolute' >
-            <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] macBeco:text-[25px] w-[50%] mt-10 ml-[80px] macBeco:ml-32'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
+            <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] mt-4 ml-[80px] w-[50%] 1536:text-[26px] 1536:ml-[120px] fromJB:text-[30px] fromJB:w-[60%] fromJB:mt-8'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
             {fourniList[currentSlide]}
           </div>
         </div>
@@ -76,7 +76,7 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
         <div className='fourniOld h-full w-full'>
           <img src={pageCahier} className='h-full w-full object-cover absolute' />
           <div className='absolute'>
-            <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] macBeco:text-[25px] w-[50%] mt-10 ml-[80px] macBeco:ml-32'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
+            <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] mt-4 ml-[80px] w-[50%] 1536:text-[26px] 1536:ml-[120px] fromJB:text-[30px] fromJB:w-[60%] fromJB:mt-8'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
             {oldFourni}
           </div>
         </div>
@@ -99,51 +99,89 @@ export default FourniComponent
 /* ########################## COMPUTER  ##########################*/
 
 export const fourni1 = (
-  <ul style={{ fontFamily: 'OpenSansBold' }} className='mt-5 ml-10 macBeco:ml-16 text-fondue-blue text-[12px] macBeco:text-[15px] w-[80%]'>
-      <li className='' >
-          <h1 className='font-bold text-[15px] fromBeco:text-[18px]'>DISTILLERIE LOUIS COUDERC</h1>
-          <p className='text-left'>14 rue Victor Hugo à Aurillac</p>
-          <p className='text-left'>04 71 48 01 50 - commercial@distillerie-couderc.com</p>
-      </li>
-      <br />
-      <li className='max-w-[290px] macBeco:max-w-[350px]' >
-          <h1 className='font-bold  text-[15px] fromBeco:text-[18px]'>FROMAGERIE MORIN</h1>
-          <p className='text-left'>Marché aux Fromages</p>
-          <p className='text-left'>7 rue du buis à Aurillac - 04 71 48 63 10</p>
-          <p className='text-left'>Morin Fromager Center Commercial de Marmiers à Aurillac - 04 71 63 59 18</p>
-          <p className='text-left'>Morin Fromager Garric</p>
-          <p className='text-left'>13 avenue du Garric à Aurillac - 04 71 43 25 84</p>
-          <br />
-          <p className='text-left'>Marchés: Tulle, Ussel, Egleton, Bugeat, Le Rouget, Maurs Vic-sur-Cère, Ste Genevieve sur Argence</p>
-      </li>
-      <br />
-      <li className='max-w-[290px] macBeco:max-w-[350px]' >
-          <h1 className='font-bold  text-[15px] macBeco:text-[17px]'>LECLERC AURILLAC</h1>
-          <p className='text-left'>26 Rue de la Jordanne</p>
-          <p></p>
-      </li>
+  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue mt-5 ml-12 h-full w-full'>
+    <li className='w-[70%] 1536:w-[74%]'>
+      <h1 className='font-bold text-[1.2vw]'>DISTILLERIE LOUIS COUDERC</h1>
+      <p className='text-left text-[1vw]'>14 rue Victor Hugo à Aurillac</p>
+      <p className='text-left text-[1vw]'>commercial@distillerie-couderc.com</p>
+      <p className='text-left text-[1vw]'>04 71 48 01 50</p>
+    </li>
+    <br />
+    <li className='w-[64%] 1536:w-[72%]' >
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>FROMAGERIE MORIN</h1>
+        <p className='text-left text-[1vw]'>&nbsp;à Aurillac</p>
+      </div>
+      <p className='text-left text-[1vw]'>- Boutique au 13 avenue du Garric</p>
+      <p className='text-left text-[1vw]'>&nbsp;&nbsp;04 71 43 25 84</p>
+      <p className='text-left text-[1vw]'>- Centre Commercial de Marmiers</p>
+      <p className='text-left text-[1vw]'>&nbsp;&nbsp;04 71 63 59 18</p>
+      <p className='text-left text-[1vw]'>- Marché aux Fromages, 7 rue du buis</p>
+      <p className='text-left text-[1vw]'>&nbsp;&nbsp;04 71 48 63 10</p>
+      <p className='text-left text-[1vw]'>- Les Marchés de: Tulle, Ussel, Egleton, Bugeat, Le Rouget, Maurs, Vic-sur-Cère et Sainte Genevieve sur Argence</p>
+    </li>
+    <br />
   </ul>
 );
 
 export const fourni2 = (
-  <ul style={{ fontFamily: 'OpenSansBold' }} className='mt-5 ml-10 macBeco:ml-16 text-fondue-blue text-[12px] macBeco:text-[15px] w-[80%]'>
-      <li className='max-w-[290px] macBeco:max-w-[350px]' >
-          <h1 className='font-bold  text-[15px] macBeco:text-[17px]'>LECLERC AURILLAC</h1>
-          <p className='text-left'>26 Rue de la Jordanne</p>
-          <p></p>
-
-      </li>
+  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue mt-5 ml-12 h-full w-full'>
+    <li className='w-[70%] 1536:w-[74%]'>
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>E.LECLERC</h1>
+        <p className='text-left text-[1.2vw]'>&nbsp;à Aurillac</p>
+      </div>
+      <p className='text-left text-[1vw]'>26 Rue de la Jordanne</p>
+      <p className='text-left text-[1vw]'>04 71 64 25 05</p>
+    </li>
+    <br />
+    <li className='w-[64%] 1536:w-[72%]' >
+      <h1 className='font-bold text-[1.2vw]'>FROMAGERIE LAQUEUILLE</h1>
+      <p className='text-left text-[1vw]'>Gare de Laqueuille, 63820 Saint-Julien Puy-Lavèze</p>
+      <p className='text-left text-[1vw]'>www.fromages-laqueuille.fr</p>
+      <p className='text-left text-[1vw]'>04 73 22 18 06</p>
+    </li>
+    <br />
+    <li className='w-[64%] 1536:w-[72%]' >
+      <h1 className='font-bold text-[1.2vw]'>FROMAGERIE DUROUX</h1>
+      <p className='text-left text-[1vw]'>12 Route de Chaussenac, 19220 Rilhac-Xaintrie</p>
+      <p className='text-left text-[1vw]'>www.fromagerie-duroux.fr</p>
+      <p className='text-left text-[1vw]'>05 55 28 27 62</p>
+    </li>
+    <br />
   </ul>
 );
 
 export const fourni3 = (
-  <ul style={{ fontFamily: 'OpenSansBold' }} className='mt-5 ml-10 macBeco:ml-16 text-fondue-blue text-[12px] macBeco:text-[15px] w-[80%]'>
-      <li className='max-w-[290px] macBeco:max-w-[350px]' >
-          <h1 className='font-bold  text-[15px] macBeco:text-[17px]'>33333333333333</h1>
-          <p className='text-left'>333333333333 BLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALABLAALALALALALALALA</p>
-          <p></p>
-
-      </li>
+  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue mt-5 ml-12 h-full w-full'>
+    <li className='w-[70%] 1536:w-[74%]'>
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>UTILE</h1>
+        <p className='text-left text-[1.2vw]'>&nbsp;à Lafeuillade-en-Vézie</p>
+      </div>
+      <p className='text-left text-[1vw]'>8 Rue Germain Prat, 15130 Lafeuillade-en-Vézie </p>
+      <p className='text-left text-[1vw]'>04 63 41 94 71</p>
+    </li>
+    <br />
+    <li className='w-[70%] 1536:w-[74%]'>
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>SPAR</h1>
+        <p className='text-left text-[1.2vw]'>&nbsp;Le Lioran</p>
+      </div>
+      <p className='text-left text-[1vw]'>Galerie Marchande Sumene, 15300 Laveissière</p>
+      <p className='text-left text-[1vw]'>04 71 49 58 81</p>
+    </li>
+    <br />
+    <li className='w-[70%] 1536:w-[74%]'>
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>Clémentine et Cie</h1>
+        <p className='text-left text-[1.2vw]'>&nbsp;à Ussel</p>
+      </div>
+      <p className='text-left text-[1vw]'>Parc d'activité du bois Saint Michel, 19200 Saint-Angel </p>
+      <p className='text-left text-[1vw]'>www.clementine-et-cie.fr</p>
+      <p className='text-left text-[1vw]'>05 55 95 82 76</p>
+    </li>
+    <br />
   </ul>
 );
 

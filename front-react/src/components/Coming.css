@@ -23,7 +23,7 @@ ul {
 }
 
 .animate-own-bounce {
-    animation: my-bounce 1s infinite;
+    animation: contact-bounce 1s infinite;
 }
 
 @keyframes my-bounce {

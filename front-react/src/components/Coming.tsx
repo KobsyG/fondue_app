@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap';
 import './Coming.css'
 
@@ -8,6 +8,7 @@ import logoFondue from '../images/FFP/logo.png'
 import { Carousel, Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
+import FourniComponent, { fourni1, fourni2, fourni3 } from './FourniComponent';
 
 const box = require('../images/FFP/box.png')
 const facebook = require('../images/FFP/facebook.png')
@@ -40,7 +41,6 @@ const diapo4 = require('../images/FFP/diapo/bread.jpg')
 const diapo5 = require('../images/FFP/diapo/cheese-kitchen.jpg')
 const diapo6 = require('../images/FFP/diapo/gentiane.jpg')
 
-
 const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: boolean }) => {
 
   const [openContact, setOpenContact] = useState(false);
@@ -72,11 +72,6 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         ease: 'none',
         scale: 1,
       }, '>');
-
-      const sneakyManTl = gsap.timeline({
-      })
-
-
 
     }, comingContainer)
 
@@ -155,6 +150,20 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         xPercent: +10,
         zIndex: 0,
       }, '+=4')
+
+    // sneakyTl.to('.sneaky4', { opacity: 1 })
+    //   .fromTo('.sneaky4',
+    //     {
+    //       xPercent: -20,
+    //     }, {
+    //     xPercent: 0,
+    //   })
+    //   // .to('.sneaky4', { zIndex: 10 })
+    //   .to('.sneaky4', {
+    //     opacity: 0,
+    //     xPercent: -20,
+    //     zIndex: 0,
+    //   }, '+=4')
 
     sneakyTl.to('.sneaky2', { opacity: 1 })
       .fromTo('.sneaky2',
@@ -239,36 +248,25 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
       }
     }, comingContainer)
 
-    // const contactTl = gsap.timeline({
-    //   repeat: -1,
-    //   repeatDelay: 5,
-    // })
+    /*
+    const contactTl = gsap.timeline({
+      repeat: -1,
+      repeatDelay: 5,
+    })
 
-    // contactTl.to('.contact', {
-    //   animationPlayState: 'running',
-    // })
-    // .to('.contact', {
-    //   animationPlayState: 'paused',
-    // }, '+=2')
+    contactTl.to('.contact', {
+      animationPlayState: 'running',
+    })
+    .to('.contact', {
+      animationPlayState: 'paused',
+    }, '+=2')
+    */
 
     return () => {
       ctx.revert();
     };
 
   }, [videoEnd]);
-
-
-  // useLayoutEffect(() => {
-  //   let ctx = gsap.context(() => {
-
-
-  //   }, comingContainer)
-
-  // return () => {
-  //   ctx.revert();
-  // };
-
-  // }, []);
 
   return (
     <div ref={comingContainer} className='coming absolute top-0 left-0 h-[100vh] w-[100vw] bg-[#1B133B] flex flex-col overflow-hidden'>
@@ -296,7 +294,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         </div>
       </div>
 
-      <div className='carreau block h-[4vh] min-h-[4vh] w-full bg-contain bg-repeat-x bg-dominos' />
+      <div className='carreau block h-[4vh] min-h-[2vh] w-full bg-contain bg-repeat-x bg-dominos' />
 
       <div className='main grow w-full flex items-end'>
 
@@ -331,10 +329,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
             </div>
           </div>
-
         </div>
-
-
 
         <div className='pageDiapo h-full w-[27vw]'>
           <Carousel className=""
@@ -376,7 +371,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
           <img src={kraft} className='h-full w-full object-cover absolute' />
 
-          <div className='ruban absolute top-0  h-[75%] w-[56px] 1366:w-[70px] -left-[28px] 1366:-left-[35px] 1536:w-[80px] 1536:-left-[40px] overflow-hidden flex flex-col-reverse'>
+          <div className='ruban absolute top-0  h-[75%] w-[56px] 1366:w-[70px] -left-[28px] 1366:-left-[35px] 1536:w-[80px] 1536:-left-[40px] overflow-hidden flex flex-col-reverse z-10'>
             <img className='object-cover w-full' src={ruban2} />
             <div className='bg-fondue-red w-full h-[100vh]' />
           </div>
@@ -404,55 +399,26 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             <p style={{ fontFamily: 'OpenSansBold' }} className='text-left text-[13px] macBeco:text-[15px] w-fit px-1 ml-16 mb-5 macBeco:mb-3 text-white bg-fondue-blue'>CONTACT@FONDUECOEUR.FR</p>
             <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[25px] text-left macBeco:text-[27px] ml-16 mb-5 macBeco:mb-3 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
 
-            <div className='h-[150px]'>
-              <img src={sneakyMan} className='object-cover h-full' />
+            <div className='h-[150px] relative overflow-hidden'>
+              <img src={sneakyMan} className='sneaky4 object-cover absolute h-full left-[8px] 1366:left-[15px] 1536:left-[20px] opacity-1 z-0' />
             </div>
 
           </div>
 
           <div className='page-rotate absolute h-[105%] w-[400px] macBeco:w-[500px] -bottom-5 -right-16 -rotate-6 bg-gray-200'>
-
-            <img src={pageCahier} className='h-full w-full object-cover absolute' />
-            <div className='fournisseurs absolute' >
-              <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red text-[22px] macBeco:text-[25px] w-[50%] mt-10 ml-[80px] macBeco:ml-32'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
-              <ul style={{ fontFamily: 'OpenSansBold' }} className='mt-5 ml-10 macBeco:ml-16 text-fondue-blue text-[12px] macBeco:text-[15px] w-[80%]'>
-                <li className='' >
-                  <h1 className='font-bold text-[15px] fromBeco:text-[18px]'>DISTILLERIE LOUIS COUDERC</h1>
-                  <p className='text-left'>14 rue Victor Hugo à Aurillac</p>
-                  <p className='text-left'>04 71 48 01 50 - commercial@distillerie-couderc.com</p>
-                </li>
-                <br />
-                <li className='max-w-[290px] macBeco:max-w-[350px]' >
-                  <h1 className='font-bold  text-[15px] fromBeco:text-[18px]'>FROMAGERIE MORIN</h1>
-                  <p className='text-left'>Marché aux Fromages</p>
-                  <p className='text-left'>7 rue du buis à Aurillac - 04 71 48 63 10</p>
-                  <p className='text-left'>Morin Fromager Center Commercial de Marmiers à Aurillac - 04 71 63 59 18</p>
-                  <p className='text-left'>Morin Fromager Garric</p>
-                  <p className='text-left'>13 avenue du Garric à Aurillac - 04 71 43 25 84</p>
-                  <br />
-                  <p className='text-left'>Marchés: Tulle, Ussel, Egleton, Bugeat, Le Rouget, Maurs Vic-sur-Cère, Ste Genevieve sur Argence</p>
-                </li>
-                <br />
-                <li className='max-w-[290px] macBeco:max-w-[350px]' >
-                  <h1 className='font-bold  text-[15px] macBeco:text-[17px]'>LECLERC AURILLAC</h1>
-                  <p className='text-left'>26 Rue de la Jordanne</p>
-                  <p></p>
-
-                </li>
-              </ul>
-            </div>
+            <FourniComponent fourniList={[fourni1, fourni2]} />
           </div>
 
-          <button onClick={handleOpen} className='contact group absolute animate-own-bounce z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>
+          <button onClick={handleOpen} className='contact group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>
             <p style={{ fontFamily: 'AvocadoCake' }} className='absolute w-[80px] z-10 text-[20px] text-white'>ON SE LANCE ?</p>
-            <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] group-hover:transition-transform group-hover:duration-500 group-hover:' src={contactRouge} />
+            <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} />
           </button>
 
           <div className='smallbox hidden fromJB:block w-[15vw] mt-44 ml-20 -rotate-[17deg] '>
             <img src={box} />
           </div>
 
-          <div className='box absolute w-[25vw] -top-[10vw] left-[3vw] 1281:left-0 1920:-left-[3vw] '>
+          <div className='box absolute w-[25vw] -top-[10vw] left-[3vw] 1281:left-0 1920:-left-[3vw] z-10'>
             <img className='object-cover' src={box} />
           </div>
         </div>

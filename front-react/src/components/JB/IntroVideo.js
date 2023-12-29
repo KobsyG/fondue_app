@@ -69,14 +69,14 @@ function IntroVideo({videoEnd, setVideoEnd, videoDisplay, setVideoDisplay}) {
           <SoundButton audioswitch={audioswitch} handleAudio={handleAudio} />
         </>
       }
-      <audio
+      <video
         id="myaudio"
-        src={require('../../images/introAudio.mp3')}
-        type="video/mp3"
+        src={require('../../images/introAudio.mp4')}
+        type="video/mp4"
         autoPlay={true}
         muted={audioswitch}
       >
-      </audio>
+      </video>
     </div>
   );
 }

@@ -135,7 +135,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         zIndex: 0,
         opacity: 0,
         xPercent: -10,
-      }, '+=4')
+      }, '+=7')
 
     sneakyTl.to('.sneaky1', { opacity: 1 })
       .fromTo('.sneaky1',
@@ -151,19 +151,19 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         zIndex: 0,
       }, '+=4')
 
-    // sneakyTl.to('.sneaky4', { opacity: 1 })
-    //   .fromTo('.sneaky4',
-    //     {
-    //       xPercent: -20,
-    //     }, {
-    //     xPercent: 0,
-    //   })
-    //   // .to('.sneaky4', { zIndex: 10 })
-    //   .to('.sneaky4', {
-    //     opacity: 0,
-    //     xPercent: -20,
-    //     zIndex: 0,
-    //   }, '+=4')
+    sneakyTl.to('.sneaky4', { opacity: 1 })
+      .fromTo('.sneaky4',
+        {
+          xPercent: -40,
+        }, {
+        xPercent: 0,
+      })
+      .to('.ruban', { zIndex: 0 })
+      .to('.ruban', {zIndex: 10}, '+=2')
+      .to('.sneaky4', {
+        opacity: 0,
+        xPercent: -40,
+      })
 
     sneakyTl.to('.sneaky2', { opacity: 1 })
       .fromTo('.sneaky2',
@@ -177,7 +177,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         opacity: 0,
         xPercent: -10,
         zIndex: 0,
-      }, '+=4')
+      }, '+=6')
   }
 
   useLayoutEffect(() => {
@@ -246,20 +246,6 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           }, '3')
       }
     }, comingContainer)
-
-    /*
-    const contactTl = gsap.timeline({
-      repeat: -1,
-      repeatDelay: 5,
-    })
-
-    contactTl.to('.contact', {
-      animationPlayState: 'running',
-    })
-    .to('.contact', {
-      animationPlayState: 'paused',
-    }, '+=2')
-    */
 
     return () => {
       ctx.revert();
@@ -370,12 +356,6 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
           <img src={kraft} className='h-full w-full object-cover absolute' />
 
-          <div className='ruban absolute top-0  h-[75%] w-[56px] 1366:w-[70px] -left-[28px] 1366:-left-[35px] 1536:w-[80px] 1536:-left-[40px] overflow-hidden flex flex-col-reverse z-10'>
-            <img className='object-cover w-full' src={ruban2} />
-            <div className='bg-fondue-red w-full h-[100vh]' />
-          </div>
-
-
           <div className='absolute bottom-0 z-10 flex flex-col-reverse'>
             <div className='flex items-end'>
               <button onClick={handleEaster} className='guyHP relative h-[20vh] aspect-square mb-5 ml-2'>
@@ -401,17 +381,22 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             </button>
 
             <div className='h-[150px] relative overflow-hidden'>
-              <img src={sneakyMan} className='sneaky4 object-cover absolute h-full left-[8px] 1366:left-[15px] 1536:left-[20px] opacity-0 z-0' />
+              <img src={sneakyMan} className='sneaky4 object-cover absolute h-full left-[8px] 1366:left-[15px] 1536:left-[20px] opacity-0' />
             </div>
 
           </div>
 
+          <div className='ruban absolute top-0  h-[75%] w-[56px] 1366:w-[70px] -left-[28px] 1366:-left-[35px] 1536:w-[80px] 1536:-left-[40px] overflow-hidden flex flex-col-reverse z-10'>
+            <img className='object-cover w-full' src={ruban2} />
+            <div className='bg-fondue-red w-full h-[100vh]' />
+          </div>
+
           <div
             className='page-rotate absolute h-[105%] w-[400px] macBeco:w-[500px] -bottom-5 -right-16 -rotate-6 bg-gray-200'
-            // onMouseEnter={() => setCanSlide(false)}
-            // onMouseLeave={() => setCanSlide(true)}
+          // onMouseEnter={() => setCanSlide(false)}
+          // onMouseLeave={() => setCanSlide(true)}
           >
-            <FourniComponent fourniList={[fourni1, fourni2, fourni3]}/>
+            <FourniComponent fourniList={[fourni1, fourni2, fourni3]} />
           </div>
 
           <button onClick={handleOpen} className='contact group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>

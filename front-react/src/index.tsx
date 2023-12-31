@@ -14,31 +14,32 @@ import Contact from './components/Contact';
 import Terroir from './components/Kobe/Actuel/Terroir';
 import Waiting from './components/Waiting';
 import Mono from './components/Mono';
+import Coming from './components/Coming';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Waiting />,
+    element: <App />,
   },
   // {
     // path: "mono",
     // element: <Mono />,
   // },
-  {
-    path: "histoire",
-    element: <Histoire />,
-  },
-  {
-    path: "terroir",
-    element: <Terroir />,
-  },
-  {
-    path: "all",
-    element: <App />,
-  },
+  // {
+  //   path: "histoire",
+  //   element: <Histoire />,
+  // },
+  // {
+  //   path: "terroir",
+  //   element: <Terroir />,
+  // },
+  // {
+  //   path: "all",
+  //   element: <App />,
+  // },
   {
     path: "*",
-    element: <Waiting />,
+    element: <App />,
   },
 ]);
 

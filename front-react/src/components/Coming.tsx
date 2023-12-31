@@ -159,7 +159,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         xPercent: 0,
       })
       .to('.ruban', { zIndex: 0 })
-      .to('.ruban', {zIndex: 10}, '+=2')
+      .to('.ruban', { zIndex: 10 }, '+=2')
       .to('.sneaky4', {
         opacity: 0,
         xPercent: -40,

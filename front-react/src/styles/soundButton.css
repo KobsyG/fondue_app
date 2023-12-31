@@ -1,0 +1,30 @@
+  .custom-cursor {
+    cursor: none;
+  }
+
+  .circle-text {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    fill: #FFFFFF;
+  }
+
+  .absolute-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .audiobut:hover+.custom-cursor {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+
+  .skip-button:hover+.custom-cursor {
+    opacity: 0;
+    transition: opacity 500ms;
+    /* cursor: ; */
+  }

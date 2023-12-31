@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
+import { ThemeProvider } from "@material-tailwind/react";
 
 import './index.css';
 import './styles/font.css';
@@ -12,7 +13,6 @@ import Histoire from './components/Histoire';
 import Contact from './components/Contact';
 import Terroir from './components/Kobe/Actuel/Terroir';
 import Waiting from './components/Waiting';
-import Contact2 from './components/Contact2';
 import Mono from './components/Mono';
 
 const router = createBrowserRouter([
@@ -20,10 +20,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Waiting />,
   },
-  {
-    path: "contact",
-    element: <Contact />,
-  },
+  // {
+    // path: "mono",
+    // element: <Mono />,
+  // },
   {
     path: "histoire",
     element: <Histoire />,
@@ -47,20 +47,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ToastContainer
-      position="top-center"
-      autoClose={2000}
-      limit={3}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover={false}
-      theme="light"
-    />
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

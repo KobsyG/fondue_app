@@ -1,0 +1,81 @@
+ul {
+    list-style-image: url("../images/FFP/coeurList.png");
+    height: 10px;
+    width: 10px;
+}
+
+.papa div {
+    background-color: #f0f0f0;
+}
+
+@media ((min-aspect-ratio: 0.5)) {
+    .coeursTelShort {
+        opacity: 1;
+    }
+}
+
+/* Adjusted margin-top for all Fourni on Tel */
+.margin-top-fourni-tel {
+    margin-top: 0.5rem
+}
+
+@media (max-aspect-ratio: 0.5) {
+    .margin-top-fourni-tel {
+        margin-top: 1rem;
+    }
+}
+
+/* Adjusted pastille-contact for Tel */
+.pastille-size-margin-tel {
+    height: 80px;
+    width: 80px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+}
+
+@media (min-width: 601px) {
+    .pastille-size-margin-tel {
+        height: 120px;
+        width: 120px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px;
+    }
+}
+
+@media (max-aspect-ratio: 0.5) {
+    .pastille-size-margin-tel {
+        height: 100px;
+        width: 100px;
+        bottom: 30px;
+        right: 20px;
+        font-size: 20px;
+    }
+}
+
+.contact {
+    rotate: 12deg;
+}
+
+.group:hover {
+    animation-play-state: paused !important;
+}
+
+.animate-own-bounce {
+    animation: contact-bounce 1s infinite;
+}
+
+@keyframes my-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    50% {
+        transform: translateY(-15%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+}

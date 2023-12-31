@@ -37,8 +37,7 @@ function Loading({ progress, setProgress }: { progress: number, setProgress: any
 
 function ComingLoadingTel() {
   const [progress, setProgress] = useState(0);
-  // const [loadingDisplay, setLoadingDisplay] = useState(true);
-  const [loadingDisplay, setLoadingDisplay] = useState(false);
+  const [loadingDisplay, setLoadingDisplay] = useState(true);
   const loadingContainer = useRef(null);
 
   useLayoutEffect(() => {
@@ -63,9 +62,9 @@ function ComingLoadingTel() {
 
   return (
     <div ref={loadingContainer} className='loadingContainer'>
-      {/* {loadingDisplay && */}
-        {/* <Loading progress={progress} setProgress={setProgress} /> */}
-      {/* } */}
+      {loadingDisplay &&
+        <Loading progress={progress} setProgress={setProgress} />
+      }
       <ComingTel loadingDisplay={loadingDisplay}/>
     </div>
   )

@@ -41,6 +41,17 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
           setCanSlide(true);
         },
       })
+
+      const phareTl = gsap.timeline({
+      })
+
+      phareTl.to('.leftArrow', {
+        scale: 1.7,
+        duration: 2,
+        yoyo: true,
+        repeat: -1,
+      });
+
     }, fourniContainer)
 
     return () => {
@@ -58,20 +69,20 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
           className='fourniNew h-full w-full absolute z-20'>
           <img src={pageCahier} className='h-full w-full object-cover absolute' />
           <div className='absolute mt-2 ml-2 sm:mt-4 sm:ml-4 lg:mt-0 lg:ml-0 fromBeco:mt-4' >
-            
+
             <div className='flex items-center justify-start lg:w-full lg:mt-4 lg:ml-[30px] 1536:ml-[50px] fromJB:mt-8'>
               <button
                 className='w-fit h-fit flex items-center'
                 onClick={handleSlideChange}
               >
-                <img src={leftArrow} className='h-6 mr-2 sm:h-10 sm:mr-6 lg:h-8 1536:h-10 fromJB:h-12' />
-                <p className='text-fondue-red text-[6vw] mr-2 sm:mr-6 lg:text-[2vw] lg:mr-6'>{currentSlide + 1}</p>
+                <img src={leftArrow} className='leftArrow h-6 mr-2 sm:h-10 sm:mr-6 lg:h-8 1536:h-10 fromJB:h-12' />
+                <p className='text-fondue-red text-[6vw] mr-2 sm:mr-6 lg:text-[2vw] lg:mr-6'>{currentSlide + 1}/3</p>
               </button>
               <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red w-[64%] text-[2vh] sm:text-[2.5vh]                              lg:text-[22px] lg:w-[50%] 1536:text-[26px] fromJB:text-[30px] fromJB:w-[60%]'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
             </div>
 
 
-  
+
             {fourniList[currentSlide]}
           </div>
         </div>
@@ -79,10 +90,10 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
         <div className='fourniOld h-full w-full'>
           <img src={pageCahier} className='h-full w-full object-cover absolute' />
           <div className='absolute mt-2 ml-2 sm:mt-4 sm:ml-4 lg:mt-0 lg:ml-0 fromBeco:mt-4' >
-            
+
             <div className='flex items-center justify-start lg:w-full lg:mt-4 lg:ml-[30px] 1536:ml-[50px] fromJB:mt-8'>
               <img src={leftArrow} className='h-6 mr-2 sm:h-10 sm:mr-6 lg:h-8 1536:h-10 fromJB:h-12' />
-              <p className='text-fondue-red text-[6vw] mr-2 sm:mr-6 lg:text-[2vw] lg:mr-6'>{oldSlide + 1}</p>
+              <p className='text-fondue-red text-[6vw] mr-2 sm:mr-6 lg:text-[2vw] lg:mr-6'>{oldSlide + 1}/3</p>
               <h3 style={{ fontFamily: 'AvocadoCake' }} className='text-fondue-red w-[64%] text-[2vh] sm:text-[2.5vh]                              lg:text-[22px] lg:w-[50%] 1536:text-[26px] fromJB:text-[30px] fromJB:w-[60%]'>ET ON LA TROUVE OÙ CETTE MERVEILLE ?</h3>
             </div>
 
@@ -217,7 +228,7 @@ export const fourniTel1 = (
 export const fourniTel2 = (
   <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue h-full w-full ml-2 sm:mt-4 sm:ml-8'>
     <li className='w-[75%] margin-top-fourni-tel'>
-    <div className='flex'>
+      <div className='flex'>
         <h1 className='font-bold text-[3.2vw]'>E.LECLERC</h1>
         <p className='text-left text-[3.2vw]'>&nbsp;à Aurillac</p>
       </div>
@@ -225,16 +236,16 @@ export const fourniTel2 = (
       <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>04 71 64 25 05</p>
     </li>
     <li className='w-[72%] margin-top-fourni-tel' >
-        <h1 className='font-bold text-[3.2vw]'>FROMAGERIE LAQUEUILLE</h1>
-        <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>Gare de Laqueuille, 63820 Saint-Julien Puy-Lavèze</p>
-        <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>www.fromages-laqueuille.fr</p>
-        <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>04 73 22 18 06</p>
+      <h1 className='font-bold text-[3.2vw]'>FROMAGERIE LAQUEUILLE</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>Gare de Laqueuille, 63820 Saint-Julien Puy-Lavèze</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>www.fromages-laqueuille.fr</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>04 73 22 18 06</p>
     </li>
     <li className='w-[72%] margin-top-fourni-tel' >
-        <h1 className='font-bold text-[3.2vw]'>FROMAGERIE DUROUX</h1>
-        <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>12 Route de Chaussenac, 19220 Rilhac-Xaintrie</p>
-        <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>www.fromagerie-duroux.fr</p>
-        <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>05 55 28 27 62</p>
+      <h1 className='font-bold text-[3.2vw]'>FROMAGERIE DUROUX</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>12 Route de Chaussenac, 19220 Rilhac-Xaintrie</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>www.fromagerie-duroux.fr</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>05 55 28 27 62</p>
     </li>
   </ul>
 );
@@ -242,7 +253,7 @@ export const fourniTel2 = (
 export const fourniTel3 = (
   <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue h-full w-full ml-2 sm:mt-4 sm:ml-8'>
     <li className='w-[75%] margin-top-fourni-tel'>
-    <div className='flex'>
+      <div className='flex'>
         <h1 className='font-bold text-[3.2vw]'>UTILE</h1>
         <p className='text-left text-[3.2vw] sm:text-[3.2vw]'>&nbsp;à Lafeuillade-en-Vézie</p>
       </div>
@@ -250,7 +261,7 @@ export const fourniTel3 = (
       <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>04 63 41 94 71</p>
     </li>
     <li className='w-[75%] margin-top-fourni-tel'>
-    <div className='flex'>
+      <div className='flex'>
         <h1 className='font-bold text-[3.2vw]'>SPAR</h1>
         <p className='text-left text-[3.2vw] sm:text-[3.2vw]'>&nbsp;Le Lioran</p>
       </div>
@@ -258,7 +269,7 @@ export const fourniTel3 = (
       <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>04 71 49 58 81</p>
     </li>
     <li className='w-[75%] margin-top-fourni-tel'>
-    <div className='flex'>
+      <div className='flex'>
         <h1 className='font-bold text-[3.2vw]'>Clémentine et Cie</h1>
         <p className='text-left text-[3.2vw] sm:text-[3.2vw]'>&nbsp;à Ussel</p>
       </div>

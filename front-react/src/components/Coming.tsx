@@ -295,19 +295,19 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
               <p style={{ letterSpacing: '2px', writingMode: 'vertical-lr', fontFamily: 'OccamsEraser' }} className='phare ml-[1vw] text-[3vw] pcJB:text-[2.5vw] whitespace-nowrap -rotate-180'>100% AUVERGNE</p>
             </div>
             <div className='photos relative w-[100%]'>
-              <img src={bouteille} className='bouteille absolute z-40 top-0 left-0  h-full object-cover opacity-0' />
-              <img src={fleurs} className='fleurs absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
-              <img src={fromages} className='fromages absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
-              <img src={lentilles} className='lentilles absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
-              <img src={pastille} className='pastille absolute top-0 left-0 h-full object-cover z-10 opacity-0' />
-              <img src={coeurs} className='coeurs absolute top-0 left-0 h-full object-cover opacity-0' />
-              {/* <img src={coeur1} className='absolute top-0 left-0 h-full object-cover' /> */}
-              {/* <img src={coeur2} className='absolute top-0 left-0 h-full object-cover' /> */}
-              {/* <img src={coeur3} className='absolute top-0 left-0 h-full object-cover' /> */}
-              <img src={phraseFromage} className='absolute top-0 left-0 h-full object-cover' />
+              <img src={bouteille} className='bouteille absolute z-40 top-0 left-0  w-full object-cover opacity-0' />
+              <img src={fleurs} className='fleurs absolute top-0 left-0 w-full object-cover z-10 opacity-0' />
+              <img src={fromages} className='fromages absolute top-0 left-0 w-full object-cover z-10 opacity-0' />
+              <img src={lentilles} className='lentilles absolute top-0 left-0 w-full object-cover z-10 opacity-0' />
+              <img src={pastille} className='pastille absolute top-0 left-0 w-full object-cover z-10 opacity-0' />
+              <img src={coeurs} className='coeurs absolute top-0 left-0 w-full object-cover opacity-0' />
+              {/* <img src={coeur1} className='absolute top-0 left-0 w-full object-cover' /> */}
+              {/* <img src={coeur2} className='absolute top-0 left-0 w-full object-cover' /> */}
+              {/* <img src={coeur3} className='absolute top-0 left-0 w-full object-cover' /> */}
+              <img src={phraseFromage} className='absolute top-0 left-0 w-full object-cover' />
               {/* phraseGentiane is the only one without absolutness */}
-              <img src={phraseGentiane} className='h-full object-cover' />
-              <img src={phraseLentille} className='absolute top-0 left-0 h-full object-cover' />
+              <img src={phraseGentiane} className='w-full object-cover' />
+              <img src={phraseLentille} className='absolute top-0 left-0 w-full object-cover' />
               <img src={sneaky1} className='absolute sneaky1 top-0 left-0 opacity-0' />
               <img src={sneaky2} className='absolute sneaky2 top-0 left-0 opacity-0' />
               <img src={sneaky3} className='absolute sneaky3 top-0 left-0 opacity-0' />
@@ -316,7 +316,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           </div>
         </div>
 
-        <div className='pageDiapo h-full w-[27vw]'>
+        <div className='pageDiapo relative h-full w-[27vw]'>
           <Carousel className=""
             prevArrow={() => { }}
             nextArrow={() => { }}
@@ -327,27 +327,27 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             <img
               src={diapo6}
               alt="image 6"
-              className="h-full object-cover object-[20%]"
+              className="h-full absolute object-cover object-[20%]"
             />
             <img
               src={diapo1}
               alt="image 1"
-              className="h-full object-cover object-[80%]"
+              className="h-full absolute object-cover object-[80%]"
             />
             <img
               src={diapo2}
               alt="image 2"
-              className="h-full object-cover"
+              className="h-full absolute object-cover"
             />
             <img
               src={diapo3}
               alt="image 3"
-              className="h-full object-cover"
+              className="h-full absolute object-cover"
             />
             <img
               src={diapo4}
               alt="image 4"
-              className="h-full object-cover"
+              className="h-full absolute object-cover"
             />
           </Carousel>
         </div>

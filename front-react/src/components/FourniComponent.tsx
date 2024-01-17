@@ -42,16 +42,6 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
         },
       })
 
-      const phareTl = gsap.timeline({
-      })
-
-      phareTl.to('.leftArrow', {
-        scale: 1.7,
-        duration: 2,
-        yoyo: true,
-        repeat: -1,
-      });
-
     }, fourniContainer)
 
     return () => {

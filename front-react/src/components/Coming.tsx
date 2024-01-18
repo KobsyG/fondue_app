@@ -8,7 +8,7 @@ import logoFondue from '../images/FFP/logo.png'
 import { Carousel, Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
-import FourniComponent, { fourni1, fourni2, fourni3 } from './FourniComponent';
+import FourniComponent, { fourni1, fourni2, fourni3, fourni4 } from './FourniComponent';
 
 const box = require('../images/FFP/box.png')
 const facebook = require('../images/FFP/facebook.png')
@@ -396,7 +396,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           // onMouseEnter={() => setCanSlide(false)}
           // onMouseLeave={() => setCanSlide(true)}
           >
-            <FourniComponent fourniList={[fourni1, fourni2, fourni3]} />
+            <FourniComponent fourniList={[fourni1, fourni2, fourni3, fourni4]} />
           </div>
 
           <a className='w-[50px] macBeco:w-[60px]' href="https://www.morin-fromager.fr/produit/box-fondue-coeur/" target='_blank'>

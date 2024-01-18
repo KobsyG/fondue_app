@@ -255,17 +255,25 @@ export const fourniTel2 = (
       <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>26 Rue de la Jordanne</p>
       <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>04 71 64 25 05</p>
     </li>
-    <li className='w-[72%] margin-top-fourni-tel' >
-      <h1 className='font-bold text-[3.2vw]'>FROMAGERIE LAQUEUILLE</h1>
-      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>Gare de Laqueuille, 63820 Saint-Julien Puy-Lavèze</p>
-      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>www.fromages-laqueuille.fr</p>
-      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>04 73 22 18 06</p>
+    <li className='w-[72%] mt-[0.5rem]' >
+      <div className='flex'>
+        <h1 className='font-bold text-[3.2vw]'>GammVert</h1>
+        <p className='text-left text-[3.2vw]'>&nbsp;à Aurillac</p>
+      </div>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>1 boulevard du Vialenc</p>
     </li>
-    <li className='w-[72%] margin-top-fourni-tel' >
-      <h1 className='font-bold text-[3.2vw]'>FROMAGERIE DUROUX</h1>
-      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>12 Route de Chaussenac, 19220 Rilhac-Xaintrie</p>
-      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>www.fromagerie-duroux.fr</p>
-      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>05 55 28 27 62</p>
+    <li className='w-[72%] mt-[0.5rem]' >
+      <h1 className='font-bold text-[3.2vw]'>Boucherie Serge Tardif</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>6 rue Simone Veil, 15130 Arpajon sur Cère</p>
+    </li>
+    <li className='w-[72%] mt-[0.5rem]' >
+      <h1 className='font-bold text-[3.2vw]'>Intermarché</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>8 Avenue d'Aurillac, 15600 St Etienne de Maurs</p>
+    </li>
+    <li className='w-[72%] mt-[0.5rem]' >
+      <h1 className='font-bold text-[3.2vw]'>Les domaines qui montent</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>48 rue Blatin, 63000</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>Clermont-Ferrand</p>
     </li>
   </ul>
 );
@@ -296,6 +304,27 @@ export const fourniTel3 = (
       <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>Parc d'activité du bois Saint Michel, 19200 Saint-Angel</p>
       <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>www.clementine-et-cie.fr</p>
       <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>05 55 95 82 76</p>
+    </li>
+  </ul>
+);
+
+export const fourniTel4 = (
+  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue h-full w-full ml-2 sm:mt-4 sm:ml-8'>
+    <li className='w-[80%] margin-top-fourni-tel'>
+      <h1 className='font-bold text-[3.2vw]'>Les Fromages du Mont Royal</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>Chemin de Baraillan, 31210 Montrejeau</p>
+    </li>
+    <li className='w-[72%] margin-top-fourni-tel' >
+      <h1 className='font-bold text-[3.2vw]'>FROMAGERIE LAQUEUILLE</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>Gare de Laqueuille, 63820 Saint-Julien Puy-Lavèze</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>www.fromages-laqueuille.fr</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>04 73 22 18 06</p>
+    </li>
+    <li className='w-[72%] margin-top-fourni-tel' >
+      <h1 className='font-bold text-[3.2vw]'>FROMAGERIE DUROUX</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>12 Route de Chaussenac, 19220 Rilhac-Xaintrie</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>www.fromagerie-duroux.fr</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>05 55 28 27 62</p>
     </li>
   </ul>
 );

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import ComingTel from './ComingTel'
 import { Progress } from '@material-tailwind/react'
 import './Coming.css'
@@ -7,24 +7,24 @@ import gsap from 'gsap'
 const logo = require('../images/FFP/logo.png')
 
 function Loading({ progress, setProgress }: { progress: number, setProgress: any }) {
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress: number) => {
-        const newProgress = prevProgress + 2;
-        if (newProgress >= 100) {
-          clearInterval(timer);
-          return 100;
-        }
-        return newProgress;
-      });
-    }, 40);
-    return () => clearInterval(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setProgress((prevProgress: number) => {
+  //       const newProgress = prevProgress + 2;
+  //       if (newProgress >= 100) {
+  //         clearInterval(timer);
+  //         return 100;
+  //       }
+  //       return newProgress;
+  //     });
+  //   }, 40);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <div className='loadingPage fixed top-0 z-[1020] h-[100vh] w-[100vw] bg-fondue-blue flex items-center justify-center'>
       <div className='h-fit w-[80%]'>
-        <img src={logo} className='w-full mb-4' alt='logo fonduecoeur'/>
+        <img src={logo} className='w-full mb-4' alt='logo fonduecoeur' />
         <Progress
           value={progress}
           variant='filled'
@@ -65,9 +65,10 @@ function ComingLoadingTel() {
       {loadingDisplay &&
         <Loading progress={progress} setProgress={setProgress} />
       }
-      <ComingTel loadingDisplay={loadingDisplay}/>
+      <ComingTel loadingDisplay={loadingDisplay} setProgress={setProgress} />
     </div>
   )
+
 }
 
 export default ComingLoadingTel

@@ -8,16 +8,16 @@ import gsap from 'gsap'
 import { Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
-import FourniComponent, { fourni1, fourni2, fourni3, fourniTel1, fourniTel2, fourniTel3 } from './FourniComponent'
+import FourniComponent, { fourniTel1, fourniTel2, fourniTel3 } from './FourniComponent'
 
 const box = require('../images/FFP/box.png')
-const pageCahier = require('../images/FFP/pageCahierCut.png')
+// const pageCahier = require('../images/FFP/pageCahierCut.png')
 const kraft = require('../images/FFP/kraftBg.png')
 const facebook = require('../images/FFP/facebook.png')
 const insta = require('../images/FFP/insta.png')
 const ruban2 = require('../images/FFP/rubanCut.png')
 
-const bouteille = require('../images/FFP/bouteille.png')
+const bouteille = require('../images/FFP/bouteille.png') 
 const bouteilleLong = require('../images/FFP/bouteilleLong.png')
 const fleurs = require('../images/FFP/fleursGentiane.png')
 const fleursLong = require('../images/FFP/fleursLong.png')
@@ -245,18 +245,18 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
 
       <button onClick={handleOpen} className='contact pastille-size-margin-tel fixed z-40 flex items-center justify-center'>
         <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-10 sm:text-[22px] text-white'>ON SE LANCE ?</p>
-        <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} />
+        <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} alt='contact'/>
       </button>
 
       <div className='part1 flex flex-col h-[100vh]'>
 
         <div className='topbar w-full h-[100px] sm:h-[200px] flex justify-between'>
           <div className='fonduecoeur w-[40%] pl-4 my-auto sm:ml-[3vw]'>
-            <img className=' object-contain' src={require('../images/FFP/logo.png')} />
+            <img className=' object-contain' src={require('../images/FFP/logo.png')} alt='logo fonduecoeur' />
           </div>
 
           <div className='championne h-[70%] pr-4 my-auto'>
-            <img className='object-contain h-full' src={logoChampion} />
+            <img className='object-contain h-full' src={logoChampion} alt='logo fondue championne de France' />
           </div>
         </div>
 
@@ -270,7 +270,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
           <div className='photos relative h-fit w-full mx-auto my-auto'>
 
             {/* LES 3 COEURS */}
-            <img src={coeurs} className='coeursTelShort object-cover absolute z-0 top-0 left-0 opacity-0' />
+            <img src={coeurs} className='coeursTelShort object-cover absolute z-0 top-0 left-0 opacity-0' alt=''/>
 
             {/* PHOTOS FRIGOS */}
             <picture>
@@ -284,7 +284,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={bouteilleLong}
                 className='bouteille long-ratio object-cover absolute z-20 top-0 left-0 opacity-0'
               />
-              <img src={bouteille} className='bouteille object-cover absolute z-20 top-0 left-0 opacity-0' />
+              <img src={bouteille} className='bouteille object-cover absolute z-20 top-0 left-0 opacity-0' alt='bouteille de gentiane Couderc' />
             </picture>
             <picture>
               <source
@@ -297,7 +297,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={fleursLong}
                 className='fleurs long-ratio object-cover absolute top-0 left-0 opacity-0 z-10'
               />
-              <img src={fleurs} className='fleurs object-cover absolute top-0 left-0 opacity-0 z-10' />
+              <img src={fleurs} className='fleurs object-cover absolute top-0 left-0 opacity-0 z-10' alt='fleur de gentiane' />
             </picture>
             <picture>
               <source
@@ -310,7 +310,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={fromagesLong}
                 className='fromages long-ratio object-cover absolute top-0 left-0 opacity-0 z-10'
               />
-              <img src={fromages} className='fromages object-cover absolute top-0 left-0 opacity-0 z-10' />
+              <img src={fromages} className='fromages object-cover absolute top-0 left-0 opacity-0 z-10' alt="fromages AOP d'Auvergne" />
             </picture>
             <picture>
               <source
@@ -323,7 +323,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={lentillesLong}
                 className='lentilles long-ratio object-cover absolute top-0 left-0 opacity-0 z-10'
               />
-              <img src={lentilles} className='lentilles object-cover absolute top-0 left-0 opacity-0 z-10' />
+              <img src={lentilles} className='lentilles object-cover absolute top-0 left-0 opacity-0 z-10' alt='farine de lentilles blondes de Saint-Flour' />
             </picture>
             <picture>
               <source
@@ -336,7 +336,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={pastilleLong}
                 className='pastille long-ratio object-cover absolute top-0 left-0 opacity-0 z-10'
               />
-              <img src={pastille} className='pastille object-cover absolute top-0 left-0 opacity-0 z-10' />
+              <img src={pastille} className='pastille object-cover absolute top-0 left-0 opacity-0 z-10' alt='logo distillerie Couderc' />
             </picture>
 
             {/* PHRASES */}
@@ -351,7 +351,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={phraseFromagesLong}
                 className='phraseFromages long-ratio object-cover absolute top-0 left-0'
               />
-              <img src={phraseFromages} className='phraseFromages object-cover absolute top-0 left-0' />
+              <img src={phraseFromages} className='phraseFromages object-cover absolute top-0 left-0' alt="phrase les fromages AOP d'Auvergne" />
             </picture>
             <picture>
               <source
@@ -364,7 +364,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={phraseLentillesLong}
                 className='phraseLentilles long-ratio object-cover absolute top-0 left-0'
               />
-              <img src={phraseLentilles} className='phraseLentilles object-cover absolute top-0 left-0' />
+              <img src={phraseLentilles} className='phraseLentilles object-cover absolute top-0 left-0' alt='phrase la farine de lentilles blondes de la planèze' />
             </picture>
 
             {/* {Sneaky Guys} */}
@@ -380,7 +380,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={sneaky1Long}
                 className='sneaky1long long-ratio object-cover absolute top-5 left-5 opacity-0'
               />
-              <img src={sneaky1} className='sneaky1 object-cover absolute top-0 left-0 opacity-0' />
+              <img src={sneaky1} className='sneaky1 object-cover absolute top-0 left-0 opacity-0' alt='' />
             </picture>
 
             <picture>
@@ -394,7 +394,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={sneaky2Long}
                 className='sneaky2long long-ratio object-cover absolute top-0 left-0 opacity-0'
               />
-              <img src={sneaky2} className='sneaky2 object-cover absolute top-0 left-0 opacity-0' />
+              <img src={sneaky2} className='sneaky2 object-cover absolute top-0 left-0 opacity-0' alt='' />
             </picture>
 
             <picture>
@@ -408,7 +408,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={sneaky3Long}
                 className='sneaky3long long-ratio object-cover absolute top-0 left-0 opacity-0'
               />
-              <img src={sneaky3} className='sneaky3 object-cover absolute top-0 left-0 opacity-0' />
+              <img src={sneaky3} className='sneaky3 object-cover absolute top-0 left-0 opacity-0' alt='' />
             </picture>
 
             {/* phraseFleurs is the only one without absolutness */}
@@ -423,7 +423,7 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
                 srcSet={phraseFleursLong}
                 className='phraseFleurs long-ratio object-cover'
               />
-              <img src={phraseFleurs} className='phraseFleurs object-cover' />
+              <img src={phraseFleurs} className='phraseFleurs object-cover' alt="phrase la gentiane couderc au thé d'Aubrac" />
             </picture>
           </div>
         </div>
@@ -432,11 +432,11 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
 
 
       <div className='page3 relative h-[60vh] w-[full] flex flex-col-reverse bg-yellow-800'>
-        <img src={kraft} className='h-full w-full object-cover absolute' />
+        <img src={kraft} className='h-full w-full object-cover absolute' alt=''/>
         <div style={{ pointerEvents: 'none' }} className='ruban absolute flex flex-row z-30 h-[50%] w-[50%] top-0 left-0'>
-          <img src={ruban2} className='object-cover h-full' />
+          <img src={ruban2} className='object-cover h-full' alt=''/>
           <div className='box h-32 mt-[40%] sm:mt-[20%] grow sm:grow-0 sm:w-[75%]'>
-            <img src={box} className='object-cover w-full' />
+            <img src={box} className='object-cover w-full' alt='boite fonduecoeur' />
           </div>
         </div>
 
@@ -448,14 +448,14 @@ const ComingTel = ({ loadingDisplay }: { loadingDisplay: boolean }) => {
           </div>
           <div className='w-full relative h-[60%] flex'>
             <div className='guyHP relative bottom-0 left-0 w-full h-full'>
-              <img className='absolute w-full h-full object-contain' src={require('../images/FFP/guy-hp.png')} />
+              <img className='absolute w-full h-full object-contain' src={require('../images/FFP/guy-hp.png')} alt='' />
             </div>
             <div className='reseaux absolute bottom-2 -right-2 flex flex-col justify-between'>
-              <a className='facebook w-[9vw]' href="https://www.facebook.com/fonduecoeur" target='_blank'>
-                <img src={facebook} />
+              <a className='facebook w-[9vw]' href="https://www.facebook.com/fonduecoeur" target='_blank' rel="noopener noreferrer">
+                <img src={facebook} alt='logo Facebook' />
               </a>
-              <a className='instagram w-[9vw] mt-2' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank'>
-                <img src={insta} />
+              <a className='instagram w-[9vw] mt-2' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank' rel="noopener noreferrer">
+                <img src={insta} alt='logo Instagram' />
               </a>
             </div>
           </div>

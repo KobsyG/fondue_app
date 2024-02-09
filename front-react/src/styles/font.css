@@ -40,10 +40,10 @@
     src: url("../fonts/Allora.ttf") format('truetype');
 }
 
-@font-face {
+/* @font-face {
     font-family: '';
     src: url('') format('');
-}
+} */
 
 @font-face {
     font-family: 'OpenSansRegular';
@@ -55,7 +55,7 @@
     src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
 }
 
-@font-face {
+/* @font-face {
     font-family: '';
     src: url('') format('');
 }
@@ -63,4 +63,4 @@
 @font-face {
     font-family: '';
     src: url('') format('');
-}
+} */

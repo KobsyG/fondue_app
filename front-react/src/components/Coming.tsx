@@ -14,7 +14,7 @@ const box = require('../images/FFP/box.png')
 const facebook = require('../images/FFP/facebook.png')
 const insta = require('../images/FFP/insta.png')
 const ruban2 = require('../images/FFP/rubanCut.png')
-const pageCahier = require('../images/FFP/pageCahierCut.png')
+// const pageCahier = require('../images/FFP/pageCahierCut.png')
 const kraft = require('../images/FFP/kraftBg.png')
 
 const bouteille = require('../images/FFP/bouteille.png')
@@ -22,9 +22,9 @@ const fleurs = require('../images/FFP/fleursGentiane.png')
 const fromages = require('../images/FFP/fromages.png')
 const lentilles = require('../images/FFP/lentilles.png')
 const pastille = require('../images/FFP/pastilleCouderc.png')
-const coeur1 = require('../images/FFP/coeur1.png')
-const coeur2 = require('../images/FFP/coeur2.png')
-const coeur3 = require('../images/FFP/coeur3.png')
+// const coeur1 = require('../images/FFP/coeur1.png')
+// const coeur2 = require('../images/FFP/coeur2.png')
+// const coeur3 = require('../images/FFP/coeur3.png')
 const coeurs = require('../images/FFP/coeur-tel.png')
 const phraseFromage = require('../images/FFP/phraseFromage.png')
 const phraseGentiane = require('../images/FFP/phraseGentiane.png')
@@ -38,7 +38,7 @@ const diapo1 = require('../images/FFP/diapo/cheese-fondue.jpeg')
 const diapo2 = require('../images/FFP/diapo/Cantal.jpg')
 const diapo3 = require('../images/FFP/diapo/Fourme.jpg')
 const diapo4 = require('../images/FFP/diapo/bread.jpg')
-const diapo5 = require('../images/FFP/diapo/cheese-kitchen.jpg')
+// const diapo5 = require('../images/FFP/diapo/cheese-kitchen.jpg')
 const diapo6 = require('../images/FFP/diapo/gentiane.jpg')
 
 const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: boolean }) => {
@@ -257,12 +257,12 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
     <div ref={comingContainer} className='coming absolute top-0 left-0 h-[100vh] w-[100vw] bg-[#1B133B] flex flex-col overflow-hidden'>
 
       <div className='sneakyGiant h-full w-full absolute z-[100] left-[100vw]'>
-        <img src={sneakyMan} className='h-full absolute top-0 left-0 transform scale-x-[-1] object-cover' />
+        <img src={sneakyMan} className='h-full absolute top-0 left-0 transform scale-x-[-1] object-cover' alt='' />
       </div>
 
       <div className='topbar w-full h-[20%] flex'>
         <div className='fonduecoeur h-[60%] min-w-[408px] ml-[60px] my-auto'>
-          <img className='h-full object-contain' src={logoFondue} />
+          <img className='h-full object-contain' src={logoFondue} alt='logo fonduecoeur' />
         </div>
 
         <div style={{ fontFamily: 'OpenSansBold' }} className='devenez h-full flex-col justify-center items-left hidden xl:flex 1536:ml-[5%] text-[18px] 1600:text-[23px] 1800:text-[25px]'>
@@ -275,7 +275,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         </div>
 
         <div className='fonduecoeur h-[60%] ml-auto my-auto mr-[60px]'>
-          <img className='h-full object-contain' src={logoChampion} />
+          <img className='h-full object-contain' src={logoChampion} alt='logo fondue championne de France' />
         </div>
       </div>
 
@@ -295,22 +295,22 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
               <p style={{ letterSpacing: '2px', writingMode: 'vertical-lr', fontFamily: 'OccamsEraser' }} className='phare ml-[1vw] text-[3vw] pcJB:text-[2.5vw] whitespace-nowrap -rotate-180'>100% AUVERGNE</p>
             </div>
             <div className='photos relative w-[100%]'>
-              <img src={bouteille} className='bouteille absolute z-40 top-0 left-0  w-full object-cover opacity-0' />
-              <img src={fleurs} className='fleurs absolute top-0 left-0 w-full object-cover z-10 opacity-0' />
-              <img src={fromages} className='fromages absolute top-0 left-0 w-full object-cover z-10 opacity-0' />
-              <img src={lentilles} className='lentilles absolute top-0 left-0 w-full object-cover z-10 opacity-0' />
-              <img src={pastille} className='pastille absolute top-0 left-0 w-full object-cover z-10 opacity-0' />
-              <img src={coeurs} className='coeurs absolute top-0 left-0 w-full object-cover opacity-0' />
+              <img src={bouteille} className='bouteille absolute z-40 top-0 left-0  w-full object-cover opacity-0' alt='bouteille de gentiane Couderc' />
+              <img src={fleurs} className='fleurs absolute top-0 left-0 w-full object-cover z-10 opacity-0' alt='fleur de gentiane' />
+              <img src={fromages} className='fromages absolute top-0 left-0 w-full object-cover z-10 opacity-0' alt="fromages AOP d'Auvergne" />
+              <img src={lentilles} className='lentilles absolute top-0 left-0 w-full object-cover z-10 opacity-0' alt='farine de lentilles blondes de Saint-Flour' />
+              <img src={pastille} className='pastille absolute top-0 left-0 w-full object-cover z-10 opacity-0' alt='logo distillerie Couderc' />
+              <img src={coeurs} className='coeurs absolute top-0 left-0 w-full object-cover opacity-0' alt='3 coeurs' />
               {/* <img src={coeur1} className='absolute top-0 left-0 w-full object-cover' /> */}
               {/* <img src={coeur2} className='absolute top-0 left-0 w-full object-cover' /> */}
               {/* <img src={coeur3} className='absolute top-0 left-0 w-full object-cover' /> */}
-              <img src={phraseFromage} className='absolute top-0 left-0 w-full object-cover' />
+              <img src={phraseFromage} className='absolute top-0 left-0 w-full object-cover' alt="phrase les fromages AOP d'Auvergne" />
               {/* phraseGentiane is the only one without absolutness */}
-              <img src={phraseGentiane} className='w-full object-cover' />
-              <img src={phraseLentille} className='absolute top-0 left-0 w-full object-cover' />
-              <img src={sneaky1} className='absolute sneaky1 top-0 left-0 opacity-0' />
-              <img src={sneaky2} className='absolute sneaky2 top-0 left-0 opacity-0' />
-              <img src={sneaky3} className='absolute sneaky3 top-0 left-0 opacity-0' />
+              <img src={phraseGentiane} className='w-full object-cover' alt="phrase la gentiane couderc au thé d'Aubrac" />
+              <img src={phraseLentille} className='absolute top-0 left-0 w-full object-cover' alt='phrase la farine de lentilles blondes de la planèze'/>
+              <img src={sneaky1} className='absolute sneaky1 top-0 left-0 opacity-0' alt=''/>
+              <img src={sneaky2} className='absolute sneaky2 top-0 left-0 opacity-0' alt=''/>
+              <img src={sneaky3} className='absolute sneaky3 top-0 left-0 opacity-0' alt=''/>
 
             </div>
           </div>
@@ -326,27 +326,27 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           >
             <img
               src={diapo6}
-              alt="image 6"
+              alt="fleur de gentiane"
               className="h-full absolute object-cover object-[20%]"
             />
             <img
               src={diapo1}
-              alt="image 1"
+              alt="fromage fondue coulant"
               className="h-full absolute object-cover object-[80%]"
             />
             <img
               src={diapo2}
-              alt="image 2"
+              alt="fromage cantal"
               className="h-full absolute object-cover"
             />
             <img
               src={diapo3}
-              alt="image 3"
+              alt="fromage fourme d'Auvergne"
               className="h-full absolute object-cover"
             />
             <img
               src={diapo4}
-              alt="image 4"
+              alt="pain"
               className="h-full absolute object-cover"
             />
           </Carousel>
@@ -354,23 +354,23 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
         <div className='page3 relative h-full w-[35vw] macBeco:w-[40vw] min-w-[600px] macBeco:min-w-[750px] bg-yellow-800'>
 
-          <img src={kraft} className='h-full w-full object-cover absolute' />
+          <img src={kraft} className='h-full w-full object-cover absolute' alt='' />
 
           <div className='absolute bottom-0 z-10 flex flex-col-reverse'>
             <div className='flex items-end'>
               <button onClick={handleEaster} className='guyHP relative h-[20vh] aspect-square mb-5 ml-2'>
-                <img className='absolute bottom-0' src={require('../images/FFP/guy-hp.png')} />
+                <img className='absolute bottom-0' src={require('../images/FFP/guy-hp.png')} alt=''/>
               </button>
               <div className='reseaux h-[60px] w-[110px] macBeco:w-[125px] flex justify-between mb-5 macBeco:mb-10'>
-                <a className='facebook w-[50px] macBeco:w-[60px]' href="https://www.facebook.com/fonduecoeur" target='_blank'>
+                <a className='facebook w-[50px] macBeco:w-[60px]' href="https://www.facebook.com/fonduecoeur" target='_blank' rel="noopener noreferrer">
                   <button>
-                    <img src={facebook} className='hover:scale-125 transform transition-transform duration-300' />
+                    <img src={facebook} className='hover:scale-125 transform transition-transform duration-300' alt='logo Facebook'/>
                   </button>
                 </a>
 
-                <a className='instagram w-[50px] macBeco:w-[60px]' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank'>
+                <a className='instagram w-[50px] macBeco:w-[60px]' href="https://instagram.com/fondue_coeur?igshid=OGQ5ZDc2ODk2ZA==" target='_blank' rel="noopener noreferrer">
                   <button>
-                    <img src={insta} className='hover:scale-125 transform transition-transform duration-300' />
+                    <img src={insta} className='hover:scale-125 transform transition-transform duration-300' alt='logo Instagram'/>
                   </button>
                 </a>
               </div>
@@ -381,13 +381,13 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             </button>
 
             <div className='h-[150px] relative overflow-hidden'>
-              <img src={sneakyMan} className='sneaky4 object-cover absolute h-full left-[8px] 1366:left-[15px] 1536:left-[20px] opacity-0' />
+              <img src={sneakyMan} className='sneaky4 object-cover absolute h-full left-[8px] 1366:left-[15px] 1536:left-[20px] opacity-0' alt='' />
             </div>
 
           </div>
 
           <div className='ruban absolute top-0  h-[75%] w-[56px] 1366:w-[70px] -left-[28px] 1366:-left-[35px] 1536:w-[80px] 1536:-left-[40px] overflow-hidden flex flex-col-reverse z-10'>
-            <img className='object-cover w-full' src={ruban2} />
+            <img className='object-cover w-full' src={ruban2} alt=''/>
             <div className='bg-fondue-red w-full h-[100vh]' />
           </div>
 
@@ -401,15 +401,15 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
           <button onClick={handleOpen} className='contact group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>
             <p style={{ fontFamily: 'AvocadoCake' }} className='absolute w-[80px] z-10 text-[20px] text-white'>ON SE LANCE ?</p>
-            <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} />
+            <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} alt='contact' />
           </button>
 
           <div className='smallbox hidden fromJB:block w-[15vw] mt-44 ml-20 -rotate-[17deg] '>
-            <img src={box} />
+            <img src={box} alt='boite fonduecoeur'/>
           </div>
 
           <div style={{ pointerEvents: 'none' }} className='box absolute w-[25vw] -top-[10vw] left-[3vw] 1281:left-0 1920:-left-[3vw] z-10'>
-            <img className='object-cover' src={box} />
+            <img className='object-cover' src={box} alt='boite fonduecoeur'/>
           </div>
         </div>
 

@@ -24,7 +24,7 @@ function Loading({ progress, setProgress }: { progress: number, setProgress: any
   return (
     <div className='loadingPage fixed top-0 z-[1020] h-[100vh] w-[100vw] bg-fondue-blue flex items-center justify-center'>
       <div className='h-fit w-[80%]'>
-        <img src={logo} className='w-full mb-4' />
+        <img src={logo} className='w-full mb-4' alt='logo fonduecoeur'/>
         <Progress
           value={progress}
           variant='filled'

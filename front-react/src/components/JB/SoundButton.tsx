@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import '../../styles/soundButton.css';
 import useMousePosition from './useMousePosition';
 import { motion } from 'framer-motion';
@@ -7,12 +7,12 @@ function SoundButton({ audioswitch, handleAudio }: { audioswitch: boolean, handl
 
   const { x, y } = useMousePosition();
 
-  const variants = {
-    default: {
-      x: x - 20,
-      y: y - 20,
-    }
-  }
+  // const variants = {
+  //   default: {
+  //     x: x - 20,
+  //     y: y - 20,
+  //   }
+  // }
 
   return (
     <motion.div

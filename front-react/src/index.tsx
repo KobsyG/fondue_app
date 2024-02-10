@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import { ToastContainer } from 'react-toastify';
 import { ThemeProvider } from "@material-tailwind/react";
 
 import './index.css';
 import './styles/font.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
-import Histoire from './components/Histoire';
-import Contact from './components/Contact';
-import Terroir from './components/Kobe/Actuel/Terroir';
-import Waiting from './components/Waiting';
-import Mono from './components/Mono';
-import Coming from './components/Coming';
+// import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
+// import Histoire from './components/Histoire';
+// import Contact from './components/Contact';
+// import Terroir from './components/Kobe/Actuel/Terroir';
+// import Waiting from './components/Waiting';
+// import Mono from './components/Mono';
+// import Coming from './components/Coming';
 
 const router = createBrowserRouter([
   {

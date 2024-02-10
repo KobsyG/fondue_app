@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { ReactLenis } from '@studio-freight/react-lenis';
 import './App.css';
-import Histoire from './components/Histoire';
-import Terroir from './components/Kobe/Actuel/Terroir';
+// import Histoire from './components/Histoire';
+// import Terroir from './components/Kobe/Actuel/Terroir';
 import Coming from './components/Coming';
 import IntroVideo from './components/JB/IntroVideo.js';
 import useWidth from './components/JB/useWidth';
@@ -21,7 +21,7 @@ function App() {
     <ReactLenis root>
       {width >= 1080 &&
         <>
-          <Coming videoEnd={videoEnd} videoDisplay={videoDisplay}/>
+          <Coming videoEnd={videoEnd} videoDisplay={videoDisplay} />
           <IntroVideo videoEnd={videoEnd} setVideoEnd={setVideoEnd} videoDisplay={videoDisplay} setVideoDisplay={setVideoDisplay} />
         </>
       }

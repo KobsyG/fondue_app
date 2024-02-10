@@ -399,10 +399,10 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             <FourniComponent fourniList={[fourni1, fourni2, fourni3, fourni4]} />
           </div>
 
-          <a className='w-[50px] macBeco:w-[60px]' href="https://www.morin-fromager.fr/produit/box-fondue-coeur/" target='_blank'>
+          <a className='w-[50px] macBeco:w-[60px]' href="https://www.morin-fromager.fr/produit/box-fondue-coeur/" target='_blank' rel="noopener noreferrer">
             <button onClick={handleOpen} className='contact group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>
               <p style={{ fontFamily: 'AvocadoCake' }} className='absolute w-[80px] z-10 text-[20px] text-white'>ON SE LANCE ?</p>
-              <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} />
+              <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} alt='' />
             </button>
           </a>
 

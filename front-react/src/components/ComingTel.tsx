@@ -245,10 +245,10 @@ const ComingTel = ({ loadingDisplay, setProgress }: { loadingDisplay: boolean, s
   return (
     <div ref={comingTelContainer} className='comingTelContainer relative w-[100vw] bg-[#1B133B] overflow-hidden'>
 
-      <a className='w-[50px] macBeco:w-[60px]' href="https://www.morin-fromager.fr/produit/box-fondue-coeur/" target='_blank'>
+      <a className='w-[50px] macBeco:w-[60px]' href="https://www.morin-fromager.fr/produit/box-fondue-coeur/" target='_blank' rel="noopener noreferrer">
         <button onClick={handleOpen} className='contact pastille-size-margin-tel fixed z-40 flex items-center justify-center'>
           <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-10 sm:text-[22px] text-white'>ON SE LANCE ?</p>
-          <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} onLoad={() => setProgress(progress => progress + ProgressAvanced)} />
+          <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} alt='' onLoad={() => setProgress(progress => progress + ProgressAvanced)} />
         </button>
       </a>
 

@@ -262,7 +262,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
 
       <div className='topbar w-full h-[20%] flex'>
         <div className='fonduecoeur h-[60%] min-w-[408px] ml-[60px] my-auto'>
-          <img className='h-full object-contain' src={logoFondue} alt='logo fonduecoeur' />
+          <img className='h-full object-contain' src={logoFondue} alt='logo fondue coeur' />
         </div>
 
         <div style={{ fontFamily: 'OpenSansBold' }} className='devenez h-full flex-col justify-center items-left hidden xl:flex 1536:ml-[5%] text-[18px] 1600:text-[23px] 1800:text-[25px]'>
@@ -407,11 +407,11 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           </a>
 
           <div className='smallbox hidden fromJB:block w-[15vw] mt-44 ml-20 -rotate-[17deg] '>
-            <img src={box} alt='boite fonduecoeur'/>
+            <img src={box} alt='boite fondue coeur'/>
           </div>
 
           <div style={{ pointerEvents: 'none' }} className='box absolute w-[25vw] -top-[10vw] left-[3vw] 1281:left-0 1920:-left-[3vw] z-10'>
-            <img className='object-cover' src={box} alt='boite fonduecoeur'/>
+            <img className='object-cover' src={box} alt='boite fondue coeur'/>
           </div>
         </div>
 

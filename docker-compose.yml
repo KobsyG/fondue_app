@@ -7,5 +7,12 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./front-react/public:/usr/src/app/react/public
-      - ./front-react/src:/usr/src/app/react/src
+      - ./front-react/:/usr/src/app/react/
+
+  back:
+    build:
+      context: ./back
+    ports:
+      -"4000:4000"
+    volumes:
+      -./back/:/usr/src/app/back/

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.51fe9ac3.css",
-    "main.js": "/static/js/main.f0b64032.js",
+    "main.css": "/static/css/main.622e6f51.css",
+    "main.js": "/static/js/main.2cb294b5.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/PcCraft.png": "/static/media/PcCraft.525639afdedda423d8a5.png",
     "static/media/kraftBg.png": "/static/media/kraftBg.b6682c8deb622402663e.png",
@@ -55,14 +55,15 @@
     "static/media/phraseFromage.png": "/static/media/phraseFromage.2ea6135ff35ba1f1e59d.png",
     "static/media/contact-rouge.svg": "/static/media/contact-rouge.cbba06a655734e41559bd8a3a10ad41a.svg",
     "static/media/phraseFromage-tel.png": "/static/media/phraseFromage-tel.de1d89230567b981e94c.png",
+    "static/media/enveloppe2.png": "/static/media/enveloppe2.6508273e260146d3ba68.png",
     "static/media/leftArrow.svg": "/static/media/leftArrow.e7c64f2a31396cf1a1d0c0a3919e3388.svg",
     "index.html": "/index.html",
-    "main.51fe9ac3.css.map": "/static/css/main.51fe9ac3.css.map",
-    "main.f0b64032.js.map": "/static/js/main.f0b64032.js.map",
+    "main.622e6f51.css.map": "/static/css/main.622e6f51.css.map",
+    "main.2cb294b5.js.map": "/static/js/main.2cb294b5.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51fe9ac3.css",
-    "static/js/main.f0b64032.js"
+    "static/css/main.622e6f51.css",
+    "static/js/main.2cb294b5.js"
   ]
 }

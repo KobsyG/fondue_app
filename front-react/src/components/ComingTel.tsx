@@ -9,6 +9,7 @@ import { Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
 import FourniComponent, { fourniTel1, fourniTel2, fourniTel3, fourniTel4 } from './FourniComponent'
+import Command from './Command'
 
 const box = require('../images/FFP/box.png')
 // const pageCahier = require('../images/FFP/pageCahierCut.png')
@@ -50,9 +51,11 @@ const ProgressAvanced = 100 / 20
 const ComingTel = ({ loadingDisplay, setProgress }: { loadingDisplay: boolean, setProgress: React.Dispatch<React.SetStateAction<number>> }) => {
 
   const [openContact, setOpenContact] = useState(false);
+  const [openCommand, setOpenCommand] = useState(false);
   const comingTelContainer = useRef(null);
 
-  const handleOpen = () => setOpenContact(!openContact);
+  const handleOpenContact = () => setOpenContact(!openContact);
+  const handleOpenCommand = () => setOpenCommand(!openCommand);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -245,12 +248,12 @@ const ComingTel = ({ loadingDisplay, setProgress }: { loadingDisplay: boolean, s
   return (
     <div ref={comingTelContainer} className='comingTelContainer relative w-[100vw] bg-[#1B133B] overflow-hidden'>
 
-      <a className='w-[50px] macBeco:w-[60px]' href="https://www.morin-fromager.fr/produit/box-fondue-coeur/" target='_blank' rel="noopener noreferrer">
-        <button onClick={handleOpen} className='contact pastille-size-margin-tel fixed z-40 flex items-center justify-center'>
+      {/* <a className='w-[50px] macBeco:w-[60px]'> */}
+        <button onClick={handleOpenCommand} className='contact pastille-size-margin-tel fixed z-40 flex items-center justify-center'>
           <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-10 sm:text-[22px] text-white'>ON SE LANCE ?</p>
           <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} alt='' onLoad={() => setProgress(progress => progress + ProgressAvanced)} />
         </button>
-      </a>
+      {/* </a> */}
 
       <div className='part1 flex flex-col h-[100vh]'>
 
@@ -446,7 +449,7 @@ const ComingTel = ({ loadingDisplay, setProgress }: { loadingDisplay: boolean, s
 
         <div className='flex flex-col relative bottom-0 left-0 w-[45%] h-[50%] pb-3'>
           <div className='w-full h-[30%] flex items-center pl-3'>
-            <button onClick={handleOpen} className='h-fit w-fit'>
+            <button onClick={handleOpenContact} className='h-fit w-fit'>
               <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[20px] sm:text-[35px] sm:text-left sm:ml-6 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
             </button>
           </div>
@@ -473,7 +476,24 @@ const ComingTel = ({ loadingDisplay, setProgress }: { loadingDisplay: boolean, s
         </div>
       </div>
 
-      <Dialog open={openContact} size='md' handler={handleOpen} className='flex items-center shadow-none justify-center bg-transparent'>
+      <Dialog open={openCommand} size='sm' handler={handleOpenCommand} className='flex items-center justify-center shadow-none bg-transparent rounded-[20px]'>
+          <ToastContainer
+            position="top-center"
+            autoClose={2000}
+            limit={3}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover={false}
+            theme="light"
+          />
+          <Command setOpenCommand={setOpenCommand} setOpenContact={setOpenContact}/>
+        </Dialog>
+
+      <Dialog open={openContact} size='md' handler={handleOpenContact} className='flex items-center shadow-none justify-center bg-transparent'>
         <ToastContainer
           position="top-center"
           autoClose={2000}

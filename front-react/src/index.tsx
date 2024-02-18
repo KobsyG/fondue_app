@@ -8,6 +8,7 @@ import './index.css';
 import './styles/font.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Commandez from './components/Command';
 // import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
 // import Histoire from './components/Histoire';
 // import Contact from './components/Contact';

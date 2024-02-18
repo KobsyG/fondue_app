@@ -9,6 +9,7 @@ import { Carousel, Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
 import FourniComponent, { fourni1, fourni2, fourni3, fourni4 } from './FourniComponent';
+import Command from './Command';
 
 const box = require('../images/FFP/box.png')
 const facebook = require('../images/FFP/facebook.png')
@@ -44,7 +45,9 @@ const diapo6 = require('../images/FFP/diapo/gentiane.jpg')
 const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: boolean }) => {
 
   const [openContact, setOpenContact] = useState(false);
-  const handleOpen = () => setOpenContact(!openContact);
+  const [openCommand, setOpenCommand] = useState(false);
+  const handleOpenContact = () => setOpenContact(!openContact);
+  const handleOpenCommand = () => setOpenCommand(!openCommand);
   const comingContainer = useRef(null);
 
   useLayoutEffect(() => {
@@ -376,7 +379,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
               </div>
             </div>
             <p style={{ fontFamily: 'OpenSansBold' }} className='text-left text-[13px] macBeco:text-[15px] w-fit px-1 ml-16 mb-5 macBeco:mb-3 text-white bg-fondue-blue'>CONTACT@FONDUECOEUR.FR</p>
-            <button onClick={handleOpen}>
+            <button onClick={handleOpenContact}>
               <h2 style={{ fontFamily: 'AvocadoCake' }} className='text-[25px] text-left macBeco:text-[27px] ml-16 mb-5 macBeco:mb-3 text-fondue-red'>ON RESTE <br /> EN CONTACT ?</h2>
             </button>
 
@@ -399,12 +402,12 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
             <FourniComponent fourniList={[fourni1, fourni2, fourni3, fourni4]} />
           </div>
 
-          <a className='w-[50px] macBeco:w-[60px]' href="https://www.morin-fromager.fr/produit/box-fondue-coeur/" target='_blank' rel="noopener noreferrer">
-            <button onClick={handleOpen} className='contact group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>
+          {/* <a className='w-[50px] macBeco:w-[60px]'> */}
+            <button onClick={handleOpenCommand} className='contact group absolute z-[101] h-[120px] w-[120px] bottom-5 right-5 flex items-center justify-center text-center'>
               <p style={{ fontFamily: 'AvocadoCake' }} className='absolute w-[80px] z-10 text-[20px] text-white'>ON SE LANCE ?</p>
               <img className='relative pastille-contact h-full lg:group-hover:rotate-45 lg:group-hover:scale-[1.25] transition-transform duration-500' src={contactRouge} alt='' />
             </button>
-          </a>
+          {/* </a> */}
 
           <div className='smallbox hidden fromJB:block w-[15vw] mt-44 ml-20 -rotate-[17deg] '>
             <img src={box} alt='boite fondue coeur'/>
@@ -415,8 +418,25 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           </div>
         </div>
 
+        <Dialog open={openCommand} size='sm' handler={handleOpenCommand} className='flex items-center justify-center shadow-none bg-transparent rounded-[20px]'>
+          <ToastContainer
+            position="top-center"
+            autoClose={2000}
+            limit={3}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover={false}
+            theme="light"
+          />
+          <Command setOpenCommand={setOpenCommand} setOpenContact={setOpenContact}/>
+        </Dialog>
 
-        <Dialog open={openContact} size='sm' handler={handleOpen} className='flex items-center justify-center shadow-none bg-transparent rounded-[20px]'>
+
+        <Dialog open={openContact} size='sm' handler={handleOpenContact} className='flex items-center justify-center shadow-none bg-transparent rounded-[20px]'>
           <ToastContainer
             position="top-center"
             autoClose={2000}

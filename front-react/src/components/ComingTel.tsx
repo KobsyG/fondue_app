@@ -477,19 +477,6 @@ const ComingTel = ({ loadingDisplay, setProgress }: { loadingDisplay: boolean, s
       </div>
 
       <Dialog open={openCommand} size='sm' handler={handleOpenCommand} className='flex items-center justify-center shadow-none bg-transparent rounded-[20px]'>
-          <ToastContainer
-            position="top-center"
-            autoClose={2000}
-            limit={3}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover={false}
-            theme="light"
-          />
           <Command setOpenCommand={setOpenCommand} setOpenContact={setOpenContact}/>
         </Dialog>
 

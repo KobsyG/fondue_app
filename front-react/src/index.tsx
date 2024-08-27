@@ -9,6 +9,13 @@ import './styles/font.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Commandez from './components/Command';
+import FirstPart from './components/Kobe/FirstPart/FirstPart';
+import SecondPart from './components/Kobe/SecondPart/SecondPart';
+import Histoire from './components/Histoire';
+import Terroir from './components/Kobe/Actuel/Terroir';
+import Mono from './components/Mono';
+import NavDemo from './components/Kobe/Demo/NavDemo';
+import Waiting from './components/Waiting';
 // import TerroirWIP from './components/Kobe/Actuel/TerroirWIP';
 // import Histoire from './components/Histoire';
 // import Contact from './components/Contact';
@@ -20,16 +27,20 @@ import Commandez from './components/Command';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <> <FirstPart /> <SecondPart /> </> 
   },
-  // {
-    // path: "mono",
-    // element: <Mono />,
-  // },
-  // {
-  //   path: "histoire",
-  //   element: <Histoire />,
-  // },
+  {
+    path: "/second",
+    element: <> <Histoire /> <Terroir /> </>
+  },
+  {
+    path: "mono",
+    element: <Mono />,
+  },
+  {
+    path: "waiting",
+    element: <Waiting />,
+  },
   // {
   //   path: "terroir",
   //   element: <Terroir />,
@@ -38,10 +49,10 @@ const router = createBrowserRouter([
   //   path: "all",
   //   element: <App />,
   // },
-  {
-    path: "*",
-    element: <App />,
-  },
+  // {
+  //   path: "*",
+  //   element: <App />,
+  // },
 ]);
 
 const root = ReactDOM.createRoot(
@@ -50,6 +61,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider>
+      <NavDemo />
       <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>

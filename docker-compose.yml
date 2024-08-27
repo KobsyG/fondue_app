@@ -9,10 +9,10 @@ services:
     volumes:
       - ./front-react/:/usr/src/app/react/
 
-  back:
-    build:
-      context: ./back
-    ports:
-      -"4000:4000"
-    volumes:
-      -./back/:/usr/src/app/back/
+  # back:
+  #   build:
+  #     context: ./back
+  #   ports:
+  #     -"4000:4000"
+  #   volumes:
+  #     -./back/:/usr/src/app/back/

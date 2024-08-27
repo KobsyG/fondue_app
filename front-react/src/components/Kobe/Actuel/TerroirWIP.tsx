@@ -3,12 +3,12 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { AudioContext } from '../../JB/AudioComponent';
 
-const hautmontagne = require("../../../images/haut-mont.png");
-const basmontagne = require("../../../images/bas-mont.png");
-const couleeTel = require("../../../images/coulee-telephone.png")
-const couleePc = require("../../../images/coulee-ordi.png")
-const gentiane1 = require("../../../images/gentiane1.png")
-const gentiane2 = require("../../../images/gentiane2.png")
+const hautmontagne = require("../../../images/Kobe/haut-mont.png");
+const basmontagne = require("../../../images/Kobe/bas-mont.png");
+const couleeTel = require("../../../images/histoire/coulee-telephone.png")
+const couleePc = require("../../../images/histoire/coulee-ordi.png")
+// const gentiane1 = require("../../../images/gentiane1.png")
+// const gentiane2 = require("../../../images/gentiane2.png")
 // const sound1 = require("../../../images/testSounce.mp3")
 
 const TerroirWIP = () => {
@@ -365,7 +365,7 @@ const TerroirWIP = () => {
         {/* <div className='fleur h-[20%] object-cover ml-[20%]'>
             <img src={gentiane1} className='w-full h-full' />
           </div> */}
-        {/* 
+        
         <div className='montagne h-[400vh] w-[100vw]'>
           <div className='haut-montagne'>
             <picture>
@@ -383,7 +383,7 @@ const TerroirWIP = () => {
 
           <div className='sticky top-0 kraft-montagne h-[100vh] w-full'>
             <div className='table absolute h-96 w-96 top-52 left-40'>
-              <img src={require("../../../images/table.jpeg")} />
+              {/* <img src={require("../../../images/table.jpeg")} /> */}
             </div>
 
             <picture className='w-full object-cover'>
@@ -399,7 +399,7 @@ const TerroirWIP = () => {
             </picture>
           </div>
         </div>
-    */}
+   
 
 
       </div >

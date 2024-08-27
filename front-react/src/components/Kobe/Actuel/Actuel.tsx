@@ -4,15 +4,15 @@ import { gsap } from 'gsap'
 import './Actuel.css'
 const hautmontagne = require("../../../images/Kobe/haut-mont.png");
 const basmontagne = require("../../../images/Kobe/bas-mont.png");
-const montcoul = require("../../../images/Kobe/mont-coul.png");
-const compere = require("../../../images/Kobe/comper.png")
-const text = require("../../../images/Kobe/text.png")
+// const montcoul = require("../../../images/Kobe/mont-coul.png");
+const compere = require("../../../images/histoire/comper.png")
+// const text = require("../../../images/Kobe/text.png")
 const couleeTel = require("../../../images/Kobe/coulee-telephone.png")
 const couleePc = require("../../../images/Kobe/coulee-ordi.png")
-const logo = require("../../../images/logo-bleu.png")
+const logo = require("../../../images/waiting/logo-bleu.png")
 
-const montagnePC = require("../../../images/Kobe/Montagne CP.png")
-const montagne16 = require("../../../images/Kobe/Montagne 16 cm.png")
+// const montagnePC = require("../../../images/Kobe/Montagne CP.png")
+// const montagne16 = require("../../../images/Kobe/Montagne 16 cm.png")
 
 const title = "Il était une fois deux amis, partis bras dessus bras dessous pour conquérir un titre aussi inattendu que réjouissant..."
 const histoireFirst = "C'est ainsi que le 13 mars 2022, à Montréjeau, Alban et Jean-Jacques remportent le premier titre de Champion de France de Fondue aux Fromages devant 20 autres équipes candidates au titre. Ils innovent en proposant une recette à base des 5 AOP du Cantal ! Et quelques ingrédients secrets qui vont vous être dévoilés..."

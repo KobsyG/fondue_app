@@ -48,7 +48,7 @@ function FourniComponent({ fourniList }: { fourniList: JSX.Element[] }) {
       ctx.revert();
     };
 
-  }, [currentSlide]);
+  }, [currentSlide, fourniList]);
 
   return (
     <div ref={fourniContainer}>

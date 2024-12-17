@@ -27,7 +27,7 @@ function IntroVideo({videoEnd, setVideoEnd, videoDisplay, setVideoDisplay}) {
       ctx.revert();
     };
 
-  }, [videoDisplay]);
+  }, [videoDisplay, setVideoEnd]);
 
 
   const handleAudio = () => {

@@ -8,7 +8,7 @@ import logoFondue from '../images/FFP/logo.png'
 import { Carousel, Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
-import FourniComponent, { fourni1, fourni2, fourni3, fourni4 } from './FourniComponent';
+import FourniComponent, { fourni1, fourni2, fourni3 } from './FourniComponent';
 import Command from './Command';
 
 const box = require('../images/FFP/box.png')
@@ -399,7 +399,7 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
           // onMouseEnter={() => setCanSlide(false)}
           // onMouseLeave={() => setCanSlide(true)}
           >
-            <FourniComponent fourniList={[fourni1, fourni2, fourni3, fourni4]} />
+            <FourniComponent fourniList={[fourni1, fourni2, fourni3]} />
           </div>
 
           {/* <a className='w-[50px] macBeco:w-[60px]'> */}
@@ -419,6 +419,19 @@ const Coming = ({ videoEnd, videoDisplay }: { videoEnd: boolean, videoDisplay: b
         </div>
 
         <Dialog open={openCommand} size='sm' handler={handleOpenCommand} className='flex items-center justify-center shadow-none bg-transparent rounded-[20px]'>
+          <ToastContainer
+            position="top-center"
+            autoClose={2000}
+            limit={3}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover={false}
+            theme="light"
+          />
           <Command setOpenCommand={setOpenCommand} setOpenContact={setOpenContact}/>
         </Dialog>
 

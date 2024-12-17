@@ -129,46 +129,39 @@ export const fourni1 = (
 
 export const fourni2 = (
   <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue mt-5 ml-12 h-full w-full'>
-    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
-      <div className='flex'>
-        <h1 className='font-bold text-[1.2vw]'>E.LECLERC</h1>
-        <p className='text-left text-[1.2vw]'>&nbsp;à Aurillac</p>
-      </div>
-      <p className='text-left text-[1vw]'>26 Rue de la Jordanne</p>
-      <p className='text-left text-[1vw]'>04 71 64 25 05</p>
+    <li className='w-[64%] 1536:w-[65%] fromJB:w-[72%]'>
+      <h1 className='font-bold text-[1.2vw]'>Les Domaines Qui Montent</h1>
+      <p className='text-left text-[1vw]'>- 48 Rue Blatin, 63000 Clermont-Ferrand</p>
+      <p className='text-left text-[1vw]'>&nbsp;&nbsp;04 73 44 80 09</p>
+      <p className='text-left text-[1vw]'>- 1 Avenue du Maréchal Leclerc, 63800 Cournon d'Auvergne</p>
+      <p className='text-left text-[1vw]'>&nbsp;&nbsp;09 74 97 05 29</p>
     </li>
-    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
+    <br />
+    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%]'>
+      <h1 className='font-bold text-[1.2vw]'>Fromagerie Baugeoise</h1>
+      <p className='text-left text-[1vw]'>13 Rue Georges Clémenceau</p>
+      <p className='text-left text-[1vw]'>49150 Baugé en Anjou</p>
+      <p className='text-left text-[1vw]'>02 41 89 27 39</p>
+    </li>
+    <br />
+    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%]'>
       <div className='flex'>
         <h1 className='font-bold text-[1.2vw]'>GammVert</h1>
         <p className='text-left text-[1.2vw]'>&nbsp;à Aurillac</p>
       </div>
       <p className='text-left text-[1vw]'>1 boulevard du Vialenc</p>
     </li>
-    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
-      <h1 className='font-bold text-[1.2vw]'>Boucherie Serge Tardif</h1>
-      <p className='text-left text-[1vw]'>6 rue Simone Veil, 15130 Arpajon sur Cère</p>
-    </li>
-    <li className='w-[65%] fromBeco:w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
-      <h1 className='font-bold text-[1.2vw]'>Intermarché</h1>
-      <p className='text-left text-[1vw]'>8 Avenue d'Aurillac, 15600 St Etienne de Maurs</p>
-    </li>
-    <li className='w-[70%] fromBeco:w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
-      <h1 className='font-bold text-[1.2vw]'>Les domaines qui montent</h1>
-      <p className='text-left text-[1vw]'>48 rue Blatin, 63000</p>
-      <p className='text-left text-[1vw]'>Clermont-Ferrand</p>
-    </li>
   </ul>
 );
 
 export const fourni3 = (
   <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue mt-5 ml-12 h-full w-full'>
-    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%]'>
-      <div className='flex'>
-        <h1 className='font-bold text-[1.2vw]'>UTILE</h1>
-        <p className='text-left text-[1.2vw]'>&nbsp;à Lafeuillade-en-Vézie</p>
-      </div>
-      <p className='text-left text-[1vw]'>8 Rue Germain Prat, 15130 Lafeuillade-en-Vézie </p>
-      <p className='text-left text-[1vw]'>04 63 41 94 71</p>
+    <li className='w-[64%] 1536:w-[65%] fromJB:w-[72%]'>
+      <h1 className='font-bold text-[1.2vw]'>UTILE</h1>
+      <p className='text-left text-[1vw]'>- 2 Rue de l'Aubrac, 15230 Pierrefort</p>
+      <p className='text-left text-[1vw]'>&nbsp;&nbsp;04 71 23 34 51</p>
+      <p className='text-left text-[1vw]'>- 12 Avenue de Brommat, 12600 Mur de Barrez</p>
+      <p className='text-left text-[1vw]'>&nbsp;&nbsp;05 65 44 59 44</p>
     </li>
     <br />
     <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%]'>
@@ -176,46 +169,11 @@ export const fourni3 = (
         <h1 className='font-bold text-[1.2vw]'>SPAR</h1>
         <p className='text-left text-[1.2vw]'>&nbsp;Le Lioran</p>
       </div>
-      <p className='text-left text-[1vw]'>Galerie Marchande Sumene, 15300 Laveissière</p>
+      <p className='text-left text-[1vw]'>Galerie Marchande Sumene</p>
+      <p className='text-left text-[1vw]'>15300 Laveissière</p>
       <p className='text-left text-[1vw]'>04 71 49 58 81</p>
     </li>
-    <br />
-    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%]'>
-      <div className='flex'>
-        <h1 className='font-bold text-[1.2vw]'>Clémentine et Cie</h1>
-        <p className='text-left text-[1.2vw]'>&nbsp;à Ussel</p>
-      </div>
-      <p className='text-left text-[1vw]'>Parc d'activité du bois Saint Michel, 19200 Saint-Angel </p>
-      <p className='text-left text-[1vw]'>www.clementine-et-cie.fr</p>
-      <p className='text-left text-[1vw]'>05 55 95 82 76</p>
-    </li>
-    <br />
   </ul>
-);
-
-export const fourni4 = (
-  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue mt-5 ml-12 h-full w-full'>
-
-    <li className='w-[64%] 1536:w-[65%] fromJB:w-[72%]' >
-      <h1 className='font-bold text-[1.2vw]'>Les Fromages du Mont Royal</h1>
-      <p className='text-left text-[1vw]'>Chemin de Baraillan, 31210 Montrejeau</p>
-    </li>
-    <br />
-    <li className='w-[64%] 1536:w-[65%] fromJB:w-[72%]' >
-      <h1 className='font-bold text-[1.2vw]'>FROMAGERIE LAQUEUILLE</h1>
-      <p className='text-left text-[1vw]'>Gare de Laqueuille, 63820 Saint-Julien Puy-Lavèze</p>
-      <p className='text-left text-[1vw]'>www.fromages-laqueuille.fr</p>
-      <p className='text-left text-[1vw]'>04 73 22 18 06</p>
-    </li>
-    <br />
-    <li className='w-[64%] 1536:w-[65%] fromJB:w-[72%]' >
-      <h1 className='font-bold text-[1.2vw]'>FROMAGERIE DUROUX</h1>
-      <p className='text-left text-[1vw]'>12 Route de Chaussenac, 19220 Rilhac-Xaintrie</p>
-      <p className='text-left text-[1vw]'>www.fromagerie-duroux.fr</p>
-      <p className='text-left text-[1vw]'>05 55 28 27 62</p>
-    </li>
-    <br />
-  </ul >
 );
 
 /* ########################## SMARTPHONE  ##########################*/
@@ -248,6 +206,148 @@ export const fourniTel1 = (
 export const fourniTel2 = (
   <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue h-full w-full ml-2 sm:mt-4 sm:ml-8'>
     <li className='w-[75%] margin-top-fourni-tel'>
+      <h1 className='font-bold text-[3.2vw]'>Les Domaines Qui Montent</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>- 48 Rue Blatin, 63000 Clermont-Ferrand</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>&nbsp;&nbsp;04 73 44 80 09</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>- 1 Avenue du Maréchal Leclerc, 63800 Cournon d'Auvergne</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>&nbsp;&nbsp;09 74 97 05 29</p>
+    </li>
+    <li className='w-[72%] mt-[0.5rem]'>
+      <h1 className='font-bold text-[3.2vw]'>Fromagerie Baugeoise</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>13 Rue Georges Clémenceau</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>49150 Baugé en Anjou</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>02 41 89 27 39</p>
+    </li>
+    <li className='w-[72%] mt-[0.5rem]'>
+      <div className='flex'>
+        <h1 className='font-bold text-[3.2vw]'>GammVert</h1>
+        <p className='text-left text-[3.2vw]'>&nbsp;à Aurillac</p>
+      </div>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>1 boulevard du Vialenc</p>
+    </li>
+  </ul>
+);
+
+export const fourniTel3 = (
+  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue h-full w-full ml-2 sm:mt-4 sm:ml-8'>
+    <li className='w-[75%] margin-top-fourni-tel'>
+      <h1 className='font-bold text-[3.2vw]'>UTILE</h1>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>- 2 Rue de l'Aubrac, 15230 Pierrefort</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>&nbsp;&nbsp;04 71 23 34 51</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>- 12 Avenue de Brommat, 12600 Mur de Barrez</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>&nbsp;&nbsp;05 65 44 59 44</p>
+    </li>
+    <li className='w-[75%] margin-top-fourni-tel'>
+      <div className='flex'>
+        <h1 className='font-bold text-[3.2vw]'>SPAR</h1>
+        <p className='text-left text-[3.2vw]'>&nbsp;Le Lioran</p>
+      </div>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>Galerie Marchande Sumene</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>15300 Laveissière</p>
+      <p className='text-left text-[2.8vw] sm:text-[2.4vw]'>04 71 49 58 81</p>
+    </li>
+  </ul>
+);
+
+/* ########################## OLD COMPUTER  ##########################*/
+
+export const old_fourni2 = (
+  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue mt-5 ml-12 h-full w-full'>
+    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>E.LECLERC</h1>
+        <p className='text-left text-[1.2vw]'>&nbsp;à Aurillac</p>
+      </div>
+      <p className='text-left text-[1vw]'>26 Rue de la Jordanne</p>
+      <p className='text-left text-[1vw]'>04 71 64 25 05</p>
+    </li>
+    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>GammVert</h1>
+        <p className='text-left text-[1.2vw]'>&nbsp;à Aurillac</p>
+      </div>
+      <p className='text-left text-[1vw]'>1 boulevard du Vialenc</p>
+    </li>
+    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
+      <h1 className='font-bold text-[1.2vw]'>Boucherie Serge Tardif</h1>
+      <p className='text-left text-[1vw]'>6 rue Simone Veil, 15130 Arpajon sur Cère</p>
+    </li>
+    <li className='w-[65%] fromBeco:w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
+      <h1 className='font-bold text-[1.2vw]'>Intermarché</h1>
+      <p className='text-left text-[1vw]'>8 Avenue d'Aurillac, 15600 St Etienne de Maurs</p>
+    </li>
+    <li className='w-[70%] fromBeco:w-[70%] 1536:w-[65%] fromJB:w-[74%] mt-3'>
+      <h1 className='font-bold text-[1.2vw]'>Les domaines qui montent</h1>
+      <p className='text-left text-[1vw]'>48 rue Blatin, 63000</p>
+      <p className='text-left text-[1vw]'>Clermont-Ferrand</p>
+    </li>
+  </ul>
+);
+
+export const old_fourni3 = (
+  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue mt-5 ml-12 h-full w-full'>
+    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%]'>
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>UTILE</h1>
+        <p className='text-left text-[1.2vw]'>&nbsp;à Lafeuillade-en-Vézie</p>
+      </div>
+      <p className='text-left text-[1vw]'>8 Rue Germain Prat, 15130 Lafeuillade-en-Vézie </p>
+      <p className='text-left text-[1vw]'>04 63 41 94 71</p>
+    </li>
+    <br />
+    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%]'>
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>SPAR</h1>
+        <p className='text-left text-[1.2vw]'>&nbsp;Le Lioran</p>
+      </div>
+      <p className='text-left text-[1vw]'>Galerie Marchande Sumene, 15300 Laveissière</p>
+      <p className='text-left text-[1vw]'>04 71 49 58 81</p>
+    </li>
+    <br />
+    <li className='w-[70%] 1536:w-[65%] fromJB:w-[74%]'>
+      <div className='flex'>
+        <h1 className='font-bold text-[1.2vw]'>Clémentine et Cie</h1>
+        <p className='text-left text-[1.2vw]'>&nbsp;à Ussel</p>
+      </div>
+      <p className='text-left text-[1vw]'>Parc d'activité du bois Saint Michel, 19200 Saint-Angel </p>
+      <p className='text-left text-[1vw]'>www.clementine-et-cie.fr</p>
+      <p className='text-left text-[1vw]'>05 55 95 82 76</p>
+    </li>
+    <br />
+  </ul>
+);
+
+export const old_fourni4 = (
+  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue mt-5 ml-12 h-full w-full'>
+
+    <li className='w-[64%] 1536:w-[65%] fromJB:w-[72%]' >
+      <h1 className='font-bold text-[1.2vw]'>Les Fromages du Mont Royal</h1>
+      <p className='text-left text-[1vw]'>Chemin de Baraillan, 31210 Montrejeau</p>
+    </li>
+    <br />
+    <li className='w-[64%] 1536:w-[65%] fromJB:w-[72%]' >
+      <h1 className='font-bold text-[1.2vw]'>FROMAGERIE LAQUEUILLE</h1>
+      <p className='text-left text-[1vw]'>Gare de Laqueuille, 63820 Saint-Julien Puy-Lavèze</p>
+      <p className='text-left text-[1vw]'>www.fromages-laqueuille.fr</p>
+      <p className='text-left text-[1vw]'>04 73 22 18 06</p>
+    </li>
+    <br />
+    <li className='w-[64%] 1536:w-[65%] fromJB:w-[72%]' >
+      <h1 className='font-bold text-[1.2vw]'>FROMAGERIE DUROUX</h1>
+      <p className='text-left text-[1vw]'>12 Route de Chaussenac, 19220 Rilhac-Xaintrie</p>
+      <p className='text-left text-[1vw]'>www.fromagerie-duroux.fr</p>
+      <p className='text-left text-[1vw]'>05 55 28 27 62</p>
+    </li>
+    <br />
+  </ul >
+);
+
+/* ########################## OLD SMARTPHONE  ##########################*/
+
+
+export const old_fourniTel2 = (
+  <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue h-full w-full ml-2 sm:mt-4 sm:ml-8'>
+    <li className='w-[75%] margin-top-fourni-tel'>
       <div className='flex'>
         <h1 className='font-bold text-[3.2vw]'>E.LECLERC</h1>
         <p className='text-left text-[3.2vw]'>&nbsp;à Aurillac</p>
@@ -278,7 +378,7 @@ export const fourniTel2 = (
   </ul>
 );
 
-export const fourniTel3 = (
+export const old_fourniTel3 = (
   <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue h-full w-full ml-2 sm:mt-4 sm:ml-8'>
     <li className='w-[75%] margin-top-fourni-tel'>
       <div className='flex'>
@@ -308,7 +408,7 @@ export const fourniTel3 = (
   </ul>
 );
 
-export const fourniTel4 = (
+export const old_fourniTel4 = (
   <ul style={{ fontFamily: 'OpenSansBold' }} className='text-fondue-blue h-full w-full ml-2 sm:mt-4 sm:ml-8'>
     <li className='w-[80%] margin-top-fourni-tel'>
       <h1 className='font-bold text-[3.2vw]'>Les Fromages du Mont Royal</h1>

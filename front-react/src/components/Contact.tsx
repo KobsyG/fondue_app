@@ -104,7 +104,7 @@ const Contact = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boo
             <img className='object-cover' src={croix} onClick={() => setOpen(false)} alt='' />
           </button>
 
-          <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>Écrivez-nous un p'tit mot 👇</p>
+          <p style={{ fontFamily: 'OccamsEraser' }} className='text-white text-[24px] mb-4 text-left'>👇  Écrivez-nous  👇</p>
 
           <form onSubmit={handleSubmit}>
             <label

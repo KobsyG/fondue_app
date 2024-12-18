@@ -1,4 +1,3 @@
-
 import './Coming.css'
 import contactRouge from "../images/Mono/contact-rouge.svg"
 
@@ -8,7 +7,7 @@ import gsap from 'gsap'
 import { Dialog } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
 import Contact from './Contact'
-import FourniComponent, { fourniTel1, fourniTel2, fourniTel3 } from './FourniComponent'
+import FourniComponent, { fourniTel1, fourniTel2, fourniTel3, fourniTel4 } from './FourniComponent'
 import Command from './Command'
 
 const box = require('../images/FFP/box.png')
@@ -249,8 +248,8 @@ const ComingTel = ({ loadingDisplay, setProgress }: { loadingDisplay: boolean, s
     <div ref={comingTelContainer} className='comingTelContainer relative w-[100vw] bg-[#1B133B] overflow-hidden'>
 
       {/* <a className='w-[50px] macBeco:w-[60px]'> */}
-        <button onClick={handleOpenCommand} className='contact pastille-size-margin-tel fixed z-40 flex items-center justify-center'>
-          <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-10 sm:text-[22px] text-white'>ON SE LANCE ?</p>
+        <button onClick={handleOpenCommand} className='contact pastille-size-margin-tel fixed z-[150] flex items-center justify-center'>
+          <p style={{ fontFamily: 'AvocadoCake' }} className='absolute z-[150] sm:text-[22px] text-white'>ON SE LANCE ?</p>
           <img className='pastille-contact absolute h-full w-full z-0' src={contactRouge} alt='' onLoad={() => setProgress(progress => progress + ProgressAvanced)} />
         </button>
       {/* </a> */}
@@ -472,7 +471,7 @@ const ComingTel = ({ loadingDisplay, setProgress }: { loadingDisplay: boolean, s
         </div>
 
         <div className='page-rotate z-[100] absolute h-[110%] w-[65%] left-[45%] top-0 -rotate-[6deg]'>
-          <FourniComponent fourniList={[fourniTel1, fourniTel2, fourniTel3]} />
+          <FourniComponent fourniList={[fourniTel1, fourniTel2, fourniTel3, fourniTel4]} />
         </div>
       </div>
 

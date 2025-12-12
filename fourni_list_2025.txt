@@ -1,0 +1,49 @@
+supprimer boutton bien manger.com
+
+Liste fournisseurs dans l'ordre où ils doivent apparaittre sur les pages fournisseurs:
+
+Page 1 : 
+
+DISTILLERIE LOUIS COUDERC
+14 rue Victor Hugo à Aurillac
+commercial@distillerie-couderc.com
+04 71 48 01 50
+
+FROMAGERIE MORIN
+ à Aurillac
+- 41 Av. Charles de Gaulle
+  04 71 43 25 84
+- Centre Commercial de Marmiers
+  04 71 63 59 18
+- Marché aux Fromages, 7 rue du buis
+  04 71 48 63 10
+- Enclos Milhaud, Arpajon-sur-Cère
+  04 71 49 30 96
+
+Page 2 :
+
+E.Leclerc
+- 26 Zac de la Jordanne, à AURILLAC
+  04 71 64 25 05
+- 175 Bd Gustave Flaubert, LA PARDIEU, Clermont-Ferrand
+  04 73 44 29 09
+- Zac Du Crozatier, Saint-Flour
+  04 71 20 10 00
+
+Intermarché à Murat
+Chem. de la Croix Jolie
+  04 71 20 15 90
+
+Page 3 : 
+
+GammVert à Aurillac
+1 boulevard du Vialenc
+
+SPAR Le Lioran
+Galerie Marchande Sumene
+15300 Laveissière
+04 71 49 58 81
+
+UTILE
+12 Avenue de Brommat, 12600 Mur de Barrez
+05 65 44 59 44

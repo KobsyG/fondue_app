@@ -56,17 +56,20 @@ git commit -m "build: description des changements"
 git push origin Prod
 ```
 
-### 3. Mise à jour des fichiers statiques sur Hostinger
+### 3. Mise à jour du site sur Hostinger
 
 Via le **File Manager** d'Hostinger :
 
 **Étape 1 : Sauvegarder l'ancienne version**
 - Aller dans `public_html/`
-- Déplacer le dossier `static` vers `public_html/previous/`
-- Renommer en `static-YYYY-MM-DD` (exemple: `static-2025-12-12`)
+- Déplacer le dossier `static` vers `public_html/previous/static-YYYY-MM-DD`
 
-**Étape 2 : Copier la nouvelle version**
-- Copier `public_html/git/front-react/build/static`
-- Coller dans `public_html/`
+**Étape 2 : Copier tout le contenu de build**
+- Copier **tout le contenu** de `public_html/git/front-react/build/` :
+  - `static/` (dossier)
+  - `index.html`
+  - `asset-manifest.json`
+  - `favicon.ico`
+- Coller dans `public_html/` (écraser les anciens fichiers)
 
 ✅ Le site est maintenant à jour !
